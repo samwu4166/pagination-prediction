@@ -1,0 +1,1376 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7" >
+<title>Forums - Welcome</title>
+<link rel="shortcut icon" href="/favicon.ico">
+<style type="text/css">
+pre { font-size : 9pt; }
+a { font-weight: bold; text-decoration : none; color: #003399; }
+a:hover { text-decoration: underline; }
+a:visited {color: #003399;}
+a:active {color: #99ccff;}
+body {color:#000000;}
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.flyordie.com/flyordie.css">
+<style>
+body{margin:0px;padding:0px;background-color:#eaeaea;overflow-y:scroll;text-align:center;}
+#header,#footer{font-family:verdana,arial,geneva,helvetica,sans-serif;font-size:12px;text-decoration:none;text-align:center;color:black;}
+#header a, #footer a {color:#106BA8;outline:0;text-decoration:underline;}
+#sheet{width:960px;margin:auto auto;background-color:white;position:relative;overflow:hidden;padding-left:10px;padding-right:10px;}
+#header{background:#50a8f7;text-align:center;border-bottom:2px solid #026196;height:70px;position:relative;}
+#title{position:absolute;top:35px;left:40px;}
+#title h1 {font-size:20px;color:white;margin:0;}
+#path{position:absolute;top:10px;left:40px;color:#3b5998;}
+#path a:link,#path a:visited,#path a:hover{color:#3b5998;font-weight:normal;}
+#pc{position:absolute;top:44px;left:50px;width:100%;font-weight:bold;color:white;}
+#pc a:link,#pc a:visited,#pc a:hover{color:white;}
+#logo{background:url('http://www.flyordie.com/images/logo01.png') no-repeat;position:absolute;z-index:10;width:252px;height:72px;top:10px;right:10px;outline:0;display:block;}
+#content{padding:15px 35px 0px 35px;position:relative;}
+#contentbottom{clear:both;height:1px;}
+#footer{clear:both;padding:15px 20px 30px 20px;font-size:smaller;}
+#footerdivider{position:relative;margin-bottom:15px;background-color:#741E1E;height:1px;border-bottom:1px solid #D29494;overflow:hidden;}
+#shl{background-color:#eaeaea;background-image:url('http://www.flyordie.com/images/$hv.png');background-repeat:repeat-y;background-position:left top;position:absolute;left:0;width:10px;height:10000px;}
+#shr{background-color:#eaeaea;background-image:url('http://www.flyordie.com/images/$hv.png');background-repeat:repeat-y;background-position:right top;position:absolute;right:0;width:10px;height:10000px;}
+#shb{clear:both;background-color:#eaeaea;background-image:url('http://www.flyordie.com/images/$hb.png');background-repeat:repeat-x;width:960px;height:10px;margin:auto auto;overflow:hidden;position:relative;padding-left:10px;padding-right:10px;}
+#shbl{background-image:url('http://www.flyordie.com/images/$hv.png');background-position:top center;background-repeat:no-repeat;width:10px;height:10px;overflow:hidden;position:absolute;top:0px;left:0px;}
+#shbr{background-image:url('http://www.flyordie.com/images/$hv.png');background-position:50% -20px;background-repeat:no-repeat;width:10px;height:10px;overflow:hidden;position:absolute;top:0px;right:0px;}
+.hl table { border: 2px solid red; }
+.hl table table { border-style: none; }
+</style>
+<!--[if lt IE 7]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js">IE7_PNG_SUFFIX=/^[^$]*\.png/i;</script>
+<![endif]-->
+<!--[if IE]>
+<style>body{overflow-y:auto;}</style>
+<![endif]-->
+
+<script>
+var adv = document.cookie.indexOf("noAdv=true") < 0;
+var ls={
+	a:(function(){ try { return window.localStorage||{}; } catch(e) {} return {}; })(),
+	g:function(n,v) { try { v=this.a[n]||v; } catch(e){} return v; },
+	s:function(n,v) { try { this.a[n]=v; } catch(e){} return v; },
+	c:function(n) { try { this.a.removeItem(n); } catch(e){} }
+};
+ls.d=!!ls.a.getItem;
+function gwna(a,p) {
+	var n = window.name, i = n.indexOf('*'+a), j;
+	if(i < 0) return "";
+	j = n.indexOf('*', i + 2);
+	n = n.substring(i, j > 0 ? j : undefined);
+	return p ? n.split(':')[1] : n;
+}
+var gacid=gwna('gacid',1);
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments);},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+(function(){
+var o = {}, r=gauid();
+if(gacid) o.clientId = gacid;
+if(r) o.userId = r;
+ga('create', 'UA-295578-1', 'auto', o);
+ga('require', 'displayfeatures');
+ga('set','anonymizeIp',true);
+ga('send', 'pageview');
+if(!gacid) ga(function(t) { gacid = t.get('clientId'); });
+})();
+function loadScript(u,id,l,f) {
+	var e = document.createElement('script');e.type = 'text/javascript';e.async = true;e.src = u;
+	e.setAttribute("charset", "UTF-8");
+	if(l) {
+		function d(c) { e.onreadystatechange=e.onerror=e.onload=null; c(); }
+		e.onload=function(){d(l);};
+		e.onreadystatechange=function(){if(e.readyState=='loaded'||e.readyState=='complete') d(l);};
+		if(f) e.onerror=function(){d(f);};
+	}
+	var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(e, s);
+}
+var isEU=1,eucc=0,euccTs=0;function euccCheck(s){
+var e=document.getElementById('eucc');if(!e)return;var d=function(v,ts){eucc=v;euccTs=ts||Date.now();if(ls.d){ls.s('eucc',v);ls.s('euccTs',euccTs);}else setCookie('eucc',v,'',v<0?30:180);},f=function(){e.style.display="block";var t=e.style.top;window.euccOk=function(){e.style.top=t;setTimeout(function(){e.style.display="none";},1000);window.euccOk=function(){};d(1);};setTimeout(function(){e.style.top=0;},1000);};if(ls.d){eucc=ls.g('eucc')|0;
+euccTs=parseFloat(ls.g('euccTs'))||0;}else{eucc=getCookie('eucc')|0;euccTs=Date.now();}var wts=parseFloat(gwna('eucc1',1))||0;if(eucc>0){}else if(wts)d(1,wts);if(eucc<=0&&gauid())d(1);if(!s&&!isEU){if(eucc<-1)eucc=-1;return;}if(eucc){if(eucc>0)return;var dt;if(!s||ls.d&&(dt=Date.now()-euccTs)>=0&&dt<30*24*3600000){eucc=0;if(ls.d)ls.s('eucc',0);}else if(eucc==-3){s=0;isEU=1;}else return;}if(s)loadScript('//www.flyordie.com/'+'games/free/'+'b/SEU-','SEU',function(){if(isEU){d(-3);f();}else d(-1);},function(){if(isEU)
+f();else eucc=-2;});else f();}
+function gauid() {
+var r=/reg\=([^;]*)/.exec(document.cookie||'');
+return r&&r.length>1&&(r = r[1].split('+')).length&&parseInt(r[0]);
+}
+function prepwnd() {
+	window.name=(eucc==1?'*eucc1:'+euccTs:'')+(gacid?'*gacid:'+gacid:'');
+	setTimeout(function(){window.name='fodforum';},2000);
+}
+function init() {
+setTimeout(fixScroll,100);
+euccCheck(1);
+window.name='fodforum';
+}
+function fixScroll() {
+	var e=document.getElementById("sheet"),s=e.scrollTop;
+	if(s) {
+		e.scrollTop=0;
+		document.body.scrollTop=s;
+	}
+}
+</script>
+
+</head>
+<body onload="init();">
+<div id="sheet"><div id="shl"></div><div id="shr"></div>
+<div id="header">
+<div id="title"><h1>Forum</h1></div>
+<div id="path">
+<a href="http://www.flyordie.com/" onclick="prepwnd();">All games</a> » 
+Forum
+</div>
+<div id="pc">
+<a href="/">Forum</a> | 
+<a href="http://games.flyordie.com/subscription/product.html?lang=en&game=8Ball&portal=flyordie_com" target="_blank">Subscribe</a> | 
+<a href="http://www.flyordie.com/games/help/support/contents.html" target="_blank" title="Frequently Asked Questions">Faq</a>
+</div>
+<a id="logo" href="http://www.flyordie.com/"></a>
+</div>
+<div id="content" style="text-align:center">
+<script>
+if(adv) {
+	var as = location.pathname=='/'||location.pathname=='/index.jsp';
+	document.write(
+		'<div id="dfplb" style="width:728px; height:90px; margin: 0 auto 10px auto; padding:10px; background-color:#D3F5AD;">'+
+		'<ins id="fplb" style="display:inline-block;width:728px;height:90px" fod-slot="hb-f'+(as?'a':'-')+'-t-lb"></ins></div>'
+	);
+	fodhb = [['fplb'],loadScript,0];
+	loadScript("//www.flyordie.com/games/pb-1-20.js");
+}
+</script>
+<div style="width: 768px; margin-left:auto; margin-right:auto; text-align:left">
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+    <td valign="top" width="98%">
+
+    
+    <font face="arial,sans-serif"
+     color="#003399">
+    <b>
+
+    <a href="index.jsp" title="Go back to the forum list"
+     >Forums</a>
+    </b>
+    </font>
+<br>
+
+    
+
+    <font size="-1"
+     face="arial,sans-serif"
+     color="#000000">
+    
+        Welcome to our online community. Please choose from one of the forums below or log-in to your user account to start using this service.
+    
+    </font>
+
+    </td>
+    <td width="1%"><img src="images/blank.gif" width="10" height="1" border="0"></td>
+    <td valign="top" width="1%" align="center">
+    
+
+
+
+
+
+    <table cellpadding="3" cellspacing="0" border="0" width="200">
+    
+    <tr><td colspan="2">
+            <font size="-1"
+             face="arial,sans-serif"
+             color="#000000">
+
+            
+            Welcome, <i>Guest</i>
+            </font>
+    </td></tr>
+    
+    <tr><td width="1%" nowrap><a href="auth.jsp"><img src="images/login.gif" width="17" height="17" title="Click to login or create a new account" border="0"></a></td>
+        <td width="99%">
+            <font size="-2"
+             face="verdana,arial,sans-serif">
+
+            
+             <a href="auth.jsp" title="Click to login"
+              >Login</a></font>
+            
+        </td>
+    </tr>
+    
+    <tr><td width="1%" nowrap><a href="settings.jsp"><img src="images/prefs.gif" width="17" height="17" title="Click to change your viewing preferences" border="0"></a></td>
+        <td width="99%">
+            <font size="-2"
+             face="verdana,arial,sans-serif">
+            <a href="settings.jsp" title="Click to change your viewing preferences"
+             >Guest Settings</a>
+            </font>
+        </td>
+    </tr>
+    </table>
+
+
+    </td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr><td width="98%" valign="top">
+
+    
+
+    
+
+    <table bgcolor="#cccccc"
+     cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr><td>
+        <table bgcolor="#cccccc"
+         cellpadding="4" cellspacing="1" border="0" width="100%">
+        <tr bgcolor="#336699">
+            <td width="1%"><img src="images/blank.gif" width="1" height="1" border="0"></td>
+            <td width="97%">
+                <font size="-2"
+                 color="#ffffff"
+                 face="arial,sans-serif">
+                
+                <!--
+                <b>FORUM NAME</b>
+                -->
+                <b>FORUM / CATEGORY NAME</b>
+                </font>
+            </td>
+            <td width="1%" nowrap>
+                <font size="-2"
+                 color="#ffffff"
+                 face="arial,sans-serif">
+                
+                <b>TOPICS / MESSAGES</b>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center">
+                <font size="-2"
+                 color="#ffffff"
+                 face="arial,sans-serif">
+                
+                <b>LAST POST</b>
+                </font>
+            </td>
+        </tr>
+
+
+        <tr bgcolor="#dddddd">
+            <td colspan="4">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="index.jsp?cat=3"
+                 ><b>General</b></a>
+                
+                    <font size="-2" face="verdana">
+                    <br>
+                    
+                    </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=2">General</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                2,304  / 11,255
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 9, 2020 7:18 PM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=33">Requests/Suggestions</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                837  / 3,087
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Sep 23, 2020 11:05 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=16">Leagues</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                114  / 502
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Aug 24, 2020 11:04 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=9">Offtopic</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                2,637  / 32,722
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Apr 14, 2020 6:30 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=23">Technical</a>
+                <br>
+                <i>Technical problems with FlyOrDie Games</i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                1,849  / 7,381
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Jul 16, 2020 11:52 PM
+                </font>
+                
+                <br>
+                <font size="-2" face="verdana,arial,sans-serif">
+                    
+                            by: <a href="thread.jsp?forum=23&thread=133959&message=595546#595546" title="Jump to Message">《.¢ℓαяк кєหŦ.》 &raquo;</a>
+
+                    
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=42">Forum games</a>
+                <br>
+                <i>Create your own forum game</i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                78  / 923
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Dec 28, 2019 8:59 AM
+                </font>
+                
+                <br>
+                <font size="-2" face="verdana,arial,sans-serif">
+                    
+                            by: <a href="thread.jsp?forum=42&thread=58769&message=592094#592094" title="Jump to Message">《.¢ℓαяк кєหŦ.》 &raquo;</a>
+
+                    
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#dddddd">
+            <td colspan="4">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="index.jsp?cat=7"
+                 ><b>FlyOrDie Games</b></a>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_new.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=4">Billiards</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                4,470  / 37,855
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 13, 2020 4:46 PM
+                </font>
+                
+                <br>
+                <font size="-2" face="verdana,arial,sans-serif">
+                    
+                            by: <a href="thread.jsp?forum=4&thread=134170&message=596668#596668" title="Jump to Message">Sunrise Vodka™ &raquo;</a>
+
+                    
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=3">Chess</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                1,053  / 3,685
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Sep 3, 2020 10:20 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=36">Darts</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                288  / 1,786
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Sep 7, 2020 11:01 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_new.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=40">Curling</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                1,291  / 10,222
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 18, 2020 8:53 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_new.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=18">Checkers</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                624  / 2,126
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 19, 2020 6:46 PM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=31">FODBall</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                97  / 408
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 8, 2020 10:48 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=46">Go</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                260  / 938
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Jun 29, 2020 11:58 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=21">Go Moku</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                192  / 693
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Jul 3, 2020 7:53 AM
+                </font>
+                
+                <br>
+                <font size="-2" face="verdana,arial,sans-serif">
+                    
+                            by: <a href="thread.jsp?forum=21&thread=133928&message=595383#595383" title="Jump to Message">《.¢ℓαяк кєหŦ.》 &raquo;</a>
+
+                    
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=37">Four in a Row</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                365  / 3,808
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 3, 2020 6:33 AM
+                </font>
+                
+                <br>
+                <font size="-2" face="verdana,arial,sans-serif">
+                    
+                            by: <a href="thread.jsp?forum=37&thread=134169&message=596555#596555" title="Jump to Message">Đℯαтн☠Nℴтℯ &raquo;</a>
+
+                    
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_new.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=48">Backgammon</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                246  / 1,150
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 16, 2020 10:10 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=26">Other Board Games</a>
+                <br>
+                <i>(Reversi, Nine Men's Morris, Pente, Memory)</i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                341  / 1,606
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 8, 2020 10:49 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_new.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=6">Tanx</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                3,096  / 23,379
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 16, 2020 12:07 PM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_new.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=13">The Larkinor Quest</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                3,455  / 37,140
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 19, 2020 10:12 AM
+                </font>
+                
+                <br>
+                <font size="-2" face="verdana,arial,sans-serif">
+                    
+                            by: <a href="thread.jsp?forum=13&thread=134068&message=596699#596699" title="Jump to Message">zmr08 &raquo;</a>
+
+                    
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#dddddd">
+            <td colspan="4">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="index.jsp?cat=4"
+                 ><b>Moderation</b></a>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_new.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=12">Dear Moderators</a>
+                <br>
+                <i>requests, comments to moderators</i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                1,771  / 11,566
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 15, 2020 5:27 PM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#dddddd">
+            <td colspan="4">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="index.jsp?cat=2"
+                 ><b>NON-ENGLISH</b></a>
+                
+                    <font size="-2" face="verdana">
+                    <br>
+                    Non-English language topics
+                    </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=8">General (non-English)</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                220  / 1,201
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Feb 12, 2020 12:25 PM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_new.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=25">Deutsch</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                1,563  / 10,331
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 20, 2020 8:05 PM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_new.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=29">Español</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                1,819  / 7,064
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 19, 2020 8:31 AM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=27">Français</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                1,590  / 5,691
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 6, 2020 11:49 PM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_old.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=30">Italiano</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                281  / 809
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                May 7, 2020 1:25 PM
+                </font>
+                
+            </td>
+        </tr>
+
+        <tr bgcolor="#eeeeee">
+            <td width="1%" align="center" valign="top">
+            
+                <img src="images/forum_new.gif" width="12" height="12" vspace="2" border="0">
+            
+            </td>
+            <td width="97%" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                <a href="forum.jsp?forum=24">Magyar</a>
+                <br>
+                <i></i>
+                </font>
+            </td>
+            <td width="1%" nowrap align="center" valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                1,985  / 12,616
+                </font>
+            </td>
+            <td width="1%" nowrap valign="top">
+                <font size="-1"
+                 face="arial,sans-serif"
+                 color="#000000">
+                Oct 16, 2020 3:49 PM
+                </font>
+                
+            </td>
+        </tr>
+
+        </table>
+    </td></tr>
+    </table>
+
+<br>
+
+    
+    <table cellpadding="3" cellspacing="0" border="0">
+    <tr><td>
+        <img src="images/forum_new.gif" width="12" height="12" border="0">
+    </td><td>
+        <font size="-1"
+         face="arial,sans-serif"
+         color="#000000">
+        <i>Denotes new messages since your last visit.</i>
+        </font>
+    </td></tr>
+    </table>
+
+    
+
+    </td>
+    <td width="1%"><img src="images/blank.gif" width="10" height="1" border="0"></td>
+    <td width="1%" nowrap valign="top">
+
+    
+
+    
+
+        
+
+
+
+
+<table bgcolor="#cccccc"
+ cellpadding="1" cellspacing="0" border="0" width="200">
+<tr><td>
+    <table bgcolor="#eeeeee"
+     cellpadding="4" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td align="center">
+            <font size="-2"
+             color="#000000"
+             face="arial,sans-serif">
+            <b>SEARCH</b>
+            </font>
+        </td>
+    </tr>
+    </table>
+</td></tr>
+<tr><td>
+    <table bgcolor="#ffffff"
+     cellpadding="3" cellspacing="0" border="0" width="100%">
+
+<tr><td>
+<form action="http://www.google.com" id="cse-search-box" target="_blank">
+<div>
+	<input type="hidden" name="cx" value="partner-pub-4436814515234129:9557260994" />
+	<input type="hidden" name="ie" value="UTF-8" />
+	<input type="text" name="q" size="22" />
+	<input type="image" name="sa" src="images/go.gif" width="17" height="17" border="0" title="Click to search" />
+</div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+</td></tr>
+    </table>
+</td></tr>
+</table>
+
+
+<br>
+
+    
+
+    
+    <table bgcolor="#cccccc"
+     cellpadding="1" cellspacing="0" border="0" width="200">
+    <tr><td>
+        <table bgcolor="#eeeeee"
+         cellpadding="4" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td align="center">
+                <font size="-2"
+                 color="#000000"
+                 face="arial,sans-serif">
+                <b>POPULAR DISCUSSIONS</b>
+                </font>
+            </td>
+        </tr>
+        </table>
+    </td></tr>
+    <tr><td>
+        <table bgcolor="#ffffff"
+         cellpadding="3" cellspacing="0" border="0" width="100%">
+        
+        <tr>
+            <td valign="top" width="1%">
+                
+                <font size="-1"
+                 face="arial,sans-serif">
+                 <b>&#149;</b>
+                </font>
+            </td>
+            <td width="99%">
+                <font size="-1"
+                 face="arial,sans-serif">
+                <a href="thread.jsp?forum=25&thread=134200"
+                >textet provoziert </a>
+                <br>
+                Replies:
+                0
+                <br>
+                </font>
+                <font size="-2"
+                 face="verdana,arial,sans-serif">
+                Deutsch
+                </font>
+            </td>
+        </tr>
+        
+        </table>
+    </td></tr>
+    </table>
+    
+
+    
+
+    <img src="images/blank.gif" width="200" height="1" border="0">
+    </td>
+</tr></table>
+
+
+
+</div>
+<div id="contentbottom"></div>
+</div>
+<div id="footer"><div id="footerdivider"></div>
+<a href="http://www.flyordie.com/termsofservice.html" target="_blank">Terms of Service</a> &nbsp;
+<a href="http://www.flyordie.com/privacy.html" target="_blank">Privacy Policy</a> &nbsp;
+<a href="http://www.flyordie.com/contact.html">Contact Us</a> &nbsp;
+<a href="http://www.flyordie.com/games/help/moderation.html" target="_blank">Moderation</a> &nbsp;
+<a href="http://www.jivesoftware.com/poweredby/" target="_blank"
+	style="color:#003399;"
+	title="Click to learn more about Jive Forums"
+	>Powered by Jive Forums</a>
+<br><br>
+Copyright © 2001-2017 FlyOrDie Free Games Online. 
+FlyOrDie® is a registered trademark of <a href="http://www.solware.com/" target="_blank">Solware Ltd.</a>
+</div>
+</div><div id="shb"><div id="shbl"></div><div id="shbr"></div></div>
+<div id="eucc" style="display:none; position: fixed !important; position: absolute; left:50%; margin-left: -321px; width: 640px; top:-60px; height: 41px; border: 1px solid #026196; border-top: 0 none; border-radius: 0 0 10px 10px; z-index: 1000; box-shadow: 0 0px 5px 3px rgba(0,0,0,0.3); padding-top: 8px; -webkit-transition: top 1s ease; transition: top 1s ease; background-color: #cfe4f7; color: #293e6a; text-align: center; font-size: 14px; line-height: 14px; white-space: nowrap;">
+<span style="display:inline-block; max-width: 660px; white-space: normal;">We are using cookies.
+<a href="privacy.html#cookies" target="_blank">Privacy Policy</a>
+</span><a style="display: inline-block; width: 130px; margin-left: 20px; padding: 9px 0px; line-height: 15px; background-color: #026196; color: #fff; border-radius: 5px; text-decoration: none; text-align: center; font-weight: bold;" href="javascript:euccOk()">Got it!</a></div>
+<script>fixScroll();</script>
+</body>
+</html>
+

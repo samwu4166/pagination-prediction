@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script async src='https://www.googletagmanager.com/gtag/js?id=AW-734328598' type="cc9d561734364f1ded07f2c0-text/javascript">
+                            </script>
+<script type="cc9d561734364f1ded07f2c0-text/javascript">
+                              window.dataLayer = window.dataLayer || [];
+                              function gtag(){dataLayer.push(arguments);}
+                              gtag('js', new Date());
+                              gtag('config', 'AW-734328598');
+                            </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="cc9d561734364f1ded07f2c0-text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"843ec445c1","applicationID":"342567877","transactionName":"M1ZWMktUD0tTAEQLDAoceTB6GilXXwZzDQ0QQVsKVVATF3sNVAcb","queueTime":0,"applicationTime":208,"agent":"","atts":""}</script><script type="cc9d561734364f1ded07f2c0-text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"843ec445c1",applicationID:"342567877"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<meta name="revisit-after" content="2 days" />
+
+
+<link href="/bundles/css/critical?v=MvzifqFGMKNmr64pWXuSqDyaqx48YmvnIIrUy2ijswk1" rel="stylesheet" />
+<!--[if (lt IE 9)&(!IEMobile)]><link rel="stylesheet" href="/Content/flow/less/ie.css"/> <![endif]-->
+<!--[if IE 8]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<link rel="shortcut icon" href="/favicon.ico?1" />
+
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="keywords" content="hotels, accommodation, self-catering, Bed and Breakfast, Guest Houses, Lodges" />
+<meta name="description" content="Find & book your perfect accommodation with SafariNow: ✓ Self catering, guesthouses, b&b's, hotels, camping sites, backpackers and more ✓ Best Price Guarantee ✓ South African company, trusted for over 15 years" />
+<meta name="theme-color" content="#43abef">
+<link rel="canonical" href="https://www.safarinow.com/">
+<title>SafariNow: Discover Unique Accommodation in Africa - Book Today! </title>
+<link rel="preconnect" href="https://bid.g.doubleclick.net">
+<link rel="preconnect" href="https://sncdn.com">
+<link href="/bundles/css/a?v=5Nkq5Xu5r0D8bQIT-BZ3BpP6LEuV_69MIvR52oTz6w81" rel="stylesheet" />
+<link href="/bundles/css/app?v=IClc__X5o4ND-YCttDPBnxAAqznZyjglYmDpgwAd3B41" rel="stylesheet" />
+
+<script type="cc9d561734364f1ded07f2c0-text/javascript">analyticsData = {"HashedEmail":"","PageType":"Homepage"}</script></head>
+<body class="SafariNow <!--Donut#D76CD4E40636483BEE08EE62D26BCFC325ECC837BDAE4C178933FD2BFA43226A97C6544135D555072D5B1AAB99FEED9F0A757DC000ED75CD5B4CAA95C3AB031B960AA0FFA5FB37A8298F971E0F1B09574FD00FCF108F4E847DC7A58EC8A03016EE59E1E1271EB84D9D4ACED080FEAB5D122234723A4E2E941420E5B4DEEA8AAC385CE4B02132CD9807C2B969FBC4B282DD4A78E28E78D1158D3B1484B914218933BC09E5537F62B5F5544600094718E491BFFBED460D5959E3B5FFA1DDD20CA36D921A1B0DA7AC109441EB4F870A8BE132836E337A66020570ECC53D777C55F076C93E4BEA185720191F09573953E1670B5A8E22D50138432A71D5C31355F62568BB1D1FC10F68230E86FA2279016CAEF2D33D271805D13D29DE19EE87F3F5DD40498565C03F94C9AC9DA5C52F9C5DECAAE60F04DB3E373CC3D19E328E2E168CAAD7CD7826E63B5723D3937982C108A84CD2EDD0476A14AB35538AFB4E571FAF890E6D3CBFBC2E1AB7627999BEFA821D6E7E5E19A94330456F41B8B0A306FA0564A47840B168291DD21FE59E1656B77D#--><!--EndDonut-->">
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-LHFG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script type="cc9d561734364f1ded07f2c0-text/javascript">(function (w, d, s, l, i) {w[l] = w[l] || []; w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'}); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =		'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-LHFG'); dataLayer = dataLayer || []; sysData = {"isStaff":false,"staffDepartment":"","staffUserName":"","userId":0,"userType":"Buyer","impersonatedUserId":0,"siteDomain":"safarinow.com","isMobileDevice":false};</script>
+<a href="javascript:void(0)" class="menu-close" id="menu-close"></a>
+<main role="main" id="frmMain" class="main l-mauto" tabindex="-1">
+<input Id="contactId" data-bind="valueWithInit:&#32;&#39;userId&#39;" data-val="true" data-val-number="The&#32;field&#32;CurrentUserId&#32;must&#32;be&#32;a&#32;number." data-val-required="The&#32;CurrentUserId&#32;field&#32;is&#32;required." id="CurrentUserId" name="CurrentUserId" type="hidden" value="-2" />
+<input Id="contactGuid" id="CurrentUserGuid" name="CurrentUserGuid" type="hidden" value="7c8de844-de8c-4985-9589-3e6fc9173f5c" />
+<input data-bind="valueWithInit:&#32;&#39;userFirstname&#39;" id="CurrentUserFirstname" name="CurrentUserFirstname" type="hidden" value="" />
+<input data-bind="valueWithInit:&#32;&#39;userLastname&#39;" id="CurrentUserLastname" name="CurrentUserLastname" type="hidden" value="" />
+<input data-bind="valueWithInit:&#32;&#39;userMobile&#39;" id="CurrentUserMobile" name="CurrentUserMobile" type="hidden" value="" />
+<input data-bind="valueWithInit:&#32;&#39;userEmail&#39;" id="CurrentUserEmail" name="CurrentUserEmail" type="hidden" value="" />
+<input data-bind="valueWithInit:&#32;&#39;currencyCode&#39;" id="CurrencyCode" name="CurrencyCode" type="hidden" value="USD" />
+<input data-bind="valueWithInit:&#32;&#39;currencySymbol&#39;" id="CurrencySymbol" name="CurrencySymbol" type="hidden" value="$" />
+<input data-bind="valueWithInit:&#32;&#39;isStaff&#39;" data-val="true" data-val-required="The&#32;IsStaff&#32;field&#32;is&#32;required." id="IsStaff" name="IsStaff" type="hidden" value="False" />
+<input data-bind="valueWithInit:&#32;&#39;isCorporateAgent&#39;" data-val="true" data-val-required="The&#32;IsCorporateAgent&#32;field&#32;is&#32;required." id="IsCorporateAgent" name="IsCorporateAgent" type="hidden" value="False" />
+<div id="referralHeaderStrip" class="referral-notice clearfix">
+<div class="referral-notice-message">
+Welcome to SafariNow. Get <span class="referral-value-amount"></span> off your accommodation booking by paying with the voucher code <span class="referral-voucher-code"></span> before <span class="referral-expirydate"></span>.
+</div>
+<div class="referral-notice-terms">
+<a href="javascript:void(0);" class="closeReferral">
+<i class="demo-icon icon-cancel-1"></i>
+</a>
+</div>
+</div>
+<div id="Header">
+<div class="container">
+<div id="Nav">
+<ul>
+<li id="MenuAccount">
+<a href="javascript:void(0)">
+<i class="icon-menu"></i>
+<span>Menu</span>
+</a>
+<div id="MenuItems">
+<ul>
+<li id="MenuItemFavourites">
+<a href="/listing/myfavorites"><i class="icon-heart-1 darkGrey medium l-pad-r-s"></i>My Favourites</a>
+</li>
+
+<li>
+<a href="/Logon.aspx"><i class="icon-login darkGrey medium l-pad-r-s"></i>Log in</a>
+</li>
+<li>
+<a href="//support.safarinow.com/support/home"><i class="icon-help darkGrey medium l-pad-r-s"></i>Help</a>
+</li>
+<li class="menu-nolink">
+<i class="icon-money darkGrey medium l-pad-r-s"></i><span class="darkGrey">Show prices in </span>
+<select id="currency-picker" class="l-pad-xs l-ml-s ">
+<option value="AUD">AUD</option>
+<option value="BRL">BRL</option>
+<option value="GBP">GBP</option>
+<option value="EUR">EUR</option>
+<option value="INR">INR</option>
+<option value="KES">KES</option>
+<option value="NGN">NGN</option>
+<option value="ZAR">ZAR</option>
+<option value="USD" selected=&#39;true&#39;>USD</option>
+</select>
+</li>
+<li id="MenuItemListYourPlace">
+<a id="ancListYourPlace" href="/join"><i class="icon-home-1 darkGrey medium l-pad-r-s"></i>List your property</a>
+</li>
+</ul>
+</div>
+</li>
+<li id="MenuFavourites">
+<a href="/listing/myfavorites">
+<i class="icon-heart-empty"></i>
+My Favourites
+</a>
+</li>
+<li id="MenuListYourPlace">
+<a href="/join">
+<i class="icon-home-1"></i>
+List Your Place
+</a>
+</li>
+<li id="MenuLogo">
+<a href="/">
+<img src="/res/img/homepage/safarinow.png" alt="SafariNow">
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+ <div id="fb-root"></div>
+<div style="display: none" class="dialogContainer">
+
+<div class="dialogContent">
+<div class="dialogContentTitle"></div>
+<div class="dialogContentSubTitle"></div>
+<div class="dialogContentBody">
+<p></p>
+<p class="l-mb-none l-dn">Terms &amp; conditions apply.</p>
+</div>
+</div>
+
+<div class="dialogActionBar">
+<a class="buttonTouchTarget" id="buttonTwoTouchTarget" href="#">
+<div class="buttonFlat" id="buttonTwo" style="background-color: rgba(99, 99, 99, 0);">CLOSE</div>
+</a>
+</div>
+</div>
+<div class="gradient">
+<div class="homepage content-full l-pr">
+<span data-picture data-alt="">
+<span data-src="/res/img/homepage/homepage_mobile_2.jpg" data-media="(min-width: 300px)"></span>
+ <span data-src="/res/img/homepage/homepage_30_1-640.jpg?d=20160805" data-media="(min-width: 400px)"></span>
+<span data-src="/res/img/homepage/homepage_30_1-1680.jpg?d=20160805" data-media="(min-width: 600px)"></span>
+<span data-src="/res/img/homepage/homepage_30_1.jpg?d=20160805" data-media="(min-width: 1200px)"></span>
+<!--[if (lt IE 9) & (!IEMobile)]>
+            <span data-src="/res/img/homepage/homepage_30_1.jpg?d=20160805"></span>
+        <![endif]-->
+<noscript>
+            <img src="/res/img/homepage/homepage_30_1-320.jpg?d=20160805" alt="">
+        </noscript>
+</span>
+<div class="homepagesearchcontainer">
+<h2 class="hero-text tac m-0-10-0-0">
+Accommodation. Everywhere. For Everyone.<br />
+<span>Over 170000 places to stay</span>
+</h2>
+
+<div class="content homepagesearch l-mauto l-pad clearfix">
+<div class="filter-panel-full">
+<i class="filter-icon icon-search lighter"></i>
+<div id="scrollable-dropdown-menu">
+<input type="text" name="SearchFilterFilterSearchTerm" id="SearchFilterFilterSearchTerm" autocomplete="off" aria-invalid="false" class="hero-search-listing Typeahead" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder =''" placeholder="Where would you like to go?" maxlength="30" data-cf-modified-cc9d561734364f1ded07f2c0-="">
+<input type="hidden" name="SearchFilterURL" id="SearchFilterURL" />
+<input id="btnSearch" type="button" value="Search" class="hero-btn no-b btn-green btn-small l-pad l-mauto search-filter-btn">
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="content l-mauto l-pad" style="font-size: 16px; line-height: 22px;">
+<div class="swiper-title">
+<h3>Popular Destinations</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-0" id="0-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/cape-town/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817613/gt2193644.jpg" class="swiper-lazy" alt="Cape Town Accommodation" title="Cape Town Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/cape-town/hub.aspx" class="title">Cape Town</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 1956 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/durban/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816562/gt2193665.jpg" class="swiper-lazy" alt="Durban Accommodation" title="Durban Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/durban/hub.aspx" class="title">Durban</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 950 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/margate/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816643/gt2193648.jpg" class="swiper-lazy" alt="Margate Accommodation" title="Margate Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/margate/hub.aspx" class="title">Margate</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 772 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/ballito/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816641/gt2193611.jpg" class="swiper-lazy" alt="Ballito Accommodation" title="Ballito Accommodation" />
+<div class="swiper-price"> <span class="price">$41 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/ballito/hub.aspx" class="title">Ballito</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 616 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/bela-bela-(warmbaths)/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817700/gt2193623.jpg" class="swiper-lazy" alt="Bela Bela (Warmbaths) Accommodation" title="Bela Bela (Warmbaths) Accommodation" />
+<div class="swiper-price"> <span class="price">$34 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/bela-bela-(warmbaths)/hub.aspx" class="title">Bela Bela (Warmbaths)</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 485 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/hartbeespoort/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/818691/gt253718.jpg" class="swiper-lazy" alt="Hartbeespoort Accommodation" title="Hartbeespoort Accommodation" />
+<div class="swiper-price"> <span class="price">$36 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/hartbeespoort/hub.aspx" class="title">Hartbeespoort</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 540 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/johannesburg/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817758/gt263751.jpg" class="swiper-lazy" alt="Johannesburg Accommodation" title="Johannesburg Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/johannesburg/hub.aspx" class="title">Johannesburg</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 462 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/port-elizabeth/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816538/gt2193680.jpg" class="swiper-lazy" alt="Port Elizabeth Accommodation" title="Port Elizabeth Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/port-elizabeth/hub.aspx" class="title">Port Elizabeth</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 444 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/east-london/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816531/gt429927.jpg" class="swiper-lazy" alt="East London Accommodation" title="East London Accommodation" />
+<div class="swiper-price"> <span class="price">$39 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/east-london/hub.aspx" class="title">East London</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 297 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/langebaan/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816490/gt267448.jpg" class="swiper-lazy" alt="Langebaan Accommodation" title="Langebaan Accommodation" />
+<div class="swiper-price"> <span class="price">$40 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/langebaan/hub.aspx" class="title">Langebaan</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 310 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-0"></div>
+<div class="swiper-button-next swiper-next-0"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>Weekend Getaways</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-1" id="1-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/hartbeespoort/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/818691/gt253718.jpg" class="swiper-lazy" alt="Hartbeespoort Accommodation" title="Hartbeespoort Accommodation" />
+<div class="swiper-price"> <span class="price">$36 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/hartbeespoort/hub.aspx" class="title">Hartbeespoort</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 540 reviews </div>
+ </div>
+<div class="swiper-slide">
+<a href="/destinations/langebaan/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816490/gt267448.jpg" class="swiper-lazy" alt="Langebaan Accommodation" title="Langebaan Accommodation" />
+<div class="swiper-price"> <span class="price">$40 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/langebaan/hub.aspx" class="title">Langebaan</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 310 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/magaliesburg/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816595/gt2193643.jpg" class="swiper-lazy" alt="Magaliesburg Accommodation" title="Magaliesburg Accommodation" />
+<div class="swiper-price"> <span class="price">$40 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/magaliesburg/hub.aspx" class="title">Magaliesburg</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 212 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/dullstroom/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816545/gt402009.jpg" class="swiper-lazy" alt="Dullstroom Accommodation" title="Dullstroom Accommodation" />
+<div class="swiper-price"> <span class="price">$41 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/dullstroom/hub.aspx" class="title">Dullstroom</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 304 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/hermanus/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816480/gt2193638.jpg" class="swiper-lazy" alt="Hermanus Accommodation" title="Hermanus Accommodation" />
+<div class="swiper-price"> <span class="price">$39 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/hermanus/hub.aspx" class="title">Hermanus</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 316 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/parys/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816624/gt402407.jpg" class="swiper-lazy" alt="Parys Accommodation" title="Parys Accommodation" />
+<div class="swiper-price"> <span class="price">$36 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/parys/hub.aspx" class="title">Parys</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 271 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/bettys-bay/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816677/gt264333.jpg" class="swiper-lazy" alt="Bettys Bay Accommodation" title="Bettys Bay Accommodation" />
+<div class="swiper-price"> <span class="price">$39 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/bettys-bay/hub.aspx" class="title">Bettys Bay</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 82 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-1"></div>
+<div class="swiper-button-next swiper-next-1"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>City Trips</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-2" id="2-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/johannesburg/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817758/gt263751.jpg" class="swiper-lazy" alt="Johannesburg Accommodation" title="Johannesburg Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/johannesburg/hub.aspx" class="title">Johannesburg</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 462 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/port-elizabeth/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816538/gt2193680.jpg" class="swiper-lazy" alt="Port Elizabeth Accommodation" title="Port Elizabeth Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/port-elizabeth/hub.aspx" class="title">Port Elizabeth</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 444 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/bloemfontein/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816615/gt267804.jpg" class="swiper-lazy" alt="Bloemfontein Accommodation" title="Bloemfontein Accommodation" />
+<div class="swiper-price"> <span class="price">$36 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/bloemfontein/hub.aspx" class="title">Bloemfontein</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 232 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/pretoria-(tshwane)/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817762/gt429939.jpg" class="swiper-lazy" alt="Pretoria (Tshwane) Accommodation" title="Pretoria (Tshwane) Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/pretoria-(tshwane)/hub.aspx" class="title">Pretoria (Tshwane)</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 255 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/cape-town/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817613/gt2193644.jpg" class="swiper-lazy" alt="Cape Town Accommodation" title="Cape Town Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/cape-town/hub.aspx" class="title">Cape Town</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 1956 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/durban/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816562/gt2193665.jpg" class="swiper-lazy" alt="Durban Accommodation" title="Durban Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/durban/hub.aspx" class="title">Durban</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 950 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/east-london/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816531/gt429927.jpg" class="swiper-lazy" alt="East London Accommodation" title="East London Accommodation" />
+<div class="swiper-price"> <span class="price">$39 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/east-london/hub.aspx" class="title">East London</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 297 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-2"></div>
+<div class="swiper-button-next swiper-next-2"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>Kwazulu-Natal Beach Escapes</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-3" id="3-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/ballito/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816641/gt2193611.jpg" class="swiper-lazy" alt="Ballito Accommodation" title="Ballito Accommodation" />
+<div class="swiper-price"> <span class="price">$41 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/ballito/hub.aspx" class="title">Ballito</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 616 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/amanzimtoti/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817074/gt401861.jpg" class="swiper-lazy" alt="Amanzimtoti Accommodation" title="Amanzimtoti Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/amanzimtoti/hub.aspx" class="title">Amanzimtoti</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 184 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/umhlanga/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816638/gt1740711.jpg" class="swiper-lazy" alt="Umhlanga Accommodation" title="Umhlanga Accommodation" />
+<div class="swiper-price"> <span class="price">$44 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/umhlanga/hub.aspx" class="title">Umhlanga</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 204 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/margate/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816643/gt2193648.jpg" class="swiper-lazy" alt="Margate Accommodation" title="Margate Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/margate/hub.aspx" class="title">Margate</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 772 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/port-edward/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816575/gt403510.jpg" class="swiper-lazy" alt="Port Edward Accommodation" title="Port Edward Accommodation" />
+<div class="swiper-price"> <span class="price">$40 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/port-edward/hub.aspx" class="title">Port Edward</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 126 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/richards-bay/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816577/gt420856.jpg" class="swiper-lazy" alt="Richards Bay Accommodation" title="Richards Bay Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/richards-bay/hub.aspx" class="title">Richards Bay</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 49 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/scottburgh/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817042/gt424672.jpg" class="swiper-lazy" alt="Scottburgh Accommodation" title="Scottburgh Accommodation" />
+<div class="swiper-price"> <span class="price">$36 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/scottburgh/hub.aspx" class="title">Scottburgh</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 76 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-3"></div>
+<div class="swiper-button-next swiper-next-3"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>Wildlife Adventures</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-4" id="4-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/kruger-surrounds/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/818028/gt264248.jpg" class="swiper-lazy" alt="Kruger Surrounds Accommodation" title="Kruger Surrounds Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/kruger-surrounds/hub.aspx" class="title">Kruger Surrounds</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 1186 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/bela-bela-(warmbaths)/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817700/gt2193623.jpg" class="swiper-lazy" alt="Bela Bela (Warmbaths) Accommodation" title="Bela Bela (Warmbaths) Accommodation" />
+<div class="swiper-price"> <span class="price">$34 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/bela-bela-(warmbaths)/hub.aspx" class="title">Bela Bela (Warmbaths)</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 485 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/marloth-park/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817049/gt401744.jpg" class="swiper-lazy" alt="Marloth Park Accommodation" title="Marloth Park Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/marloth-park/hub.aspx" class="title">Marloth Park</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 659 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/dinokeng-game-reserve/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/925122/gt2193658.jpg" class="swiper-lazy" alt="Dinokeng Game Reserve Accommodation" title="Dinokeng Game Reserve Accommodation" />
+<div class="swiper-price"> <span class="price">$23 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/dinokeng-game-reserve/hub.aspx" class="title">Dinokeng Game Reserve</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 214 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/hazyview/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816549/gt2193624.jpg" class="swiper-lazy" alt="Hazyview Accommodation" title="Hazyview Accommodation" />
+<div class="swiper-price"> <span class="price">$32 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/hazyview/hub.aspx" class="title">Hazyview</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 257 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/st-lucia/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816580/gt429992.jpg" class="swiper-lazy" alt="St Lucia Accommodation" title="St Lucia Accommodation" />
+<div class="swiper-price"> <span class="price">$39 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/st-lucia/hub.aspx" class="title">St Lucia</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 251 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/graskop/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816547/gt402370.jpg" class="swiper-lazy" alt="Graskop Accommodation" title="Graskop Accommodation" />
+<div class="swiper-price"> <span class="price">$36 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/graskop/hub.aspx" class="title">Graskop</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 200 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-4"></div>
+<div class="swiper-button-next swiper-next-4"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>Explore the Garden Route</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-5" id="5-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/knysna/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816523/gt2193674.jpg" class="swiper-lazy" alt="Knysna Accommodation" title="Knysna Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/knysna/hub.aspx" class="title">Knysna</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 308 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/mossel-bay/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816524/gt2193664.jpg" class="swiper-lazy" alt="Mossel Bay Accommodation" title="Mossel Bay Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/mossel-bay/hub.aspx" class="title">Mossel Bay</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 219 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/jeffreys-bay/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816534/gt2193663.jpg" class="swiper-lazy" alt="Jeffreys Bay Accommodation" title="Jeffreys Bay Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/jeffreys-bay/hub.aspx" class="title">Jeffreys Bay</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 216 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/plettenberg-bay/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816525/gt2193684.jpg" class="swiper-lazy" alt="Plettenberg Bay Accommodation" title="Plettenberg Bay Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/plettenberg-bay/hub.aspx" class="title">Plettenberg Bay</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 163 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/stilbaai/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816527/gt2193609.jpg" class="swiper-lazy" alt="Stilbaai Accommodation" title="Stilbaai Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/stilbaai/hub.aspx" class="title">Stilbaai</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 98 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/george/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816521/gt256447.jpg" class="swiper-lazy" alt="George Accommodation" title="George Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/george/hub.aspx" class="title">George</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 76 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/wilderness/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816651/gt1777621.jpg" class="swiper-lazy" alt="Wilderness Accommodation" title="Wilderness Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/wilderness/hub.aspx" class="title">Wilderness</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 142 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-5"></div>
+<div class="swiper-button-next swiper-next-5"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>Amazing Country Escapes</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-6" id="6-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/magaliesburg/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816595/gt2193643.jpg" class="swiper-lazy" alt="Magaliesburg Accommodation" title="Magaliesburg Accommodation" />
+<div class="swiper-price"> <span class="price">$40 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/magaliesburg/hub.aspx" class="title">Magaliesburg</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 212 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/clarens/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816616/gt2193647.jpg" class="swiper-lazy" alt="Clarens Accommodation" title="Clarens Accommodation" />
+<div class="swiper-price"> <span class="price">$41 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/clarens/hub.aspx" class="title">Clarens</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 755 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/dullstroom/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816545/gt402009.jpg" class="swiper-lazy" alt="Dullstroom Accommodation" title="Dullstroom Accommodation" />
+<div class="swiper-price"> <span class="price">$41 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/dullstroom/hub.aspx" class="title">Dullstroom</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 304 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/parys/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816624/gt402407.jpg" class="swiper-lazy" alt="Parys Accommodation" title="Parys Accommodation" />
+<div class="swiper-price"> <span class="price">$36 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/parys/hub.aspx" class="title">Parys</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 271 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/oudtshoorn/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816519/gt2193672.jpg" class="swiper-lazy" alt="Oudtshoorn Accommodation" title="Oudtshoorn Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/oudtshoorn/hub.aspx" class="title">Oudtshoorn</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 177 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/drakensberg/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817052/gt2193660.jpg" class="swiper-lazy" alt="Drakensberg Accommodation" title="Drakensberg Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/drakensberg/hub.aspx" class="title">Drakensberg</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 424 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/hogsback/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817601/gt2193645.jpg" class="swiper-lazy" alt="Hogsback Accommodation" title="Hogsback Accommodation" />
+<div class="swiper-price"> <span class="price">$35 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/hogsback/hub.aspx" class="title">Hogsback</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 127 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-6"></div>
+<div class="swiper-button-next swiper-next-6"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>West Coast Getaways</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-7" id="7-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/langebaan/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816490/gt267448.jpg" class="swiper-lazy" alt="Langebaan Accommodation" title="Langebaan Accommodation" />
+<div class="swiper-price"> <span class="price">$40 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/langebaan/hub.aspx" class="title">Langebaan</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 310 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/blouberg/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/1665004/gt477135.jpg" class="swiper-lazy" alt="Blouberg Accommodation" title="Blouberg Accommodation" />
+<div class="swiper-price"> <span class="price">$39 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/blouberg/hub.aspx" class="title">Blouberg</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 369 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/lamberts-bay/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816489/gt401852.jpg" class="swiper-lazy" alt="Lamberts Bay Accommodation" title="Lamberts Bay Accommodation" />
+<div class="swiper-price"> <span class="price">$39 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/lamberts-bay/hub.aspx" class="title">Lamberts Bay</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 141 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/yzerfontein/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816502/gt402035.jpg" class="swiper-lazy" alt="Yzerfontein Accommodation" title="Yzerfontein Accommodation" />
+<div class="swiper-price"> <span class="price">$43 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/yzerfontein/hub.aspx" class="title">Yzerfontein</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 173 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/paternoster/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816491/gt253668.jpg" class="swiper-lazy" alt="Paternoster Accommodation" title="Paternoster Accommodation" />
+<div class="swiper-price"> <span class="price">$41 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/paternoster/hub.aspx" class="title">Paternoster</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 198 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/port-nolloth/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817038/gt401848.jpg" class="swiper-lazy" alt="Port Nolloth Accommodation" title="Port Nolloth Accommodation" />
+<div class="swiper-price"> <span class="price">$39 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/port-nolloth/hub.aspx" class="title">Port Nolloth</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 74 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/st-helena-bay/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816496/gt402994.jpg" class="swiper-lazy" alt="St Helena Bay Accommodation" title="St Helena Bay Accommodation" />
+<div class="swiper-price"> <span class="price">$40 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/st-helena-bay/hub.aspx" class="title">St Helena Bay</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 125 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-7"></div>
+<div class="swiper-button-next swiper-next-7"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>Discover the Winelands</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-8" id="8-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/stellenbosch/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816473/gt248402.jpg" class="swiper-lazy" alt="Stellenbosch Accommodation" title="Stellenbosch Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/stellenbosch/hub.aspx" class="title">Stellenbosch</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 132 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/franschhoek/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816470/gt247374.jpg" class="swiper-lazy" alt="Franschhoek Accommodation" title="Franschhoek Accommodation" />
+<div class="swiper-price"> <span class="price">$25 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/franschhoek/hub.aspx" class="title">Franschhoek</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 204 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/paarl/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816472/gt248359.jpg" class="swiper-lazy" alt="Paarl Accommodation" title="Paarl Accommodation" />
+<div class="swiper-price"> <span class="price">$39 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/paarl/hub.aspx" class="title">Paarl</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 60 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/constantia/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817111/gt267499.jpg" class="swiper-lazy" alt="Constantia Accommodation" title="Constantia Accommodation" />
+<div class="swiper-price"> <span class="price">$40 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/constantia/hub.aspx" class="title">Constantia</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 24 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/robertson/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816510/gt402700.jpg" class="swiper-lazy" alt="Robertson Accommodation" title="Robertson Accommodation" />
+<div class="swiper-price"> <span class="price">$40 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/robertson/hub.aspx" class="title">Robertson</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 99 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/montagu/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816508/gt264744.jpg" class="swiper-lazy" alt="Montagu Accommodation" title="Montagu Accommodation" />
+<div class="swiper-price"> <span class="price">$41 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+ <a href="/destinations/montagu/hub.aspx" class="title">Montagu</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 94 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/wellington-new-zealand/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/res/img/no-image-logo.png" class="swiper-lazy" alt="Wellington Accommodation" title="Wellington Accommodation" />
+<div class="swiper-price"> <span class="price">$45 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/wellington-new-zealand/hub.aspx" class="title">Wellington</a>
+<div class="stars">
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-8"></div>
+<div class="swiper-button-next swiper-next-8"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>Incredible Road Trips</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-9" id="9-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/panorama-route/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817739/gt477139.jpg" class="swiper-lazy" alt="Panorama Route Accommodation" title="Panorama Route Accommodation" />
+<div class="swiper-price"> <span class="price">$34 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/panorama-route/hub.aspx" class="title">Panorama Route</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 694 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/maloti-route/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817725/gt477136.jpg" class="swiper-lazy" alt="Maloti Route Accommodation" title="Maloti Route Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/maloti-route/hub.aspx" class="title">Maloti Route</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 1024 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/route-62/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817181/gt265385.jpg" class="swiper-lazy" alt="Route 62 Accommodation" title="Route 62 Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/route-62/hub.aspx" class="title">Route 62</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 920 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/garden-route/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816429/gt1740714.jpg" class="swiper-lazy" alt="Garden Route Accommodation" title="Garden Route Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/garden-route/hub.aspx" class="title">Garden Route</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 1590 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/wild-coast/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817075/gt263959.jpg" class="swiper-lazy" alt="Wild Coast Accommodation" title="Wild Coast Accommodation" />
+<div class="swiper-price"> <span class="price">$35 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/wild-coast/hub.aspx" class="title">Wild Coast</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 282 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/n1/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817192/gt264741.jpg" class="swiper-lazy" alt="N1 Accommodation" title="N1 Accommodation" />
+<div class="swiper-price"> <span class="price">$36 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/n1/hub.aspx" class="title">N1</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 607 reviews </div>
+</div>
+<div class="swiper-slide">
+ <a href="/destinations/n2/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817230/gt263858.jpg" class="swiper-lazy" alt="N2 Accommodation" title="N2 Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/n2/hub.aspx" class="title">N2</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 4362 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-9"></div>
+<div class="swiper-button-next swiper-next-9"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>Stop Overs</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-10" id="10-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/colesberg/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816605/gt402160.jpg" class="swiper-lazy" alt="Colesberg Accommodation" title="Colesberg Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/colesberg/hub.aspx" class="title">Colesberg</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 249 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/kimberley/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816610/gt263927.jpg" class="swiper-lazy" alt="Kimberley Accommodation" title="Kimberley Accommodation" />
+<div class="swiper-price"> <span class="price">$40 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/kimberley/hub.aspx" class="title">Kimberley</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 93 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/beaufort-west/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816512/gt402776.jpg" class="swiper-lazy" alt="Beaufort West Accommodation" title="Beaufort West Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/beaufort-west/hub.aspx" class="title">Beaufort West</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 87 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/gariep-dam/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/817018/gt2193610.jpg" class="swiper-lazy" alt="Gariep Dam Accommodation" title="Gariep Dam Accommodation" />
+<div class="swiper-price"> <span class="price">$36 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/gariep-dam/hub.aspx" class="title">Gariep Dam</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 72 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/graaff-reinet/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816532/gt401760.jpg" class="swiper-lazy" alt="Graaff-Reinet Accommodation" title="Graaff-Reinet Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/graaff-reinet/hub.aspx" class="title">Graaff-Reinet</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 158 reviews </div>
+ </div>
+<div class="swiper-slide">
+<a href="/destinations/upington/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816613/gt2193634.jpg" class="swiper-lazy" alt="Upington Accommodation" title="Upington Accommodation" />
+<div class="swiper-price"> <span class="price">$38 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/upington/hub.aspx" class="title">Upington</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 73 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/middelburg-mpumalanga/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816552/gt420039.jpg" class="swiper-lazy" alt="Middelburg - Mpumalanga Accommodation" title="Middelburg - Mpumalanga Accommodation" />
+<div class="swiper-price"> <span class="price">$39 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/middelburg-mpumalanga/hub.aspx" class="title">Middelburg - Mpumalanga</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 29 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-10"></div>
+<div class="swiper-button-next swiper-next-10"></div>
+</div>
+</div>
+<div class="swiper-title">
+<h3>Countries</h3>
+</div>
+
+<div class="swiper-container-wrapper">
+<div class="swiper-container swiper-11" id="11-swiperContainer">
+
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a href="/destinations/south-africa/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816319/gt794148.jpg" class="swiper-lazy" alt="South Africa Accommodation" title="South Africa Accommodation" />
+<div class="swiper-price"> <span class="price">$37 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/south-africa/hub.aspx" class="title">South Africa</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 25523 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/namibia/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816275/gt244891.jpg" class="swiper-lazy" alt="Namibia Accommodation" title="Namibia Accommodation" />
+<div class="swiper-price"> <span class="price">$31 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/namibia/hub.aspx" class="title">Namibia</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 813 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/mozambique/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816273/gt1739152.jpg" class="swiper-lazy" alt="Mozambique Accommodation" title="Mozambique Accommodation" />
+<div class="swiper-price"> <span class="price">$32 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/mozambique/hub.aspx" class="title">Mozambique</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 562 reviews </div>
+</div>
+<div class="swiper-slide">
+<a href="/destinations/botswana/hub.aspx" class="track-home-carousel">
+<div class="image">
+<img data-src="https://sncdn.com/imagecache/db/id/816168/gt264079.jpg" class="swiper-lazy" alt="Botswana Accommodation" title="Botswana Accommodation" />
+<div class="swiper-price"> <span class="price">$31 </span><span class="night"> Avg per night</span></div>
+</div>
+</a>
+<a href="/destinations/botswana/hub.aspx" class="title">Botswana</a>
+<div class="stars">
+<i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i><i class='i i-star i-star-full'>&#9733;</i> 192 reviews </div>
+</div>
+</div>
+</div>
+<div class="swiper-buttons">
+<div class="swiper-button-prev swiper-prev-11"></div>
+<div class="swiper-button-next swiper-next-11"></div>
+</div>
+</div>
+<section class="homepage-popular-links clearfix l-pad-t-xl">
+<section class="tac grid nogutter nav-list-pad grid-col-sm-1 grid-col-md-1 grid-col-lg-1 grid-col-xl-1 no-p no-mt no-bull nav-list-geo ">
+<ul class="w-fifth l-fl no-p no-mt no-bull nav-list-long nav-list-shortened">
+<li>
+<h6 class="l-mb l-ib l-pad-s">Countries</h6>
+</li>
+<li><a href="/destinations/south-africa/hub.aspx">South Africa</a></li>
+<li><a href="/destinations/kenya/hub.aspx">Kenya</a></li>
+<li><a href="/destinations/tanzania/hub.aspx">Tanzania</a></li>
+<li><a href="/destinations/uganda/hub.aspx">Uganda</a></li>
+<li><a href="/destinations/namibia/hub.aspx">Namibia</a></li>
+<li><a href="/destinations/mozambique/hub.aspx">Mozambique</a></li>
+<li><a href="/destinations/botswana/hub.aspx">Botswana</a></li>
+<li><a href="/destinations/zambia/hub.aspx">Zambia</a></li>
+<li><a href="/destinations/zimbabwe/hub.aspx">Zimbabwe</a></li>
+<li><a href="/destinations/malawi/hub.aspx">Malawi</a></li>
+<li><a href="/destinations/perth/hub.aspx">Perth</a></li>
+<li><a href="/destinations/democratic-republic-of-the-congo/hub.aspx">Democratic Republic of the Congo</a></li>
+<li><a href="/destinations/swaziland/hub.aspx">Swaziland</a></li>
+<li><a href="/destinations/angola/hub.aspx">Angola</a></li>
+<li><a href="/destinations/lesotho/hub.aspx">Lesotho</a></li>
+<li><a href="/destinations/new-york/hub.aspx">New York</a></li>
+</ul>
+<ul class="grid-col-sm-1 grid-col-md-1 grid-col-lg-1-5 grid-col-xl-1-5 no-p no-mt no-bull nav-list-geo nav-list-long">
+<li>
+<h6 class="l-mb l-ib l-pad-s">Cities</h6>
+</li>
+<li><a href="/destinations/paris/hotel.aspx">Paris Hotels</a></li>
+<li><a href="/destinations/london/hotel.aspx">London Hotels</a></li>
+<li><a href="/destinations/rome/hotel.aspx">Rome Hotels</a></li>
+<li><a href="/destinations/istanbul/hotel.aspx">Istanbul Hotels</a></li>
+<li><a href="/destinations/shanghai/hotel.aspx">Shanghai Hotels</a></li>
+<li><a href="/destinations/beijing/hotel.aspx">Beijing Hotels</a></li>
+<li><a href="/destinations/lagos/hotel.aspx">Lagos Hotels</a></li>
+<li><a href="/destinations/bangkok/hotel.aspx">Bangkok Hotels</a></li>
+<li><a href="/destinations/kuta/hotel.aspx">Kuta Hotels</a></li>
+<li><a href="/destinations/barcelona/hotel.aspx">Barcelona Hotels</a></li>
+<li><a href="/destinations/phuket-thailand/hotel.aspx">Phuket Hotels</a></li>
+<li><a href="/destinations/new-delhi-india/hotel.aspx">New Delhi Hotels</a></li>
+<li><a href="/destinations/dubai/hotel.aspx">Dubai Hotels</a></li>
+<li><a href="/destinations/guangzhou/hotel.aspx">Guangzhou Hotels</a></li>
+<li><a href="/destinations/tokyo/hotel.aspx">Tokyo Hotels</a></li>
+<li><a href="/destinations/berlin/hotel.aspx">Berlin Hotels</a></li>
+<li><a href="/destinations/ho-chi-minh-city/hotel.aspx">Ho Chi Minh City Hotels</a></li>
+<li><a href="/destinations/shenzhen/hotel.aspx">Shenzhen Hotels</a></li>
+<li><a href="/destinations/madrid/hotel.aspx">Madrid Hotels</a></li>
+<li><a href="/destinations/seoul/hotel.aspx">Seoul Hotels</a></li>
+</ul>
+<ul class="grid-col-sm-1 grid-col-md-1 grid-col-lg-1-5 grid-col-xl-1-5 no-p no-mt no-bull nav-list-geo nav-list-long">
+<li>
+<h6 class="l-mb l-ib l-pad-s">Popular Locations</h6>
+</li>
+<li><a href="/destinations/south-africa/hub.aspx">South Africa</a></li>
+<li><a href="/destinations/kenya/hub.aspx">Kenya</a></li>
+<li><a href="/destinations/tanzania/hub.aspx">Tanzania</a></li>
+<li><a href="/destinations/uganda/hub.aspx">Uganda</a></li>
+<li><a href="/destinations/namibia/hub.aspx">Namibia</a></li>
+<li><a href="/destinations/mozambique/hub.aspx">Mozambique</a></li>
+<li><a href="/destinations/botswana/hub.aspx">Botswana</a></li>
+<li><a href="/destinations/zambia/hub.aspx">Zambia</a></li>
+<li><a href="/destinations/zimbabwe/hub.aspx">Zimbabwe</a></li>
+<li><a href="/destinations/malawi/hub.aspx">Malawi</a></li>
+<li><a href="/destinations/perth/hub.aspx">Perth</a></li>
+<li><a href="/destinations/democratic-republic-of-the-congo/hub.aspx">Democratic Republic of the Congo</a></li>
+<li><a href="/destinations/swaziland/hub.aspx">Swaziland</a></li>
+<li><a href="/destinations/angola/hub.aspx">Angola</a></li>
+<li><a href="/destinations/lesotho/hub.aspx">Lesotho</a></li>
+<li><a href="/destinations/new-york/hub.aspx">New York</a></li>
+</ul>
+<ul class="grid-pull-right grid-col-sm-1 grid-col-md-1 grid-col-lg-1-5 grid-col-xl-1-5 no-p no-mt no-bull nav-list-geo nav-list-long">
+<li>
+<h6 class="l-mb l-ib l-pad-s">Popular Searches</h6>
+</li>
+<li><a href="/destinations/south-africa/san-parks.aspx">South African National Parks</a></li>
+<li><a href="/destinations/kruger-national-park/hub.aspx">Kruger National Park</a></li>
+<li><a href="/destinations/garden-route/hub.aspx">Garden Route</a></li>
+<li><a href="/destinations/south-africa/protea-hotels.aspx">Protea Hotel</a></li>
+<li><a href="/destinations/cape-town/self-catering.aspx">Cape Town Self Catering</a></li>
+<li><a href="/destinations/world/hub.aspx">Accommodation</a></li>
+<li><a href="/destinations/durban/hotel.aspx">Hotels in Durban</a></li>
+<li><a href="/destinations/ballito/hub.aspx">Ballito Accommodation</a></li>
+<li><a href="/destinations/world/self-catering.aspx">Self Catering Accommodation</a></li>
+<li><a href="/destinations/cape-town/hotel.aspx">Hotels in Cape Town</a></li>
+<li><a href="/destinations/langebaan/hub.aspx">Langebaan Accommodation</a></li>
+<li><a href="/destinations/world/self-catering.aspx">Holiday Homes</a></li>
+<li><a href="/destinations/durban/self-catering.aspx">Duban Self Catering</a></li>
+<li><a href="/destinations/world/specials.aspx/1">Budget Getaways</a></li>
+<li><a href="/destinations/knysna/hub.aspx">Knysna</a></li>
+<li><a href="/destinations/cape-town/self-catering.aspx">Cape Town Vacation Rentals</a></li>
+<li><a href="/destinations/south-coast/hub.aspx">South Coast Accommodation</a></li>
+<li><a href="/destinations/nairobi/hotel.aspx">Nairobi Hotels</a></li>
+<li><a href="/destinations/hermanus/hub.aspx">Hermanus Accommodation</a></li>
+<li><a href="/destinations/clarens/hub.aspx">Clarens Accommodation</a></li>
+</ul>
+</section>
+</section>
+</div>
+</div>
+</main>
+<footer role="contentinfo" id="footer">
+<div class="l-mauto content-footer l-pr">
+<span data-picture data-alt="">
+<span data-src="/res/img/adventure400.png"></span>
+<span data-src="/res/img/adventure800.png" data-media="(min-width: 400px)"></span>
+<span data-src="/res/img/adventure1280.png" data-media="(min-width: 800px)"></span>
+<span data-src="/res/img/adventure.png" data-media="(min-width: 1200px)"></span>
+<!--[if (lt IE 9) & (!IEMobile)]>
+                <span data-src="/res/img/adventure.png"></span>
+            <![endif]-->
+<noscript>
+                <img src="/res/img/adventure400.png" alt="">
+            </noscript>
+</span>
+</div>
+<div class="bg-alt" style="margin-top: -33px; padding-top: 31px;">
+<div class="content-footer l-mauto bg-alt clearfix" style="position: relative;">
+<div class="whale">
+<img src="https://sncdn.com/res/img/no-image-logo.png" original="/res/img/whale.png" alt="">
+</div>
+<div class="diver">
+<img src="https://sncdn.com/res/img/no-image-logo.png" original="/res/img/diver.png" alt="">
+</div>
+<div class="row" style="margin-top: 15px; clear: both;">
+<div class="col">
+<ul>
+<li style="padding: 0.2em 0"><a href="https://www.safarinow.com/cms/about-us/irie.aspx" class="l-ib">About us</a></li>
+<li style="padding: 0.2em 0"><a href="/cms/contact-us/irie.aspx" class="l-ib">Contact us</a></li>
+</ul>
+</div>
+<div class="col">
+<ul>
+<li style="padding: 0.2em 0"><a href="/lib/hbef/testimonials/testimonials.aspx" class="l-ib">Testimonials</a></li>
+<li style="padding: 0.2em 0"><a href="//feedback.safarinow.com" class="l-ib">Help for Guests</a></li>
+<li style="padding: 0.2em 0"><a href="//establishments.safarinow.com" class="l-ib">Help for Hosts</a></li>
+<li style="padding: 0.2em 0"><a href="//affiliate.safarinow.com" class="l-ib">Help for Affiliates</a></li>
+</ul>
+</div>
+<div class="col-last">
+<div style="width: 300px;">
+<p>Get inspired and receive our exclusive specials</p>
+<input type="text" data-subscribe="email" placeholder="Email address" /><button data-subscribe="button" class="button flat-buttons waves-effect waves-button blue">Subscribe</button>
+</div>
+</div>
+</div>
+<div style="margin-top: 20px;" class="tac">
+<a href="/"><img src="/res/img/homepage/safarinow.png" alt="SafariNow" style="width: 180px;"></a>
+</div>
+<div class="tac l-mtb-m" style="font-size: 14px;">
+<ul style="margin-left: 1em; padding-left: 0; padding-bottom: 15px;">
+<li style="padding: 0.2em 0.5em; display: inline; border-right: solid 1px white;"><a href="/cms/terms-of-use/irie.aspx">Terms of use</a></li>
+<li style="padding: 0.2em 0.5em; display: inline; border-right: solid 1px white;"><a href="/cms/privacy/irie.aspx">Privacy Policy</a></li>
+ <li style="padding: 0.2em 0.5em; display: inline;"><a href="/sitemap">Sitemap</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bg-black fwb w-full tac slogan" style="display: none;">
+<i class="white">Accommodation.</i> <i class="blue">Everywhere.</i> <i class="green">For Everyone.</i>
+</div>
+</footer>
+
+<div id="window-overlay"></div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="cc9d561734364f1ded07f2c0-text/javascript"></script>
+<script type="cc9d561734364f1ded07f2c0-text/javascript">(window.jQuery)||document.write('<script src="/bundles/js/jquery"><\/script>');</script>
+<script src="/bundles/js/mvcbase?v=dJnlF_iE5ZHctqmY4Put8Kv7dfGMahIE3FkJ9IiN_NM1" defer="defer" type="cc9d561734364f1ded07f2c0-text/javascript"></script>
+<script type="cc9d561734364f1ded07f2c0-text/javascript" defer="defer">
+
+    window.lazySizesConfig = window.lazySizesConfig || {};
+
+    lazySizesConfig.expand = 100;
+    //page is optimized for fast onload event
+    lazySizesConfig.loadMode = 1;
+
+    $(function () {
+        
+        sn.app.init();
+    });
+    </script>
+<script src=" /bundles/js/search?v=HWJHJjP8kJ9ftfcgqDryRC7xBvQftkYI3HLYs6TDn8g1" defer=" defer" type="cc9d561734364f1ded07f2c0-text/javascript"></script>
+<script type="cc9d561734364f1ded07f2c0-text/javascript" defer="defer">
+            $(function () {
+                
+                sn.app.shared.search.init();
+
+                var swipers = document.getElementsByClassName("swiper-container");
+                for (var i = 0; i < swipers.length; i++) {
+                    new Swiper('.swiper-' + i, {
+                        loop: true,
+
+                        // Navigation arrows
+                        nextButton: '.swiper-next-' + i,
+                        prevButton: '.swiper-prev-' + i,
+
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+                        // Disable preloading of all images
+                        preloadImages: false,
+                        // Enable lazy loading
+                        lazyLoading: true,
+                        lazyLoadingInPrevNext: true,
+                        lazyLoadingInPrevNextAmount: 2,
+                        lazyLoadingOnTransitionStart: true,
+                        breakpoints: {
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 15
+                            },
+                            768: {
+                                slidesPerView: 2.5,
+                                spaceBetween: 15
+                            },
+                            640: {
+                                slidesPerView: 1.5,
+                                spaceBetween: 15
+                            },
+                            400: {
+                                slidesPerView: 1.5,
+                                spaceBetween: 15
+                            }
+                        }
+                    })
+                }
+
+                //$(".track-home-carousel img").lazyload({ threshold: 100, placeholder: "/res/img/no-image-logo.png" });
+                //var swipers = document.getElementsByClassName("swiper-container");
+                //for (var i = 0; i < swipers.length; i++) {
+
+                //    var swiper = new Swiper('#' + swipers[i].id, {
+                //        // Optional parameters
+                //        slidesPerView: 'auto',
+                //        spaceBetween: 30,
+
+                //        // Navigation arrows
+                //        nextButton: '.swiper-button-next',
+                //        prevButton: '.swiper-button-prev',
+
+                //        // And if we need scrollbar
+                //        scrollbar: '.swiper-scrollbar',
+
+                //    })
+                //}
+            });
+    </script>
+<div class="serv">
+<div class="l-dn server ">WEB05</div>
+</div>
+
+
+<div id="loginOrSignUp">
+<div id="loginPopupContainer" class="l-dn shadow ui-widget ui-widget-content ui-corner-all ui-draggable gradient login ui-dialog-responsive">
+<form action="/Account/Login" data-ajax="true" data-ajax-begin="sn.app.onLoginBegin" data-ajax-success="sn.app.onLoginSuccess" id="form0" method="post"> <div class="form-login clearfix">
+<h4 class="title">Login</h4>
+<a href="#" id="closeDialog" data-login-register="login">
+<i class="demo-icon icon-cancel-1"></i>
+</a>
+<div id="loginControls">
+<div class="w-full l-mb-s">
+<div class="l-pr">
+<i class="demo-icon icon-mail registerIcon"></i>
+<input class="ui-dialog-text" data-val="true" data-val-required="The&#32;LoginEmail&#32;field&#32;is&#32;required." id="LoginEmail" name="LoginEmail" placeholder="Email" type="text" value="" />
+</div>
+</div>
+<div class="w-full l-mb-s">
+<div class="l-pr">
+<i class="demo-icon icon-lock registerIcon"></i>
+<input class="ui-dialog-text" data-val="true" data-val-required="The&#32;LoginPassword&#32;field&#32;is&#32;required." id="Password" name="LoginPassword" placeholder="Password" type="password" />
+</div>
+</div>
+<div class="clearfix smaller l-pad-b-s">
+<div>
+<div class="smaller l-fl blue">
+<a href="#" id="forgotpwd"><span class="blue">Forgot password?</span></a>
+</div>
+<div class="l-pr l-fr smaller">
+<input class="" data-val="true" data-val-required="The&#32;RememberMe&#32;field&#32;is&#32;required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" /> Remember me
+</div>
+</div>
+</div>
+<div>
+<div class="clearfix">
+<div class="l-pr clearfix l-fr">
+<input type="submit" id="login" value="Login" class="btn btn-blue l-fr" />
+<div class="login-reg-loading btn btn-blue l-dn">Logging in...</div>
+</div>
+<div class="smaller">
+<span>Don't have an account?</span>
+<a href="#" id="register"><span class="blue"> Register here</span></a>
+</div>
+</div>
+</div>
+</div>
+<div id="forgotControls">
+<div class="w-full l-mb-s">
+<div class="l-pr">
+<i class="demo-icon icon-mail registerIcon"></i>
+<input class="ui-dialog-text" id="forgotEmail" name="LoginEmail" placeholder="Email" type="text" value="" />
+</div>
+</div>
+<div>
+<div class="clearfix">
+<div class="l-pr clearfix l-pad-t">
+<a href="#" id="sendPassword" class="btn btn-blue l-fr white">Send Password Reminder</a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix">
+<div class="w-full l-pad-s red smaller" id="message"></div>
+</div>
+</div>
+</form>
+</div>
+<div id="registerPopupContainer" class="l-dn shadow ui-widget ui-widget-content ui-corner-all ui-draggable gradient login ui-dialog-responsive">
+<form action="/Account/Register" data-ajax="true" data-ajax-begin="sn.app.onRegisterBegin" data-ajax-method="POST" data-ajax-success="sn.app.onRegisterSuccess" id="form1" method="post"> <div class="form-register form-horizontal">
+<h4>Register</h4>
+<a href="#" id="closeDialog" data-login-register="register">
+<i class="demo-icon icon-cancel-1"></i>
+</a>
+<hr />
+<div class="w-full l-mb-s">
+<div class="l-pr">
+<i class="demo-icon icon-user registerIcon"></i>
+<input data-val="true" data-val-required="FirstName&#32;is&#32;required" id="FirstName" maxlength="50" name="FirstName" placeholder="First&#32;Name" type="text" value="" />
+<span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="w-full l-mb-s">
+<div class="l-pr">
+<i class="demo-icon icon-user registerIcon"></i>
+<input data-val="true" data-val-required="LastName&#32;is&#32;required" id="LastName" maxlength="49" name="LastName" placeholder="Last&#32;Name" type="text" value="" />
+<span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="w-full l-mb-s">
+<div class="l-pr">
+<i class="demo-icon icon-mail registerIcon"></i>
+<input data-val="true" data-val-email="Invalid&#32;Email&#32;Address" data-val-required="The&#32;Email&#32;field&#32;is&#32;required." id="Email" name="Email" placeholder="Email" type="text" value="" />
+<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+ </div>
+</div>
+<div class="w-full l-mb-s">
+<div class="l-pr">
+<i class="demo-icon icon-phone registerIcon"></i>
+<input id="Cellphone" name="Cellphone" placeholder="Cellphone" type="text" value="" />
+<span class="field-validation-valid" data-valmsg-for="Cellphone" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="w-full l-mb-s">
+<div class="l-pr">
+<i class="demo-icon icon-lock registerIcon"></i>
+<input data-val="true" data-val-length="Must&#32;be&#32;more&#32;than&#32;5&#32;characters" data-val-length-max="1000" data-val-length-min="5" data-val-required="*" id="RegisteredPassword" name="RegisteredPassword" placeholder="Password" type="password" />
+<span class="field-validation-valid" data-valmsg-for="RegisteredPassword" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="w-full l-mb-s">
+<div class="l-pr">
+<i class="demo-icon icon-lock registerIcon"></i>
+<input data-val="true" data-val-equalto="The&#32;password&#32;and&#32;confirmation&#32;password&#32;do&#32;not&#32;match." data-val-equalto-other="*.RegisteredPassword" data-val-length="Must&#32;be&#32;more&#32;than&#32;5&#32;characters" data-val-length-max="1000" data-val-length-min="5" data-val-required="*" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm&#32;Password" type="password" />
+<span class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+</div>
+</div>
+<br />
+<div class="smaller">
+<input checked="checked" class="l-pr&#32;l-fl" data-val="true" data-val-required="The&#32;SendMeNewsLetter&#32;field&#32;is&#32;required." id="SendMeNewsLetter" name="SendMeNewsLetter" type="checkbox" value="true" /><input name="SendMeNewsLetter" type="hidden" value="false" />
+Send me your awesome newsletter?
+</div>
+<div class="clearfix l-pad-t">
+<div class="l-fr">
+<div class="l-pr clearfix l-fr">
+<input type="submit" id="register" value="Register" class="btn btn-blue" />
+<div class="login-reg-loading l-dn">Registering...</div>
+</div>
+<div class="login-think l-dn">
+<i class="icon icon-refresh spin"></i>
+</div>
+</div>
+<div class="">
+<span class="smallest l-pad-t">Already have an account?<a href="#" id="login" class="blue"><span class="blue"> Login here</span></a></span>
+</div>
+</div>
+<div class="clearfix">
+<div class="w-full l-pad-s red smaller" id="message"></div>
+</div>
+</div>
+</form>
+</div>
+<div class="overlay">
+</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="cc9d561734364f1ded07f2c0-text/javascript"></script>
+<script type="cc9d561734364f1ded07f2c0-text/javascript">(window.Modernizr)||document.write('<script src="/bundles/js/modernizr"><\/script>');</script>
+<script type="application/ld+json">[{"@context":"http://www.schema.org","@type":"WebPage","name":"SafariNow Home Page","publisher":{"@type":"Organization","name":"SafariNow","logo":"https://www.safarinow.com/res/img/homepage/safarinow.png","address":{"@type":"PostalAddress","streetAddress":"153 Main Road, Muizenberg, Cape Town","email":"info@safarinow.com"}}},{"@context":"http://www.schema.org","@type":"Site","name":"SafariNow","url":"http://www.safarinow.com/"},{"@context":"http://www.schema.org","@type":"Organization","name":"SafariNow","url":"http://www.safarinow.com/","sameAs":["https://www.facebook.com/SafariNow/","https://twitter.com/safarinowsa?lang=en/","https://plus.google.com/+safarinow/","https://www.instagram.com/safarinowsa/","https://www.youtube.com/channel/UCBfglh3_rQJP25TYyxR8VA/","https://www.instagram.com/safarinowsa/","https://www.linkedin.com/company/safarinow.com/","https://www.pinterest.com/safarinow/"],"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","availableLanguage":["English","Afrikaans","Xhosa"]}]},{"@context":"http://www.schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.safarinow.com/","name":"SafariNow home page"}}]}]</script>
+
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="cc9d561734364f1ded07f2c0-|49" defer=""></script></body>
+</html>

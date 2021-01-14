@@ -1,0 +1,1526 @@
+<!DOCTYPE HTML>
+
+
+
+<html lang="es-ES">
+
+
+
+<head>
+
+
+
+<meta name="geo.region" content="ES-MD" />
+
+
+
+<meta name="geo.placename" content="Rozas de Madrid (las)" />
+
+
+
+<meta name="geo.position" content="40.508081;-3.894289" />
+
+
+
+<meta name="ICBM" content="40.508081, -3.894289" />
+
+
+<link rel="alternate" hreflang="en" href="http://www.juanmerodio.com/en/" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+
+
+<title>Juan Merodio | Marketing, Innovación y Transformación Digital - Parte 7</title>
+
+
+
+<meta name="keywords" content="" />
+
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700' rel='stylesheet' type='text/css'>
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+
+
+
+<link rel="stylesheet"  href="http://www.juanmerodio.com/wp-content/themes/base/css/reset.css" type="text/css" media="all" />
+
+
+
+<link rel="stylesheet"  href="http://www.juanmerodio.com/wp-content/themes/base/css/estilos.css" type="text/css" media="all" />
+
+
+
+<link rel="stylesheet"  href="http://www.juanmerodio.com/wp-content/themes/base/css/responsive.css" type="text/css" media="all" />
+
+
+
+
+
+
+<script type="text/javascript" src="http://www.juanmerodio.com/wp-content/themes/base/js/jquery.js"></script>
+
+
+
+<link rel="stylesheet" href="http://www.juanmerodio.com/wp-content/themes/base/js/owl-carousel/owl.carousel.css">
+
+
+
+<link rel="stylesheet" href="http://www.juanmerodio.com/wp-content/themes/base/js/owl-carousel/owl.theme.css">
+
+
+
+<script src="http://www.juanmerodio.com/wp-content/themes/base/js/owl-carousel/owl.carousel.min.js"></script> 
+
+
+
+<link rel="shortcut icon" href="http://www.juanmerodio.com/wp-content/uploads/favicon-2.png" type="image/x-icon" />
+
+
+<script type="text/javascript" src="http://www.juanmerodio.com/wp-content/themes/base/js/fancybox/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+
+
+<link rel="stylesheet" href="http://www.juanmerodio.com/wp-content/themes/base/js/fancybox/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+<meta name="apple-itunes-app" content="app-id=1015897672">
+<meta name="google-play-app" content="app-id=com.quadram.juanmerodio">
+
+<script src="http://www.juanmerodio.com/wp-content/themes/base/js/jquery.smartbanner-master/jquery.smartbanner.js"></script>
+<link rel="stylesheet" href="http://www.juanmerodio.com/wp-content/themes/base/js/jquery.smartbanner-master/jquery.smartbanner.css" type="text/css" media="screen" />
+
+<script src="http://www.juanmerodio.com/wp-content/themes/base/js/jquery.rwdImageMaps.min.js"></script>
+
+
+<script type="text/javascript">
+	
+	$(function() { $.smartbanner() } )
+
+	$(document).ready(function() {
+
+		$('img[usemap]').rwdImageMaps();
+
+		// Fancybox
+
+
+
+		$('a.fancy-image').fancybox();
+
+
+
+
+
+
+
+		//Carrusel Eventos
+
+
+
+        var eventos = $("#eventos-scroll");
+
+
+
+        eventos.owlCarousel({
+
+
+
+            autoPlay : 8000,
+
+
+
+	        items : 1,
+
+
+
+	        stopOnHover: true,
+
+
+
+	        navigation: false,
+
+
+
+	        autoHeight : true,
+
+
+
+	        singleItem: true
+
+
+
+        });
+
+
+
+
+
+
+
+        // Menús
+
+
+
+        $('.responsiveMenuSelect option').each(function(index, element) {
+
+
+
+            if($(this).text().indexOf('⇒') == -1){
+
+
+
+				$(this).text($(this).text().toUpperCase());
+
+
+
+			}
+
+
+
+        });
+
+
+
+
+
+
+
+        // Buscador
+
+
+
+        $('#searchform #s').attr('placeholder', 'Buscar...');
+
+
+
+
+
+
+
+        // Whatsapp
+
+
+
+        /*$(document).ready(function(){	
+
+
+
+			$('.enviar-telefono').click(function(){
+
+
+
+				if($('#acepta').attr('checked')!='checked'){ alert('Debes aceptar el Aviso Legal.'); }
+
+
+
+				else if($('#email-whatsapp').val().length<9)	alert('Debes introducir un número de teléfono válido.');
+
+
+
+				else enviar_contacto();
+
+
+
+			});
+
+
+
+
+
+
+
+			$("#email-whatsapp").keydown(function(event) {
+
+
+
+				if(event.shiftKey){
+
+
+
+					event.preventDefault(); 
+
+
+
+				}
+
+
+
+				if (event.keyCode == 46 || event.keyCode == 8){
+
+
+
+
+
+
+
+				} else {
+
+
+
+					if (event.keyCode < 95) {
+
+
+
+						if (event.keyCode < 48 || event.keyCode > 57) {
+
+
+
+							event.preventDefault();
+
+
+
+						}
+
+
+
+					} else {
+
+
+
+						if (event.keyCode < 96 || event.keyCode > 105) {
+
+
+
+							event.preventDefault();
+
+
+
+						}
+
+
+
+					}
+
+
+
+			  	}
+
+
+
+			});
+
+
+
+		});		
+
+
+
+
+
+
+
+		function enviar_contacto(){
+
+
+
+			$.post('http://www.juanmerodio.com/wp-content/themes/base/includes/enviar-contacto.php', { telefono: $('#email-whatsapp').val()}, function(data) { 
+
+
+
+				alert(data);	
+
+
+
+				$('#email-whatsapp').val('');
+
+
+
+				$('#acepta').click();
+
+
+
+			});	
+
+
+
+		}*/
+
+
+
+
+
+
+
+		// Suscribir Traducción
+
+
+
+		$('#respond p.subscribe-to-comments label').text('Deseo recibir una notificación cuando se publique un nuevo comentario');
+
+
+
+	});
+
+
+
+</script>
+
+
+
+<!--Start of Monoloop Script-->
+
+ <script type="text/javascript">
+
+var ML_vars = { cid:1139 };
+
+(function() { var ml = document.createElement('script'); ml.type = 'text/javascript'; ml.async = true; ml.id = 'monoloop_invoke'; ml.src = (("https:" == document.location.protocol) ? 'https://d1n1frcxojl8er.cloudfront.net/'+ML_vars.cid+'_cbr.js' : 'http://d1n1frcxojl8er.cloudfront.net/'+ML_vars.cid+'_cbr.js'); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ml, s);}) ();
+
+</script>
+
+<!--End of Monoloop Script-->
+
+
+
+<script type="text/javascript">
+
+
+
+  var _gaq = _gaq || [];
+
+
+
+  _gaq.push(['_setAccount', 'UA-12662149-1']);
+
+
+
+  _gaq.push(['_trackPageview']);
+
+
+
+setTimeout('_gaq.push([\'_trackEvent\', \'NoBounce\', \'Over 20 seconds\'])',20000);
+
+
+
+  (function() {
+
+
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+
+
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+
+
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+
+
+  })();
+
+
+
+</script>
+
+
+
+
+<!--Start of LiveBeep Script-->
+
+<script type="text/javascript">
+
+(function(d,s){
+
+u=(('https:' == d.location.protocol) ? 'https://' : 'http://') + 'www.livebeep.com/'+d.domain+'/eye.js';
+
+if((h=d.location.href.split(/#ev!/)[1])) u += '?_e=' +h;
+
+else if((r=/.*\_evV=(\w+)\b.*/).test(c=d.cookie) ) u += '?_v=' + c.replace(r,'$1');
+
+d.write(unescape('%3Cscript src="'+u+'" type="text/javascript"%3E%3C/script%3E'));
+
+})(document,'script');
+
+</script>
+
+<!--End of LiveBeep Script-->
+
+
+
+<link rel="alternate" type="application/rss+xml" title="Juan Merodio &raquo; Feed" href="http://www.juanmerodio.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Juan Merodio &raquo; RSS de los comentarios" href="http://www.juanmerodio.com/comments/feed/" />
+
+<!-- JM Twitter Cards by Julien Maury 5.3.6 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@juanmerodio">
+<meta name="twitter:creator" content="@juanmerodio">
+<meta name="twitter:title" content="Juan Merodio">
+<meta name="twitter:description" content="Welcome to El Blog de Juan Merodio - see bltwitter posts">
+<meta name="twitter:image:src" content="http://www.juanmerodio.com/wp-content/themes/juanmerodio/images/logo.png">
+<meta name="twitter:image:width" content="280">
+<meta name="twitter:image:height" content="150">
+<!-- /JM Twitter Cards 5.3.6 -->
+
+<!-- This site is powered by Shareaholic - https://shareaholic.com -->
+<script type='text/javascript' data-cfasync='false'>
+  //<![CDATA[
+    _SHR_SETTINGS = {"endpoints":{"local_recs_url":"http:\/\/www.juanmerodio.com\/wp-admin\/admin-ajax.php?action=shareaholic_permalink_related","share_counts_url":"http:\/\/www.juanmerodio.com\/wp-admin\/admin-ajax.php?action=shareaholic_share_counts_api"}};
+  //]]>
+</script>
+<script type='text/javascript'
+        src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js'
+        data-shr-siteid='b4912daac2e16397fdcac3040b07a6dc'
+        data-cfasync='false'
+        async='async' >
+</script>
+
+<!-- Shareaholic Content Tags -->
+<meta name='shareaholic:site_name' content='Juan Merodio' />
+<meta name='shareaholic:language' content='es-ES' />
+<meta name='shareaholic:site_id' content='b4912daac2e16397fdcac3040b07a6dc' />
+<meta name='shareaholic:wp_version' content='7.7.0.0' />
+
+<!-- Shareaholic Content Tags End -->
+<link rel='stylesheet' id='fb-like-responsive-css'  href='http://www.juanmerodio.com/wp-content/plugins/facebook-like-box-responsive/facebook-like-responsive.css?ver=4.0.10' type='text/css' media='all' />
+<link rel='stylesheet' id='swipebox_css-css'  href='http://www.juanmerodio.com/wp-content/plugins/enjoy-instagram-instagram-responsive-images-gallery-and-carousel/css/swipebox.css?ver=4.0.10' type='text/css' media='all' />
+<link rel='stylesheet' id='grid_fallback-css'  href='http://www.juanmerodio.com/wp-content/plugins/enjoy-instagram-instagram-responsive-images-gallery-and-carousel/css/grid_fallback.css?ver=4.0.10' type='text/css' media='all' />
+<link rel='stylesheet' id='grid_style-css'  href='http://www.juanmerodio.com/wp-content/plugins/enjoy-instagram-instagram-responsive-images-gallery-and-carousel/css/grid_style.css?ver=4.0.10' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-polls-css'  href='http://www.juanmerodio.com/wp-content/plugins/wp-polls/polls-css.css?ver=2.67' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://www.juanmerodio.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css'  href='http://www.juanmerodio.com/wp-content/plugins/wordpress-popular-posts/style/wpp.css?ver=3.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='cssMyYoutubeChannel-css'  href='http://www.juanmerodio.com/wp-content/plugins/myyoutubechannel/myvideos.css?ver=4.0.10' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.juanmerodio.com/wp-content/plugins/enjoy-instagram-instagram-responsive-images-gallery-and-carousel/js/jquery.swipebox.js?ver=4.0.10'></script>
+<script type='text/javascript' src='http://www.juanmerodio.com/wp-content/plugins/enjoy-instagram-instagram-responsive-images-gallery-and-carousel/js/modernizr.custom.26633.js?ver=4.0.10'></script>
+<script type='text/javascript' src='http://www.juanmerodio.com/wp-content/plugins/enjoy-instagram-instagram-responsive-images-gallery-and-carousel/js/jquery.gridrotator.js?ver=4.0.10'></script>
+<script type='text/javascript' src='http://www.juanmerodio.com/wp-content/plugins/enjoy-instagram-instagram-responsive-images-gallery-and-carousel/js/ios-orientationchange-fix.js?ver=4.0.10'></script>
+<script type='text/javascript' src='http://www.juanmerodio.com/wp-content/plugins/myyoutubechannel/myvideos.js?ver=4.0.10'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.juanmerodio.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.juanmerodio.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.0.10" />
+<script type="text/javascript">var ajaxurl = "http://www.juanmerodio.com/wp-admin/admin-ajax.php"</script>   <script type="text/javascript">
+		jQuery(function($) {
+			$(".swipebox_grid").swipebox({
+			hideBarsDelay : 0
+			});
+			
+		});   
+
+		jQuery(function(){
+		  jQuery(document.body)
+			  .on('click touchend','#swipebox-slider .current img', function(e){
+				  jQuery('#swipebox-next').click();
+				  return false;
+			  })
+			  .on('click touchend','#swipebox-slider .current', function(e){
+				  jQuery('#swipebox-close').trigger('click');
+			  });
+		});
+	
+</script>
+   <style type="text/css">
+<!--#ccfd-eucookielaw { display:none }--></style><script type="text/javascript">
+			function setCookie(c_name,value,exdays){
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate() + exdays);
+				var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+				document.cookie=c_name + "=" + c_value;
+			}
+			</script>
+			<div id="ccfd-eucookielaw" >
+				<p id="ccfd-cookiewarning">Este sitio utiliza cookies. Al navegar por la web estás aceptando el uso de cookies.<br/><br/>
+				<a id="ccfd-removecookie">Aceptar</a> <a id="ccfd-more" href="http://www.juanmerodio.com/politica-de-cookies/">Más información</a></p>
+			</div>
+			<script type="text/javascript">
+				if( document.cookie.indexOf("eucookie") ===-1 ){
+					jQuery("#ccfd-eucookielaw").show();
+				}
+				jQuery("#ccfd-removecookie").click(function () {
+					setCookie('eucookie','eucookie',365*10)
+					jQuery("#ccfd-eucookielaw").remove();
+			    });
+			</script><style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 10px;
+	line-height: 12px;
+	height: 12px;
+	background-image: url('http://www.juanmerodio.com/wp-content/plugins/wp-polls/images/default_gradient/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+</style>
+
+<!-- All in One SEO Pack 2.2.3.1 by Michael Torbert of Semper Fi Web Design[543,550] -->
+<link rel='prev' href='http://www.juanmerodio.com/page/6/' />
+<link rel='next' href='http://www.juanmerodio.com/page/8/' />
+
+<link rel="canonical" href="http://www.juanmerodio.com/page/7/" />
+<!-- /all in one seo pack -->
+		
+<!-- Responsive Select CSS 
+================================================================ -->
+<style type="text/css" id="responsive-select-css">
+.responsiveSelectContainer select.responsiveMenuSelect, select.responsiveMenuSelect{
+	display:none;
+}
+
+@media (max-width: 750px) {
+	.responsiveSelectContainer{
+		border:none !important;
+		background:none !important;
+		box-shadow:none !important;
+		height:auto !important;
+		max-height:none !important;
+		visibility:visible !important;
+	}
+	.responsiveSelectContainer ul, ul.responsiveSelectFullMenu, #megaMenu ul.megaMenu.responsiveSelectFullMenu{
+		display: none !important;
+	}
+	.responsiveSelectContainer select.responsiveMenuSelect, select.responsiveMenuSelect { 
+		display: inline-block; 
+		width:100%;
+	}
+}	
+</style>
+<!-- end Responsive Select CSS -->
+
+<!-- Responsive Select JS
+================================================================ -->
+<script type="text/javascript">
+jQuery(document).ready( function($){
+	$( '.responsiveMenuSelect' ).change(function() {
+		var loc = $(this).find( 'option:selected' ).val();
+		if( loc != '' && loc != '#' ) window.location = loc;
+	});
+	//$( '.responsiveMenuSelect' ).val('');
+});
+</script>
+<!-- end Responsive Select JS -->
+		
+
+<style>
+
+	#suscripcion-sidebar p.alignright{ color: #FFF !important; }
+
+	#suscripcion-sidebar p.alignright + p{ margin-top: 10px; }
+
+	
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+<header>
+
+
+
+	<div id="header-bar">
+
+
+
+		
+
+
+		<div id="logo">
+
+
+
+			<a href="http://www.juanmerodio.com"><img title="Juan Merodio" alt="Juan Merodio" src="http://www.juanmerodio.com/wp-content/uploads/logo-nuevo-2.png"/></a>
+
+
+
+				<div itemscope itemtype="http://schema.org/Person" style="display:none;">
+
+
+
+					<a itemprop="url" href="http://juanmerodio.com/"><div itemprop="name"><strong>Juan Merodio</strong></div></a>
+
+
+
+					<div itemscope itemtype="http://schema.org/Organization"><span itemprop="name">juanmerodio.com</span></div><div itemprop="jobtitle">Blogger en JuanMerodio.com</div>
+
+
+
+					<div itemprop="description">Aprendo, Escribo y Comunico acerca de Marketing Digital y Redes Sociales para Empresas.</div>
+
+
+
+					<div itemprop="email">info@juanmerodio.com</div>
+
+
+
+				</div>
+
+
+
+		</div>
+
+
+
+		
+
+
+		<div id="redes-sociales-header">
+
+
+
+					<ul id="redes-sociales">
+							<li>
+					<a title="RSS" target="_blank" href="http://feedly.com/i/subscription/feed/http://www.juanmerodio.com/feed/" class="rss_24">
+						<img src="http://www.juanmerodio.com/wp-content/themes/base/images/redes-sociales/30px/rss.jpg" alt="Síguenos en RSS" title="Síguenos en RSS"/>
+					</a>
+				</li>
+										<li>
+					<a target="_blank" title="Síguenos en Ivoox" href="http://juanmerodio.ivoox.com/" class="ivoox_24">
+						<img src="http://www.juanmerodio.com/wp-content/themes/base/images/redes-sociales/30px/ivoox.jpg" alt="Síguenos en Ivoox" title="Síguenos en Ivoox"/>
+					</a>
+				</li>
+										<li>
+					<a target="_blank" title="Síguenos en YouTube" href="http://www.youtube.com/subscription_center?add_user=juanmerodio" class="youtube_24">
+						<img src="http://www.juanmerodio.com/wp-content/themes/base/images/redes-sociales/30px/youtube.jpg" alt="Síguenos en Youtube" title="Síguenos en Youtube"/>
+					</a>
+				</li>
+										<li>
+					<a target="_blank" title="Síguenos en Slideshare" href="http://www.slideshare.net/juanmerodio" class="slideshare_24">
+						<img src="http://www.juanmerodio.com/wp-content/themes/base/images/redes-sociales/30px/slideshare.jpg" alt="Síguenos en Slideshare" title="Síguenos en Slideshare"/>
+					</a>
+				</li>
+										<li>
+					<a target="_blank" title="Síguenos en Instagram" href="http://instagram.com/juanmerodio" class="instagram_24">
+						<img src="http://www.juanmerodio.com/wp-content/themes/base/images/redes-sociales/30px/instagram.png" alt="Síguenos en Instagram" title="Síguenos en Instagram"/>
+					</a>
+				</li>
+													<li>
+					<a target="_blank" title="Síguenos en LinkedIn" href="https://www.linkedin.com/in/juanmerodio/es" class="linkedin_24">
+						<img src="http://www.juanmerodio.com/wp-content/themes/base/images/redes-sociales/30px/linkedin.jpg" alt="Síguenos en Linkedin" title="Síguenos en Linkedin"/>
+					</a>
+				</li>
+													<li>
+					<a target="_blank" title="Síguenos en Google+" href="https://plus.google.com/+JuanMerodioBlog/posts" class="googleplus_24">
+						<img src="http://www.juanmerodio.com/wp-content/themes/base/images/redes-sociales/30px/google-plus.jpg" alt="Síguenos en Google Plus" title="Síguenos en Google Plus"/>
+					</a>
+				</li>
+										<li>
+					<a target="_blank" title="Síguenos en Twitter" href="http://www.twitter.com/juanmerodio" class="twitter_24">
+						<img src="http://www.juanmerodio.com/wp-content/themes/base/images/redes-sociales/30px/twitter.jpg" alt="Síguenos en Twitter" title="Síguenos en Twitter"/>
+					</a>
+				</li>
+										<li>
+					<a target="_blank" title="Síguenos en Facebook" href="http://www.facebook.com/JuanMerodio" class="facebook_24">
+						<img src="http://www.juanmerodio.com/wp-content/themes/base/images/redes-sociales/30px/facebook.jpg" alt="Síguenos en Facebook" title="Síguenos en Facebook"/>
+					</a>
+				</li>
+					</ul>
+		
+
+
+			<div style="clear:both"></div>
+
+
+
+					<ul id="me-gusta">
+            <li id="megusta-google-plus">
+            	<div class="g-plusone" data-size="medium"></div>
+				<script type="text/javascript">
+                  (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                  })();
+                </script>
+            </li>
+            <li id="megusta-facebook">
+            	<div style="width: 130px;">
+					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FJuanMerodio&amp;send=false&amp;layout=button_count&amp;width=130&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"  style="border:none; overflow:hidden; height:21px; width: 130px;"></iframe>
+				</div>
+            </li>
+            <li id="megusta-twitter">
+            	<a href="https://twitter.com/juanmerodio" class="twitter-follow-button" data-show-count="true" data-lang="es">Seguir</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </li>
+            <!--<li id="megusta-linkedin">
+            	<script src="//platform.linkedin.com/in.js" type="text/javascript">
+				  lang: es_ES
+				</script>
+				<script type="IN/FollowCompany" data-id="2127248" data-counter="right"></script>
+            </li>-->
+        </ul>	
+	
+
+
+		</div>
+
+
+
+		<div style="clear:both"></div>
+
+
+
+	</div>
+
+
+
+	<div style="clear:both"></div>
+
+    <div id="caja-idioma">
+        <a href="http://www.juanmerodio.com/en"><img src="http://www.juanmerodio.com/wp-content/themes/base/images/banderita-ingles.png" style="cursor:pointer;width:30px;height:25px;"></a>
+
+    </div>
+
+	<nav id="menu-superior">
+
+
+
+		<div class="responsiveSelectContainer"><ul id="menu-menu-principal-1" class="menu responsiveSelectFullMenu"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-6623"><a href="http://www.juanmerodio.com/">Inicio Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="http://www.juanmerodio.com/quien-soy/">¿Quién Soy?</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2223"><a href="http://www.juanmerodio.com/obras/">Obras</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-7152"><a href="http://www.juanmerodio.com/eventos/">Eventos</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2307"><a href="http://www.juanmerodio.com/category/eventos-destacados/">Eventos Destacados</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-6835"><a target="_blank" href="http://prensajuanmerodio.wordpress.com/">Prensa</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6838"><a target="_blank" href="http://www.juanmerodio.com/wp-content/uploads/dossier-prensa-juan-merodio-2014.pdf">Dossier</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6843"><a href="http://www.juanmerodio.com/material-grafico/">Material Gráfico</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2065"><a href="http://www.juanmerodio.com/category/apariciones-en-los-medios/">Apariciones en los Medios</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6892"><a href="http://www.juanmerodio.com/contacto-prensa/">Contacto Prensa</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7713"><a href="http://www.juanmerodio.com/contratar-a-juan/">Mis Conferencias</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2028"><a href="http://www.juanmerodio.com/contacta-conmigo/">Contacto</a></li>
+</ul><select class="responsiveMenuSelect"><option value="" >MENÚ</option><option  id="menu-item-6623" value="http://www.juanmerodio.com/" selected="selected">Inicio Blog</option>
+<option  id="menu-item-2027" value="http://www.juanmerodio.com/quien-soy/">¿Quién Soy?</option>
+<option  id="menu-item-2223" value="http://www.juanmerodio.com/obras/">Obras</option>
+<option  id="menu-item-7152" value="http://www.juanmerodio.com/eventos/">Eventos</option>
+	<option  id="menu-item-2307" value="http://www.juanmerodio.com/category/eventos-destacados/">⇒ Eventos Destacados</option>
+<option  id="menu-item-6835" value="http://prensajuanmerodio.wordpress.com/">Prensa</option>
+	<option  id="menu-item-6838" value="http://www.juanmerodio.com/wp-content/uploads/dossier-prensa-juan-merodio-2014.pdf">⇒ Dossier</option>
+	<option  id="menu-item-6843" value="http://www.juanmerodio.com/material-grafico/">⇒ Material Gráfico</option>
+	<option  id="menu-item-2065" value="http://www.juanmerodio.com/category/apariciones-en-los-medios/">⇒ Apariciones en los Medios</option>
+	<option  id="menu-item-6892" value="http://www.juanmerodio.com/contacto-prensa/">⇒ Contacto Prensa</option>
+<option  id="menu-item-7713" value="http://www.juanmerodio.com/contratar-a-juan/">Mis Conferencias</option>
+<option  id="menu-item-2028" value="http://www.juanmerodio.com/contacta-conmigo/">Contacto</option>
+</select></div>
+
+
+		
+		<form role="search" method="get" class="searchform" action="http://www.juanmerodio.com">
+			<input type="text" placeholder="Buscar..." value="" name="s" id="s"/>
+			<button  id="searchsubmit" ><span class="icon-search"></span></button>
+		</form>
+
+	
+
+
+        <div style="clear:both;"></div>
+
+
+
+   	</nav>    	
+
+
+
+	<div style="clear:both"></div>
+
+
+
+
+
+	
+	<div id="sub-header" >
+
+
+
+		<div id="sub-header-wrap">
+
+
+
+			
+
+
+			<div id="zona-eventos">
+
+
+
+				<div id="ze-video">
+
+
+
+					<div class="video-container">
+
+
+
+						<iframe width="1280" height="720" src="https://www.youtube.com/embed/TP-rWR7q6F4?autoplay=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+
+				<div id="eventos">
+
+					
+						
+						<img src="http://www.juanmerodio.com/wp-content/themes/base/images/bannerapp.gif" alt="App Juan Merodio" usemap="#Map" border="0" />
+						<map name="Map" id="Map">
+						  <area shape="poly" coords="81,223,159,225,168,228,168,231,171,232,171,236,170,240,168,242,166,245,163,249,155,249,83,249,75,247,73,244,71,239,70,235,72,229,75,227,79,224" href="https://itunes.apple.com/es/app/juan-merodio/id1015897672?l=en&amp;mt=8 " target="_blank" />
+						  <area shape="poly" coords="186,225,267,225,274,229,277,231,278,235,278,237,278,240,276,242,273,244,270,246,266,248,186,249,183,246,180,242,178,239,178,236,178,233,178,231,181,229,184,226" href="https://play.google.com/store/apps/details?id=com.quadram.juanmerodio" target="_blank" />
+						</map>
+
+					
+
+
+				</div>
+
+
+
+				<div style="clear:both"></div>
+
+
+
+			</div>
+
+
+
+			
+
+
+			 <div class="eliminable"> 
+
+
+							<h3>Mis Libros</h3>
+			<div id="carrusel-libros" class="owl-carousel owl-theme">
+									<div class="libro librocarrusel">
+						<div class="imagen-libro"><img src="http://www.juanmerodio.com/wp-content/uploads/banca30.png" alt="Banca 3.0: La Transformación Tecnológica del Sector Bancario" title="Banca 3.0: La Transformación Tecnológica del Sector Bancario"></div>
+						<div class="texto-libro">
+							<h4>Banca 3.0: La Transformación Tecnológica del Sector Bancario</h4>
+							<a href="#formulario-libros-wrap" id="boton-libro-7" class="fancy-container">Descargar libro</a>
+						</div>
+					</div>
+									<div class="libro librocarrusel">
+						<div class="imagen-libro"><img src="http://www.juanmerodio.com/wp-content/uploads/portada-post-marketing1.jpg" alt="2 Años de Marketing Digital & Social Media" title="2 Años de Marketing Digital & Social Media"></div>
+						<div class="texto-libro">
+							<h4>2 Años de Marketing Digital & Social Media</h4>
+							<a href="#formulario-libros-wrap" id="boton-libro-6" class="fancy-container">Descargar libro</a>
+						</div>
+					</div>
+									<div class="libro librocarrusel">
+						<div class="imagen-libro"><img src="http://www.juanmerodio.com/wp-content/uploads/ideasmarketing1.png" alt="Ideas de Marketing 2.011 - Recopilación de post de Marketing 2.0" title="Ideas de Marketing 2.011 - Recopilación de post de Marketing 2.0"></div>
+						<div class="texto-libro">
+							<h4>Ideas de Marketing 2.011 - Recopilación de post de Marketing 2.0</h4>
+							<a href="#formulario-libros-wrap" id="boton-libro-5" class="fancy-container">Descargar libro</a>
+						</div>
+					</div>
+									<div class="libro librocarrusel">
+						<div class="imagen-libro"><img src="http://www.juanmerodio.com/wp-content/uploads/365dias2.png" alt="365 Dias (y noches) de Marketing 2.0. El inicio de la e-década" title="365 Dias (y noches) de Marketing 2.0. El inicio de la e-década"></div>
+						<div class="texto-libro">
+							<h4>365 Dias (y noches) de Marketing 2.0. El inicio de la e-década</h4>
+							<a href="#formulario-libros-wrap" id="boton-libro-4" class="fancy-container">Descargar libro</a>
+						</div>
+					</div>
+									<div class="libro librocarrusel">
+						<div class="imagen-libro"><img src="http://www.juanmerodio.com/wp-content/uploads/marketinen2.png" alt="Marketing en Redes Sociales: Mensajes de empresa para gente selectiva" title="Marketing en Redes Sociales: Mensajes de empresa para gente selectiva"></div>
+						<div class="texto-libro">
+							<h4>Marketing en Redes Sociales: Mensajes de empresa para gente selectiva</h4>
+							<a href="#formulario-libros-wrap" id="boton-libro-3" class="fancy-container">Descargar libro</a>
+						</div>
+					</div>
+									<div class="libro librocarrusel">
+						<div class="imagen-libro"><img src="http://www.juanmerodio.com/wp-content/uploads/promocionnegocios.png" alt="Cómo Empezar a Promocionar tu Negocio en Redes Sociales" title="Cómo Empezar a Promocionar tu Negocio en Redes Sociales"></div>
+						<div class="texto-libro">
+							<h4>Cómo Empezar a Promocionar tu Negocio en Redes Sociales</h4>
+							<a href="#formulario-libros-wrap" id="boton-libro-2" class="fancy-container">Descargar libro</a>
+						</div>
+					</div>
+								<div class="libro librocarrusel">
+					<div class="imagen-libro"><img src="http://www.juanmerodio.com/wp-content/uploads/trabaja-con-red.png" alt="Trabaja con Red" title="Trabaja con Red"></div>
+					<div class="texto-libro">
+						<h4>Trabaja con Red</h4>
+						<a href="http://www.trabajaconred.com/" target="_blank">Descargar libro</a>
+					</div>
+				</div>
+				<div class="libro librocarrusel">
+					<div class="imagen-libro"><img src="http://www.juanmerodio.com/wp-content/uploads/estrategias-empresariales.png" alt="Todo lo que hay que saber de estrategia empresarial en redes sociales" title="Todo lo que hay que saber de estrategia empresarial en redes sociales"></div>
+					<div class="texto-libro">
+						<h4>Todo lo que hay que saber de estrategia empresarial en redes sociales</h4>
+						<a href="http://www.amazon.es/estrategia-empresarial-sociales-negocios-online/dp/8493955965" target="_blank">Descargar libro</a>
+					</div>
+				</div>
+			</div>
+			<div id="formulario-libros">
+				<div id="formulario-libros-wrap">
+					<p>Suscríbete para descargar gratuitamente el libro</p>
+					<p>Introduce tus datos y dale a enviar, se abrirá un mensaje informativo sobre tu suscripción en una página nueva, al volver a esta página tendrás el enlace a tu libro esperándote.</p>
+					<input type="hidden" name="id-flibros" id="id-flibros"/>
+					<p><label for="nombre-flibros">Nombre:</label> <input type="text" name="nombre-flibros" class="requerido-form" id="nombre-flibros"/></p>
+					<p><label for="email-flibros">Email:</label> <input type="text" name="email-flibros" class="requerido-form" id="email-flibros"/></p>
+					<p><input type="checkbox" name="privacidad-flibros" id="privacidad-flibros"> Acepto el <a href="http://www.juanmerodio.com/aviso-legal/" target="_parent">Aviso Legal</a></p>
+
+					<p><input type="button" name="enviar-flibros" id="enviar-flibros" value="Enviar"/></p>
+					<p id="msj-form"></p>
+				</div>
+				
+									<div style="display:none">
+						<input type="text" name="name" id="fs-nombre"/>
+						<input type="text" name="email" id="fs-email"/>
+						<input type="button" name="enviar-flibros" id="enviar-flibros" calue="Enviar"/>
+					</div>
+							</div>
+			<script>
+				function validarForm(){
+					limpiarMensajesForm(); 
+					if(!obligatoriosForm()){ $('#msj-form').html('Debes rellenar los campos obligatorios.');	$('#msj-form').addClass('errores');	 }
+					if(!($('#privacidad-flibros').is(':checked'))){
+						if($('#msj-form').html()==''){
+							$('#msj-form').html('Debes aceptar el Aviso Legal.');
+							$('#msj-form').addClass('errores');
+						} else {
+							$('#msj-form').html($('#msj-form').html()+'<br/>Debes aceptar el Aviso Legal.');
+						}
+					}
+					var email = $('#email-flibros').val();
+					if($.trim(email)!=''){
+						if(!emailCorrecto(email)){
+							if($('#msj-form').html()!='')	$('#msj-form').html($('#msj-form').html()+'<br />');
+							$('#msj-form').html($('#msj-form').html()+'El e-mail introducido no es válido.');
+							$('#email').addClass('errores');
+						}
+
+						if($('#msj-form').html()=='')	enviarForm();
+						else	$('#msj-form').addClass('errores');
+					}
+				}
+				
+				function obligatoriosForm(){
+					var ok = true;
+					$('#formulario-libros-wrap .requerido-form').each(function(){
+						if($.trim($(this).val())==''){
+							$(this).addClass('errores');
+							ok = false;
+						}
+					});
+					return ok;
+				}
+
+				function emailCorrecto(emailAddress) {
+				    var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+				    return pattern.test(emailAddress);
+				};
+				
+				function limpiarMensajesForm(){
+					$('#formulario-libros input[type=text]').each(function(){ $(this).removeClass('errores');  });
+					$('#msj-form').html(''); $('#msj-form').removeClass('errores'); $('#msj-form').removeClass('correcto'); 
+				}
+				
+				function limpiarDatosForm(){
+					$('#formulario-libros input[type=text]').each(function(){ $(this).val('');   });
+					$('#formulario-libros textarea').each(function(){ $(this).val(''); });
+					$('#formulario-libros input[type=checkbox]').each(function(){ $(this).attr('checked', false);   });
+				}
+				
+				function limpiarForm(){
+					limpiarMensajesForm(); limpiarDatosForm();
+				}
+				
+				function enviarForm(){
+					$.post('http://www.juanmerodio.com/wp-content/themes/base/codigo/includes/ajax/grabar-suscriptor-libro.php', { id: $('#id-flibros').val(), nombre: $('#nombre-flibros').val(), email: $('#email-flibros').val()}, function(data) { 
+						$('#msj-form').html('Gracias, en breve recibirás un email para confirmar tu suscripción.<br/>Para descargar este libro pulsa en el siguiente enlace:<br/><a id="enlace-externo" href="' + data + '" target="_blank">Descargar</a>');
+					});
+
+					/* Registro en MailChimp */
+											//$.post('http://www.aweber.com/scripts/addlead.pl', { name: $('#nombre-flibros').val(), email: $('#email-flibros').val(), meta_web_form_id: '732152806', meta_split_id: '', listname: 'blogjuanmerodio', redirect: 'http://www.aweber.com/thankyou-coi.htm?m=text', meta_adtracking: 'Formulario_Sidebar_Blog_Juan_Merodio', meta_message: '1', meta_required: 'name,email', meta_tooltip: ''}, function(){});
+						$.post('http://www.juanmerodio.com/wp-content/themes/base/codigo/includes/ajax/suscripcion-mailchimp.php', { nombre: $('#nombre-flibros').val(), email: $('#email-flibros').val() }, function(){});
+										
+						
+				}
+
+				$(document).ready(function(){
+					//Carrusel Libros
+			        var libros = $("#carrusel-libros");
+			        libros.owlCarousel({
+			            autoPlay : 8000,
+				        items : 4,
+				        itemsDesktop : [1135,3], //3 items between 1135px and 901px
+			            itemsDesktopSmall : false, // betweem 900px and 601px
+			            itemsTablet: false, //2 items between 600 and 0
+			            itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+				        stopOnHover: true,
+				        navigation: false,
+				        autoHeight : true
+			        });
+
+			        // Fancy Box
+			        $("a.fancy-container").click(function(e){
+			        	e.preventDefault();
+			        	limpiarForm();
+			        	$('#id-flibros').val(($(this).attr('id').substring(12)));
+					});
+
+					 $('a.fancy-container').fancybox();
+
+					$('#enviar-flibros').click(function(){ validarForm(); });
+					$('input[type=text]').focus(function(){ $(this).removeClass('errores'); });
+
+					$('#enlace-externo').click(function(){
+						$.fancybox.close();
+					})
+				});
+			</script>
+			
+
+
+			 </div> 
+
+
+		</div>
+
+
+
+	</div>
+
+	
+
+
+
+
+</header>
+<section id="principal">
+	<div id="content" class="page">
+		<div id="archive">
+							<div class="item">
+					                        <span class="ncomments" title="0 comentarios">0</span>
+                    					<h2><a href="http://www.juanmerodio.com/2015/novedades-marketing-digital-redes-sociales-diciembre-2015/" title="Novedades en Marketing Digital y Redes Sociales (Diciembre 2015)">Novedades en Marketing Digital y Redes Sociales (Diciembre 2015)</a></h2>
+					<p class="publicado">Publicado el 7 de diciembre de 2015 por Juan Merodio</p>
+					                        <div class="imagen-articulo">
+                            <a href="http://www.juanmerodio.com/2015/novedades-marketing-digital-redes-sociales-diciembre-2015/"><img src="http://www.juanmerodio.com/wp-content/themes/base/includes/timthumb/timthumb.php?src=http://www.juanmerodio.com/wp-content/uploads/mes20-dic-15.jpg&amp;w=140&amp;h=140&amp;zc=1" alt="Novedades en Marketing Digital y Redes Sociales (Diciembre 2015) - Juan Merodio" title="Novedades en Marketing Digital y Redes Sociales (Diciembre 2015) - Juan Merodio"/></a>
+                        </div>
+                        <div class="cuerpo-articulo">
+                    					<p>En el post de hoy quiero compartir con vosotros el resumen de las noticias y tendencias del Marketing Digital y Redes Sociales más destacadas del mes de Diciembre 2015. En esta ocasión hablaremos de: &#8211; Facebook Music Stories, la entrada del gigante en el sector musica &#8211; Facebook en campañas de crowdfunding solidario &#8211; Linkedin ATC, la personalización de sus notificaciones &#8211; Google Mortgages, el comparador de hipotecas que se acerca ¡Nos vemos en la próxima edición de Mes 2.0!</p>
+					 </div><div style="clear:both"></div> 
+					<div class="meta">
+						Publicado en <span class="categorias"><a href="http://www.juanmerodio.com/category/marketing-digital/" rel="category tag">Marketing Digital</a></span> | Etiquetado como <span class="etiquetas"><span class="tag"> <a href="http://www.juanmerodio.com/tag/facebook-music-stories/" rel="tag">Facebook Music Stories</a>, <a href="http://www.juanmerodio.com/tag/google-mortgages/" rel="tag">Google Mortgages</a>, <a href="http://www.juanmerodio.com/tag/linkedin-atc/" rel="tag">Linkedin ATC</a></span></span> | <a href="http://www.juanmerodio.com/2015/novedades-marketing-digital-redes-sociales-diciembre-2015//#respond">Deja una respuesta</a>
+					</div>
+				</div>
+								<div class="item">
+					                        <a class="ncomments" title="1 Comentario" href="http://www.juanmerodio.com/2015/renovarse-o-morir/#commentarea">1</a>
+                    					<h2><a href="http://www.juanmerodio.com/2015/renovarse-o-morir/" title="Artículo: &#8220;¡O te renuevas o morirás!">Artículo: &#8220;¡O te renuevas o morirás!</a></h2>
+					<p class="publicado">Publicado el 3 de diciembre de 2015 por Juan Merodio</p>
+					                        <div class="imagen-articulo">
+                            <a href="http://www.juanmerodio.com/2015/renovarse-o-morir/"><img src="http://www.juanmerodio.com/wp-content/themes/base/includes/timthumb/timthumb.php?src=http://www.juanmerodio.com/wp-content/uploads/transformacion-digital-la-razon-juan-merodio.jpg&amp;w=140&amp;h=140&amp;zc=1" alt="Artículo: &#8220;¡O te renuevas o morirás! - Juan Merodio" title="Artículo: &#8220;¡O te renuevas o morirás! - Juan Merodio"/></a>
+                        </div>
+                        <div class="cuerpo-articulo">
+                    					<p>Transformación digital, evolución empresarial, adaptación a nuevos escenarios&#8230; el nombre es lo de menos, lo que importa es que la empresa sea capaz de adaptarse a tiempo a los cambios económicos y por lo tanto contextuales que vivimos. En este artículo publicado en el periódico &#8220;La Razón&#8221; el pasado 15 de Noviembre, hablo de la supervivencia empresarial. &nbsp; Medio: La Razón Fecha: Diciembre 2015 &nbsp; ¿Suena radical? Tan radical como el cambio que vivimos en la empresa, donde los usuarios han tomado gran parte del control indirecto de las compañías, que aunque muchas sigan sin verlo, están en manos de&#8230; <a class="moretag" href="http://www.juanmerodio.com/2015/renovarse-o-morir/"> Sigue leyendo &#8594;</a></p>
+					 </div><div style="clear:both"></div> 
+					<div class="meta">
+						Publicado en <span class="categorias"><a href="http://www.juanmerodio.com/category/apariciones-en-los-medios/" rel="category tag">Apariciones en los Medios</a></span> | Etiquetado como <span class="etiquetas"><span class="tag"> <a href="http://www.juanmerodio.com/tag/evolucion-empresarial/" rel="tag">evolucion empresarial</a>, <a href="http://www.juanmerodio.com/tag/transformacion-digital/" rel="tag">transformacion digital</a></span></span> | <a href="http://www.juanmerodio.com/2015/renovarse-o-morir//#respond">Deja una respuesta</a>
+					</div>
+				</div>
+								<div class="item">
+					                        <a class="ncomments" title="5 Comentarios" href="http://www.juanmerodio.com/2015/facebook-beacons/#commentarea">5</a>
+                    					<h2><a href="http://www.juanmerodio.com/2015/facebook-beacons/" title="Facebook Beacons, el dispositivo para conectar con tu cliente en el punto de venta">Facebook Beacons, el dispositivo para conectar con tu cliente en el punto de venta</a></h2>
+					<p class="publicado">Publicado el 30 de noviembre de 2015 por Juan Merodio</p>
+					                        <div class="imagen-articulo">
+                            <a href="http://www.juanmerodio.com/2015/facebook-beacons/"><img src="http://www.juanmerodio.com/wp-content/themes/base/includes/timthumb/timthumb.php?src=http://www.juanmerodio.com/wp-content/uploads/facebook-beacon.gif&amp;w=140&amp;h=140&amp;zc=1" alt="Facebook Beacons, el dispositivo para conectar con tu cliente en el punto de venta - Juan Merodio" title="Facebook Beacons, el dispositivo para conectar con tu cliente en el punto de venta - Juan Merodio"/></a>
+                        </div>
+                        <div class="cuerpo-articulo">
+                    					<p>Hace un par de años hablaba de los Beacons de Apple, un dispositivo que permite conectar a tiempo real el mundo online y offline, y de como la unión de las App móviles y los beacons pueden ser una gran estrategia de marketing para el retail. Hoy me gustaría hablaros de los beacons de Facebook, el cual te permite colocarlo en tu local y mediante él enviar información a las personas en Facebook que se encuentra próximas a ti y tienen el bluetooth activo, ya que estos dispositivos funcionan bajo esta tecnología. &nbsp; Tienen muchos usos, pero algunos de ellos&#8230; <a class="moretag" href="http://www.juanmerodio.com/2015/facebook-beacons/"> Sigue leyendo &#8594;</a></p>
+					 </div><div style="clear:both"></div> 
+					<div class="meta">
+						Publicado en <span class="categorias"><a href="http://www.juanmerodio.com/category/redes-sociales/" rel="category tag">Redes Sociales</a></span> | Etiquetado como <span class="etiquetas"><span class="tag"> <a href="http://www.juanmerodio.com/tag/facebook-beacons/" rel="tag">facebook beacons</a></span></span> | <a href="http://www.juanmerodio.com/2015/facebook-beacons//#respond">Deja una respuesta</a>
+					</div>
+				</div>
+								<div class="item">
+					                        <span class="ncomments" title="0 comentarios">0</span>
+                    					<h2><a href="http://www.juanmerodio.com/2015/marketing-politico-hoy-gaspar-llamazares-y-fernando-del-paramo/" title="&#8220;El marketing político de hoy vs el de años atrás&#8221; con Gaspar Llamazares y Fernando del Páramo">&#8220;El marketing político de hoy vs el de años atrás&#8221; con Gaspar Llamazares y Fernando del Páramo</a></h2>
+					<p class="publicado">Publicado el 27 de noviembre de 2015 por Juan Merodio</p>
+					                        <div class="imagen-articulo">
+                            <a href="http://www.juanmerodio.com/2015/marketing-politico-hoy-gaspar-llamazares-y-fernando-del-paramo/"><img src="http://www.juanmerodio.com/wp-content/themes/base/includes/timthumb/timthumb.php?src=http://www.juanmerodio.com/wp-content/uploads/conversaciones-con-juan-merodio-marketing-politico.jpg&amp;w=140&amp;h=140&amp;zc=1" alt="&#8220;El marketing político de hoy vs el de años atrás&#8221; con Gaspar Llamazares y Fernando del Páramo - Juan Merodio" title="&#8220;El marketing político de hoy vs el de años atrás&#8221; con Gaspar Llamazares y Fernando del Páramo - Juan Merodio"/></a>
+                        </div>
+                        <div class="cuerpo-articulo">
+                    					<p>Hoy quiero presentaros un nuevo programa de TV online que he inaugurado llamado &#8220;Conversaciones by Juan Merodio&#8221;, y en el que sentaremos a personalidades del mundo de los negocios, la política, las artes&#8230; para debatir en un formato a tres y charlar con ellos de tú a tú. Hoy estrenamos el programa hablando de marketing político, de cómo era antes y de cómo es hoy, y de la irrupción de las redes sociales y otros canales digitales en las estrategias de campañas políticas, y dadas las elecciones del próximo 20 de diciembre, contamos con la presencia de Gaspar Llamazares (diputado&#8230; <a class="moretag" href="http://www.juanmerodio.com/2015/marketing-politico-hoy-gaspar-llamazares-y-fernando-del-paramo/"> Sigue leyendo &#8594;</a></p>
+					 </div><div style="clear:both"></div> 
+					<div class="meta">
+						Publicado en <span class="categorias"><a href="http://www.juanmerodio.com/category/marketing-digital/" rel="category tag">Marketing Digital</a></span> | Etiquetado como <span class="etiquetas"><span class="tag"> <a href="http://www.juanmerodio.com/tag/fernando-del-paramo/" rel="tag">fernando del paramo</a>, <a href="http://www.juanmerodio.com/tag/gaspar-llamazares/" rel="tag">gaspar llamazares</a>, <a href="http://www.juanmerodio.com/tag/marketing-politico/" rel="tag">marketing politico</a></span></span> | <a href="http://www.juanmerodio.com/2015/marketing-politico-hoy-gaspar-llamazares-y-fernando-del-paramo//#respond">Deja una respuesta</a>
+					</div>
+				</div>
+								<div class="item">
+					                        <a class="ncomments" title="1 Comentario" href="http://www.juanmerodio.com/2015/datos-empresa-potenciadores-estrategia-marketing/#commentarea">1</a>
+                    					<h2><a href="http://www.juanmerodio.com/2015/datos-empresa-potenciadores-estrategia-marketing/" title="Artículo: &#8220;Los datos en la empresa como potenciadores de la estrategia de marketing&#8221;">Artículo: &#8220;Los datos en la empresa como potenciadores de la estrategia de marketing&#8221;</a></h2>
+					<p class="publicado">Publicado el 25 de noviembre de 2015 por Juan Merodio</p>
+					                        <div class="imagen-articulo">
+                            <a href="http://www.juanmerodio.com/2015/datos-empresa-potenciadores-estrategia-marketing/"><img src="http://www.juanmerodio.com/wp-content/themes/base/includes/timthumb/timthumb.php?src=http://www.juanmerodio.com/wp-content/uploads/datos-empresa.jpg&amp;w=140&amp;h=140&amp;zc=1" alt="Artículo: &#8220;Los datos en la empresa como potenciadores de la estrategia de marketing&#8221; - Juan Merodio" title="Artículo: &#8220;Los datos en la empresa como potenciadores de la estrategia de marketing&#8221; - Juan Merodio"/></a>
+                        </div>
+                        <div class="cuerpo-articulo">
+                    					<p>Los datos, un activo en la empresa con un potencial inimaginable pero del que todavía no se está obteniendo todo el valor de negocio que se podría. En este artículo hablo acerca de cómo puedes empezar a usar los datos de tus clientes para mejorar los resultados de tu empresa. Medio: El Blog de Epson Fecha: Noviembre 2015 &nbsp; &nbsp; Descargar artículo completo en PDF &nbsp;</p>
+					 </div><div style="clear:both"></div> 
+					<div class="meta">
+						Publicado en <span class="categorias"><a href="http://www.juanmerodio.com/category/apariciones-en-los-medios/" rel="category tag">Apariciones en los Medios</a></span> | Etiquetado como <span class="etiquetas"><span class="tag"> <a href="http://www.juanmerodio.com/tag/big-data/" rel="tag">big data</a>, <a href="http://www.juanmerodio.com/tag/datos/" rel="tag">datos</a></span></span> | <a href="http://www.juanmerodio.com/2015/datos-empresa-potenciadores-estrategia-marketing//#respond">Deja una respuesta</a>
+					</div>
+				</div>
+				
+			<div id="wp-pagenavibox"><div class='wp-pagenavi'>
+<a class="first" href="http://www.juanmerodio.com/">« Primera</a><a class="previouspostslink" rel="prev" href="http://www.juanmerodio.com/page/6/">«</a><span class='extend'>...</span><a class="page smaller" href="http://www.juanmerodio.com/page/5/">5</a><a class="page smaller" href="http://www.juanmerodio.com/page/6/">6</a><span class='current'>7</span><a class="page larger" href="http://www.juanmerodio.com/page/8/">8</a><a class="page larger" href="http://www.juanmerodio.com/page/9/">9</a><span class='extend'>...</span><a class="nextpostslink" rel="next" href="http://www.juanmerodio.com/page/8/">»</a><a class="last" href="http://www.juanmerodio.com/page/210/">Última »</a>
+</div></div>
+	    	<div style="clear:both"></div>
+		</div>
+	</div>
+
+	<div id="sidebar" class="inicio">
+		<ul>
+			<!--<li id="banner-business"><a href="http://www.entradasatualcance.com/businessinchange-el-evento-de-la-transformacion-digital-empresarial/?utm_campaign=post-blog-juan-merodio" target="_blank"><img src="http://www.juanmerodio.com/wp-content/themes/base/images/bic-banner.jpg" alt="Business in Change" title="Business in Change"/></a></li>-->
+
+			<li id="banner-business"><a href="http://vkm.is/10businessfactors" target="_blank"><img src="http://www.juanmerodio.com/wp-content/themes/base/images/banner-10BF.gif" alt="10 Business Factors" title="10 Business Factors"/></a></li>
+
+            <li>		<div id="suscripcion-sidebar">
+        <h3>Recibe en tu Email los Últimos Artículos</h3>
+        <input type="text" name="name" id="ss-nombre" placeholder="Nombre"/>
+        <input type="text" name="email" id="ss-email" placeholder="Email"/>
+        <p class="alignright"><input type="checkbox" value="acepta" name="acepta-suscripcion" id="acepta-suscripcion"> Acepto el <a target="_blank" href="http://juanmerodio.com/aviso-legal/">Aviso Legal</a></p>
+        <p class="alignright"><span id="ss-msj"></span><input type="button" id="enviar" value="Enviar"/></p>
+        <script type="text/javascript">
+			$(document).ready(function() {
+				function isValidEmailAddress(emailAddress) {
+				    var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+				    return pattern.test(emailAddress);
+				};
+
+				function limpiarMensajes(){
+					$('#suscripcion-sidebar input[type=text]').each(function(){ $(this).removeClass('errores');  });
+					$('#ss-msj').html(''); $('#ss-msj').removeClass('errores'); $('#ss-msj').removeClass('correcto'); 
+				}
+				
+				function limpiarDatos(){
+					$('#ss-email').val('');
+					$('#ss-nombre').val('');
+					$('#acepta-suscripcion').click();
+				}
+				
+				function limpiar(){
+					limpiarMensajes(); limpiarDatos();
+				}
+
+				$('#enviar').click(function(e){
+					e.preventDefault();
+					limpiarMensajes();
+					if(!($('#acepta-suscripcion').is(':checked'))){
+						if($('#ss-msj').html()==''){
+							$('#ss-msj').html('Debes aceptar el Aviso Legal.');
+							$('#ss-msj').addClass('errores');
+						} else {
+							$('#ss-msj').html($('#ss-msj').html()+'<br/>Debes aceptar el Aviso Legal.');
+						}
+					}
+
+					if($('#ss-msj').html() == ''){
+						var email = $.trim($('#ss-email').val());
+						if(email !='' && isValidEmailAddress(email)){
+							$.post('http://www.juanmerodio.com/wp-content/themes/base/codigo/includes/ajax/suscripcion-mailchimp.php', { nombre: $('#ss-nombre').val(), email: $('#ss-email').val() }, function(data) { 
+								if(data=='ok'){
+									$('#ss-msj').html('Datos enviados correctamente.');
+									$('#ss-msj').addClass('correcto');
+
+									setTimeout(function(){ limpiar() }, 5000);
+
+								}else{
+									$('#ss-msj').html(data);
+									$('#ss-msj').addClass('errores');
+								} 
+							});
+						} else {
+							if($('#ss-msj').html()==''){
+								$('#ss-msj').html('El email introducido no es válido.');
+								$('#ss-msj').addClass('errores');
+							} else {
+								$('#ss-msj').html($('#ss-msj').html()+'<br/>El email introducido no es válido.');
+							}
+						}
+					}
+				})
+
+			});
+		</script>
+    </div>
+	</li>
+            <li>		<div id="whatsapp-sidebar">
+                    <h3 class="titulo-whatsapp">¡Novedades de Juan Merodio en tu WhatsApp!</h3>
+                    <form action="" id="formulario-whatsapp" name="formulario-whatsapp" method="post">
+                        <p>Deja tu número de teléfono y agrega a tu WhatsApp el mío y envía un mensaje con el texto ALTA<br/><span class="subinfo">*Solo se enviarán comunicaciones muy puntuales</span></p>
+                        <a href="tel:+34645754453"><span>+34 645 754 453</span></a>
+                        <input type="text" value="" placeholder="Tu teléfono" id="telefono-whatsapp" name="telefono-whatsapp" maxlength="12"/>
+                        <p class="alignright"><input type="checkbox" value="acepta" name="acepta-whatsapp" id="acepta-whatsapp"> Acepto el <a target="_blank" href="http://juanmerodio.com/aviso-legal/">Aviso Legal</a></p>
+                        <p class="alignright"><span id="ws-msj"></span><input type="button" id="enviar-whatsapp" value="Enviar"/></p>
+                    </form>
+                    <script type="text/javascript">
+                        $(document).ready(function(){   
+                            
+                            $('#enviar-whatsapp').click(function(){
+                                $('#ws-msj').text('');
+                                $('#ws-msj').removeClass('errores');
+                                if($('#acepta-whatsapp').attr('checked')!='checked'){ 
+                                    $('#ws-msj').text('Debes aceptar el aviso legal');
+                                    $('#ws-msj').addClass('errores'); 
+                                } else if($('#telefono-whatsapp').val().length<9){
+                                    $('#ws-msj').text('El teléfono no es correcto');
+                                    $('#ws-msj').addClass('errores');
+                                } else {
+                                    enviar_contacto();
+                                }
+                            });
+
+                            $("#telefono-whatsapp").keydown(function(event) {
+                                if(event.shiftKey){
+                                    event.preventDefault(); 
+                                }
+                                if (event.keyCode == 46 || event.keyCode == 8){
+
+                                } else {
+                                    if (event.keyCode < 95) {
+                                        if (event.keyCode < 48 || event.keyCode > 57) {
+                                            event.preventDefault();
+                                        }
+                                    } else {
+                                        if (event.keyCode < 96 || event.keyCode > 105) {
+                                            event.preventDefault();
+                                        }
+                                    }
+                                }
+                            });
+                        });     
+
+                        function enviar_contacto(){
+                            $.post('http://www.juanmerodio.com/wp-content/themes/base/includes/enviar-contacto.php', { telefono: $('#telefono-whatsapp').val()}, function(data) { 
+                                //alert(data);  
+                                $('#ws-msj').text(data);
+                                if(data == 'Teléfono recibido correctamente'){
+                                    $('#ws-msj').addClass('correcto');
+                                    setTimeout('limpiarWS()',5000);
+                                } else {
+                                    $('#ws-msj').addClass('errores');
+                                }
+                            }); 
+                        }
+
+                        function limpiarWS(){
+                            $('#ws-msj').text('');
+                            $('#ws-msj').removeClass('correcto');
+                            $('#telefono-whatsapp').val('');
+                            $('#acepta-whatsapp').click();
+                        }
+                    </script>
+                </div>
+	</li>
+
+			
+<!-- Wordpress Popular Posts Plugin v3.0.3 [W] [daily] [views] [regular] -->
+<li>
+<h3>Lo más visto</h3>
+<ul class="wpp-list">
+<li><a href="http://www.juanmerodio.com/2012/como-contactar-con-facebook-cuando-tienes-un-problema/" title="Cómo Contactar con Facebook Cuando Tienes un Problema" target="_self"><img src="http://www.juanmerodio.com/wp-content/uploads/contacto-facebook1-70x70.jpg" title="Cómo Contactar con Facebook Cuando Tienes un Problema" alt="Cómo Contactar con Facebook Cuando Tienes un Problema" width="70" height="70" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a><a href="http://www.juanmerodio.com/2012/como-contactar-con-facebook-cuando-tienes-un-problema/" title="Cómo Contactar con Facebook Cuando Tienes un Problema" class="wpp-post-title" target="_self">Cómo Contactar con Facebook Cuando Tienes un Problema</a>  <span class="post-stats"></span> </li>
+<li><a href="http://www.juanmerodio.com/2016/transformacion-digital-aplicar-modelos-de-gestion-disruptivos/" title="Artículo: &#8220;La transformación digital no es estar en las redes, sino aplicar modelos de gestión disruptivos&#8221;" target="_self"><img src="http://www.juanmerodio.com/wp-content/uploads/expansion-transformacion-digital-juan-merodio-70x70.jpg" title="Artículo: &#8220;La transformación digital no es estar en las redes, sino aplicar modelos de gestión disruptivos&#8221;" alt="Artículo: &#8220;La transformación digital no es estar en las redes, sino aplicar modelos de gestión disruptivos&#8221;" width="70" height="70" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a><a href="http://www.juanmerodio.com/2016/transformacion-digital-aplicar-modelos-de-gestion-disruptivos/" title="Artículo: &#8220;La transformación digital no es estar en las redes, sino aplicar modelos de gestión disruptivos&#8221;" class="wpp-post-title" target="_self">Artículo: &#8220;La transformación digital no es estar en las redes, sino aplicar modelos de gestión disruptivos&#8221;</a>  <span class="post-stats"></span> </li>
+<li><a href="http://www.juanmerodio.com/2010/las-5-estrategias-en-social-media-usadas-por-grandes-empresas-para-aumentar-sus-ventas/" title="Las 5 estrategias en Social Media usadas por grandes empresas para aumentar sus ventas" target="_self"><img src="http://www.juanmerodio.com/wp-content/plugins/wordpress-popular-posts/no_thumb.jpg" title="Las 5 estrategias en Social Media usadas por grandes empresas para aumentar sus ventas" alt="Las 5 estrategias en Social Media usadas por grandes empresas para aumentar sus ventas" width="70" height="70" class="wpp-thumbnail wpp_def_noPath wpp_featured" /></a><a href="http://www.juanmerodio.com/2010/las-5-estrategias-en-social-media-usadas-por-grandes-empresas-para-aumentar-sus-ventas/" title="Las 5 estrategias en Social Media usadas por grandes empresas para aumentar sus ventas" class="wpp-post-title" target="_self">Las 5 estrategias en Social Media usadas por grandes empresas para aumentar sus ventas</a>  <span class="post-stats"></span> </li>
+
+</ul>
+</li>
+<!-- End Wordpress Popular Posts Plugin v3.0.3 -->
+            <li>
+                <h3>Conferencia en TEDx Talks</h3>
+                <div class="video-container">
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/E6LI1gnju3U?rel=0&amp;controls=0&amp;showinfo=0&amp;theme=light" frameborder="0" allowfullscreen></iframe>
+                </div>
+                            </li>
+		</ul>
+	</div>
+
+	<div style="clear:both"></div>
+</section>
+
+<script type='text/javascript'>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-12662149-1']);
+_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<footer>
+
+	<div id="top-footer">
+
+        <div id="logo-footer">
+
+            <a href="http://www.juanmerodio.com">
+
+                <img src="http://www.juanmerodio.com/wp-content/themes/base/images/logo.png" title="Juan Merodio" alt="Juan Merodio"/>
+
+                <span>Marketing 2.0</span>
+
+            </a>
+
+        </div>
+
+        <p>Sígueme en las principales redes sociales</p>
+
+        <div style="clear:both"></div>
+
+    </div>
+
+    <div id="footer-widgets">
+
+        <ul>
+
+            <li>            <div class="fb-like-box" 
+            	data-href="http://www.facebook.com/JuanMerodio" 
+            	data-width="396" 
+                data-height="230" 
+            	data-show-faces="true" 
+            	data-stream="false" 
+            	data-header="false"
+            	data-show-border=""></div>
+		</li><li>			<div class="textwidget"><a class="twitter-timeline"  href="https://twitter.com/juanmerodio"  data-widget-id="243389266451898368">Tweets por @juanmerodio</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</li><li><div id="rigrid-grid_widget-2" class="ri-grid ri-grid-size-2 ri-shadow" style="display:none">
+    <ul>
+<li><a title="Hay dias que para ver lo no evidente  tienes que cambiar como te ven" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/10611085_768557483278436_994006881_n.jpg?ig_cache_key=MTIwMDY4MTQwMTA2MzE3OTU4MQ%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/10611085_768557483278436_994006881_n.jpg?ig_cache_key=MTIwMDY4MTQwMTA2MzE3OTU4MQ%3D%3D.2"></a></li><li><a title="En el DX3, la feria más importante de Canadá en Marketing Digital para retail. En unos días en mi canal de YouTube contare las últimas tendencias y novedades" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12784106_915270461904949_957439073_n.jpg?ig_cache_key=MTE5OTk0Mzk3NDY3MzU4MTY1OQ%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12784106_915270461904949_957439073_n.jpg?ig_cache_key=MTE5OTk0Mzk3NDY3MzU4MTY1OQ%3D%3D.2"></a></li><li><a title="Salir de casa con un precioso nevado dia ⛄️" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12751026_108821589511400_1593420872_n.jpg?ig_cache_key=MTE5NzA2MDYwNTQxMzU1NzM2MQ%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12751026_108821589511400_1593420872_n.jpg?ig_cache_key=MTE5NzA2MDYwNTQxMzU1NzM2MQ%3D%3D.2"></a></li><li><a title="Playa y ski en el mismo dia #UnDomingoCualquieraEnToronto" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12748165_237857349886064_641334729_n.jpg?ig_cache_key=MTE5NTI3OTI5MTE5MDQ3ODUyOA%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12748165_237857349886064_641334729_n.jpg?ig_cache_key=MTE5NTI3OTI5MTE5MDQ3ODUyOA%3D%3D.2"></a></li><li><a title="Has visto el video de la campaña de crowdfunding de mi Nuevo libro #10BusinessFactors ? Entra en mi perfil y tendras el enlace para verlo" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/e15/12729605_2051844098288204_93369896_n.jpg?ig_cache_key=MTE5NDI5MzMxNjQxOTE5MjYxOA%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/e15/12729605_2051844098288204_93369896_n.jpg?ig_cache_key=MTE5NDI5MzMxNjQxOTE5MjYxOA%3D%3D.2"></a></li><li><a title="Llega #ubercoptero a Colombia 🙀 @isragarcia ya nos podemos quitar de trancones en los viajes de #EngageWorldwide 😂" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12797594_1714883325461054_2144769788_n.jpg?ig_cache_key=MTE5MzM3ODk4NDUxMjU4NzMzMQ%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12797594_1714883325461054_2144769788_n.jpg?ig_cache_key=MTE5MzM3ODk4NDUxMjU4NzMzMQ%3D%3D.2"></a></li><li><a title="A punto entrar en directo en CNN en el Programa Portafolio Global" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12783187_1011427998892822_1137473105_n.jpg?ig_cache_key=MTE5Mjk4NzYwNzI0NTEyOTE0NQ%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12783187_1011427998892822_1137473105_n.jpg?ig_cache_key=MTE5Mjk4NzYwNzI0NTEyOTE0NQ%3D%3D.2"></a></li><li><a title="Llego el día, arranca la campaña de crowdfunding de mi nuevo libro "10 Business Factors" , si quieres saber más y reservar tu ejemplar con numerosas ventajas, entra en mi perfil de instagram u haz click en el enlace @juanmerodio #10BusinessFactors" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12717061_219994751682921_763876908_n.jpg?ig_cache_key=MTE5MDg0NzExNTI1MDIzODY3MQ%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12717061_219994751682921_763876908_n.jpg?ig_cache_key=MTE5MDg0NzExNTI1MDIzODY3MQ%3D%3D.2"></a></li><li><a title="Próximo destino Toronto, y mientras analizando la aplicación de lo cognitivo al #marketing" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12716749_1674663286108460_838733574_n.jpg?ig_cache_key=MTE5MDAwNjQxNDAwNjQyMTA4Mg%3D%3D.2.l"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12716749_1674663286108460_838733574_n.jpg?ig_cache_key=MTE5MDAwNjQxNDAwNjQyMTA4Mg%3D%3D.2.l"></a></li><li><a title="Después de 7 días lanvandome con este champú , hoy leo que está hecho con embrion de pato , casi me da algo 🙀 #PobresPatos" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12725194_1101391269895436_2138455156_n.jpg?ig_cache_key=MTE4OTg5ODQ1NDQ1ODU2NjEzMg%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12725194_1101391269895436_2138455156_n.jpg?ig_cache_key=MTE4OTg5ODQ1NDQ1ODU2NjEzMg%3D%3D.2"></a></li><li><a title="No pude evitar compartir esto ...... @jaimechicheri @isragarcia 🤔" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12728438_216449352038827_706328740_n.jpg?ig_cache_key=MTE4OTEzODE0NDQwNzcxNzIxNg%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12728438_216449352038827_706328740_n.jpg?ig_cache_key=MTE4OTEzODE0NDQwNzcxNzIxNg%3D%3D.2"></a></li><li><a title="Da gusto el servicio de atención al cliente de Uber, ayer un conductor me engaño en la ruta dándome más vuelta de lo que debía, lo valore mal, en 2 horas tenía una email de Uber para ver qué había pasado y en 12 horas un reembolso a mi cuenta por la cantidad pagada de más. Solo puedo decir ole #Uber 👏👏👏👏👏" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12724824_568303193333320_902355902_n.jpg?ig_cache_key=MTE4ODM2Njk1MDc4MzkxMTY5OQ%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12724824_568303193333320_902355902_n.jpg?ig_cache_key=MTE4ODM2Njk1MDc4MzkxMTY5OQ%3D%3D.2"></a></li><li><a title="La piratería también evoluciona buscando nuevos soportes, hoy paseando me encuentro USB de grupos musicales a la venta (la foto no es mía, no me dejaron hacerla) 😶" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12729623_447844225410586_150639719_n.jpg?ig_cache_key=MTE4NTcxODgwNjA3ODE2MjM3Mg%3D%3D.2.l"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12729623_447844225410586_150639719_n.jpg?ig_cache_key=MTE4NTcxODgwNjA3ODE2MjM3Mg%3D%3D.2.l"></a></li><li><a title="Proximo destino Bogota, mision #EngageWorldwide con @isragarcia , ahora esperando en el unico aeropuerto que conozco con iPads disponibles para todo el mundo" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12599132_1097040170328489_1861106558_n.jpg?ig_cache_key=MTE4NDcxMzU4MDkzNjMwMDM4Ng%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12599132_1097040170328489_1861106558_n.jpg?ig_cache_key=MTE4NDcxMzU4MDkzNjMwMDM4Ng%3D%3D.2"></a></li><li><a title="Ha sido leerlo y pensar en compartirlo, esperemos que este mensaje llegue lo antes posible a todos aquellos profesionales que siguen pensando que liderar es mandar #NewWayOfManagement" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/12724745_1651946488400975_374446022_n.jpg?ig_cache_key=MTE4MzUxNDg1NjQwMjg0NzE2OQ%3D%3D.2.l"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/12724745_1651946488400975_374446022_n.jpg?ig_cache_key=MTE4MzUxNDg1NjQwMjg0NzE2OQ%3D%3D.2.l"></a></li><li><a title="Me encanta amanecer nevando, el blanco me da nuevos  puntos de vista 👀" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12627941_984137974990301_294502403_n.jpg?ig_cache_key=MTE4MTgzMzk2NTk4MTAwOTY3OA%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12627941_984137974990301_294502403_n.jpg?ig_cache_key=MTE4MTgzMzk2NTk4MTAwOTY3OA%3D%3D.2"></a></li><li><a title="500 gramos de pavo casi 20$ 🤔 #EsUnLujo" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12519484_926959297382485_1618439041_n.jpg?ig_cache_key=MTE3NDgwNTcxOTUxNTAwNjI5MA%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12519484_926959297382485_1618439041_n.jpg?ig_cache_key=MTE3NDgwNTcxOTUxNTAwNjI5MA%3D%3D.2"></a></li><li><a title="Asomarte por la ventana de casa y ver a un oso saludándote 🤗🐻" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/e15/916505_1708764499366888_35142179_n.jpg?ig_cache_key=MTE3NDA2ODMzNjc4ODExMjc1OQ%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/e15/916505_1708764499366888_35142179_n.jpg?ig_cache_key=MTE3NDA2ODMzNjc4ODExMjc1OQ%3D%3D.2"></a></li><li><a title=""Data Profile Manager" la nueva profesión, es totalmente cierto , lo vi ayer en Toronto publicado en Craiglist #trabajo . Que te parece?" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12479471_585594708271368_2920367_n.jpg?ig_cache_key=MTE3MzA5Njc5MjI5MzI0NjEyNg%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12479471_585594708271368_2920367_n.jpg?ig_cache_key=MTE3MzA5Njc5MjI5MzI0NjEyNg%3D%3D.2"></a></li><li><a title="Feliz de anunciar que ya puedes descargar totalmente gratis la App de mi blog, para Apple y Android - JuanMerodio.com 📲" class="swipebox_grid" href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12545481_537528599741060_801692687_n.jpg?ig_cache_key=MTE3MjM4MTYzOTcxMzA5NzYzNg%3D%3D.2"><img  src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12545481_537528599741060_801692687_n.jpg?ig_cache_key=MTE3MjM4MTYzOTcxMzA5NzYzNg%3D%3D.2"></a></li>    </ul></div>
+
+<script type="text/javascript">	
+    
+
+			jQuery(function() {
+			
+				jQuery('#rigrid-grid_widget-2').gridrotator({
+					rows		: 2,
+					columns		: 3,
+					animType	: 'fadeInOut',
+					onhover : false,
+					interval		: 7000,
+					preventClick    : false,
+					w1024           : {
+    rows    : 2,
+    columns : 3},
+ 
+w768            : {
+    rows    : 2,
+    columns : 3},
+ 
+w480            : {
+    rows    : 2,
+    columns : 3},
+ 
+w320            : {
+    rows    : 2,
+    columns : 3},
+ 
+w240            : {
+    rows    : 2,
+    columns : 3}
+				});
+				jQuery('#rigrid-grid_widget-2').fadeIn('slow');
+			});
+
+			
+		</script>
+
+   
+</li>
+            <li id="google-plus-badge">
+
+                <a href="https://plus.google.com/+JuanMerodioBlog/" target="_blank"><img src="http://www.juanmerodio.com/wp-content/themes/base/images/avatar.png" alt="Juan Merodio" title="Juan Merodio"/></a><br/>
+
+                <a href="https://plus.google.com/+JuanMerodioBlog/" target="_blank">google.com/+JuanMerodioBlog</a><br/>
+
+                ¿Google+? Descúbrela y Verás<br/>
+
+               <!-- Place this tag where you want the widget to render. -->
+
+                <div class="g-follow" data-annotation="bubble" data-height="20" data-href="https://plus.google.com/+JuanMerodioBlog" data-rel="publisher"></div>
+
+                
+
+                <!-- Place this tag after the last widget tag. -->
+
+                <script type="text/javascript">
+
+                  window.___gcfg = {lang: 'es'};
+
+                
+
+                  (function() {
+
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+
+                    po.src = 'https://apis.google.com/js/platform.js';
+
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+
+                  })();
+
+                </script>
+
+            </li>
+
+         
+
+        </ul>
+
+        <div style="clear:both"></div>
+
+    </div>
+
+    <div id="enlaces-footer">
+
+        <a href="http://www.juanmerodio.com/quien-soy">¿Quién Soy?</a> | <a href="http://www.juanmerodio.com/aviso-legal">Aviso Legal</a> | <a href="http://www.juanmerodio.com/contacta-conmigo">Contacto</a>
+
+    </div>
+
+</footer>
+
+        
+
+<script type="text/javascript">
+  (function() {
+    window._pa = window._pa || {};
+    // _pa.orderId = "myUser@email.com"; // OPTIONAL: include your user's email address or order ID
+    // _pa.revenue = "19.99"; // OPTIONAL: include dynamic purchase value for the conversion
+    // _pa.onLoadEvent = "sign_up"; // OPTIONAL: name of segment/conversion to be fired on script load
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/51907826b2f043000200041c .js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script><div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&appId=117017735039638";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+</body>
+
+</html>

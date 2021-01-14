@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="reg">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>
+        福德正神
+    </title>
+    <meta content="" name="keywords">
+    <meta content="" name="Description">
+    <link rel="stylesheet" href="css/core.css">
+    <script type="text/javascript"> 
+    var url = '/api/checkwh.do?t='+Math.random();
+    document.write("<script type='text/javascript' src='"+url+"'><\/script>");
+    document.close();
+</script>
+</head>
+
+<body>
+    <!-- <div class="topBanner"></div> -->
+    <div class="container">
+        <div class="main mainReg">
+            <div class="header">
+                <p>请在以下填写您的注册信息</p>
+            </div>
+            <div class="regbox">
+                <form onsubmit="doRegister(); return false;">
+                    <div class="input-group hide" id="recoTr">
+                        <label class="ipt-lab">推荐人帐号: </label>
+                        <div class="ipt">
+                            <input type="text" id="regRecoUserName" maxlength="15" class="ipt" placeholder="非必填">
+                        </div>
+                        <span class="ipt-tip">上级代理帐号或推荐人帐号,如没有可以不填</span>
+                    </div>
+                    <div class="input-group">
+                        <label class="ipt-lab">注册邀请码：</label>
+                        <div class="ipt">
+                            <input type="text" id="inviteCode" maxlength="15" class="ipt">
+                        </div>
+                        <span class="ipt-tip">*邀请码规则：数字组合</span>
+                    </div>
+                    <div class="input-group">
+                        <label class="ipt-lab">会员账号：</label>
+                        <div class="ipt">
+                            <input type="text" id="regUsername" maxlength="15" class="ipt">
+                        </div>
+                        <span class="ipt-tip">*账号规则：账号必须为6-15位数字和字母组合</span>
+                    </div>
+                    <div class="input-group">
+                        <label class="ipt-lab">登录密码：</label>
+                        <div class="ipt">
+                            <input type="password" class="ipt" id="regPassword" maxlength="20">
+                        </div>
+                        <span class="ipt-tip">*密码规则：密码长度要有6-20个字符，以及必须含有数字和字母组合</span>
+                    </div>
+                    <div class="input-group">
+                        <label class="ipt-lab">确认密码：</label>
+                        <div class="ipt">
+                            <input type="password" id="password1" class="ipt" maxlength="20">
+                        </div>
+                        <span class="ipt-tip">*确认您的登录密码,请输入和以上一致的密码</span>
+                    </div>
+                    <div class="input-group">
+                        <label class="ipt-lab">真实姓名：</label>
+                        <div class="ipt">
+                            <input type="text" id="fullName" class="ipt" maxlength="10">
+                        </div>
+                        <span class="ipt-tip">真实姓名必须与你用于提款的银行户口名字一致</span>
+                    </div>
+                    <div class="input-group">
+                        <label class="ipt-lab">提款密码：</label>
+                        <div class="ipt">
+                            <select id="pwd1">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                            <select id="pwd2">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                            <select id="pwd3">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                            <select id="pwd4">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <span class="ipt-tip">*取款必须认证,势必记住</span>
+                    </div>
+                    <div class="input-group hide" id="showRegEmail">
+                        <label class="ipt-lab">邮箱：</label>
+                        <div class="ipt">
+                            <input type="text" id="email" maxlength="30" class="ipt">
+                        </div>
+                        <span class="ipt-tip">*电子邮箱(email)格式：888888@qq.com</span>
+                    </div>
+                    <div class="input-group hide" id="showRegQQ">
+                        <label class="ipt-lab">QQ号码：</label>
+                        <div class="ipt">
+                            <input type="text" id="qq" maxlength="20" class="ipt">
+                        </div>
+                        <span class="ipt-tip">请输入QQ号码</span>
+                    </div>
+                    <div class="input-group hide" id="showRegMobile">
+                        <label class="ipt-lab">手机号码：</label>
+                        <div class="ipt">
+                            <input type="text" id="phone" maxlength="11" class="ipt">
+                        </div>
+                        <span class="ipt-tip">*手机号码格式: 18888888888</span>
+                    </div>
+                    <div class="input-group hide showMobileCode" style="position: relative;">
+                        <label class="ipt-lab">短信验证码：</label>
+                        <div class="ipt">
+                            <input type="text" id="smsText" maxlength="10" class="ipt">
+                        </div>
+                        <button id="sendSmsBtn" onclick="sendSmsCode();return false;" style="position: absolute;left: 216px;top: 5px;width: 90px;">发送验证码</button>
+                    </div>
+                    <div class="input-group" style="position:relative" id="regValiCode">
+                        <label class="ipt-lab">验证码：</label>
+                        <div class="ipt">
+                            <input type="text" id="valiCode" class="ipt" maxlength="4">
+                        </div>
+                        <img src="" alt="" class="imgCode" title="看不清？点击更换一张验证图片">
+                    </div>
+                    <div class="btn-group">
+                        <label class="ipt-lab"></label>
+                        <input type="submit" class="regbtn" value="">
+                        <!-- <span class="lg">如果您已有账号，可点击<a href="index.html">登录</a>进入，或<a href="javascript:guestLogin();">试玩登录</a></span> -->
+                        <span class="lg">已有账戶?</span>
+                        <a href="index.html" class="loginBtn"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="copyRight">Copyright © 福德正神 All Rights Reserved.</p>
+    </div>
+    <div id="float" class="float">
+	<ul>
+		<li><a href="javascript:BBOnlineService();" class="f3"></a></li>
+		<li><a href="javascript:agentService()">
+			<span class="cfgMainAgentQQ"></span></a>
+		</li>
+		<li><a href="javascript:qqService();">
+			<span class="cfgMainCustomerQQ qqService"></span>
+		</a></li>
+		<li><a href="mobile.html" target="_blank"></a></li>
+		<li><a href="mobile.html" target="_blank"></a></li>
+		<li><a href="javascript:kjzb();"></a></li>
+		<li><img src="" class="ewm cfgQR" alt=""></li>
+		<li class="close"></li>
+	</ul>
+</div>
+    <link type="text/css" href="/static/lib/remodal-1.1.0/remodal.min.css" rel="stylesheet" />
+<div class="remodal" data-remodal-id="modal" role="dialog" aria-describedby="modal1Desc" data-remodal-options="hashTracking: false"  style="width: auto;min-width: 250px;">
+    <div>
+        <p id="modal1Desc" style="color: #000"></p>
+        <span class="btnclose">关闭</span>
+    </div>
+</div>
+
+<script src="js/home_main.min.js?v=190601"></script>
+
+    <script type="text/javascript" src="js/core.js"></script>
+</body>
+
+</html>

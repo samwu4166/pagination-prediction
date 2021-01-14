@@ -1,0 +1,22 @@
+File Name,type,Encoding,note,url,type,PREV,PAGE,NEXT,LAST,FIRST
+1,POST,UTF-8,click page,https://www.mittw.org.tw/products/default.aspx,a,#WebPager1 > div:nth-child(2) > a:nth-child(2),.cpb ~ a:nth-last-child(n+3),#WebPager1 > div:nth-child(2) > a:nth-last-child(2),#WebPager1 > div:nth-child(2) > a:nth-last-child(1),#WebPager1 > div:nth-child(2) > a:nth-child(1)
+2,GET,UTF-8,null page,https://www.mittw.org.tw/Home/#,a,,,,,
+3,GET,UTF-8,page in page,https://www.mobile01.com/topiclist.php?f=180,a,,.c-pagination:not(.c-pagination--next):not(.c-pagination--prev),.c-pagination--next,,
+4,GET,UTF-8,page in page,https://www.mobile01.com/topiclist.php?f=180&p=4,a,.c-pagination--prev,.c-pagination:not(.c-pagination--next):not(.c-pagination--prev),.c-pagination--next,,
+5,GET,UTF-8,page,https://www.monster.com.hk/srp/results?query=software&searchId=487c795d-a528-46f0-98e6-0722bcfa2554,b,,,.btn-next,,
+6,GET,UTF-8,page,https://tw.indeed.com/jobs?q=%E7%B2%97%E5%B7%A5,a,,.pagination-list li:not(:last-child) a,.pagination-list li:last-child a,,
+7,GET,UTF-8,page,https://www.simplyhired.com/search?q=education&l=&job=YZyQieO1diZI6yVT4GtI3K2sXqsXk2az1TXBl2bZeZyfaWd4VaGdPg,a,,".Pagination-link:not(.next-pagination), .active > a",.Pagination-link.next-pagination,,
+8,GET,UTF-8,page,https://www.rei.com/f/scd-deals,a,,#search-results +nav a:not(:last-child),#search-results +nav a:last-child,,
+9,GET,UTF-8,page,https://www.musicarts.com/woodwinds?page=1,b,,.pagination li:not(:nth-last-child(2)) > button.ng-scope,.pagination-next button,.pagination li:nth-last-child(2) > button.ng-scope,
+10,GET,UTF-8,page,https://www.musicarts.com/woodwinds?page=5,b,.pagination-previous button,.pagination li:not(:nth-last-child(2)):not(:nth-child(2)) > button.ng-scope,.pagination-next button,.pagination li:nth-last-child(2) > button.ng-scope,.pagination li:nth-child(2) > button.ng-scope
+11,GET,UTF-8,page,https://www.wwbw.com/Woodwinds.wwbw,a,,"a.page-link:not(:last-child), .pageLink",.next_link,,
+12,GET,UTF-8,page,https://www.wwbw.com/Woodwinds.wwbw#pageName=department-page&N=70437&Nao=100&recsPerPage=20&profileCountryCode=US&profileCurrencyCode=USD,a,.pagePrevious,a.pageLink:not(:first-child):not(.disabled):not(:last-child),.pageNext,,
+13,GET,cp1252,page,https://www.idjnow.com/lighting/lighting-effects.html?p=1,a,,.pages a:not(.next),.next,,
+14,GET,cp1252,page,https://www.idjnow.com/lighting/lighting-effects.html?p=3,a,.previous,.pages a:not(.next):not(.previous),.next,,
+15,GET,UTF-8,page,https://www.sheetmusicnow.com/collections/piano-c2?page=1,a,,.paginate span:not(.next) a,.next a,,
+16,GET,UTF-8,page,https://www.sheetmusicnow.com/collections/piano-c2?page=10,a,.prev a,.paginate span:not(.next):not(.prev) a,.next a,,
+17,GET,UTF-8,page,https://nba.udn.com/nba/cate/6754/-1/newest/3,a,.pagelink goback a:nth-child(2),.pagelink gopage a,.pagelink gonext a:nth-child(1),.pagelink gonext a:nth-child(2),.pagelink goback a:nth-child(1)
+18,GET,UTF-8,page,https://www.turntablelab.com/collections/dj-production-alpha?_=pf&page=1,a,,.pagination a:not(.next),.next,,
+19,GET,UTF-8,page,https://www.turntablelab.com/collections/dj-production-alpha?_=pf&page=10,a,.prev,.pagination a:not(.next):not(.prev),.next,,
+20,GET,UTF-8,page,https://www.chicagomusicexchange.com/collections/acoustic-guitars,a,,.ss-pagination li:not(.last) a,.ss-pagination .last a,,
+21,GET,UTF-8,page,https://www.chicagomusicexchange.com/collections/acoustic-guitars?page=5,a,.ss-pagination li:first-child a,.ss-pagination li:not(.last):not(:first-child) a,,,

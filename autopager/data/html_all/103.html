@@ -1,0 +1,2444 @@
+<!doctype html>
+<html lang="pt">
+    <head >
+        <script>
+    var BASE_URL = 'https://arcacenter.com.br/';
+    var require = {
+        "baseUrl": "https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR"
+    };
+</script>
+        <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-cea3cc6ba5200425954",applicationID:"600928121"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<meta name="title" content="Lançamentos ArcaCenter - Produtos Novos"/>
+<meta name="description" content="Conheça as novidades que chegam ao ArcaCenter na seção de Lançamentos: livros cristãos, modelos novos das roupas dos grupos Universal e muito mais."/>
+<meta name="keywords" content="ArcaCenter, lançamentos ArcaCenter, novidades ArcaCenter, lançamentos Unipro, Novidades Unipro, Camisa nova grupos Universal"/>
+<meta name="robots" content="INDEX,FOLLOW"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>Lançamentos ArcaCenter - Produtos Novos</title>
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/mage/calendar.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/css/styles-m.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/owl.carousel/assets/owl.carousel.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/fancybox/css/jquery.fancybox.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/icon-fonts/css/porto-icons-codes.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/icon-fonts/css/animation.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/font-awesome/css/font-awesome.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/Magento_Cookie/css/cookie.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/Avanter_ArcacenterProductPassword/css/avt.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/Avanter_ProductPlayer/css/module.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/Avanter_ProductPlayer/fontawesome-free-5.12.1-web/css/font-awesome.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/Smartwave_Dailydeals/css/style.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/WeltPixel_Quickview/css/magnific-popup.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/Mageplaza_SocialLogin/css/style.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/Mageplaza_Core/css/grid-mageplaza.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/Mageplaza_Core/css/font-awesome.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/Mageplaza_Core/css/magnific-popup.css" />
+<link  rel="stylesheet" type="text/css"  media="screen and (min-width: 768px)" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/css/styles-l.css" />
+<link  rel="stylesheet" type="text/css"  media="print" href="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/css/print.css" />
+<script  type="text/javascript"  src="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/requirejs/require.js"></script>
+<script  type="text/javascript"  src="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/mage/requirejs/mixins.js"></script>
+<script  type="text/javascript"  src="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/requirejs-config.js"></script>
+<script  type="text/javascript"  src="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/mage/polyfill.js"></script>
+<link  rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Shadows+Into+Light" />
+<link  rel="icon" type="image/x-icon" href="https://arcacenter.com.br/media/favicon/default/favicon.ico" />
+<link  rel="shortcut icon" type="image/x-icon" href="https://arcacenter.com.br/media/favicon/default/favicon.ico" />
+<script src="//code.jivosite.com/widget/Z9MbcVLd0e" async></script>
+<script src="https://kit.fontawesome.com/a586b549b3.js" crossorigin="anonymous"></script>        <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2C400%2C400italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic,latin-ext' type='text/css' />
+<link href="//fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2C400%2C400italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&amp;v1&amp;subset=latin%2Clatin-ext" type="text/css" media="screen"/>
+    <link rel="stylesheet" type="text/css" media="all" href="https://arcacenter.com.br/media/porto/web/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="https://arcacenter.com.br/media/porto/web/css/animate.css">
+<link rel="stylesheet" type="text/css" media="all" href="https://arcacenter.com.br/media/porto/web/css/header/type2.css">
+<link rel="stylesheet" type="text/css" media="all" href="https://arcacenter.com.br/media/porto/web/css/custom.css">
+<link rel="stylesheet" type="text/css" media="all" href="https://arcacenter.com.br/media/porto/configed_css/design_default.css">
+<link rel="stylesheet" type="text/css" media="all" href="https://arcacenter.com.br/media/porto/configed_css/settings_default.css">
+<link rel="stylesheet" type="text/css" media="all" href="https://arcacenter.com.br/media/porto/web/css/arcacenter.css">
+
+<script type="text/javascript">
+var porto_config = {
+    paths: {
+        'parallax': 'js/jquery.parallax.min',
+        'owlcarousel': 'owl.carousel/owl.carousel',
+        'owlcarousel_thumbs': 'owl.carousel/owl.carousel2.thumbs',
+        'imagesloaded': 'Smartwave_Porto/js/imagesloaded',
+        'packery': 'Smartwave_Porto/js/packery.pkgd',
+        'floatelement': 'js/jquery.floatelement'
+    },
+    shim: {
+        'parallax': {
+          deps: ['jquery']
+        },
+        'owlcarousel': {
+          deps: ['jquery']
+        },        
+        'owlcarousel_thumbs': {
+          deps: ['jquery','owlcarousel']
+        },    
+        'packery': {
+          deps: ['jquery','imagesloaded']
+        },
+        'floatelement': {
+          deps: ['jquery']
+        }
+    }
+};
+
+require.config(porto_config);
+</script>
+<script type="text/javascript">
+require([
+    'jquery'
+], function ($) {
+    $(document).ready(function(){
+        $(".drop-menu > a").off("click").on("click", function(){
+            if($(this).parent().children(".nav-sections").hasClass("visible")) {
+                $(this).parent().children(".nav-sections").removeClass("visible");
+                $(this).removeClass("active");
+            }
+            else {
+                $(this).parent().children(".nav-sections").addClass("visible");
+                $(this).addClass("active");
+            }
+        });
+        $('.page-header.type2 ul.header.links').clone().appendTo($(".sections.nav-sections #store\\.links"));
+        $(".page-header.type2 .sections.nav-sections #store\\.links").hide();
+    });
+    var scrolled = false;
+    $(window).scroll(function(){
+        if(!$('.page-header').hasClass('type10')) {
+            if($(window).width()>=768){
+                if(160<$(window).scrollTop() && !scrolled){
+                    $('.page-header:not(.sticky-header)').css("height",$('.page-header:not(.sticky-header)').height()+'px');
+                    $('.page-header').addClass("sticky-header");
+                    scrolled = true;
+                    if((!$(".page-header").hasClass("type12")) && (!$(".page-header").hasClass("type23")) && (!$(".page-header").hasClass("type25")) && (!$(".page-header").hasClass("type26"))) {
+                        $('.page-header .minicart-wrapper').after('<div class="minicart-place hide"></div>');
+
+                        if($(".page-header").hasClass("type2"))
+                            $('header.page-header.type2 .header.content .block-search').appendTo('.page-header .navigation');
+                            $('.page-header .navigation').append($('header.page-header.type2 a.action.my-wishlist').detach());
+
+                        var minicart = $('.page-header .minicart-wrapper').detach();
+                        if($(".page-header").hasClass("type8"))
+                            $('.page-header .menu-wrapper').append(minicart);
+                        else
+                            $('.page-header .navigation').append(minicart);
+                        
+                                                var logo_image = $('<div>').append($('.page-header .header > .logo').clone()).html();
+                        if($(".page-header").hasClass("type27"))
+                            logo_image = $('<div>').append($('.page-header .header .header-main-left > .logo').clone()).html();
+                        if($(".page-header").hasClass("type8"))
+                            $('.page-header .menu-wrapper').prepend('<div class="sticky-logo">'+logo_image+'</div>');
+                        else
+                            $('.page-header .navigation').prepend('<div class="sticky-logo">'+logo_image+'</div>');
+                                            } else {
+                                                $('.page-header.type12 .logo').append('<span class="sticky-logo"><img src="" alt=""/></span>');
+                        $('.page-header .logo > img').addClass("hide");
+                                            }
+                                                            $(".sticky-logo img").attr("src","https://arcacenter.com.br/media/porto/sticky_logo/default/arca_logo_1.png");
+                                                        }
+                if(160>=$(window).scrollTop() && scrolled){
+                    $('.page-header.sticky-header').css("height",'auto');
+                    $('.page-header').removeClass("sticky-header");
+                    scrolled = false;
+                    if((!$(".page-header").hasClass("type12")) && (!$(".page-header").hasClass("type23")) && (!$(".page-header").hasClass("type25")) && (!$(".page-header").hasClass("type26"))) {
+                        var minicart;
+                        if($(".page-header").hasClass("type8"))
+                            minicart = $('.page-header .menu-wrapper .minicart-wrapper').detach();
+                        else
+                            minicart = $('.page-header .navigation .minicart-wrapper').detach();
+                        $('.minicart-place').after(minicart);
+                        $('.minicart-place').remove();
+                        if($(".page-header").hasClass("type2"))
+                            $('.page-header .search-container').before($('.page-header .navigation a.action.my-wishlist').detach());
+                            $('.page-header .navigation .block-search').appendTo(".page-header .header.content .search-container");
+                        $('.page-header .minicart-wrapper-moved').addClass("minicart-wrapper").removeClass("minicart-wrapper-moved").removeClass("hide");
+                    }
+                                        if($(".page-header").hasClass("type8"))
+                        $('.page-header .menu-wrapper > .sticky-logo').remove();
+                    else if($(".page-header").hasClass("type12")) {
+                        $('.page-header .sticky-logo').remove();
+                        $('.page-header .logo > img').removeClass("hide");;
+                    } else
+                        $('.page-header .navigation > .sticky-logo').remove();
+                                    }
+            }
+        }
+    });
+});
+</script>
+            <!-- BEGIN GOOGLE UNIVERSAL ANALYTICS CODE -->
+            <script type="text/x-magento-init">
+            {
+                "*": {
+                    "Magento_GoogleAnalytics/js/google-analytics": {
+                        "isCookieRestrictionModeEnabled": 1,
+                        "currentWebsite": 1,
+                        "cookieName": "user_allowed_save_cookie",
+                        "ordersTrackingData": [],
+                        "pageTrackingData": {"optPageUrl":"","isAnonymizedIpActive":false,"accountId":"UA-27446132-1"}                    }
+                }
+            }
+            </script>
+            <!-- END GOOGLE UNIVERSAL ANALYTICS CODE -->
+            <!-- BEGIN GOOGLE VERIFICATION TAG -->
+<!-- END GOOGLE VERIFICATION TAG -->
+<!-- BEGIN GTAG GLOBAL TAG -->
+<!-- END GTAG GLOBAL TAG -->
+<div id="getresponse-tracking-code-snippet"><!-- Getresponse Analytics -->
+<script type="text/javascript" src="https://arcacenter.getresponse360.com/script/ga.js?grid=uB1kAVCpY" async></script>
+<!-- End Getresponse Analytics --></div><div class="getresponse-tracking-code-section" data-bind="scope: 'getresponse_tracking_code_section'">
+    <div id="customer-email-address" data-bind="attr: { 'customer-email': getResponseTrackingCode().customerEmail}"></div>
+</div>
+
+<script>
+    require([
+        'jquery',
+        'mage/cookies',
+    ], function ($) {
+
+        $('body').on('DOMSubtreeModified', '#customer-email-address', function () {
+
+            var customerEmail = document.getElementById('customer-email-address').getAttribute('customer-email');
+            var trackingCodeSnippet = document.getElementById('getresponse-tracking-code-snippet');
+            var gaIsValuable = $.cookie('gaIsValuable');
+
+            if (customerEmail !== null
+                && trackingCodeSnippet !== null
+                && gaIsValuable !== '1'
+            ) {
+                gaSetUserId(customerEmail);
+            }
+        });
+    });
+</script>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "getresponse_tracking_code_section": {
+                        "component": "GetResponse_GetResponseIntegration/js/getresponse_tracking_code_section"
+                    }
+                }
+            }
+        }
+    }
+</script><style>
+    #social-login-popup .social-login-title {
+        background-color: #6e716e    }
+
+    #social-login-popup .social-login #bnt-social-login-authentication,
+    #social-login-popup .forgot .primary button,
+    #social-login-popup .create .primary button,
+    #social-login-popup .fake-email .primary button {
+        background-color: #6e716e;
+        border: #6e716e    }
+
+    .block.social-login-authentication-channel.account-social-login .block-content {
+        text-align: center;
+    }
+
+    
+    /* Compatible ETheme_YOURstore*/
+    div#centerColumn .column.main .block.social-login-authentication-channel.account-social-login {
+        max-width: 900px !important;
+        margin: 0 auto !important;
+    }
+
+    div#centerColumn .column.main .block.social-login-authentication-channel.account-social-login .block-content {
+        text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+        div#centerColumn .column.main .block.social-login-authentication-channel.account-social-login .block-content {
+            padding: 0 15px;
+        }
+    }
+</style>
+
+    </head>
+    <body data-container="body"
+          data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/images/loader-2.gif"}}'
+        class="page-with-filter page-products categorypath-lancamentos category-lancamentos  layout-1140 wide mobile-sticky page-layout-2columns-left am-porto-cmtb catalog-category-view page-layout-category-full-width">
+        <div data-role="bss-fbpixel-subscribe" style="display:none;">
+</div>
+<span class="bss-subscribe-email" style="display:none;"></span>
+<span class="bss-subscribe-id" style="display:none;"></span>
+<script type="text/x-magento-init">
+    {
+        "[data-role='bss-fbpixel-subscribe']":
+            {
+                "Magento_Ui/js/core/app": {"components":{"bssFbpixelsSubscribe":{"component":"Bss_FacebookPixel\/js\/subscribe"}}}            }
+    }
+</script>
+<div data-role="bss-fbpixel-atc" style="display:none;">
+
+</div>
+<script type="text/x-magento-init">
+    {
+        "[data-role='bss-fbpixel-atc']":
+            {
+                "Magento_Ui/js/core/app": {"components":{"bssFbpixelsAtc":{"component":"Bss_FacebookPixel\/js\/atc"}}}            }
+    }
+</script>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_PageBuilder/js/widget-initializer": {
+                "config": {"[data-content-type=\"slider\"][data-appearance=\"default\"]":{"Magento_PageBuilder\/js\/content-type\/slider\/appearance\/default\/widget":false},"[data-content-type=\"map\"]":{"Magento_PageBuilder\/js\/content-type\/map\/appearance\/default\/widget":false},"[data-content-type=\"row\"]":{"Magento_PageBuilder\/js\/content-type\/row\/appearance\/default\/widget":false},"[data-content-type=\"tabs\"]":{"Magento_PageBuilder\/js\/content-type\/tabs\/appearance\/default\/widget":false},"[data-content-type=\"slide\"]":{"Magento_PageBuilder\/js\/widget\/show-on-hover":{"buttonSelector":".pagebuilder-slide-button","showOverlay":"hover","dataRole":"slide"}},"[data-content-type=\"banner\"]":{"Magento_PageBuilder\/js\/widget\/show-on-hover":{"buttonSelector":".pagebuilder-banner-button","showOverlay":"hover","dataRole":"banner"}},"[data-content-type=\"buttons\"]":{"Magento_PageBuilder\/js\/content-type\/buttons\/appearance\/inline\/widget":false},"[data-content-type=\"products\"][data-appearance=\"carousel\"]":{"Magento_PageBuilder\/js\/content-type\/products\/appearance\/carousel\/widget":false}},
+                "breakpoints": {"desktop":{"conditions":{"min-width":"1024px"},"options":{"products":{"default":{"slidesToShow":"5"}}}},"tablet":{"conditions":{"max-width":"1024px","min-width":"768px"},"options":{"products":{"default":{"slidesToShow":"4"},"continuous":{"slidesToShow":"3"}}}},"mobile":{"conditions":{"max-width":"768px","min-width":"640px"},"options":{"products":{"default":{"slidesToShow":"3"}}}},"mobile-small":{"conditions":{"max-width":"640px"},"options":{"products":{"default":{"slidesToShow":"2"},"continuous":{"slidesToShow":"1"}}}}}            }
+        }
+    }
+</script>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "mage/cookies": {
+                "expires": null,
+                "path": "\u002F",
+                "domain": ".arcacenter.com.br",
+                "secure": false,
+                "lifetime": "3600"
+            }
+        }
+    }
+</script>
+    <noscript>
+        <div class="message global noscript">
+            <div class="content">
+                <p>
+                    <strong>O JavaScript parece estar desabilitado no seu navegador.</strong>
+                    <span>Para ter uma melhor experiência em nosso site, certifique-se de ativar o javascript em seu navegador.</span>
+                </p>
+            </div>
+        </div>
+    </noscript>
+<script>
+    require.config({
+        map: {
+            '*': {
+                wysiwygAdapter: 'mage/adminhtml/wysiwyg/tiny_mce/tinymce4Adapter'
+            }
+        }
+    });
+</script>
+    <div role="alertdialog"
+         tabindex="-1"
+         class="message global cookie"
+         id="notice-cookie-block"
+         style="display: none;">
+        <div role="document" class="content" tabindex="0">
+            <p>
+                O Arca Center usa cookies para aprimorar sua experiência em nosso site.                <span>Ao continuar navegando, você concorda com o uso de cookies.</span>
+                <a href="https://arcacenter.com.br/privacy-policy-cookie-restriction-mode/">Saiba mais</a>.            </p>
+            <div class="actions">
+                <button id="btn-cookie-allow" class="action allow primary">
+                    <span>Eu concordo</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script type="text/x-magento-init">
+        {
+            "#notice-cookie-block": {
+                "cookieNotices": {
+                    "cookieAllowButtonSelector": "#btn-cookie-allow",
+                    "cookieName": "user_allowed_save_cookie",
+                    "cookieValue": {"1":1},
+                    "cookieLifetime": 31536000,
+                    "noCookiesUrl": "https\u003A\u002F\u002Farcacenter.com.br\u002Fcookie\u002Findex\u002FnoCookies\u002F"
+                }
+            }
+        }
+    </script>
+
+<script>
+    window.cookiesConfig = window.cookiesConfig || {};
+    window.cookiesConfig.secure = true;
+</script>
+<script>
+    require.config({
+        paths: {
+            googleMaps: 'https\u003A\u002F\u002Fmaps.googleapis.com\u002Fmaps\u002Fapi\u002Fjs\u003Fv\u003D3\u0026key\u003D'
+        },
+        config: {
+            'Magento_PageBuilder/js/utils/map': {
+                style: ''
+            },
+            'Magento_PageBuilder/js/content-type/map/preview': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Farcacenter.com.br\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+            'Magento_PageBuilder/js/form/element/map': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Farcacenter.com.br\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+        }
+    });
+</script>
+
+<script>
+    require.config({
+        shim: {
+            'Magento_PageBuilder/js/utils/map': {
+                deps: ['googleMaps']
+            }
+        }
+    });
+</script>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_GoogleTagManager/js/google-tag-manager-cart": {
+                "blockNames": ["category.products.list","product.info.upsell","catalog.product.related","checkout.cart.crosssell","search_result_list"],
+                "cookieAddToCart": "add_to_cart",
+                "cookieRemoveFromCart": "remove_from_cart"
+            }
+        }
+    }
+</script>
+<!-- BEGIN GTAG CART SCRIPT -->
+<!-- END GTAG CART SCRIPT -->
+
+<div class="page-wrapper"><header class="page-header type2 header-newskin" >
+    <div class="main-panel-top">
+        <div class="container">
+            <div class="main-panel-inner">
+                <div class="panel wrapper">
+                    <div class="panel header">
+                        <a class="action skip contentarea"
+   href="#contentarea">
+    <span>
+        Pular para o conteúdo    </span>
+</a>
+                                                                        <div class="custom-block"><div data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><div class="row-full-width-inner" data-element="inner"><div data-content-type="html" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;" data-decoded="true"><span style="float: left;">BEM VINDO AO ARCACENTER</span>
+<span style="float: right;">ATENDIMENTO: (11) 5555-1388&nbsp;&nbsp;&nbsp; WHATSAPP: (11) 99602-9768</span></div></div></div></div>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header content">
+        <span data-action="toggle-nav" class="action nav-toggle"><span>Navegação</span></span>
+            <a class="logo" href="https://arcacenter.com.br/" title="">
+        <img src="https://arcacenter.com.br/media/logo/default/arca_logo.png"
+             alt=""
+             width="200"             height="50"        />
+    </a>
+        
+<div data-block="minicart" class="minicart-wrapper">
+    <a class="action showcart" href="https://arcacenter.com.br/checkout/cart/"
+       data-bind="scope: 'minicart_content'">
+        <span class="text">Meu carrinho</span>
+        <span class="counter qty empty"
+              data-bind="css: { empty: !!getCartParam('summary_count') == false && !isLoading() }, blockLoader: isLoading">
+            <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+            <span class="counter-label">
+            <!-- ko if: getCartParam('summary_count') -->
+                <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
+                <!-- ko i18n: 'items' --><!-- /ko -->
+            <!-- /ko -->
+            </span>
+        </span>
+    </a>
+            <div class="block block-minicart"
+             data-role="dropdownDialog"
+             data-mage-init='{"dropdownDialog":{
+                "appendTo":"[data-block=minicart]",
+                "triggerTarget":".showcart",
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":[]}}'>
+            <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            </div>
+                    </div>
+        <script>
+        window.checkout = {"shoppingCartUrl":"https:\/\/arcacenter.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/arcacenter.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/arcacenter.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/arcacenter.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/arcacenter.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/arcacenter.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9sYW5jYW1lbnRvcw%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/arcacenter.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1603601056}}};
+    </script>
+    <script type="text/x-magento-init">
+    {
+        "[data-block='minicart']": {
+            "Magento_Ui/js/core/app": {"components":{"minicart_content":{"children":{"subtotal.container":{"children":{"subtotal":{"children":{"subtotal.totals":{"config":{"display_cart_subtotal_incl_tax":0,"display_cart_subtotal_excl_tax":1,"template":"Magento_Tax\/checkout\/minicart\/subtotal\/totals"},"component":"Magento_Tax\/js\/view\/checkout\/minicart\/subtotal\/totals","children":{"subtotal.totals.msrp":{"component":"Magento_Msrp\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"displayArea":"minicart-subtotal-hidden","template":"Magento_Msrp\/checkout\/minicart\/subtotal\/totals"}}}}},"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/subtotal"}}},"component":"uiComponent","config":{"displayArea":"subtotalContainer"}},"item.renderer":{"component":"uiComponent","config":{"displayArea":"defaultRenderer","template":"Avanter_ArcacenterProductPassword\/minicart\/item\/default"},"children":{"item.image":{"component":"Magento_Catalog\/js\/view\/image","config":{"template":"Magento_Catalog\/product\/image","displayArea":"itemImage"}},"checkout.cart.item.price.sidebar":{"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/item\/price","displayArea":"priceSidebar"}}}},"extra_info":{"component":"uiComponent","config":{"displayArea":"extraInfo"}},"promotion":{"component":"uiComponent","config":{"displayArea":"promotion"}}},"config":{"itemRenderer":{"default":"defaultRenderer","simple":"defaultRenderer","virtual":"defaultRenderer"},"template":"Magento_Checkout\/minicart\/content"},"component":"Magento_Checkout\/js\/view\/minicart"}},"types":[]}        },
+        "*": {
+            "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Farcacenter.com.br\u002Fstatic\u002Ffrontend\u002FSmartwave\u002Fporto_child\u002Fpt_BR\u002Fimages\u002Floader\u002D1.gif"
+        }
+    }
+    </script>
+</div>
+
+
+        <div class="search-container"><div class="block block-search">
+    <div class="block block-title"><strong>Busca</strong></div>
+    <div class="block block-content">
+        <form class="form minisearch" id="search_mini_form" action="https://arcacenter.com.br/catalogsearch/result/" method="get">
+            <div class="field search">
+                <label class="label" for="search" data-role="minisearch-label">
+                    <span>Busca</span>
+                </label>
+                <div class="control">
+                    <input id="search"
+                           data-mage-init='{"quickSearch":{
+                                "formSelector":"#search_mini_form",
+                                "url":"https://arcacenter.com.br/search/ajax/suggest/",
+                                "destinationSelector":"#search_autocomplete"}
+                           }'
+                           type="text"
+                           name="q"
+                           value=""
+                           placeholder="Buscar..."
+                           class="input-text"
+                           maxlength="128"
+                           role="combobox"
+                           aria-haspopup="false"
+                           aria-autocomplete="both"
+                           autocomplete="off"/>
+                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                    <div class="nested">
+    <a class="action advanced" href="https://arcacenter.com.br/catalogsearch/advanced/" data-action="advanced-search">
+        Pesquisa Avançada    </a>
+</div>
+        <div class="search-category" style="position:absolute; top: 0; right: 35px; width: 130px">
+        <select id="mpsearch-category">
+                            <option value="0">Categorias</option>
+                            <option value="370">GRUPOS</option>
+                            <option value="534">- ARIMATÉIA</option>
+                            <option value="371">- CALEBE</option>
+                            <option value="535">- CELEBRAÇÃO DE CASAMENTOS</option>
+                            <option value="375">- EBI</option>
+                            <option value="373">- EVG</option>
+                            <option value="377">- FJU</option>
+                            <option value="372">- FTU</option>
+                            <option value="378">- GODLLYWOOD</option>
+                            <option value="374">- GSU</option>
+                            <option value="533">- INTELLIMEN</option>
+                            <option value="531">- DEPRESSÃO TEM CURA</option>
+                            <option value="376">- UNP</option>
+                            <option value="538">- VÍCIO TEM CURA</option>
+                            <option value="805">- SOCIOEDUCATIVO</option>
+                            <option value="832">- UNISOCIAL</option>
+                            <option value="844">- ELITE UNIVERSAL</option>
+                            <option value="881">- UFP</option>
+                            <option value="941">- OUTROS</option>
+                            <option value="1021">- TERAPIA DO AMOR</option>
+                            <option value="1027">- RAABE</option>
+                            <option value="384">BÍBLIAS</option>
+                            <option value="386">- ACESSÓRIOS PARA BÍBLIA</option>
+                            <option value="387">- BÍBLIAS - ACF - FIEL</option>
+                            <option value="388">- BÍBLIAS DE ESTUDO</option>
+                            <option value="389">- BÍBLIAS INFANTOJUVENIL</option>
+                            <option value="390">- BÍBLIAS KING JAMES</option>
+                            <option value="391">- BÍBLIAS FEMININAS</option>
+                            <option value="393">LIVROS</option>
+                            <option value="394">- AUTORES</option>
+                            <option value="404">- TEMAS</option>
+                            <option value="415">EBOOKS</option>
+                            <option value="416">- AUTORES</option>
+                            <option value="431">- TEMAS</option>
+                            <option value="462">FJU</option>
+                            <option value="463">- PROJETOS</option>
+                            <option value="476">- BÍBLIAS</option>
+                            <option value="477">- UTILIDADES</option>
+                            <option value="914">- ROUPAS</option>
+                            <option value="478">GODLLYWOOD</option>
+                            <option value="479">- ACESSÓRIOS</option>
+                            <option value="480">- ROUPAS</option>
+                            <option value="481">- SEMIJOIAS</option>
+                            <option value="482">- LIVROS</option>
+                            <option value="483">VESTUÁRIO</option>
+                            <option value="484">- UNIFORME DOS GRUPOS</option>
+                            <option value="496">- CAMISAS POLO</option>
+                            <option value="497">- COLETES</option>
+                            <option value="498">- JALECOS</option>
+                            <option value="499">- CAMISETAS</option>
+                            <option value="878">- ROUPAS DE FRIO</option>
+                            <option value="993">- OUTROS</option>
+                            <option value="520">KITS</option>
+                            <option value="808">OQJF</option>
+                            <option value="944">- ACESSÓRIOS</option>
+                            <option value="947">- ROUPAS</option>
+                            <option value="950">- UTILIDADES</option>
+                            <option value="975">OUTLET</option>
+                    </select>
+    </div>
+        <script src="https://arcacenter.com.br/media/mageplaza/search/default_0.js"></script>
+    <script type="text/javascript">
+    require([
+        'jquery',
+        'Magento_Catalog/js/price-utils',
+        'mpDevbridgeAutocomplete'
+    ], function ($, priceUtils) {
+        "use strict";
+
+        var baseUrl = 'https://arcacenter.com.br/',
+            baseImageUrl = 'https://arcacenter.com.br/media/catalog/product/',
+            priceFormat = {"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false},
+            displayInfo = ["price","image","description"];
+
+        var categorySelect = $('#mpsearch-category'),
+            searchInput = $('#search');
+        if (categorySelect.length) {
+            categorySelect.on('change', function () {
+                searchInput.focus();
+
+                if ($(this).val() === 0) {
+                    $(this).removeAttr('name');
+                } else {
+                    $(this).attr('name', 'cat');
+                }
+            });
+        }
+
+        searchInput.devbridgeAutocomplete({
+            lookup: mageplazaSearchProducts,
+            lookupLimit: 10,
+            maxHeight: 2000,
+            minChars: 3,
+            lookupFilter: function (suggestion, query, queryLowerCase) {
+                if (categorySelect.length) {
+                    var categoryId = categorySelect.val();
+                    if (categoryId > 0 && ($.inArray(categoryId, suggestion.c) === -1)) {
+                        return false;
+                    }
+                }
+
+                return suggestion.value.toLowerCase().indexOf(queryLowerCase) !== -1;
+            },
+            onSelect: function (suggestion) {
+                window.location.href = correctProductUrl(suggestion.u);
+            },
+            formatResult: function (suggestion, currentValue) {
+                var html = '<a href="' + correctProductUrl(suggestion.u) + '">';
+
+                if ($.inArray('image', displayInfo) !== -1) {
+                    html += '<div class="suggestion-left"><img class="img-responsive" src="' + correctProductUrl(suggestion.i, true) + '" alt="" /></div>';
+                }
+
+                html += '<div class="suggestion-right">';
+                html += '<div class="product-line product-name">' + suggestion.value + '</div>';
+
+                if ($.inArray('price', displayInfo) !== -1) {
+                    html += '<div class="product-line product-price">Preço: ' + priceUtils.formatPrice(suggestion.p, priceFormat) + '</div>';
+                }
+
+                if ($.inArray('description', displayInfo) !== -1 && suggestion.d) {
+                    html += '<div class="product-des"><p class="short-des">' + suggestion.d + '...</p></div>';
+                }
+
+                html += '</div></a>';
+
+                return html;
+            }
+    //		onSearchComplete: function (query, suggestion) {
+    //			$('.autocomplete-suggestions').append("<div id='view_all'><a href='javascript:void(0)' id='search-view-all'>View all >></a></div>");
+    //			$('#search-view-all').on('click', function(){
+    //			   $('#search_mini_form').submit();
+    //            });
+    //		}
+        });
+
+        function correctProductUrl(urlKey, isImage) {
+            if (urlKey.search('http') !== -1) {
+                return urlKey;
+            }
+
+            return ((typeof isImage !== 'undefined') ? baseImageUrl : baseUrl) + urlKey;
+        }
+    });
+    </script>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="submit"
+                        title="Busca"
+                        class="action search">
+                    <span>Busca</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+        <a href="https://arcacenter.com.br/wishlist" class="action my-wishlist" title="Minha lista de desejos" role="button"><i class="porto-icon-heart-empty"></i></a>
+        <ul class="header links">    <li class="greet welcome" data-bind="scope: 'customer'">
+        <i class="Simple-Line-Icons-user"></i>
+        <!-- ko if: customer().fullname  -->
+        <a href="https://arcacenter.com.br/customer/account/" title="Minha conta">
+            <span class="logged-in"
+                  data-bind="text: new String('Bem vindo, %1!').replace('%1', customer().firstname)">
+            </span>
+        </a>
+        <!-- /ko -->
+        <!-- ko ifnot: customer().fullname  -->
+        <a class="not-logged-in" href="https://arcacenter.com.br/customer/account/login/" title="Fazer login">
+            <span class="not-logged-in" data-bind='html:"Entre"'></span>
+                                </a>
+        <a class="not-logged-in" href="https://arcacenter.com.br/customer/account/create/" title="Cadastre-se">
+            <span class="not-logged-in" data-bind='html:"ou cadastre-se"'></span>
+        </a>
+        <!-- /ko -->
+    </li>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "customer": {
+                        "component": "Magento_Customer/js/view/customer"
+                    }
+                }
+            }
+        }
+    }
+    </script>
+<li class="authorization-link" data-label="ou">
+    <a href="https://arcacenter.com.br/customer/account/login/referer/aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9sYW5jYW1lbnRvcw%2C%2C/">
+        Entrar    </a>
+</li>
+</ul>    </div>
+        <div class="sections nav-sections">
+                <div class="section-items nav-sections-items"
+             data-mage-init='{"tabs":{"openedState":"active"}}'>
+                                            <div class="section-item-title nav-sections-item-title"
+                     data-role="collapsible">
+                    <a class="nav-sections-item-switch"
+                       data-toggle="switch" href="#store.menu">
+                        Menu                    </a>
+                </div>
+                <div class="section-item-content nav-sections-item-content"
+                     id="store.menu"
+                     data-role="content">
+                    
+<nav class="navigation sw-megamenu " role="navigation">
+    <ul>
+        <li class="ui-menu-item level0 fullwidth parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/grupos" class="level-top" title="GRUPOS"><span>GRUPOS</span></a><div class="level0 submenu"><div class="container"><div class="row"><ul class="subchildmenu col-md-12 mega-columns columns4"><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/arimateia" title="ARIMATÉIA"><span>ARIMATÉIA</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/calebe" title="CALEBE"><span>CALEBE</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/grupos-celebracaodecasamento" title="CELEBRAÇÃO DE CASAMENTOS"><span>CELEBRAÇÃO DE CASAMENTOS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/ebi" title="EBI"><span>EBI</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/evg" title="EVG"><span>EVG</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/fju" title="FJU"><span>FJU</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/ftu" title="FTU"><span>FTU</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/godllywood" title="GODLLYWOOD"><span>GODLLYWOOD</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/gsu" title="GSU"><span>GSU</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/gruposintellimen" title="INTELLIMEN"><span>INTELLIMEN</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/depressaotemcura" title="DEPRESSÃO TEM CURA"><span>DEPRESSÃO TEM CURA</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/unp" title="UNP"><span>UNP</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/viciotemcura" title="VÍCIO TEM CURA"><span>VÍCIO TEM CURA</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/socioeducativo" title="SOCIOEDUCATIVO"><span>SOCIOEDUCATIVO</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/unisocial" title="UNISOCIAL"><span>UNISOCIAL</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/eliteuniversal" title="ELITE UNIVERSAL"><span>ELITE UNIVERSAL</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/ufp" title="UFP"><span>UFP</span></a></li></ul></div></div></div></li><li class="ui-menu-item level0 fullwidth parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/biblias" class="level-top" title="BÍBLIAS"><span>BÍBLIAS</span></a><div class="level0 submenu"><div class="container"><div class="row"><ul class="subchildmenu col-md-12 mega-columns columns4"><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/acessoriosparabiblia" title="ACESSÓRIOS PARA BÍBLIA"><span>ACESSÓRIOS PARA BÍBLIA</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/biblias-acf-fiel" title="BÍBLIAS - ACF - FIEL"><span>BÍBLIAS - ACF - FIEL</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/bibliasdeestudo" title="BÍBLIAS DE ESTUDO"><span>BÍBLIAS DE ESTUDO</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/bibliasinfantojuvenil" title="BÍBLIAS INFANTOJUVENIL"><span>BÍBLIAS INFANTOJUVENIL</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/bibliaskingjames" title="BÍBLIAS KING JAMES"><span>BÍBLIAS KING JAMES</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/bibliasfemininas" title="BÍBLIAS FEMININAS"><span>BÍBLIAS FEMININAS</span></a></li></ul></div></div></div></li><li class="ui-menu-item level0 fullwidth parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/livros" class="level-top" title="LIVROS"><span>LIVROS</span></a><div class="level0 submenu"><div class="container"><div class="row"><ul class="subchildmenu col-md-12 mega-columns columns4"><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/livros/autores" title="AUTORES"><span>AUTORES</span></a><ul class="subchildmenu "><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/autores/edir-macedo" title="EDIR MACEDO"><span>Edir Macedo</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/autores/cristiane-cardoso" title="CRISTIANE CARDOSO"><span>Cristiane Cardoso</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/autores/alinemunhoz" title="ALINE MUNHOZ"><span>Aline Munhoz</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/autores/esterbezerra" title="ESTER BEZERRA"><span>Ester Bezerra</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/autores/nandabezerra" title="NANDA BEZERRA"><span>Nanda Bezerra</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/autores/patricialages" title="PATRÍCIA LAGES"><span>Patrícia Lages</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/autores/renato-cardoso" title="RENATO CARDOSO"><span>Renato Cardoso</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/autores/taniarubim" title="TÂNIA RUBIM"><span>Tânia Rubim</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/autores/outros" title="OUTROS"><span>Outros</span></a></li></ul></li><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/livros/temas" title="TEMAS"><span>TEMAS</span></a><ul class="subchildmenu "><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/temas/linguaestrangeira" title="LINGUA ESTRANGEIRA"><span>Lingua Estrangeira</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/temas/relacionamento" title="RELACIONAMENTO"><span>Relacionamento</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/temas/autoajuda" title="AUTOAJUDA"><span>Autoajuda</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/temas/vida-crist" title="VIDA ESPIRITUAL"><span>Vida Espiritual</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/temas/mulher" title="MULHER"><span>Mulher</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/temas/ficcao" title="FICÇÃO"><span>Ficção</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/temas/estudo" title="ESTUDO"><span>Estudo</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/temas/infantojuvenil" title="INFANTOJUVENIL"><span>Infantojuvenil</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/livros/temas/biografia" title="BIOGRAFIA"><span>Biografia</span></a></li></ul></li></ul></div></div></div></li><li class="ui-menu-item level0 fullwidth parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/ebooks" class="level-top" title="EBOOKS"><span>EBOOKS</span></a><div class="level0 submenu"><div class="container"><div class="row"><ul class="subchildmenu col-md-12 mega-columns columns4"><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores" title="AUTORES"><span>AUTORES</span></a><ul class="subchildmenu "><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores/patricia-lages" title="PATRÍCIA LAGES"><span>Patrícia Lages</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores/ebookalinemunhoz" title="ALINE MUNHOZ"><span>Aline Munhoz</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores/ebookcristianecardoso" title="CRISTIANE CARDOSO"><span>Cristiane Cardoso</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores/ebookesterbezerra" title="ESTER BEZERRA"><span>Ester Bezerra</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores/ebooknandabezerra" title="NANDA BEZERRA"><span>Nanda Bezerra</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores/ebooktaniarubim" title="TÂNIA RUBIM"><span>Tânia Rubim</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores/ebookrenatocardoso" title="RENATO CARDOSO"><span>Renato Cardoso</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores/edir-macedo" title="EDIR MACEDO"><span>Edir Macedo</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores/outros" title="OUTROS"><span>Outros</span></a></li></ul></li><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/ebooks/temas" title="TEMAS"><span>TEMAS</span></a><ul class="subchildmenu "><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/temas/lingua-estrangeira" title="LÍNGUA ESTRANGEIRA"><span>Língua Estrangeira</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/temas/ebookautoajuda" title="AUTOAJUDA"><span>Autoajuda</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/temas/biografia" title="BIOGRAFIA"><span>Biografia</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/temas/estudo" title="ESTUDO"><span>Estudo</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/temas/ficc-o" title="FICÇÃO"><span>Ficção</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/temas/infanto-juvenil" title="INFANTOJUVENIL"><span>Infantojuvenil</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/temas/mulher" title="MULHER"><span>Mulher</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/temas/relacionamento" title="RELACIONAMENTO"><span>Relacionamento</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/temas/vida-espiritual" title="VIDA ESPIRITUAL"><span>Vida Espiritual</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/ebooks/temas/outros" title="OUTROS"><span>Outros</span></a></li></ul></li></ul></div></div></div></li><li class="ui-menu-item level0 fullwidth "><a href="https://arcacenter.com.br/oqjf" class="level-top" title="OQJF"><span>OQJF</span></a></li><li class="ui-menu-item level0 fullwidth parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/fju" class="level-top" title="FJU"><span>FJU</span></a><div class="level0 submenu"><div class="container"><div class="row"><ul class="subchildmenu col-md-12 mega-columns columns4"><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/fju/fjucamisas" title="PROJETOS"><span>PROJETOS</span></a><ul class="subchildmenu "><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/jovem" title="JOVEM"><span>Jovem</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/camisasobreiro" title="OBREIRO"><span>Obreiro</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/lider" title="LÍDER"><span>Líder</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/secretaria" title="SECRETÁRIA"><span>Secretária</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/midia" title="MÍDIA"><span>Mídia</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/cultura" title="CULTURA"><span>Cultura</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/uniforca" title="UNIFORÇA"><span>Uniforça</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/universitario" title="UNIVERSITÁRIO"><span>Universitário</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/esporte" title="ESPORTE"><span>Esporte</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/outros" title="OUTROS"><span>Outros</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/fju/fjucamisas/arcanjo" title="ARCANJO"><span>Arcanjo</span></a></li></ul></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/fju/biblias" title="BÍBLIAS"><span>BÍBLIAS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/fju/utilidades" title="UTILIDADES"><span>UTILIDADES</span></a></li></ul></div></div></div></li><li class="ui-menu-item level0 fullwidth parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/godllywood" class="level-top" title="GODLLYWOOD"><span>GODLLYWOOD</span></a><div class="level0 submenu"><div class="container"><div class="row"><ul class="subchildmenu col-md-12 mega-columns columns4"><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/godllywood/godllywoodacessorios" title="ACESSÓRIOS"><span>ACESSÓRIOS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/godllywood/camisas" title="ROUPAS"><span>ROUPAS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/godllywood/semijoias" title="SEMIJOIAS"><span>SEMIJOIAS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/godllywood/livros" title="LIVROS"><span>LIVROS</span></a></li></ul></div></div></div></li><li class="ui-menu-item level0 fullwidth parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/vestuario" class="level-top" title="VESTUÁRIO"><span>VESTUÁRIO</span></a><div class="level0 submenu"><div class="container"><div class="row"><ul class="subchildmenu col-md-12 mega-columns columns4"><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/vestuario/vestuariogrupos" title="UNIFORME DOS GRUPOS"><span>UNIFORME DOS GRUPOS</span></a><ul class="subchildmenu "><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/gruposebi" title="EBI"><span>Ebi</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/elite-universal" title="ELITE UNIVERSAL"><span>Elite Universal</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/evg" title="EVG"><span>Evg</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/calebe" title="CALEBE"><span>Calebe</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/fju" title="FJU"><span>Fju</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/ftu" title="FTU"><span>Ftu</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/gsu" title="GSU"><span>Gsu</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/intellimen" title="INTELLIMEN"><span>Intellimen</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/unp" title="UNP"><span>Unp</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/godllywood" title="GODLLYWOOD"><span>Godllywood</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/outros" title="OUTROS"><span>Outros</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/unisocial" title="UNISOCIAL"><span>Unisocial</span></a></li><li class="ui-menu-item level2 "><a href="https://arcacenter.com.br/vestuario/vestuariogrupos/ufp" title="UFP"><span>Ufp</span></a></li></ul></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/vestuario/camisas" title="CAMISAS POLO"><span>CAMISAS POLO</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/vestuario/coletes" title="COLETES"><span>COLETES</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/vestuario/jalecos" title="JALECOS"><span>JALECOS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/vestuario/camisetas" title="CAMISETAS"><span>CAMISETAS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/vestuario/roupas-de-frio" title="ROUPAS DE FRIO"><span>ROUPAS DE FRIO</span></a></li></ul></div></div></div></li><li class="ui-menu-item level0 fullwidth "><a href="https://arcacenter.com.br/nossoskits" class="level-top" title="KITS"><span>KITS</span></a></li><li class="ui-menu-item level0 fullwidth "><a href="https://arcacenter.com.br/outlet" class="level-top" title="OUTLET"><span>OUTLET</span></a></li><li class="ui-menu-item level0"><a href="https://clubeunilivros.arcacenter.com.br/" target="_blank" class="level-top"><span>Blog</span><a/></li><li class="ui-menu-item level0 fullwidth parent alldepts">
+    <a href="javascript:void(0)" class="level-top" title="TODOS OS DEPARTAMENTOS">
+        <span>TODOS OS DEPARTAMENTOS</span>
+    </a>
+    <div class="level0 submenu">
+        <div class="container">
+            <div class="row">
+                <ul class="subchildmenu col-md-12 mega-columns columns6" role="menu" aria-expanded="false" aria-hidden="true">
+                    <li class="ui-menu-item level1 fullwidth parent fl-left "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/grupos" class="level-top" title="GRUPOS"><span>GRUPOS</span></a><ul class="subchildmenu  "><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/arimateia" title="ARIMATÉIA"><span>ARIMATÉIA</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/calebe" title="CALEBE"><span>CALEBE</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/grupos-celebracaodecasamento" title="CELEBRAÇÃO DE CASAMENTOS"><span>CELEBRAÇÃO DE CASAMENTOS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/ebi" title="EBI"><span>EBI</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/evg" title="EVG"><span>EVG</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/fju" title="FJU"><span>FJU</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/ftu" title="FTU"><span>FTU</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/godllywood" title="GODLLYWOOD"><span>GODLLYWOOD</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/gsu" title="GSU"><span>GSU</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/gruposintellimen" title="INTELLIMEN"><span>INTELLIMEN</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/depressaotemcura" title="DEPRESSÃO TEM CURA"><span>DEPRESSÃO TEM CURA</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/unp" title="UNP"><span>UNP</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/viciotemcura" title="VÍCIO TEM CURA"><span>VÍCIO TEM CURA</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/socioeducativo" title="SOCIOEDUCATIVO"><span>SOCIOEDUCATIVO</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/unisocial" title="UNISOCIAL"><span>UNISOCIAL</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/eliteuniversal" title="ELITE UNIVERSAL"><span>ELITE UNIVERSAL</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/grupos/ufp" title="UFP"><span>UFP</span></a></li></ul></li><li class="ui-menu-item level1 fullwidth parent fl-left "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/biblias" class="level-top" title="BÍBLIAS"><span>BÍBLIAS</span></a><ul class="subchildmenu  "><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/acessoriosparabiblia" title="ACESSÓRIOS PARA BÍBLIA"><span>ACESSÓRIOS PARA BÍBLIA</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/biblias-acf-fiel" title="BÍBLIAS - ACF - FIEL"><span>BÍBLIAS - ACF - FIEL</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/bibliasdeestudo" title="BÍBLIAS DE ESTUDO"><span>BÍBLIAS DE ESTUDO</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/bibliasinfantojuvenil" title="BÍBLIAS INFANTOJUVENIL"><span>BÍBLIAS INFANTOJUVENIL</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/bibliaskingjames" title="BÍBLIAS KING JAMES"><span>BÍBLIAS KING JAMES</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/biblias/bibliasfemininas" title="BÍBLIAS FEMININAS"><span>BÍBLIAS FEMININAS</span></a></li></ul></li><li class="ui-menu-item level1 fullwidth parent fl-left "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/livros" class="level-top" title="LIVROS"><span>LIVROS</span></a><ul class="subchildmenu  "><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/livros/autores" title="AUTORES"><span>AUTORES</span></a></li><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/livros/temas" title="TEMAS"><span>TEMAS</span></a></li></ul></li><li class="ui-menu-item level1 fullwidth parent fl-left "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/ebooks" class="level-top" title="EBOOKS"><span>EBOOKS</span></a><ul class="subchildmenu  "><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/ebooks/livros-digitaisautores" title="AUTORES"><span>AUTORES</span></a></li><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/ebooks/temas" title="TEMAS"><span>TEMAS</span></a></li></ul></li><li class="ui-menu-item level1 fullwidth fl-left "><a href="https://arcacenter.com.br/oqjf" class="level-top" title="OQJF"><span>OQJF</span></a></li><li class="ui-menu-item level1 fullwidth parent fl-left "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/fju" class="level-top" title="FJU"><span>FJU</span></a><ul class="subchildmenu  "><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/fju/fjucamisas" title="PROJETOS"><span>PROJETOS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/fju/biblias" title="BÍBLIAS"><span>BÍBLIAS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/fju/utilidades" title="UTILIDADES"><span>UTILIDADES</span></a></li></ul></li><li class="ui-menu-item level1 fullwidth parent fl-left "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/godllywood" class="level-top" title="GODLLYWOOD"><span>GODLLYWOOD</span></a><ul class="subchildmenu  "><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/godllywood/godllywoodacessorios" title="ACESSÓRIOS"><span>ACESSÓRIOS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/godllywood/camisas" title="ROUPAS"><span>ROUPAS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/godllywood/semijoias" title="SEMIJOIAS"><span>SEMIJOIAS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/godllywood/livros" title="LIVROS"><span>LIVROS</span></a></li></ul></li><li class="ui-menu-item level1 fullwidth parent fl-left "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/vestuario" class="level-top" title="VESTUÁRIO"><span>VESTUÁRIO</span></a><ul class="subchildmenu  "><li class="ui-menu-item level1 parent "><div class="open-children-toggle"></div><a href="https://arcacenter.com.br/vestuario/vestuariogrupos" title="UNIFORME DOS GRUPOS"><span>UNIFORME DOS GRUPOS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/vestuario/camisas" title="CAMISAS POLO"><span>CAMISAS POLO</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/vestuario/coletes" title="COLETES"><span>COLETES</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/vestuario/jalecos" title="JALECOS"><span>JALECOS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/vestuario/camisetas" title="CAMISETAS"><span>CAMISETAS</span></a></li><li class="ui-menu-item level1 "><a href="https://arcacenter.com.br/vestuario/roupas-de-frio" title="ROUPAS DE FRIO"><span>ROUPAS DE FRIO</span></a></li></ul></li><li class="ui-menu-item level1 fullwidth fl-left "><a href="https://arcacenter.com.br/nossoskits" class="level-top" title="KITS"><span>KITS</span></a></li><li class="ui-menu-item level1 fullwidth fl-left "><a href="https://arcacenter.com.br/outlet" class="level-top" title="OUTLET"><span>OUTLET</span></a></li>                </ul>
+            </div>
+        </div>
+    </div>
+</li>    </ul>
+</nav>
+
+<script type="text/javascript">
+    require([
+        'jquery',
+        'Smartwave_Megamenu/js/sw_megamenu'
+    ], function ($) {
+        $(".sw-megamenu").swMegamenu();
+    });
+</script>
+                </div>
+                                            <div class="section-item-title nav-sections-item-title"
+                     data-role="collapsible">
+                    <a class="nav-sections-item-switch"
+                       data-toggle="switch" href="#store.links">
+                        Conta                    </a>
+                </div>
+                <div class="section-item-content nav-sections-item-content"
+                     id="store.links"
+                     data-role="content">
+                    <!-- Account links -->                </div>
+                                    </div>
+    </div>
+</header>
+<script>
+    /*define(['Magento_Customer/js/model/customer'], function (customer) {
+        if (customer.isLoggedIn()) {
+            document.getElementById('customer-name').value = customer.getDetails()
+        }
+    });*/
+</script>
+<div class="breadcrumbs">
+    <ul class="items">
+                    <li class="item home">
+                            <a href="https://arcacenter.com.br/"
+                   title="Ir&#x20;para&#x20;a&#x20;p&#xE1;gina&#x20;inicial">
+                    Início                </a>
+                        </li>
+                    <li class="item category524">
+                            <strong>LANÇAMENTOS</strong>
+                        </li>
+            </ul>
+</div>
+<div class="page-main"><div class="page-title-wrapper">
+    <h1 class="page-title"
+         id="page-title-heading"                     aria-labelledby="page-title-heading&#x20;toolbar-amount"
+        >
+        <span class="base" data-ui-id="page-title-wrapper" >LANÇAMENTOS</span>    </h1>
+    </div>
+<div class="page messages"><div data-placeholder="messages"></div>
+<div data-bind="scope: 'messages'">
+    <!-- ko if: cookieMessages && cookieMessages.length > 0 -->
+    <div role="alert" data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: messages().messages && messages().messages.length > 0 -->
+    <div role="alert" data-bind="foreach: { data: messages().messages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                        "messages": {
+                            "component": "Magento_Theme/js/view/messages"
+                        }
+                    }
+                }
+            }
+    }
+</script>
+</div></div><main id="maincontent" class="page-main"><a id="contentarea" tabindex="-1"></a>
+<div class="columns"><div class="column main"><input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" /><div id="authenticationPopup" data-bind="scope:'authenticationPopup'" style="display: none;">
+    <script>
+        window.authenticationPopup = {"autocomplete":"off","customerRegisterUrl":"https:\/\/arcacenter.com.br\/customer\/account\/create\/","customerForgotPasswordUrl":"https:\/\/arcacenter.com.br\/customer\/account\/forgotpassword\/","baseUrl":"https:\/\/arcacenter.com.br\/"};
+    </script>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#authenticationPopup": {
+                "Magento_Ui/js/core/app": {"components":{"authenticationPopup":{"component":"Magento_Customer\/js\/view\/authentication-popup","children":{"messages":{"component":"Magento_Ui\/js\/view\/messages","displayArea":"messages"},"captcha":{"component":"Magento_Captcha\/js\/view\/checkout\/loginCaptcha","displayArea":"additional-login-form-fields","formId":"user_login","configSource":"checkout"},"msp_recaptcha":{"component":"MSP_ReCaptcha\/js\/reCaptcha","displayArea":"additional-login-form-fields","configSource":"checkoutConfig","reCaptchaId":"msp-recaptcha-popup-login","zone":"login","badge":"inline","settings":{"siteKey":"6LdIi_QUAAAAAHCBwt2Za9WBH0PxJe9CXopFEr7k","size":"normal","badge":null,"theme":"light","lang":"pt-BR","enabled":{"login":false,"create":false,"forgot":true,"contact":true,"review":true,"newsletter":true,"sendfriend":true,"paypal":true}}},"amazon-button":{"component":"Amazon_Login\/js\/view\/login-button-wrapper","sortOrder":"0","displayArea":"additional-login-form-fields","config":{"tooltip":"Securely login into our website using your existing Amazon details.","componentDisabled":true}},"social-buttons":{"component":"Mageplaza_SocialLogin\/js\/view\/social-buttons","displayArea":"before"}}}}}            },
+            "*": {
+                "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Farcacenter.com.br\u002Fstatic\u002Ffrontend\u002FSmartwave\u002Fporto_child\u002Fpt_BR\u002Fimages\u002Floader\u002D1.gif"
+            }
+        }
+    </script>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/section-config": {
+                "sections": {"stores\/store\/switch":"*","stores\/store\/switchrequest":"*","directory\/currency\/switch":"*","*":["messages"],"customer\/account\/logout":["recently_viewed_product","recently_compared_product","persistent","getresponse-tracking-code"],"customer\/account\/loginpost":["getresponse-tracking-code"],"customer\/account\/createpost":["getresponse-tracking-code"],"customer\/account\/editpost":"*","customer\/ajax\/login":["checkout-data","cart","captcha","getresponse-tracking-code"],"catalog\/product_compare\/add":["compare-products"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","directory-data","bss-fbpixel-atc"],"checkout\/cart\/delete":["cart"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items","checkout-fields"],"checkout\/sidebar\/removeitem":["cart"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","last-ordered-items","instant-purchase"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data","instant-purchase"],"authorizenet\/directpost_payment\/place":["cart","checkout-data"],"wishlist\/index\/add":["wishlist"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"customer_order\/cart\/updatefaileditemoptions":["cart"],"checkout\/cart\/updatefaileditemoptions":["cart"],"customer_order\/cart\/advancedadd":["cart"],"checkout\/cart\/advancedadd":["cart"],"checkout\/cart\/removeallfailed":["cart"],"customer_order\/cart\/addfaileditems":["cart"],"checkout\/cart\/addfaileditems":["cart"],"customer_order\/sku\/uploadfile":["cart"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"paypal\/express\/onauthorization":["cart","checkout-data"],"customer\/address\/*":["instant-purchase"],"customer\/account\/*":["instant-purchase"],"vault\/cards\/deleteaction":["instant-purchase"],"wishlist\/index\/copyitem":["wishlist"],"wishlist\/index\/copyitems":["wishlist"],"wishlist\/index\/deletewishlist":["wishlist","multiplewishlist"],"wishlist\/index\/createwishlist":["multiplewishlist"],"wishlist\/index\/moveitem":["wishlist"],"wishlist\/index\/moveitems":["wishlist"],"wishlist\/search\/addtocart":["cart","wishlist"],"multishipping\/checkout\/overviewpost":["cart"],"giftregistry\/index\/cart":["cart"],"giftregistry\/view\/addtocart":["cart"],"braintree\/paypal\/placeorder":["cart","checkout-data"],"persistent\/index\/unsetcookie":["persistent"],"review\/product\/post":["review"],"newsletter\/subscriber\/new":["bss-fbpixel-subscribe"],"sociallogin\/popup\/create":["checkout-data","cart"],"weltpixel_quickview\/index\/updatecart":["cart"]},
+                "clientSideSections": ["checkout-data","cart-data","chatData"],
+                "baseUrls": ["https:\/\/arcacenter.com.br\/"],
+                "sectionNames": ["messages","customer","compare-products","last-ordered-items","cart","directory-data","captcha","wishlist","instant-purchase","multiplewishlist","persistent","review","productpassword-data","customer_audios","bss-fbpixel-atc","bss-fbpixel-subscribe","getresponse-tracking-code","chatData","recently_viewed_product","recently_compared_product","product_data_storage","paypal-billing-agreement","checkout-fields","collection-point-result","pickup-location-result"]            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/customer-data": {
+                "sectionLoadUrl": "https\u003A\u002F\u002Farcacenter.com.br\u002Fcustomer\u002Fsection\u002Fload\u002F",
+                "expirableSectionLifetime": 60,
+                "expirableSectionNames": ["cart","persistent"],
+                "cookieLifeTime": "3600",
+                "updateSessionUrl": "https\u003A\u002F\u002Farcacenter.com.br\u002Fcustomer\u002Faccount\u002FupdateSession\u002F"
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/invalidation-processor": {
+                "invalidationRules": {
+                    "website-rule": {
+                        "Magento_Customer/js/invalidation-rules/website-rule": {
+                            "scopeConfig": {
+                                "websiteId": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "pageCache": {"url":"https:\/\/arcacenter.com.br\/page_cache\/block\/render\/id\/524\/","handles":["default","catalog_category_view","catalog_category_view_type_layered","catalog_category_view_type_layered_without_children","catalog_category_view_id_524"],"originalRequest":{"route":"catalog","controller":"category","action":"view","uri":"\/lancamentos.html"},"versionCookieName":"private_content_version"}        }
+    }
+</script>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Banner/js/model/banner":
+            {"sectionLoadUrl":"https:\/\/arcacenter.com.br\/banner\/ajax\/load\/","cacheTtl":30000}        }
+}
+</script>
+
+<style>
+    .grwf2-wrapper {
+        text-align:center;
+        margin:auto;
+    }
+</style>
+
+
+
+
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "requireCookie": {"noCookieUrl":"https:\/\/arcacenter.com.br\/cookie\/index\/noCookies\/","triggers":[".action.towishlist"],"isRedirectCmsPage":true}        }
+    }
+</script>
+    <script data-role="msrp-popup-template" type="text/x-magento-template">
+    <div id="map-popup-click-for-price" class="map-popup">
+        <div class="popup-header">
+            <strong class="title" id="map-popup-heading-price"></strong>
+        </div>
+        <div class="popup-content">
+            <div class="map-info-price" id="map-popup-content">
+                <div class="price-box">
+                    <div class="map-msrp" id="map-popup-msrp-box">
+                        <span class="label">Preço</span>
+                        <span class="old-price map-old-price" id="map-popup-msrp">
+                            <span class="price"></span>
+                        </span>
+                    </div>
+                    <div class="map-price" id="map-popup-price-box">
+                        <span class="label">Preço atual</span>
+                        <span id="map-popup-price" class="actual-price"></span>
+                    </div>
+                </div>
+                <form action="" method="POST" class="map-form-addtocart">
+                    <input type="hidden" name="product" class="product_id" value="" />
+                    <button type="button"
+                            title="Adicionar&#x20;carrinho"
+                            class="action tocart primary">
+                        <span>Adicionar carrinho</span>
+                    </button>
+                    <div class="additional-addtocart-box">
+                                            </div>
+                </form>
+            </div>
+            <div class="map-text" id="map-popup-text">
+                Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.            </div>
+        </div>
+    </div>
+    </script>
+    <script data-role="msrp-info-template" type="text/x-magento-template">
+    <div id="map-popup-what-this" class="map-popup">
+        <div class="popup-header">
+            <strong class="title" id="map-popup-heading-what-this"></strong>
+        </div>
+        <div class="popup-content">
+            <div class="map-help-text" id="map-popup-text-what-this">
+                Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.            </div>
+        </div>
+    </div>
+    </script>
+
+<div id="layer-product-list">
+                <div class="toolbar toolbar-products" data-mage-init='{"productListToolbarForm":{"mode":"product_list_mode","direction":"product_list_dir","order":"product_list_order","limit":"product_list_limit","modeDefault":"grid","directionDefault":"asc","orderDefault":"position","limitDefault":"12","url":"https:\/\/arcacenter.com.br\/lancamentos","formKey":"ORup8WMHfPcC1omA","post":false}}'>
+                    <div class="toolbar-sorter sorter">
+    <label class="sorter-label" for="sorter">Ordernar por</label>
+    <select id="sorter" data-role="sorter" class="sorter-options">
+                    <option value="position"
+                                    selected="selected"
+                                >
+                Posição            </option>
+                    <option value="releases"
+                                >
+                Lançamentos            </option>
+                    <option value="offers"
+                                >
+                Ofertas            </option>
+                    <option value="price_desc"
+                                >
+                Preço : Maior para Menor            </option>
+                    <option value="price_asc"
+                                >
+                Preço : Menor para Maior            </option>
+            </select>
+</div>
+                                <div class="modes">
+                            <strong class="modes-label" id="modes-label">Ver como</strong>
+                                                <strong title="Grade"
+                            class="modes-mode active mode-grid"
+                            data-value="grid">
+                        <span>Grade</span>
+                    </strong>
+                                                                <a class="modes-mode mode-list"
+                       title="Lista"
+                       href="#"
+                       data-role="mode-switcher"
+                       data-value="list"
+                       id="mode-list"
+                       aria-labelledby="modes-label mode-list">
+                        <span>Lista</span>
+                    </a>
+                                        </div>
+        
+        <p class="toolbar-amount" id="toolbar-amount">
+            Itens <span class="toolbar-number">1</span>-<span class="toolbar-number">12</span> de <span class="toolbar-number">46</span>    </p>
+
+        
+    
+        
+                <div class="pages">
+            <strong class="label pages-label" id="paging-label">Página</strong>
+            <ul class="items pages-items" aria-labelledby="paging-label">
+            
+            
+            
+                                                <li class="item current">
+                        <strong class="page">
+                            <span class="label">Você esta lendo a pagina</span>
+                            <span>1</span>
+                        </strong>
+                    </li>
+                                                                <li class="item">
+                        <a href="https://arcacenter.com.br/lancamentos?p=2" class="page">
+                            <span class="label">Página</span>
+                            <span>2</span>
+                        </a>
+                    </li>
+                                                                <li class="item">
+                        <a href="https://arcacenter.com.br/lancamentos?p=3" class="page">
+                            <span class="label">Página</span>
+                            <span>3</span>
+                        </a>
+                    </li>
+                                                                <li class="item">
+                        <a href="https://arcacenter.com.br/lancamentos?p=4" class="page">
+                            <span class="label">Página</span>
+                            <span>4</span>
+                        </a>
+                    </li>
+                            
+            
+            
+                            <li class="item pages-item-next">
+                                        <a class="action  next"
+                       href="https://arcacenter.com.br/lancamentos?p=2"
+                       title="Pr&#xF3;ximo">
+                        <span class="label">Página</span>
+                        <span>Próximo</span>
+                    </a>
+                </li>
+                        </ul>
+        </div>
+        
+    
+    
+
+        <div class="field limiter">
+    <label class="label" for="limiter">
+        <span>Mostrar</span>
+    </label>
+    <div class="control">
+        <select id="limiter" data-role="limiter" class="limiter-options">
+                            <option value="12"
+                                            selected="selected"
+                    >
+                    12                </option>
+                            <option value="24"
+                    >
+                    24                </option>
+                            <option value="36"
+                    >
+                    36                </option>
+                            <option value="all"
+                    >
+                    Todos                </option>
+                    </select>
+    </div>
+    <span class="limiter-text">por página</span>
+</div>
+    </div>
+    <script type="text/x-magento-init">
+    {
+        "body": {
+            "addToWishlist": {"productType":{"0":"simple","3":"configurable"}}        }
+    }
+</script>
+        <div class="products wrapper grid columns4 products-grid   ">
+                <ol class="filterproducts products list items product-items ">
+                                        <li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/livrodopastor" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/l/i/livro-do-pastor_01.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"><div class="product-label arca-roundel-label" style='background-color: #FF4500; border: 1px solid #FF4500; color: #FFF'>FRETE GRÁTIS</div></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/livrodopastor">
+                                Livro do Pastor                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="5164" data-price-box="product-id-5164">
+
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-5164"                data-price-amount="79.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$79,90</span></span>
+        </span>
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/5164/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/checkout/cart/add/uenc/aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9sYW5jYW1lbnRvcy5odG1s/product/5164/" method="post">
+                                            <input type="hidden" name="product" value="5164">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9jaGVja291dC9jYXJ0L2FkZC91ZW5jL2FIUjBjSE02THk5aGNtTmhZMlZ1ZEdWeUxtTnZiUzVpY2k5c1lXNWpZVzFsYm5SdmN5NW9kRzFzL3Byb2R1Y3QvNTE2NC8,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/universalkids3terceirotrimestreano4" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/t/r/trimestral_capa_universal_kids_3trimestre.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"><div class="product-label arca-roundel-label" style='background-color: #FF4500; border: 1px solid #FF4500; color: #FFF'>FRETE GRÁTIS</div></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/universalkids3terceirotrimestreano4">
+                                Universal Kids 4 - 4º Trimestre - ano 4
+                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="5373" data-price-box="product-id-5373">
+
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-5373"                data-price-amount="49.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$49,90</span></span>
+        </span>
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/5373/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/checkout/cart/add/uenc/aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9sYW5jYW1lbnRvcy5odG1s/product/5373/" method="post">
+                                            <input type="hidden" name="product" value="5373">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9jaGVja291dC9jYXJ0L2FkZC91ZW5jL2FIUjBjSE02THk5aGNtTmhZMlZ1ZEdWeUxtTnZiUzVpY2k5c1lXNWpZVzFsYm5SdmN5NW9kRzFzL3Byb2R1Y3QvNTM3My8,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/universalkids4dezembro2020_ano4" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/d/e/dezembro_capa_universal_kids_3trimestre.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/universalkids4dezembro2020_ano4">
+                                Universal Kids 4 - Dezembro 2020 - Ano 4
+                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="5382" data-price-box="product-id-5382">
+
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-5382"                data-price-amount="19.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$19,90</span></span>
+        </span>
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/5382/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/checkout/cart/add/uenc/aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9sYW5jYW1lbnRvcy5odG1s/product/5382/" method="post">
+                                            <input type="hidden" name="product" value="5382">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9jaGVja291dC9jYXJ0L2FkZC91ZW5jL2FIUjBjSE02THk5aGNtTmhZMlZ1ZEdWeUxtTnZiUzVpY2k5c1lXNWpZVzFsYm5SdmN5NW9kRzFzL3Byb2R1Y3QvNTM4Mi8,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/jaquetafjucinza" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/j/a/jaqueta-fju-cinza-mescla_01.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/jaquetafjucinza">
+                                Jaqueta FJU  (cinza mescla) - Unissex                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="5622" data-price-box="product-id-5622"><span class="normal-price">
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+            <span class="price-label">Tão baixo quanto</span>
+        <span  id="product-price-5622"                data-price-amount="150"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$150,00</span></span>
+        </span>
+</span>
+
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/5622/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/jaquetafjucinza?options=cart" method="post">
+                                            <input type="hidden" name="product" value="5622">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9qYXF1ZXRhZmp1Y2luemE_b3B0aW9ucz1jYXJ0">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/jaquetafju_vermelha" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/j/a/jaqueta-fju-vermelha_01.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/jaquetafju_vermelha">
+                                Jaqueta FJU  (vermelha) - Unissex                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="5640" data-price-box="product-id-5640"><span class="normal-price">
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+            <span class="price-label">Tão baixo quanto</span>
+        <span  id="product-price-5640"                data-price-amount="150"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$150,00</span></span>
+        </span>
+</span>
+
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/5640/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/jaquetafju_vermelha?options=cart" method="post">
+                                            <input type="hidden" name="product" value="5640">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9qYXF1ZXRhZmp1X3Zlcm1lbGhhP29wdGlvbnM9Y2FydA,,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/dicionariosefaradidesobrenomes
+
+dicionário sefaradi de sobrenome
+
+dicionário sefaradi de sobrenome
+
+dicionário sefaradi de sobrenome" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/d/i/dicionario-sefaradi-de-sobrenomes_01.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/dicionariosefaradidesobrenomes
+
+dicionário sefaradi de sobrenome
+
+dicionário sefaradi de sobrenome
+
+dicionário sefaradi de sobrenome">
+                                Dicionário Sefaradi de Sobrenomes                             </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="5736" data-price-box="product-id-5736">
+
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-5736"                data-price-amount="200"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$200,00</span></span>
+        </span>
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/5736/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/checkout/cart/add/uenc/aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9sYW5jYW1lbnRvcy5odG1s/product/5736/" method="post">
+                                            <input type="hidden" name="product" value="5736">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9jaGVja291dC9jYXJ0L2FkZC91ZW5jL2FIUjBjSE02THk5aGNtTmhZMlZ1ZEdWeUxtTnZiUzVpY2k5c1lXNWpZVzFsYm5SdmN5NW9kRzFzL3Byb2R1Y3QvNTczNi8,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/descobrindoocaraterdedeus" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/l/i/livro-descobrindo-o-carater-de-deus_01.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/descobrindoocaraterdedeus">
+                                Descobrindo o Caráter de Deus                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="6142" data-price-box="product-id-6142">
+
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-6142"                data-price-amount="24.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$24,90</span></span>
+        </span>
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/6142/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/checkout/cart/add/uenc/aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9sYW5jYW1lbnRvcy5odG1s/product/6142/" method="post">
+                                            <input type="hidden" name="product" value="6142">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9jaGVja291dC9jYXJ0L2FkZC91ZW5jL2FIUjBjSE02THk5aGNtTmhZMlZ1ZEdWeUxtTnZiUzVpY2k5c1lXNWpZVzFsYm5SdmN5NW9kRzFzL3Byb2R1Y3QvNjE0Mi8,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/camisapoloterapiadoamormasculina" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/c/a/camisa-terapia-do-amor-masculina_01.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"><div class="product-label arca-roundel-label" style='background-color: #FFA500; border: 1px solid #FFA500; color: #FFF'>PRÉ-VENDA</div></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/camisapoloterapiadoamormasculina">
+                                Camisa Polo Terapia do Amor - Masculina                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="6322" data-price-box="product-id-6322"><span class="normal-price">
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+            <span class="price-label">Tão baixo quanto</span>
+        <span  id="product-price-6322"                data-price-amount="50"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$50,00</span></span>
+        </span>
+</span>
+
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/6322/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/camisapoloterapiadoamormasculina?options=cart" method="post">
+                                            <input type="hidden" name="product" value="6322">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9jYW1pc2Fwb2xvdGVyYXBpYWRvYW1vcm1hc2N1bGluYT9vcHRpb25zPWNhcnQ,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/oministeriodoespiritosanto" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/l/i/livro-o-ministerio-do-espirito-santo_01.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"><div class="product-label arca-roundel-label" style='background-color: #FF4500; border: 1px solid #FF4500; color: #FFF'>FRETE GRÁTIS</div></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/oministeriodoespiritosanto">
+                                O ministério do Espírito Santo                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="5288" data-price-box="product-id-5288">
+
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-5288"                data-price-amount="26.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$26,90</span></span>
+        </span>
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/5288/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/checkout/cart/add/uenc/aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9sYW5jYW1lbnRvcy5odG1s/product/5288/" method="post">
+                                            <input type="hidden" name="product" value="5288">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9jaGVja291dC9jYXJ0L2FkZC91ZW5jL2FIUjBjSE02THk5aGNtTmhZMlZ1ZEdWeUxtTnZiUzVpY2k5c1lXNWpZVzFsYm5SdmN5NW9kRzFzL3Byb2R1Y3QvNTI4OC8,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/universalkids4novembro2020_ano4" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/n/o/novembro_capa_universal_kids_3trimestre.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/universalkids4novembro2020_ano4">
+                                Universal Kids 4 - Novembro 2020 - Ano 4
+                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="5379" data-price-box="product-id-5379">
+
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-5379"                data-price-amount="19.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$19,90</span></span>
+        </span>
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/5379/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/checkout/cart/add/uenc/aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9sYW5jYW1lbnRvcy5odG1s/product/5379/" method="post">
+                                            <input type="hidden" name="product" value="5379">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9jaGVja291dC9jYXJ0L2FkZC91ZW5jL2FIUjBjSE02THk5aGNtTmhZMlZ1ZEdWeUxtTnZiUzVpY2k5c1lXNWpZVzFsYm5SdmN5NW9kRzFzL3Byb2R1Y3QvNTM3OS8,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/sobrevivi" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/l/i/livro-sobrevivi-clodomir-santos_01.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/sobrevivi">
+                                Sobrevivi                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="5754" data-price-box="product-id-5754">
+
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-5754"                data-price-amount="34.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$34,90</span></span>
+        </span>
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/5754/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/checkout/cart/add/uenc/aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9sYW5jYW1lbnRvcy5odG1s/product/5754/" method="post">
+                                            <input type="hidden" name="product" value="5754">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9jaGVja291dC9jYXJ0L2FkZC91ZW5jL2FIUjBjSE02THk5aGNtTmhZMlZ1ZEdWeUxtTnZiUzVpY2k5c1lXNWpZVzFsYm5SdmN5NW9kRzFzL3Byb2R1Y3QvNTc1NC8,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                                            </li><li class="item product product-item">                <div class="product-item-info type1" data-container="product-grid">
+                                        <div class="product photo product-item-photo">
+                        <a href="https://arcacenter.com.br/camisapoloterapiadoamorfeminina" tabindex="-1">
+                                                    <img class="product-image-photo default_image porto-lazyload" data-src="https://arcacenter.com.br/media/catalog/product/c/a/camisa-terapia-do-amor-feminina_01.jpg?width=300&height=&canvas=300:&quality=80&bg-color=255,255,255&fit=bounds" width="300" height="300" alt=""/>
+                                                                                                                            </a>
+                        <div class="product-labels"><div class="product-label arca-roundel-label" style='background-color: #FFA500; border: 1px solid #FFA500; color: #FFF'>PRÉ-VENDA</div></div>                                                <!-- Dailydeal Product data -->
+                         
+                        <!-- Dailydeal Product End -->
+                    </div>
+                    <div class="product details product-item-details">
+                                                <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               href="https://arcacenter.com.br/camisapoloterapiadoamorfeminina">
+                                Camisa Polo Terapia do Amor - Feminina                            </a>
+                        </strong>
+                                                
+                                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="6298" data-price-box="product-id-6298"><span class="normal-price">
+    
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+            <span class="price-label">Tão baixo quanto</span>
+        <span  id="product-price-6298"                data-price-amount="50"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$50,00</span></span>
+        </span>
+</span>
+
+
+</div>                                                <a class="weltpixel-quickview weltpixel_quickview_button_v2" data-quickview-url=https://arcacenter.com.br/weltpixel_quickview/catalog_product/view/id/6298/ href="javascript:void(0);"><span>Quickview</span></a>                        
+                                                <div class="product-item-inner">
+                            <div class="product actions product-item-actions">
+                                                                                                                                <div class="actions-primary">
+                                                                                                                    <form data-role="tocart-form" action="https://arcacenter.com.br/camisapoloterapiadoamorfeminina?options=cart" method="post">
+                                            <input type="hidden" name="product" value="6298">
+                                            <input type="hidden" name="uenc" value="aHR0cHM6Ly9hcmNhY2VudGVyLmNvbS5ici9jYW1pc2Fwb2xvdGVyYXBpYWRvYW1vcmZlbWluaW5hP29wdGlvbnM9Y2FydA,,">
+                                                                                        <input name="form_key" type="hidden" value="ORup8WMHfPcC1omA" />                                            <button type="submit"
+                                                    title="Adicionar carrinho"
+                                                    class="action tocart primary">
+                                                <span>Adicionar carrinho</span>
+                                            </button>
+                                        </form>
+                                                                    </div>
+                                                                                                                                                                                            </div>
+                        </div>
+                                            </div>
+                </div>
+                </li>                    </ol>
+    </div>
+            <div class="toolbar toolbar-products" data-mage-init='{"productListToolbarForm":{"mode":"product_list_mode","direction":"product_list_dir","order":"product_list_order","limit":"product_list_limit","modeDefault":"grid","directionDefault":"asc","orderDefault":"position","limitDefault":"12","url":"https:\/\/arcacenter.com.br\/lancamentos","formKey":"ORup8WMHfPcC1omA","post":false}}'>
+                    <div class="toolbar-sorter sorter">
+    <label class="sorter-label" for="sorter">Ordernar por</label>
+    <select id="sorter" data-role="sorter" class="sorter-options">
+                    <option value="position"
+                                    selected="selected"
+                                >
+                Posição            </option>
+                    <option value="releases"
+                                >
+                Lançamentos            </option>
+                    <option value="offers"
+                                >
+                Ofertas            </option>
+                    <option value="price_desc"
+                                >
+                Preço : Maior para Menor            </option>
+                    <option value="price_asc"
+                                >
+                Preço : Menor para Maior            </option>
+            </select>
+</div>
+                                <div class="modes">
+                            <strong class="modes-label" id="modes-label">Ver como</strong>
+                                                <strong title="Grade"
+                            class="modes-mode active mode-grid"
+                            data-value="grid">
+                        <span>Grade</span>
+                    </strong>
+                                                                <a class="modes-mode mode-list"
+                       title="Lista"
+                       href="#"
+                       data-role="mode-switcher"
+                       data-value="list"
+                       id="mode-list"
+                       aria-labelledby="modes-label mode-list">
+                        <span>Lista</span>
+                    </a>
+                                        </div>
+        
+        <p class="toolbar-amount" id="toolbar-amount">
+            Itens <span class="toolbar-number">1</span>-<span class="toolbar-number">12</span> de <span class="toolbar-number">46</span>    </p>
+
+        
+    
+        
+                <div class="pages">
+            <strong class="label pages-label" id="paging-label">Página</strong>
+            <ul class="items pages-items" aria-labelledby="paging-label">
+            
+            
+            
+                                                <li class="item current">
+                        <strong class="page">
+                            <span class="label">Você esta lendo a pagina</span>
+                            <span>1</span>
+                        </strong>
+                    </li>
+                                                                <li class="item">
+                        <a href="https://arcacenter.com.br/lancamentos?p=2" class="page">
+                            <span class="label">Página</span>
+                            <span>2</span>
+                        </a>
+                    </li>
+                                                                <li class="item">
+                        <a href="https://arcacenter.com.br/lancamentos?p=3" class="page">
+                            <span class="label">Página</span>
+                            <span>3</span>
+                        </a>
+                    </li>
+                                                                <li class="item">
+                        <a href="https://arcacenter.com.br/lancamentos?p=4" class="page">
+                            <span class="label">Página</span>
+                            <span>4</span>
+                        </a>
+                    </li>
+                            
+            
+            
+                            <li class="item pages-item-next">
+                                        <a class="action  next"
+                       href="https://arcacenter.com.br/lancamentos?p=2"
+                       title="Pr&#xF3;ximo">
+                        <span class="label">Página</span>
+                        <span>Próximo</span>
+                    </a>
+                </li>
+                        </ul>
+        </div>
+        
+    
+    
+
+        <div class="field limiter">
+    <label class="label" for="limiter">
+        <span>Mostrar</span>
+    </label>
+    <div class="control">
+        <select id="limiter" data-role="limiter" class="limiter-options">
+                            <option value="12"
+                                            selected="selected"
+                    >
+                    12                </option>
+                            <option value="24"
+                    >
+                    24                </option>
+                            <option value="36"
+                    >
+                    36                </option>
+                            <option value="all"
+                    >
+                    Todos                </option>
+                    </select>
+    </div>
+    <span class="limiter-text">por página</span>
+</div>
+    </div>
+            <script type="text/x-magento-init">
+        {
+            "[data-role=tocart-form], .form.map.checkout": {
+                "catalogAddToCart": {}
+            }
+        }
+        </script>
+                <script type="text/javascript">
+            require([
+                'jquery'        
+            ], function ($) {
+                $('.main .products.grid .product-items li.product-item:nth-child(2n)').addClass('nth-child-2n');
+                $('.main .products.grid .product-items li.product-item:nth-child(2n+1)').addClass('nth-child-2np1');
+                $('.main .products.grid .product-items li.product-item:nth-child(3n)').addClass('nth-child-3n');
+                $('.main .products.grid .product-items li.product-item:nth-child(3n+1)').addClass('nth-child-3np1');
+                $('.main .products.grid .product-items li.product-item:nth-child(4n)').addClass('nth-child-4n');
+                $('.main .products.grid .product-items li.product-item:nth-child(4n+1)').addClass('nth-child-4np1');
+                $('.main .products.grid .product-items li.product-item:nth-child(5n)').addClass('nth-child-5n');
+                $('.main .products.grid .product-items li.product-item:nth-child(5n+1)').addClass('nth-child-5np1');
+                $('.main .products.grid .product-items li.product-item:nth-child(6n)').addClass('nth-child-6n');
+                $('.main .products.grid .product-items li.product-item:nth-child(6n+1)').addClass('nth-child-6np1');
+                $('.main .products.grid .product-items li.product-item:nth-child(7n)').addClass('nth-child-7n');
+                $('.main .products.grid .product-items li.product-item:nth-child(7n+1)').addClass('nth-child-7np1');
+                $('.main .products.grid .product-items li.product-item:nth-child(8n)').addClass('nth-child-8n');
+                $('.main .products.grid .product-items li.product-item:nth-child(8n+1)').addClass('nth-child-8np1');
+            });
+        </script>
+    <script type="text/javascript">
+    require([
+        'jquery'        
+    ], function ($) {
+    // Timer for LEFT time for Dailydeal product
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        //Set date as magentodatetime 
+        var date = new Date('2020-10-25 04:44:17');
+        var l_date = new Date();
+        var offset_date = l_date - date;
+
+        function showRemaining() 
+        {        
+            $(".sw-dailydeal-wrapper").each(function(){
+                var unique_id = $(this).attr("data-unique-id");
+                // get Value of dailydeal product
+                var cid='countdown_'+unique_id;
+                var daysid='countdown_days_'+unique_id;
+                var hoursid='countdown_hours_'+unique_id;
+                var minutesid='countdown_minutes_'+unique_id;
+                var secondsid='countdown_seconds_'+unique_id;
+
+                var startdateid='fromdate_'+unique_id;
+                var id='todate_'+unique_id;
+
+                var enddate = new Date($('#'+id).val());
+                var dealstartdate=new Date($('#'+startdateid).val());
+
+                var currentdate=new Date();
+
+                //Get Difference between Two dates
+                var distance = enddate - (currentdate - offset_date);
+
+                $('.sw-dailydeal-wrapper').show();
+
+                if (distance < 0) {
+                   // clearInterval(timer);
+                    $('#expired_'+unique_id).html("<span style='font-size:25px; color:#000;'>EXPIRED!<span>");
+
+                } else if(dealstartdate > currentdate) {
+                   $('.countdowncontainer_'+unique_id).hide();
+                   var msg="<span style='font-size:15px; color:#000;'> Coming Soon..<br>Deal Start at:<br>"+$('#'+startdateid).val()+"<span>";
+                   $('#expired_'+unique_id).html(msg);
+                } else {
+                    var days = Math.floor(distance / _day);
+                    var hours = Math.floor((distance % _day) / _hour);
+                    var minutes = Math.floor((distance % _hour) / _minute);
+                    var seconds = Math.floor((distance % _minute) / _second);
+
+                    if(hours < 10)
+                        hours = "0" + hours;
+                    if(minutes < 10)
+                        minutes = "0" + minutes;
+                    if(seconds < 10)
+                        seconds = "0" + seconds;
+                    $('.countdowncontainer_'+unique_id).show();
+                    $('#'+daysid).html(days);
+                    $('#'+hoursid).html(hours);
+                    $('#'+minutesid).html(minutes);
+                    $('#'+secondsid).html(seconds);
+                }
+            });
+        }
+        
+        // Set Interval
+        timer = setInterval(function() 
+        {
+            showRemaining();
+        }, 1000); 
+    });   
+    </script>
+</div>
+</div><div class="sidebar sidebar-main"><style>
+    .grwf2-wrapper {
+        text-align:center;
+        margin:auto;
+    }
+</style>
+
+<div id="layered-filter-block-container" class="layered-filter-block-container">
+            <div class="block filter" id="layered-filter-block"
+         data-mage-init='{"collapsible":{"openedState": "active", "collapsible": true, "active": false, "collateral": { "openedState": "filter-active", "element": "body" } }}'>
+
+        <div id="ln_overlay" class="ln_overlay">
+            <div class="loader">
+                <img src="https://arcacenter.com.br/static/frontend/Smartwave/porto_child/pt_BR/images/loader-1.gif" alt="Loading...">
+            </div>
+        </div>
+
+        <div class="block-title filter-title" data-count="0">
+            <strong data-role="title">Shop By</strong>
+        </div>
+        <div class="block-content filter-content" data-mage-init='{"mpLayer": {"active":["id"],"params":{"id":"524"},"isCustomerLoggedIn":false,"isAjax":true,"slider":[]}}'>
+            
+            
+                                                                                                                                                                                                                                                                                                                                                                                                                    <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle">Opções de compra</strong>
+                <div class="filter-options" id="narrow-by-list" data-role="content">
+                                                <div data-role="ln_collapsible" class="filter-options-item " attribute="material_principal">
+                    <div data-role="ln_title" class="filter-options-title">Material Principal</div>
+                    <div data-role="ln_content" class="filter-options-content"><ol class="items">
+            <li class="item">
+                                                <input type="checkbox"  />
+                                <a href="https://arcacenter.com.br/lancamentos?material_principal=6012">
+                    Tecido                                            <span class="count">2<span
+                                    class="filter-count-label">items</span></span>
+                                    </a>
+                    </li>
+            <li class="item">
+                                                <input type="checkbox"  />
+                                <a href="https://arcacenter.com.br/lancamentos?material_principal=6014">
+                    Couro                                            <span class="count">1<span
+                                    class="filter-count-label">item</span></span>
+                                    </a>
+                    </li>
+    </ol></div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+        
+                    </div>
+    </div>
+</div>
+
+</div><div class="sidebar sidebar-additional">    <div class="block block-wishlist" data-bind="scope: 'wishlist'">
+        <div class="block-title">
+            <strong role="heading" aria-level="2">Minha Lista de Desejos</strong>
+            <!-- ko if: wishlist().counter -->
+            <span data-bind="text: wishlist().counter" class="counter"></span>
+            <!-- /ko -->
+        </div>
+        <div class="block-content">
+            <strong class="subtitle">Últimos Itens Adicionados</strong>
+            <!-- ko if: wishlist().counter -->
+                <ol class="product-items no-display" id="wishlist-sidebar" data-bind="foreach: wishlist().items, css: {'no-display': null}">
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <a class="product-item-photo" data-bind="attr: { href: product_url, title: product_name }">
+                                <!-- ko template: {name: $data.image.template, data: $data.image} --><!-- /ko -->
+                            </a>
+                            <div class="product-item-details">
+                                <strong class="product-item-name">
+                                    <a data-bind="attr: { href: product_url }" class="product-item-link">
+                                        <span data-bind="html: product_name"></span>
+                                    </a>
+                                </strong>
+                                <div data-bind="html: product_price"></div>
+                                <div class="product-item-actions">
+                                    <!-- ko if: product_is_saleable_and_visible -->
+                                    <div class="actions-primary">
+                                        <!-- ko if: product_has_required_options -->
+                                        <a href="#" data-bind="attr: {'data-post': add_to_cart_params}" class="action tocart primary"><span>Adicionar carrinho</span></a>
+                                        <!-- /ko -->
+                                        <!-- ko ifnot: product_has_required_options -->
+                                            <button type="button" class="action tocart primary" data-bind="attr: {'data-post': add_to_cart_params}"><span>Adicionar carrinho</span></button>
+                                        <!-- /ko -->
+                                    </div>
+                                    <!-- /ko -->
+                                    <div class="actions-secondary">
+                                        <a href="#"  data-bind="attr: {'data-post': delete_item_params}"
+                                           title="Remove&#x20;This&#x20;Item"
+                                           class="btn-remove action delete">
+                                            <span>Remove This Item</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <div class="actions-toolbar no-display" data-bind="css: {'no-display': null}">
+                    <div class="primary">
+                        <a class="action details"
+                           href="https://arcacenter.com.br/wishlist/"
+                           title="Ir&#x20;para&#x20;Lista&#x20;de&#x20;Desejos"><span>Ir para Lista de Desejos</span></a>
+                    </div>
+                </div>
+            <!-- /ko -->
+            <!-- ko ifnot: wishlist().counter -->
+                <div class="empty">Você não tem nenhum item em sua lista de desejos.</div>
+            <!-- /ko -->
+        </div>
+    </div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "wishlist": {
+                        "component": "Magento_Wishlist/js/view/wishlist"
+                    }
+                }
+            }
+        }
+    }
+</script>
+<style>
+    .grwf2-wrapper {
+        text-align:center;
+        margin:auto;
+    }
+</style>
+</div></div></main><div class="page-bottom"><div class="content"><style>
+    .grwf2-wrapper {
+        text-align:center;
+        margin:auto;
+    }
+</style>
+</div></div><footer class="page-footer"><style>
+    .grwf2-wrapper {
+        text-align:center;
+        margin:auto;
+    }
+</style>
+<div class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="custom-block"><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="inner" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><div data-content-type="html" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;" data-decoded="true"><div class="footer-top-inner">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="block" style="margin-bottom: 20px;">
+        <div class="block-title" style="padding-top: 3px;"><strong><span>FIQUE POR DENTRO DAS NOVIDADES</span></strong></div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="block-content" style="width:100%;float:right;">
+        <div class="block newsletter col-sm-8">
+    <div class="content">
+        <form class="form subscribe" novalidate action="https://arcacenter.com.br/newsletter/subscriber/new/" method="post" data-mage-init='{"validation": {"errorClass": "mage-error"}}' id="newsletter-validate-detail">
+            <div class="field newsletter">
+                <label class="label" for="footer_newsletter"><span>Assinar nossa Newsletter:</span></label>
+                <div class="control">
+                    <input name="email" type="email" id="footer_newsletter" data-validate="{required:true, 'validate-email':true}" placeholder="Email"></div>
+            </div>
+            <div class="actions">
+                <button class="action subscribe primary" title="Inscrever" type="submit">
+                    <span>Inscrever</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+        <div class="social-icons col-md-3">
+          <a href="https://www.facebook.com/arcacenter" title="Facebook" target="_blank"><i class="porto-icon-facebook"></i></a>
+          <a href="https://www.instagram.com/arcacenter/" title="Instagram" target="_blank"><i class="porto-icon-instagram"></i></a>
+          <a href="https://www.youtube.com/user/arcacenter" title="Youtube" target="_blank"><i class="porto-icon-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div></div></div></div>                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-middle">
+        <div class="container">
+                    <div class="row">
+            <div class="col-lg-4"><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="inner" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><div data-content-type="html" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;" data-decoded="true"><div class="block">
+  <div class="block-title"><strong><span>TELEVENDAS E ATENDIMENTO</span></strong></div>
+  <div class="block-content">
+    <p>(11) 5555-1388</p>
+  </div>
+  <div class="block-title"><strong><span>WHATSAPP</span></strong></div>
+  <div class="block-content">
+    <p>(11) 99602-9768</p>
+  </div>
+  <div class="block-title"><strong><span>PONTO DE VENDA - SÃO PAULO</span></strong></div>
+  <div class="block-content">
+    <p>Rua João Boemer 296 - Brás - São Paulo - SP</p>
+  </div>
+  <div class="block-title"><strong><span>HORÁRIO DE FUNCIONAMENTO</span></strong></div>
+  <div class="block-content">
+    <p>10H às 17H</p>
+  </div>
+</div>
+
+<style type="text/css">
+/* Apenas para a apresentação de 28/02 */
+@media(max-width: 767px) {
+    header.page-header.type2 a.action.my-wishlist {
+        display: none;
+    }
+    .cms-index-index .pagebuilder-slider {
+        margin-top: 63px !important;
+    }
+    .page-footer .footer > div {
+        padding: 0 15px 15px !important;
+    }
+    .page-footer .footer .footer-top-inner {
+        padding: 15px 0 !important;
+        text-align: center;
+    }
+    .page-header.type2.header-newskin {
+        z-index: 102;
+    }
+}
+
+.products-grid .product-item-details .product-item-actions .tocart {
+    color: #fff;
+    background-color: #32CD32;
+    border-color: #32CD32;
+}
+
+.page-product-giftcard .field.qty .label {
+    display: none !important;
+}
+
+.page-header.type2.header-newskin {
+    z-index: 1002 !important;
+}
+
+.page-header #search_mini_form .search-category {
+    display: none;
+}
+
+.footer-top .block.newsletter {
+    max-width: initial;
+    width: 66.6666666667%;
+}
+
+.footer-middle {
+    margin-top: -1px;
+}
+
+.nav-sections .sticky-logo {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    header.page-header.type2.header-newskin.sticky-header .navigation .alldepts > a span {
+        font-size: 12px;
+    }
+    header.page-header.type2.header-newskin.sticky-header .navigation .alldepts > a span:before {
+        display: none;
+    }
+    header.page-header.type2.header-newskin.sticky-header .navigation .alldepts > a:after {
+        display: block;
+    }
+}
+
+.wishlist-index-index .comment-box {
+    display: none;
+}
+
+.wishlist-index-index .field.qty {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+</style>
+
+<script type="text/css">
+jQuery(document).ready(function(){
+jQuery(document).mouseup(function(e){
+    var container = jQuery(".filter-options");
+    if (!container.is(e.target) && container.has(e.target).length === 0){
+        jQuery(".filter").removeClass("active");
+    }
+});
+});
+</script></div></div></div></div><div class="col-lg-3"><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="inner" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><div data-content-type="html" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;" data-decoded="true"><div class="block">
+    <div class="block-title"><strong><span>SUPORTE</span></strong></div>
+    <div class="block-content">
+        <ul class="links">
+            <li><a href="https://arcacenter.com.br/faq/" title="Central de ajuda">Central de ajuda</a></li>
+            <li><a href="https://arcacenter.com.br/contact/" title="Fale conosco">Fale conosco</a></li>
+        </ul>
+    </div>
+    <div class="block-title"><strong><span>CENTRAL DO CLIENTE</span></strong></div>
+    <div class="block-content">
+        <ul class="links">
+            <li><a href="https://arcacenter.com.br/customer/account/" title="Minha conta">Minha conta</a></li>
+            <li><a href="https://arcacenter.com.br/sales/order/history/" title="Meus pedidos">Meus pedidos</a></li>
+            <li><a href="https://arcacenter.com.br/wishlist/" title="Lista de desejos">Lista de desejos</a></li>
+        </ul>
+    </div>
+    <div class="block-title"><strong><span>INFORMAÇÕES</span></strong></div>
+    <div class="block-content">
+        <ul class="links">
+            <li><a href="https://arcacenter.com.br/#/">Sobre o Arca Center</a></li>
+            <li><a href="https://arcacenter.com.br/politica-de-uso-e-privacidade/" target="_blank">Políticas de Privacidade</a></li>
+            <li><a href="https://arcacenter.com.br/trocaedevolucao/" target="_blank">Políticas Venda, Troca e Devolução</a></li>
+            <li><a href="https://arcacenter.com.br/regulamentos/" target="_blank">Regras de Uso e Promoções</a></li>
+        </ul>
+    </div>
+</div></div></div></div></div><div class="col-lg-5"><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="inner" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><div data-content-type="html" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;" data-decoded="true"><img src="https://arcacenter.com.br/media/wysiwyg/smartwave/porto/footer/payments.png" alt="" /></div></div></div></div>            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+                                    <address>Arcacenter © 2020 Todos os direitos reservados</address>
+                    </div>
+    </div>
+</div>
+<a href="javascript:void(0)" id="totop"><em class="porto-icon-up-open"></em></a>
+
+<script>
+    require([
+        'jquery',
+    ],
+    function ($) {
+        $(document).ready(function(){
+            $(".subchildmenu .level1 > a").each(function() {
+                var link = $(this).attr("href");
+                var linkText = $(this).text();
+                var alias = "<li class=\"ui-menu-item level2\"><a href=\"" + link + "\" title=\"" + linkText + "\"><span>Ver todos<span></a></li>";
+
+                $(this).siblings(".subchildmenu").append(alias);
+            });
+
+            $(".nav-sections .navigation > ul").prepend($(".nav-sections .navigation > ul > .alldepts"));
+
+            $(".customer-account-login .account-social-login").insertAfter("#login-form");
+            $(".form-create-account").append($(".block.social-login-authentication-channel.account-social-login"));
+            $(".alldepts a:eq(0)").remove();
+
+            $(".page-header.type2 ul.header.links .Simple-Line-Icons-user").click(function(){
+                $(".page-header.type2 ul.header.links").toggleClass("active");
+            });
+        });
+    });
+</script></footer><script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "storage-manager": {
+                            "component": "Magento_Catalog/js/storage-manager",
+                            "appendTo": "",
+                            "storagesConfiguration" : {"recently_viewed_product":{"requestConfig":{"syncUrl":"https:\/\/arcacenter.com.br\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"recently_compared_product":{"requestConfig":{"syncUrl":"https:\/\/arcacenter.com.br\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"product_data_storage":{"updateRequestConfig":{"url":"https:\/\/arcacenter.com.br\/rest\/default\/V1\/products-render-info"},"allowToSendRequest":null}}                        }
+                    }
+                }
+            }
+        }
+</script>
+
+<script type="text/x-magento-init">
+		{
+		    "*": {
+			    "Avanter_ProductPlayer/js/plugins/Player":{},
+		       "Magento_Ui/js/core/app": {
+		            "components": {
+		                "player": {
+		                    "component": "Avanter_ProductPlayer/js/view/player"
+		                }
+		            }
+		        }
+		    }
+		}
+</script>
+
+<div id="product-player" data-bind="scope:'player'">
+	<!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+
+<style>
+.bg-overlay{
+    background-color:rgba(255,255,255,0.3);
+    padding:15px;
+}
+
+.downloadable-customer-products .modals-overlay{
+    /*top: 93px;*/
+}
+.overlay-playlist{
+    position:absolute;
+    width:100%;
+    /*top:93px;*/
+    right:0;
+    bottom:0;
+    left:0;
+    background-size:cover;
+    z-index: 999;
+}
+.overlay-playlist .modal-header{
+
+}
+.overlay-playlist .modal-inner-wrap{
+    width:780px;
+    border:0;
+    background:transparent;
+    box-shadow:none;
+}
+.overlay-playlist .modal-inner-wrap .modal-content{
+    color:#FFF;
+    background:none;
+    border-radius: 0;
+    border:0;
+    padding:0;
+    margin:0;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container{
+    width:780px;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .album-info{
+    width:100%;
+    float:left;
+    margin:170px 0 34px; 0;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .left-content{
+    float:left;
+    width:148px;
+    margin-right:32px;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .artist-thumb{
+    width:148px;
+    height:148px;
+    background:#fff;
+    float:left;
+    margin:0 0 12px 0;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .artist-thumb img{
+    width:140px;
+    margin:4px;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .play-btn{
+    width:110px;
+    height:32px;
+    line-height:32px;
+    background:#fff;
+    color:#a42830;
+    text-transform:uppercase;
+    text-align:center;
+    float:left;
+    cursor:pointer;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .square-btn{
+    width:32px;
+    height:32px;
+    box-sizing:border-box;
+    border:1px solid #fff;
+    margin-left:6px;
+    float:left;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .square-btn span{
+    width:16px;
+    height:16px;
+    display:block;
+    border:1px solid #fff;
+    margin:7px auto;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .info-container{
+    position:relative;
+    float:left;
+    width:600px;
+    min-height:192px;
+    text-align:left;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .info-text{
+    /* padding-top:96px; */
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    font-size:14px;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .info-text h2{
+    font-size:30px;
+    padding:0 0 12px 0;
+    margin:0;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .playlist-info{
+    width:100%;
+    float:left;
+    margin-bottom:16px;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .playlist-info span{
+    display:inline-block;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .playlist-info span.estilo{
+    margin-right:20px;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .playlist-description{
+    font-size:12px;
+    float:left;
+    margin:0;
+    line-height:18px;
+}
+.overlay-playlist .modal-footer{
+    display:none;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .track-list{
+    float:left;
+    width:100%;
+    background:rgba(42,38,34,.7);
+    padding:20px 40px;
+    color:#fff;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .track-list li{
+    width:100%;
+    float:left;
+    margin:10px 0;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .track-list li span{
+    float:left;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .track-list .now-playing{
+    display:none;
+    float:left;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .track-list .playing .now-playing{
+    display:block;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .track-list .playing .now-playing:after{
+    content: '\f04b';
+    font-family:'FontAwesome';
+    float:left;
+    width:20px;
+    margin-right:20px;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .track-list .title{
+    margin-left:20px;
+    color:#fff;
+    cursor:pointer;
+}
+.overlay-playlist .modal-inner-wrap .modal-content .player-container .track-list .time{
+    float:right;
+}
+</style>
+<script>
+    requirejs(['jquery', 'weltpixel_quickview' ],
+        function   ($, quickview) {
+            $(document).ready(function() {
+                $('.weltpixel-quickview').bind('click', function() {
+                    var prodUrl = $(this).attr('data-quickview-url');
+                    if (prodUrl.length) {
+                        quickview.displayContent(prodUrl);
+                    }
+                });
+            });
+        });
+
+    window.weltpixel_quickview = {"baseUrl":"https:\/\/arcacenter.com.br\/","closeSeconds":"5","showMiniCart":"1","showShoppingCheckoutButtons":"1"};
+</script><!-- BEGIN GTAG CATEGORY TAG -->
+<!-- END GTAG CATEGORY TAG -->
+</div>    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-cea3cc6ba5200425954","applicationID":"600928121","transactionName":"ZwBabEFSDUMCW0FbWF5KeVtHWgxeTFtURlZcCl8XUFIXVQRXR0sYRgxdTw==","queueTime":0,"applicationTime":1656,"atts":"S0dZGglIHk0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html id="ie6" lang="ja"><![endif]-->
+<!--[if IE 7]><html id="ie7" lang="ja"><![endif]-->
+<!--[if IE 8]><html id="ie8" lang="ja"><![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+<base href="/">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" />  
+<link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="/common/css/style.css"  />
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Bowlby+One'>
+<link rel='stylesheet' type="text/css" href='/common/css/glyphicons.css'/>
+<link rel='stylesheet' type="text/css" href='/common/css/glyphicons-social.css'/>
+<link rel='stylesheet' type="text/css" href='/lib/bootstrap/css/bootstrap2.min.css'/>
+<link rel='stylesheet' type="text/css" href='/lib/bootstrap/css/bootstrap-select.min.css'/>
+<link rel='stylesheet' type="text/css" href='/lib/bootstrap/css/bootstrap-social.css'/>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="/common/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/common/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/common/ng_tr/func.js"></script>
+
+<script>
+$(document).ready(function(){
+	$(function () {// fade in #back-top
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 220) {
+				$('#back-top').stop().animate({ opacity:1, right: "15px",bottom:"14px" },600,function(){
+       				 //setInterval(function(){
+        			//	$('#back-top').stop().animate({ opacity:0, right: "-120px",bottom:"14px" },600);
+    				//},3000);	
+    				});		
+			} else {
+				$('#back-top').stop().animate({ opacity:0, right: "-180px",bottom:"14px" },600);
+			}
+		});
+		$('.scroller a').click(function () {// scroll body to 0px on click
+					$('body,html').animate({scrollTop: 0}, 600);
+					return false;
+		});
+	});
+});
+</script>
+<meta name="keywords" content="tower,revolve,project,タワレボ,twrv,towerrecords,タワレコ,タワー,配信,ストリーミング" />
+<meta name="description" content="タワーレコード渋谷が発信する新しいライブ ストリーミング メディア。通称「タワレボ」。" />
+<link rel='stylesheet' id='yarppWidgetCss-css'  href='http://www.towerrevo.jp/cms/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=3.5.1' type='text/css' media='all' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.towerrevo.jp/cms/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.towerrevo.jp/cms/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.5.1" />
+<title>
+        タワレボ (TOWER REVOLVE PROJECT)-        </title>
+</head>
+<body id="base" id="ng-app" ng-app="app">
+
+ 
+<div id="body_bg" clear="clearfix" ng-controller="MainController">
+    
+<div class="container">
+    <div class="row well" style="background:none !important;">
+        <div class="col col-md-12">
+            <div class="row thumbnails_ad">
+
+			                 <div class="thumb col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <a href="http://japan.agnesb.com/ja/bside/section/whats-new/japan-event/i-love-flowers-!!%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%B3" target='_target'>
+                        <div class="thumbnail" style="border-radius:0;padding:0;border:thin solid white;">
+                            <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/dfc3fe4295e8117740d53b7b821be956.jpg" border="0"/>
+                        </div>
+                    </a>
+                </div>
+                            <div class="thumb col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <a href="http://tower.jp/article/campaign/2015/11/25/03" target='_target'>
+                        <div class="thumbnail" style="border-radius:0;padding:0;border:thin solid white;">
+                            <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/d6f16ed568b3388b67d0be554e2e4d70.jpg" border="0"/>
+                        </div>
+                    </a>
+                </div>
+                            <div class="thumb col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <a href="http://tower.jp/" target='_target'>
+                        <div class="thumbnail" style="border-radius:0;padding:0;border:thin solid white;">
+                            <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/tower_banner1.png" border="0"/>
+                        </div>
+                    </a>
+                </div>
+                            <div class="thumb col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <a href="http://towershibuya.jp/" target='_target'>
+                        <div class="thumbnail" style="border-radius:0;padding:0;border:thin solid white;">
+                            <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/35a6db7d70f86a7a47a1fc97b7d5b7cd1.jpg" border="0"/>
+                        </div>
+                    </a>
+                </div>
+                            <div class="thumb col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <a href="http://mikiki.tokyo.jp/" target='_target'>
+                        <div class="thumbnail" style="border-radius:0;padding:0;border:thin solid white;">
+                            <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/mikiki_2111.png" border="0"/>
+                        </div>
+                    </a>
+                </div>
+                        </div><!--/row.thumbnails-->
+        </div><!--/col-md-12-->
+    </div><!--/row well-->
+</div><!--/container-->
+
+
+<span id="back-top" class="scroller">
+    <!--a href="#base" class="all_close_top"-->
+    <a href="#base" class="all_close_top">
+        <span style="color:#14c3f2 !important;">
+            <span class="glyphicons glyphicons-chevron-up" style="font-size:28px;"></span>
+            <span style="font-size:18px !important;">TOP</span>
+        </span>
+    </a>
+</span><!--/back-top-->
+
+
+<div class="navbar navbar-inverse"><!--navbar-->
+    <div class="container">
+        <div id="top_logo_div" style="float:left; width:190px;max-width:50% !important;">
+        <!--p style="color:#ccc;font-size:0.5em;margin:0;padding:0;"></p-->
+            <a href="/">
+                <img src="/img/top_logo_official.png" width="100%" border="0"/>
+            </a>
+        </div><!--top_logo_div-->
+        <nav role="navigation">
+            <div class="navbar-header">
+                <a href="#"></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div><!--navbar-header-->
+            <div class="collapse navbar-collapse navbar-inverse">
+                <ul class="nav navbar-nav navbar-right" style="padding:0px;">
+                    <li class="left" style="padding-left:3px;">
+                        <a href="/#schedule" style="margin:0;padding:0;">
+                            <img class="nav_icon" src="/img/menu_schedule.png" alt="SCHEDULE" border="0"/>
+                        </a>
+                    </li>
+                    <li class="left" style="padding-left:3px;">
+                        <a href="/#regular" style="margin:0;padding:0;">
+                            <img class="nav_icon" src="/img/menu_regular.png" alt="REGULAR" border="0"/>
+                        </a>
+                    </li>
+                    <li class="left" style="padding-left:3px;">
+                    <a href="/articles/" target="_blank" style="margin:0;padding:0;">
+                            <img class="nav_icon" src="/img/menu_article.png" height="64" alt="ARTICLES" border="0"/>
+                        </a>
+                    </li>
+                    <li class="left" style="padding-left:3px;">
+                        <a href="/archives/" style="margin:0;padding:0;" target="_blank">
+                            <img class="nav_icon" src="/img/menu_archives.png" alt="ARCHIVES" border="0"/>
+                        </a>
+                    </li>
+                    <li class="left" style="padding-left:3px;">
+                        <a href="/store_venue" class="boxer" style="margin:0;padding:0;">
+                            <img class="nav_icon" src="/img/menu_about.png" alt="ABOUT US" border="0"/>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--/navbar-inverse-->
+        </nav>
+    </div><!--/container-->
+</div><!--/navbar-->
+
+<div class="container">
+    <div class="row top_social_buttons">
+	<div class="col col-xs-12 col-md-offset-9 col-md-3 text-right" style="height:10px;">
+		<!--a>
+		<img src="/img/icons_facebook.png" height="55"/>
+		</a-->
+		<a href="https://instagram.com/tower_revo/" target="_blank">
+			<img src="/img/icons_instragram.png" height="55"/>
+		</a>
+		<a href="https://twitter.com/TOWER_Revo" target="_blank">
+			<img src="/img/icons_twitter.png" height="55"/>
+		</a>
+	</div>
+	</div>
+     <div class="row well well-lg">
+	
+        <div class="col col-md-12">
+            <div class="row">
+                <div class="col col-md-9 col-sm-8 col-xs-12">
+                    <div class="row" id="video_row">
+ 
+<div class="video-container">
+
+<iframe width="640" height="392" src="http://www.ustream.tv/embed/14874043?html5ui&amp;showtitle=false&amp;wmode=direct" allowfullscreen webkitallowfullscreen scrolling="no" frameborder="0" style="border:0 none transparent; z-index:1;"></iframe> 
+
+
+</div>
+</div>
+
+<!--/video_row-->
+</div><!--/col-->
+
+                <div class="col col-md-3 col-sm-4 col-xs-12">
+                    <div class="row visible-xs" style="text-align:center;padding-top:10px;">
+                        <a style="color:white;font-size:17px;font-weight:bold !important;" href="javascript:void(0)" onclick="javascript:window.open('http://twitter.com/share?text=%23%e3%82%bf%e3%83%af%e3%83%ac%e3%83%9c&amp;url=http://www.towerrevo.jp/','tweet','width=300,height=520');">
+                            <span class="social social-twitter"><span>&nbsp;番組についてつぶやく
+                        </a>
+                    </div><!--/row visible-xs-->
+                    <div class="row hidden-xs" id="twitter_row">
+                        <div id="stream_wrapper"></div>
+                        <div id="twitterarea_footerdiv">
+                            <div class="col" style="height:30px;margin:10px 0px 10px 0px;text-align:center;">
+                                <a style="color:white;font-size:17px;font-weight:bold !important;" href="javascript:void(0)" onclick="javascript:window.open('http://twitter.com/share?text=%23%e3%82%bf%e3%83%af%e3%83%ac%e3%83%9c&amp;url=http://www.towerrevo.jp/','tweet','width=300,height=520');">
+                                    <span class="social social-twitter"><span>&nbsp;番組についてつぶやく
+                                </a>
+                            </div>
+                        </div>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </div><!--/row hidden-xs-->
+                </div><!--/col-->
+            </div><!--/row-->
+        </div><!--/col-->
+    </div><!--/row-->
+</div><!--/container--><script src='/common/js/twitterStream.js' type='text/javascript'></script>
+<!--schedule banners-->
+<a id="schedule" name="schedule"></a>
+<div class="container">
+    <div class="row well well-lg">
+        <div class="col col-md-12">
+            <div class="row">
+                <img src="/img/menus_sche.png" style="max-width:92%;" border="0"/>
+                <!--a href="/tt" target="_blank" style="font-size:15px;float:right;color:white;margin-top:5px;"><span class="glyphicons glyphicons-calendar"></span></a-->
+            </div><!--/row-->
+        </div><!--/col-->
+        <div class="col col-md-12" style="padding-left:10px;padding-right:10px;">
+            <div class="row thumbnails">
+                            <div class="thumb col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href=" http://www.towerrevo.jp/article/20880/" style="word-break:normal;" target="_blank">
+                        <div class="thumbnail ">
+                            <img alt="KEN THE 390『超・STREAM on タワレボ』" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/923f967d7109745e71d3b585a13368581.jpg" border="0">
+                        </div>
+                    </a>
+                </div>
+                            <div class="thumb col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="http://www.towerrevo.jp/article/20844/" style="word-break:normal;" target="_blank">
+                        <div class="thumbnail ">
+                            <img alt="illumination presents「塔台モトクロス」第八回～南波志帆『meets sparkjoy』スペシャル～" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/a3e76dd3beb1c2bd4f39144171e6e049.jpg" border="0">
+                        </div>
+                    </a>
+                </div>
+                            <div class="thumb col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="http://www.towerrevo.jp/article/20947/" style="word-break:normal;" target="_blank">
+                        <div class="thumbnail ">
+                            <img alt="NHK BSプレミアム「植物男子ベランダー」presents「MC植物」 m.c;ShockBoots「Botanical」発売記念スペシャルイベント" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/3f48d61000e7f52f7bb11385edd4533e.jpg" border="0">
+                        </div>
+                    </a>
+                </div>
+                            <div class="thumb col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="http://www.towerrevo.jp/article/20863/" style="word-break:normal;" target="_blank">
+                        <div class="thumbnail ">
+                            <img alt="mobsproof EX「ロックドキュメンタリー映画祭」発売記念番組 『ロック映画突撃一番』" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/f7e8daaba75b0d7c2b51e0ab538b103f.jpg" border="0">
+                        </div>
+                    </a>
+                </div>
+                            <div class="thumb col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href=" http://www.towerrevo.jp/article/20952/" style="word-break:normal;" target="_blank">
+                        <div class="thumbnail ">
+                            <img alt="『餓鬼レンジャー ポチョムキンのTube Reality』" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/14a8cb528d1470b762802c60b1fa2ce01.jpg" border="0">
+                        </div>
+                    </a>
+                </div>
+                        </div><!--/.row#thumbnails-->
+        </div><!--/col-->
+    </div><!--/row-->
+</div><!--/container-->
+
+<!--regulars-->
+<div class="container">
+    <div class="row well well-lg">
+        <div class="col col-md-3 col-md-push-9 col-lg-3 col-lg-push-9">
+            <div class="row" id="recent10_top">
+    <h1 style="margin:5px 12px 5px 12px;"><img src="/img/menus_latest.png" style="max-width:100%;"/></h1>
+                                    <div class="clearfix tr_itembox" style="margin:5px 12px 5px 12px;">
+                <p class="tr_date">
+                    <a href="/date/2016/03" style="margin:0;padding:0;" target='_blank'>
+                        <span>2016.03.18&nbsp;UP</span>
+                    </a>
+ 	             <span style="float:right;">
+                           <a href="/date/2016/03" target='_blank' style="padding-left:3px;border-left:2px solid #ee9633;">
+ARTICLES</a>
+			                       </span>
+                </p>
+                <a href="http://www.towerrevo.jp/article/20952/" target="_blank">
+                    <img class="itemimage" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/ed0f56d8abd5a8d2c53568fe7b38e95a.jpg" style="float:left;margin:0px 5px 5px 0px;" width="117" height="78" alt=""/>
+                    <h4>
+　ＣＢＧＴ【第2弾ゲスト発表！】ネゴシックス、グッドウォーキン上田が登場！さらにチャッキーズ∞インフィニティも参戦決定！...</h4>
+                </a>
+                <p class="tr_date">
+                    <span style="float:right;">
+                        <a href="/editors/?usrname=%E9%83%A1%E5%8F%B8%E5%92%8C%E6%AD%8C" target="_blank">
+                            <span class="glyphicons glyphicons-parents"></span>&nbsp;郡司和歌                        </a>
+                    </span>
+                </p>
+            </div>
+            <hr class="tr_itemhr" clear="all"/>
+                                        <div class="clearfix tr_itembox" style="margin:5px 12px 5px 12px;">
+                <p class="tr_date">
+                    <a href="/date/2016/03" style="margin:0;padding:0;" target='_blank'>
+                        <span>2016.03.18&nbsp;UP</span>
+                    </a>
+ 	             <span style="float:right;">
+                           <a href="/date/2016/03" target='_blank' style="padding-left:3px;border-left:2px solid #ee9633;">
+ARTICLES</a>
+			                       </span>
+                </p>
+                <a href="http://www.towerrevo.jp/article/20947/" target="_blank">
+                    <img class="itemimage" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/7ffb03d01d71b4a4f1b2c19b1a3f0820.jpg" style="float:left;margin:0px 5px 5px 0px;" width="117" height="78" alt=""/>
+                    <h4>
+m.c;ShockBoots(奥野瑛太)、田口トモロヲ、いとうせいこう出演！！NHK BSプレミアム「植物男子ベランダー...</h4>
+                </a>
+                <p class="tr_date">
+                    <span style="float:right;">
+                        <a href="/editors/?usrname=%E4%BC%8A%E6%BE%A4%E7%9C%9F%E7%94%B1%E7%BE%8E" target="_blank">
+                            <span class="glyphicons glyphicons-parents"></span>&nbsp;伊澤真由美                        </a>
+                    </span>
+                </p>
+            </div>
+            <hr class="tr_itemhr" clear="all"/>
+                                        <div class="clearfix tr_itembox" style="margin:5px 12px 5px 12px;">
+                <p class="tr_date">
+                    <a href="/date/2016/03" style="margin:0;padding:0;" target='_blank'>
+                        <span>2016.03.16&nbsp;UP</span>
+                    </a>
+ 	             <span style="float:right;">
+                           <a href="/date/2016/03" target='_blank' style="padding-left:3px;border-left:2px solid #ee9633;">
+ARTICLES</a>
+			                       </span>
+                </p>
+                <a href="http://www.towerrevo.jp/article/20913/" target="_blank">
+                    <img class="itemimage" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/27dd8ee4eb306eb0173870ddef6f0f37.jpg" style="float:left;margin:0px 5px 5px 0px;" width="117" height="78" alt=""/>
+                    <h4>
+【番組後記】DJ オショウがレポート！！！3/9(水)『餓鬼レンジャー ポチョムキンのTube Reality』番組後記を公開！！！</h4>
+                </a>
+                <p class="tr_date">
+                    <span style="float:right;">
+                        <a href="/editors/?usrname=DJ+%E3%82%AA%E3%82%B7%E3%83%A7%E3%82%A6" target="_blank">
+                            <span class="glyphicons glyphicons-parents"></span>&nbsp;DJ オショウ                        </a>
+                    </span>
+                </p>
+            </div>
+            <hr class="tr_itemhr" clear="all"/>
+                                        <div class="clearfix tr_itembox" style="margin:5px 12px 5px 12px;">
+                <p class="tr_date">
+                    <a href="/date/2016/03" style="margin:0;padding:0;" target='_blank'>
+                        <span>2016.03.16&nbsp;UP</span>
+                    </a>
+ 	             <span style="float:right;">
+                           <a href="/date/2016/03" target='_blank' style="padding-left:3px;border-left:2px solid #ee9633;">
+ARTICLES</a>
+			                       </span>
+                </p>
+                <a href="http://www.towerrevo.jp/article/20880/" target="_blank">
+                    <img class="itemimage" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/fb8a4335b73e9a3e8406553db0e175dc.jpg" style="float:left;margin:0px 5px 5px 0px;" width="117" height="78" alt=""/>
+                    <h4>
+3/23(水)22:00～KEN THE 390『超・STREAM on タワレボ』を配信！ゲストでS7ICK CHIC...</h4>
+                </a>
+                <p class="tr_date">
+                    <span style="float:right;">
+                        <a href="/editors/?usrname=%E9%83%A1%E5%8F%B8%E5%92%8C%E6%AD%8C" target="_blank">
+                            <span class="glyphicons glyphicons-parents"></span>&nbsp;郡司和歌                        </a>
+                    </span>
+                </p>
+            </div>
+            <hr class="tr_itemhr" clear="all"/>
+                                        <div class="clearfix tr_itembox" style="margin:5px 12px 5px 12px;">
+                <p class="tr_date">
+                    <a href="/date/2016/03" style="margin:0;padding:0;" target='_blank'>
+                        <span>2016.03.15&nbsp;UP</span>
+                    </a>
+ 	             <span style="float:right;">
+                           <a href="/date/2016/03" target='_blank' style="padding-left:3px;border-left:2px solid #ee9633;">
+ARTICLES</a>
+			                       </span>
+                </p>
+                <a href="http://www.towerrevo.jp/article/20906/" target="_blank">
+                    <img class="itemimage" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/1609ae154bc272450768c6a125b3ff42.jpg" style="float:left;margin:0px 5px 5px 0px;" width="117" height="78" alt=""/>
+                    <h4>
+ネゴシックス、グッドウォーキン上田が登場！4/13(水)22:00～トーク音楽番組『餓鬼レンジャー ポチョムキンのTub...</h4>
+                </a>
+                <p class="tr_date">
+                    <span style="float:right;">
+                        <a href="/editors/?usrname=%E9%83%A1%E5%8F%B8%E5%92%8C%E6%AD%8C" target="_blank">
+                            <span class="glyphicons glyphicons-parents"></span>&nbsp;郡司和歌                        </a>
+                    </span>
+                </p>
+            </div>
+            <hr class="tr_itemhr" clear="all"/>
+                                        <div class="clearfix tr_itembox" style="margin:5px 12px 5px 12px;">
+                <p class="tr_date">
+                    <a href="/date/2016/03" style="margin:0;padding:0;" target='_blank'>
+                        <span>2016.03.11&nbsp;UP</span>
+                    </a>
+ 	             <span style="float:right;">
+                           <a href="/date/2016/03" target='_blank' style="padding-left:3px;border-left:2px solid #ee9633;">
+ARTICLES</a>
+			                       </span>
+                </p>
+                <a href="http://www.towerrevo.jp/article/20890/" target="_blank">
+                    <img class="itemimage" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/4ced294466d38487cd8252d401465318.jpg" style="float:left;margin:0px 5px 5px 0px;" width="117" height="78" alt=""/>
+                    <h4>
+『ウェインズワールド』の監督によるパンク/ロック・ドキュメンタリー映画にして、ニルヴァーナやレッチリにも影響を与えた伝説...</h4>
+                </a>
+                <p class="tr_date">
+                    <span style="float:right;">
+                        <a href="/editors/?usrname=%E3%83%A4%E3%83%9E%E3%83%80%E3%83%8A%E3%82%AA%E3%83%92%E3%83%AD" target="_blank">
+                            <span class="glyphicons glyphicons-parents"></span>&nbsp;ヤマダナオヒロ                        </a>
+                    </span>
+                </p>
+            </div>
+            <hr class="tr_itemhr" clear="all"/>
+                                        <div class="clearfix tr_itembox" style="margin:5px 12px 5px 12px;">
+                <p class="tr_date">
+                    <a href="/date/2016/03" style="margin:0;padding:0;" target='_blank'>
+                        <span>2016.03.09&nbsp;UP</span>
+                    </a>
+ 	             <span style="float:right;">
+                           <a href="/date/2016/03" target='_blank' style="padding-left:3px;border-left:2px solid #ee9633;">
+ARTICLES</a>
+			                       </span>
+                </p>
+                <a href="http://www.towerrevo.jp/article/20872/" target="_blank">
+                    <img class="itemimage" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/e9a82abeaeeee3d152db58dbffdfbee8.jpg" style="float:left;margin:0px 5px 5px 0px;" width="117" height="78" alt=""/>
+                    <h4>
+【番組後記＆次回告知】2/22(月)分の『高橋芳朗 presents タワレコ渋谷洋楽第二企画室』レポートと3/14(月)配信の告知！</h4>
+                </a>
+                <p class="tr_date">
+                    <span style="float:right;">
+                        <a href="/editors/?usrname=%E8%B0%B7%E6%B2%B3%E7%AB%8B%E6%9C%97" target="_blank">
+                            <span class="glyphicons glyphicons-parents"></span>&nbsp;谷河立朗                        </a>
+                    </span>
+                </p>
+            </div>
+            <hr class="tr_itemhr" clear="all"/>
+            
+
+<!--search-->
+		<div class="row" style="margin:0px 2px 12px 2px;">
+
+		<form action="http://www.towerrevo.jp/" method="get" class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="hidden" value="1" name="cat" />
+                    <input type="text" class="form-control" placeholder="Search" name="s">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" style="margin:0;" type="submit">
+				<i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+  		</form>
+		</div><!--search-->
+
+
+
+</div>
+<br/><br/>
+
+        </div><!--col-->
+        <div class="col col-md-9 col-md-pull-3 col-lg-9 col-lg-pull-3">
+            <a id="regular" name="regular"></a>
+            <div class="row">
+                <div class="col col-xs-12">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <h1><img src="/img/menus_reg.png" /></h1>
+                        </div>
+                    </div><!--/row-->
+                    <div class="row thumbnails">
+                                                    <div class="thumb col-lg-4 col-md-4 col-sm-4 col-xs-6" style="background:none!important;border:none;height:260px;">
+                                <a href="http://www.towerrevo.jp/regular/12429/" style="color:white !important;" target="_blank">
+                                    <div class="thumbnail reg_thumb">
+                                        <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/e93a5cf388d1745bdf5ea8bc2597c745.png" class="img-rounded" width="150" height="126" style="width:150px;height:126px;" border="0"/>
+                                        <div class="caption">
+                                            業界視聴率急上昇↑↑↑音楽ライター南波一海とタワーレコード代表取締役社長嶺脇育夫によるアイドル紹介番組『南波一海のアイドル三十六房』                                        </div>
+                                    </div><!--/reg_thumb-->
+                                </a>
+                            </div><!--/thumb-->
+                                                    <div class="thumb col-lg-4 col-md-4 col-sm-4 col-xs-6" style="background:none!important;border:none;height:260px;">
+                                <a href="http://www.towerrevo.jp/regular/12408/" style="color:white !important;" target="_blank">
+                                    <div class="thumbnail reg_thumb">
+                                        <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/f8d6463c46555d17c4f42422aba6e1f7.jpg" class="img-rounded" width="150" height="126" style="width:150px;height:126px;" border="0"/>
+                                        <div class="caption">
+                                            KEN THE 390がMCを務めるジャパニーズ・ヒップホップ情報番組『超・STREAM on タワレボ』！                                        </div>
+                                    </div><!--/reg_thumb-->
+                                </a>
+                            </div><!--/thumb-->
+                                                    <div class="thumb col-lg-4 col-md-4 col-sm-4 col-xs-6" style="background:none!important;border:none;height:260px;">
+                                <a href="http://www.towerrevo.jp/regular/12521/" style="color:white !important;" target="_blank">
+                                    <div class="thumbnail reg_thumb">
+                                        <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/5849de02bc2c4e07a9686b606a487e0c.png" class="img-rounded" width="150" height="126" style="width:150px;height:126px;" border="0"/>
+                                        <div class="caption">
+                                            パンク・バンドSAのギタリストNAOKIがホストで贈る、熱いパンク・ロック番組『NAOKI (SA) のBARボイラールーム』！                                        </div>
+                                    </div><!--/reg_thumb-->
+                                </a>
+                            </div><!--/thumb-->
+                                                    <div class="thumb col-lg-4 col-md-4 col-sm-4 col-xs-6" style="background:none!important;border:none;height:260px;">
+                                <a href="http://www.towerrevo.jp/regular/12516/" style="color:white !important;" target="_blank">
+                                    <div class="thumbnail reg_thumb">
+                                        <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/fc65c33b2aa4a7135d60a1b7c3045359.png" class="img-rounded" width="150" height="126" style="width:150px;height:126px;" border="0"/>
+                                        <div class="caption">
+                                            最新の洋楽を紹介する、“あと半歩洋楽に近づきたい人”にオススメする番組『高橋芳朗 presents タワレコ渋谷洋楽第二企画室』                                        </div>
+                                    </div><!--/reg_thumb-->
+                                </a>
+                            </div><!--/thumb-->
+                                                    <div class="thumb col-lg-4 col-md-4 col-sm-4 col-xs-6" style="background:none!important;border:none;height:260px;">
+                                <a href="http://www.towerrevo.jp/regular/12428/" style="color:white !important;" target="_blank">
+                                    <div class="thumbnail reg_thumb">
+                                        <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/edbb9073e42b30c7594f40d626e8bc29.jpg" class="img-rounded" width="150" height="126" style="width:150px;height:126px;" border="0"/>
+                                        <div class="caption">
+                                            餓鬼レンジャーのポチョムキンを中心に総勢8人のMC達が、ジャンルを問わずゲストを招き繰り広げるトークSHOW『餓鬼レンジャー ポチョムキンのTube Reality』 !                                        </div>
+                                    </div><!--/reg_thumb-->
+                                </a>
+                            </div><!--/thumb-->
+                                                    <div class="thumb col-lg-4 col-md-4 col-sm-4 col-xs-6" style="background:none!important;border:none;height:260px;">
+                                <a href="http://www.towerrevo.jp/regular/12368/" style="color:white !important;" target="_blank">
+                                    <div class="thumbnail reg_thumb">
+                                        <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/Bang-On1.png" class="img-rounded" width="150" height="126" style="width:150px;height:126px;" border="0"/>
+                                        <div class="caption">
+                                            ニューウェイヴ以降のCOOLで尖った音楽の最新情報を知りたければコレ！パンク/ニューウェイヴ/オルタナティヴ・ロック番組『Bang On!』毎月配信！！                                        </div>
+                                    </div><!--/reg_thumb-->
+                                </a>
+                            </div><!--/thumb-->
+                                                    <div class="thumb col-lg-4 col-md-4 col-sm-4 col-xs-6" style="background:none!important;border:none;height:260px;">
+                                <a href="http://www.towerrevo.jp/regular/18428/" style="color:white !important;" target="_blank">
+                                    <div class="thumbnail reg_thumb">
+                                        <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/035fe94354cfe85460bc1faf024b5754.jpg" class="img-rounded" width="150" height="126" style="width:150px;height:126px;" border="0"/>
+                                        <div class="caption">
+                                            MC.sirafuと行達也(タワーレコード)、南波志帆、街角マチオ(ザ・プーチンズ)によるインディーズ発信番組『illumination presents 塔台モトクロス』！                                        </div>
+                                    </div><!--/reg_thumb-->
+                                </a>
+                            </div><!--/thumb-->
+                                                    <div class="thumb col-lg-4 col-md-4 col-sm-4 col-xs-6" style="background:none!important;border:none;height:260px;">
+                                <a href="http://www.towerrevo.jp/regular/12420/" style="color:white !important;" target="_blank">
+                                    <div class="thumbnail reg_thumb">
+                                        <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/BGM.png" class="img-rounded" width="150" height="126" style="width:150px;height:126px;" border="0"/>
+                                        <div class="caption">
+                                            松永耕一(COMPUMA)氏とゲストが“BGM”をテーマに音楽の魅力を探る選曲番組『Background Music～New Season』！                                        </div>
+                                    </div><!--/reg_thumb-->
+                                </a>
+                            </div><!--/thumb-->
+                                                    <div class="thumb col-lg-4 col-md-4 col-sm-4 col-xs-6" style="background:none!important;border:none;height:260px;">
+                                <a href="http://www.towerrevo.jp/regular/19932/" style="color:white !important;" target="_blank">
+                                    <div class="thumbnail reg_thumb">
+                                        <img alt="" src="http://uploads.wp-content.cms.towerrevo.jp.s3.amazonaws.com/cms/wp-content/uploads/06c8137ed7f6803b2a66ced306426e60.jpg" class="img-rounded" width="150" height="126" style="width:150px;height:126px;" border="0"/>
+                                        <div class="caption">
+                                            FUJI ROCKのWHITE STAGE、京都大作戦等のステージMCを務める、アパレルブランド“MOBSTYLES”プロデューサー田原104洋のトーク番組『&MOSH TV』                                        </div>
+                                    </div><!--/reg_thumb-->
+                                </a>
+                            </div><!--/thumb-->
+                                                <br clear="all"/>
+                    </div><!--/thumbnails-->
+                </div><!--/col-->
+            </div><!--/.row#thumbnails-->
+            <br clear="all"/>
+        </div><!--/col-->
+    </div><!--/row-->
+</div><!--/regulars.container-->
+<div class="container">
+    <div class="row well" style="background:none !important;">
+        <div class="col col-md-12">
+            <div class="row thumbnails_ad">
+
+			             </div><!--/row.thumbnails-->
+        </div><!--/col-md-12-->
+    </div><!--/row well-->
+</div><!--/container-->    <!--pankuzu-->
+<div class="container">
+		<div class="col-md-12">
+			<div class="row" style="background:none !important;color:white;font-size:11px;">
+                <div class="col col-md-4">
+                    <dl class="dl-horizontal">
+                        <dt><h4 style="color:#3593cf;font-size:14px;font-weight:500;">INFO</h4></dt>
+                        <dd>
+                            <p style="line-height:1.8em;">
+                                <a href="/store_venue/" class="boxer" style="color:#fafafa;">About us</a>
+                            </p>
+                        </dd>
+                    </dl>
+                </div><!--/col-->
+                <div class="col col-md-8">
+                    <dl class="dl-horizontal">
+                        <dt><h4 style="color:#35afba;font-size:14px;font-weight:500;">LINKS</h4></dt>
+                        <dd>
+                            <p style="line-height:1.8em;">
+                                <a href="https://twitter.com/TOWER_Revo" target="_blank" style="color:#fafafa;">タワレボTwitter</a><br/>
+                                <a href="http://tower.jp/" target="_blank" style="color:#fafafa;">タワーレコード オンライン</a><br/>
+                                <a href="http://towershibuya.jp/" target="_blank" style="color:#fafafa;">タワーレコード 渋谷店</a><br/>
+                                <a href="http://mikiki.tokyo.jp/" target="_blank" style="color:#fafafa;">Mikiki</a>
+                            </p>
+                        </dd>
+                    </dl>
+                </div><!--/col-->
+            </div><!--/row-->
+		</div>
+</div><!--/container-->
+
+<!--rights-->
+<div class="container">
+    <div class="row well well-lg">
+        <div class="col col-md-12 col-xs-12" style=":text-align:center;">
+            <div class="jasrac row">
+                <div class="col col-md-4 col-md-offset-2">
+                    <span>JASRAC許諾番号：9010254026Y45037</span>
+                </div>
+                <div class="col col-md-4">
+                    <span>©2015 Tower Records Japan Inc.</span>
+                </div>
+            </div><!--/jasrac row-->
+        </div>
+    </div>
+</div><!--/container-->
+ <!--banner & regular -->
+</div>
+
+<link href="/lib/boxer/jquery.fs.boxer.css" rel="stylesheet" type="text/css" media="all">
+<script type="text/javascript" src="/lib/masonry/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="/common/js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/lib/bootstrap/bootstrap-transition.js"></script>
+<script type="text/javascript" src="/lib/bootstrap/bootstrap-select.js"></script>
+<script type="text/javascript" src="/lib/boxer/jquery.fs.boxer.js"></script>
+<style>
+	.boxer { border: none; }
+	.inline_content { width: 300px; overflow: hidden; padding: 0 20px; }
+	#boxer h3 { font-style: italic; font-size: 16px; margin: 0; padding: 15px 10px 10px; }
+	#boxer.mobile.inline .boxer-content { background: #fff; }
+	#boxer.mobile.inline .inline_content { height: 10000px; overflow: scroll; padding: 30px 50px; width: 100%; 			
+	}
+</style>
+
+<!--boxer-->
+<script>
+	$(document).ready(function() {
+	$(".boxer").not(".boxer_fixed, .boxer_top, .boxer_format, .boxer_mobile, .boxer_object").boxer();
+    $(".boxer.retina").boxer({retina: true});
+	/*
+	$(".boxer.boxer_fixed").boxer({fixed: true});
+ 	$(".boxer.boxer_top").boxer({top: 50});
+
+    $(".boxer.boxer_format").boxer({
+        formatter: function($target) {
+            return '<h3>' + $target.attr("title") + "</h3>";
+        }
+    });
+	$(".boxer.boxer_object").click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$.boxer( $('<div class="inline_content"><h2>More Content!</h2><p>This was created by jQuery and loaded into the new Boxer instance.</p></div>') );
+		});
+		$(".boxer.boxer_mobile").boxer({mobile: true});
+		$(window).one("pronto.load", function() {
+			$.boxer("close");
+			$(".boxer").boxer("destroy");
+		});
+	*/
+	});
+</script>
+
+<!--masonry-->
+<script>
+$('body').ready(function() {
+   		var a=$(".thumbnails");
+    		a.imagesLoaded(function(){
+			setTimeout(function(){
+				a.masonry({
+					columnWidth:".thumb", 
+					itemSelector:".thumb"
+					});
+			}, 1200);
+    		});
+});
+</script>
+
+<!--vegas-->
+<link rel="stylesheet" href="/lib/vegas/vegas2.css"/>
+<script type="text/javascript" src="/lib/vegas/vegas.min.js"></script>
+<script type="text/javascript">
+    console.log(getDevice());
+    if(getDevice()=="other"){
+        $('body').vegas({
+            delay: 12000,
+            align:'center',
+            valign:'top',
+            timer: false,
+                shuffle: true,
+                transition: 'fade',
+                transitionDuration: 7000,
+            slides: [
+         { src: '/img/bg/tower_bg.jpg' }
+            ]
+        });
+    }
+</script>
+
+<!--google analysis-->
+<script type="text/javascript">
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-41975251-1', 'towerrevo.jp');
+	  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.556 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2016-03-19 06:21:34 -->
+
+<!-- super cache -->

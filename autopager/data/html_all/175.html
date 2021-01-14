@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-hant" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="fb:app_id" content="161989317205664"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<link rel="dns-prefetch" href="//d3jcp1umdd59vg.cloudfront.net" />
+<link rel="dns-prefetch" href="//" />
+<!--[if IE 9]>
+<link rel="prefetch" href="//d3jcp1umdd59vg.cloudfront.net" />
+<link rel="prefetch" href="//" />
+<![endif]-->
+<link rel="shortcut icon" href="https://www.ithome.com.tw/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://www.ithome.com.tw/big-data" />
+<meta property="og:site_name" content="iThome" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ithome.com.tw/big-data" />
+  <title>| iThome</title>
+  <link type="text/css" rel="stylesheet" href="https://www.ithome.com.tw/sites/default/files/cdn/css/https/css_y7Jb-xjvZ3TAqmOcWLj4gputLpz4AAqJ3jOQYlKG4DU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ithome.com.tw/sites/default/files/cdn/css/https/css_DyKGQQ1ZooWJGZ-VHtjSC6JOIbxxbEHPZMULRR2aAqY.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ithome.com.tw/sites/default/files/cdn/css/https/css_x3L8l8xrif3ccKffgA15_meMW5pfH0lqg7rPu7r2wZU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ithome.com.tw/sites/default/files/cdn/css/https/css_BgG04p8rLKQ-C-9t_xp9NqoJVPJb8-QFn6b3K4GRPxU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ithome.com.tw/sites/default/files/cdn/css/https/css_aYIN3mq1DmLT6Di-4-Gd2Se05n7P-awcXq0wcXZEGrI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//www.ithome.com.tw/sites/all/themes/ithomeStyle/css/font-awesome/css/font-awesome.min.css" media="all" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.ithome.com.tw/sites/default/files/js/js_vSmhpx_T-AShyt_WMW5_TcwwxJP1imoVOa8jvwL_mxE.js"></script>
+<script src="https://www.ithome.com.tw/sites/default/files/js/js_V6wBDmA8AiXYV7yNdxSYWbjyBTZz58as_PtacAj7MoA.js"></script>
+<script src="https://www.ithome.com.tw/sites/default/files/js/js_PpWj1_0vz25Pp3KJwGcWwKOJWJfOoPE7svepJH4xqZA.js"></script>
+<script src="https://www.ithome.com.tw/sites/default/files/js/js_q15x_O-9imkRmTs1RyvjELo4uxbnh8J6CSO5egfMvq4.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"ithomeStyle","theme_token":"XER7gwOZngMStigeOSp3UGW_g_7fad7I1NeBjUR4aGE","js":{"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.7.2\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/prettify\/prettify.js":1,"sites\/all\/libraries\/prettify\/lang-css.js":1,"sites\/all\/libraries\/prettify\/lang-sql.js":1,"sites\/all\/libraries\/prettify\/lang-wiki.js":1,"sites\/all\/libraries\/prettify\/lang-yaml.js":1,"public:\/\/languages\/zh-hant_EynS4tarGHEmr5eaBV3EzbgWhvNJW-hDCo2uqR3SWPQ.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/prettify\/prettify.loader.js":1,"sites\/all\/themes\/ithomeStyle\/js\/jquery.featureList.js":1,"sites\/all\/themes\/ithomeStyle\/js\/main.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-affix.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-alert.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-button.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-carousel.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-collapse.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-dropdown.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-modal.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-tooltip.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-popover.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-scrollspy.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-transition.js":1,"sites\/all\/themes\/ithomeStyle\/bootstrap\/js\/bootstrap-typeahead.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/youtube\/css\/youtube.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/panels\/plugins\/layouts\/twocol_stacked\/twocol_stacked.css":1,"sites\/all\/themes\/ithomeStyle\/css\/style.css":1,"sites\/all\/modules\/prettify\/styles\/naspinski.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"prettify":{"linenums":true,"match":".content","nocode":"no-code","custom":[],"markup":{"code":true,"pre":true,"precode":false}}});</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-big-data" >
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=161989317205664";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">移至主內容</a>
+  </div>
+    <header id="navbar" role="banner" class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+              <a class="logo pull-left" href="/" title="首頁">
+          <img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/ithome_logo_0.png" alt="首頁" />
+        </a>
+      
+      
+              <div class="nav-collapse collapse">
+          <nav role="navigation">
+                          <ul class="menu nav"><li class="first leaf"><a href="/news">新聞</a></li>
+<li class="leaf"><a href="/tech">產品&amp;技術</a></li>
+<li class="leaf"><a href="/feature">專題</a></li>
+<li class="leaf active-trail active"><a href="/big-data" class="active-trail active">AI</a></li>
+<li class="leaf"><a href="/blockchain">區塊鏈</a></li>
+<li class="leaf"><a href="/cloud">Cloud</a></li>
+<li class="leaf"><a href="/devops">DevOps</a></li>
+<li class="leaf"><a href="/gdpr">GDPR</a></li>
+<li class="expanded dropdown"><a href="/security" class="dropdown-toggle" data-toggle="dropdown" data-target="#">資安 <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="https://www.ithome.com.tw/security">新聞</a></li>
+<li class="last leaf"><a href="https://cyber.ithome.com.tw/?utm_source=ithome-online&amp;utm_medium=navbar&amp;utm_campaign=navbar" target="_blank">臺灣資安大會</a></li>
+</ul></li>
+<li class="expanded dropdown"><a href="/seminar" class="dropdown-toggle" data-toggle="dropdown" data-target="#">研討會 <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/seminar">研討會訊息</a></li>
+<li class="last leaf"><a href="/cfp">議程／講師徵求</a></li>
+</ul></li>
+<li class="expanded dropdown"><a class="hidden-phone dropdown-toggle nolink" data-toggle="dropdown" data-target="#">社群 <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="http://ithelp.ithome.com.tw" title="IT人的知識交流平臺">iT邦幫忙</a></li>
+<li class="leaf"><a href="https://www.itinnovators.com.tw">IT Innovators Club</a></li>
+<li class="last leaf"><a href="https://techtalk.ithome.com.tw/">TechTalk</a></li>
+</ul></li>
+<li class="last leaf"><a href="https://intel.ithome.com.tw/" id="intelbp" target="_blank">商用電腦</a></li>
+</ul>                                      <ul class="menu nav pull-right"><li class="first last leaf"><a href="/search" class="icon-search">搜尋</a></li>
+</ul>                                  </nav>
+        </div>
+          </div>
+  </div>
+</header>
+<div id="skybanner" style="background-color: #122239;text-align: center">
+  <script src="https://itadapi.ithome.com.tw/ads/serve?type=B5&channel=ithome_index"></script>
+</div>
+
+<header id="headerbar" role="banner" class="hidden-phone">
+  <div class="headerbar-wrap">
+        <div class="region region-before-header">
+    <section id="block-block-3" class="block block-block hidden-phone clearfix">
+
+      
+  <style>
+#div_cube3d_pic { width: 100% !important}
+#div_cube3d_exp {left:0 !important; position: relative !important; margin: 0 auto}
+#headerbar .container-fluid {max-width: 1350px !important}
+  
+</style>
+<div id="mkt-on-top">
+  <div class="mkt-720">  
+<script src="https://itadapi.ithome.com.tw/ads/serve?type=B1&channel=ithome_index"></script>
+
+  </div>
+    <div class="mkt-200 inline" style="margin-left: 15px">
+   <script src="https://itadapi.ithome.com.tw/ads/serve?type=B6&channel=ithome_index"></script>
+    </div>
+</div>
+
+<div class="container">
+    <div class="mkt-text-top">
+     <div class="text-item">
+      <script src="https://itadapi.ithome.com.tw/ads/serve?type=T2&channel=ithome_index"></script>
+     </div>
+     <div class="text-item">
+       <script src="https://itadapi.ithome.com.tw/ads/serve?type=T3&channel=ithome_index"></script>
+     </div>
+     <div class="text-item">
+        <script src="https://itadapi.ithome.com.tw/ads/serve?type=T4&channel=ithome_index"></script>
+     </div>
+   </div>
+   <br style="clear:both"> 
+</div>
+</div></section> <!-- /.block -->
+  </div>
+    </div>
+</header>
+
+
+<div class="main-container container-fluid">
+
+  
+  <header role="banner" id="page-header">
+    
+    
+                </header> <!-- /#header -->
+
+  <div class="row-fluid">
+      
+    
+      
+    <section class="main-content span9">  
+                                                                      <section id="block-block-13" class="block block-block clearfix">
+
+      
+  <div class="common-channel-title-wrap">
+  <h2 class="common-channel-title">AI</h2>
+</div></section> <!-- /.block -->
+<section id="block-views-featured-channel-headline" class="block block-views clearfix">
+
+      
+  <div class="view view-featured-channel view-id-featured_channel view-display-id-headline view-dom-id-e65c7a7653fb9cbb2ea2802293c7524c">
+        
+  
+  
+      <div class="view-content">
+        <div class="span8 hidden-phone">
+      
+          <div class="featured-channle-headline-first">
+
+  <div class="title"><a href="/voice/140699">視訊對象是你還是數位分身？</a> </div>
+  <div class="summary"> <p>2009年的科幻電影「阿凡達」（Avatar）描述的數位分身技術開始出現，可以在網路世界打造出數位分身，來即時模仿真人臉部表情，甚至可以與他人在視訊平臺上透過眼神互動</p>
+ </div>
+</div>    </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div class="view view-featured-channel view-id-featured_channel view-display-id-sub_headline view-dom-id-454659aef4e86589b4c1d2c741c3fc4c">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="views-row-odd views-row-first span4 aside-item hidden-phone no-margin-left">
+      
+          <a href="/news/140677"><div class="featured-channel-headline-last">
+  <div class="photo"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_medium/public/field/image/landinglens1-scaled.jpg?itok=rrv_6HAM" width="630" height="272" alt="" /></div>
+  <div class="title">Landing AI推製造業用AI視覺檢查平臺 </div>
+</div></a>    </div>
+
+
+  <div class="views-row-even views-row-last span4 aside-item hidden-phone">
+      
+          <a href="/news/140655"><div class="featured-channel-headline-last">
+  <div class="photo"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_medium/public/field/image/1021-philsat-1_intel.jpg?itok=uM9WHIWV" width="630" height="272" alt="" title="image credit: cosine Remote Sensing, ESA/ESTEC、NASA" /></div>
+  <div class="title">英特爾VPU賦予衛星AI能力，能過濾空拍圖雲層以呈現真實地貌 </div>
+</div></a>    </div>
+
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  
+  
+</div></section> <!-- /.block -->
+
+<div class="view view-featured-channel view-id-featured_channel view-display-id-views_fc_big_data view-dom-id-fdff7253e76672e079fdd711c1f33f28">
+        
+  
+  
+      <div class="view-content">
+        <div class="span4 channel-item no-margin-left">
+
+      
+          <div class="item">
+  <p class="photo"> </p>
+  <p class="category"><a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/chat-bot">Chat Bot</a> | <a href="/tags/gtc">GTC</a> | <a href="/tags/nvidia">Nvidia</a> | <a href="/tags/virtual-present">Virtual Present</a> | <a href="/tags/%E6%95%B8%E4%BD%8D%E5%88%86%E8%BA%AB">數位分身</a> | <a href="/tags/%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA">聊天機器人</a> | <a href="/tags/%E8%99%9B%E6%93%AC%E8%87%A8%E5%A0%B4%E5%8F%83%E8%88%87">虛擬臨場參與</a> | <a href="/tags/%E8%A6%96%E8%A8%8A%E6%9C%83%E8%AD%B0">視訊會議</a> | <a href="/taxonomy/term/81">CIO</a> | <a href="/tags/%E7%B7%A8%E8%80%85%E7%9A%84%E8%A9%B1">編者的話</a> | <a href="/taxonomy/term/451">Smart Business</a></p>
+  <p class="title"><a href="/voice/140699">視訊對象是你還是數位分身？</a> </p>
+  <div class="summary"> 2009年的科幻電影「阿凡達」（Avatar）描述的數位分身技術開始出現，可以在網路世界打造出數位分身，來即時模仿真人臉部表情，甚至可以與他人在視訊平臺上透過眼神互動
+  </div>
+  <p class="post-at">2020-10-26 </p>
+</div>    </div>
+  <div class="span4 channel-item">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140694"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/tu_1-dian_cui_hua_ji_-tu_pian_lai_yuan_-cmu.jpg?itok=RfBF4apq" width="300" height="132" alt="" title="臉書與卡內基美隆大學開源AI能源專案Open Catalyst Project資料集，包括120萬個分子鬆弛與經過2.5億次DFT計算的結果。" /></a></p>
+  <p class="category"><a href="/tags/ai">AI</a> | <a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/deepmind">Deepmind</a> | <a href="/tags/google">google</a> | <a href="/tags/it%E5%91%A8%E5%A0%B1">IT周報</a> | <a href="/tags/%E5%80%9F%E8%B2%B8">借貸</a> | <a href="/tags/%E5%86%8D%E7%94%9F%E8%83%BD%E6%BA%90">再生能源</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a> | <a href="/tags/%E8%87%89%E6%9B%B8">臉書</a> | <a href="/tags/%E9%87%8F%E5%AD%90">量子</a></p>
+  <p class="title"><a href="/news/140694">AI趨勢周報第147期：臉書聯手CMU，要用AI找出將能源轉為燃料的關鍵催化劑</a> </p>
+  <div class="summary"> 臉書攜手CMU開源Open Catalyst Project，要用AI加速量子力學模擬速度1,000倍，來找出能將再生能源轉換為燃料的電催化劑；DeepMind開源費米子類神經網路FermiNet，用AI簡化量子方程式難題，加速新材料研發；瞄準金融抵押貸款，Google推出文件審閱自動化AI工具Lending DocAI。
+  </div>
+  <p class="post-at">2020-10-23 </p>
+</div>    </div>
+  <div class="span4 channel-item">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140691"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/yu_yin_zhuan_wen_zi_.jpg?itok=cvjO__On" width="300" height="132" alt="" title="Adobe首度在Premiere Pro加入語音轉文字字幕的功能，來將影片語音自動轉換為字幕，並且依據說話的時間點生成，來節省上字幕的工作時間。" /></a></p>
+  <p class="category"><a href="/tags/adobe">adobe</a> | <a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/creative-cloud">Creative Cloud</a> | <a href="/tags/illustrator">Illustrator</a> | <a href="/tags/ipad">iPad</a> | <a href="/tags/photoshop">Photoshop</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a> | <a href="/tags/%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF%E6%BF%BE%E9%8F%A1">神經網路濾鏡</a> | <a href="/tags/%E8%AA%9E%E9%9F%B3%E8%BD%89%E6%96%87%E5%AD%97">語音轉文字</a></p>
+  <p class="title"><a href="/news/140691">Adobe發布多項應用程式更新，不只將AI融入影像設計，更在Premiere Pro內建語音轉文字來自動上字幕</a> </p>
+  <div class="summary"> Adobe在今年Max大會中揭露多項由AI驅動的新功能，相較於去年來看，AI應用更進階深化，比如在Premiere Pro中首度亮相的語音轉文字字幕功能，以及Photoshop中的神經網路濾鏡，能用來調整人物眼睛與頭部轉向
+  </div>
+  <p class="post-at">2020-10-22 </p>
+</div>    </div>
+  <div class="span4 channel-item no-margin-left">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140677"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/landinglens1-scaled.jpg?itok=Aq1A0uCN" width="300" height="132" alt="" /></a></p>
+  <p class="category"><a href="/tags/ai">AI</a> | <a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/landing-ai">Landing AI</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a> | <a href="/tags/%E7%91%95%E7%96%B5%E8%BE%A8%E8%AD%98">瑕疵辨識</a> | <a href="/tags/%E8%A3%BD%E9%80%A0%E6%A5%AD">製造業</a></p>
+  <p class="title"><a href="/news/140677">Landing AI推製造業用AI視覺檢查平臺</a> </p>
+  <div class="summary"> LandingLens提供人工智慧端到端解決方案，讓企業從收集資料到部署模型，完全不需要第三方人工智慧團隊參與
+  </div>
+  <p class="post-at">2020-10-22 </p>
+</div>    </div>
+  <div class="span4 channel-item">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140655"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/1021-philsat-1_intel.jpg?itok=g1qctio6" width="300" height="132" alt="" title="image credit: cosine Remote Sensing, ESA/ESTEC、NASA" /></a></p>
+  <p class="category"><a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/philsat-1">PhilSat-1</a> | <a href="/tags/ubotica">Ubotica</a> | <a href="/tags/%E5%BD%B1%E5%83%8F">影像</a> | <a href="/tags/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98">影像辨識</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a> | <a href="/tags/%E6%AD%90%E6%B4%B2%E5%A4%AA%E7%A9%BA%E7%B8%BD%E7%BD%B2">歐洲太空總署</a> | <a href="/tags/%E8%A1%9B%E6%98%9F">衛星</a></p>
+  <p class="title"><a href="/news/140655">英特爾VPU賦予衛星AI能力，能過濾空拍圖雲層以呈現真實地貌</a> </p>
+  <div class="summary"> 歐洲太空總署和新創Ubotica合作的PhilSat-1衛星開發計畫，讓迷你衛星透過搭載電腦視覺軟體以及英特爾Movidius Myriad 2 影像處理單元（VPU），能在空拍地球影像時，自動辨識並過濾掉遮蓋地表實景的雲層影像
+  </div>
+  <p class="post-at">2020-10-21 </p>
+</div>    </div>
+  <div class="span4 channel-item">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140612"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/1020-m2m-100_fb.png?itok=xsD7c0hh" width="300" height="132" alt="" /></a></p>
+  <p class="category"><a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/ai%E7%BF%BB%E8%AD%AF">AI翻譯</a> | <a href="/tags/m2m-100">M2M-100</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a> | <a href="/tags/%E7%BF%BB%E8%AD%AF%E6%A8%A1%E5%9E%8B">翻譯模型</a> | <a href="/tags/%E8%87%89%E6%9B%B8">臉書</a> | <a href="/tags/%E9%96%8B%E6%BA%90">開源</a></p>
+  <p class="title"><a href="/news/140612">臉書開源可直接翻譯上百種語言的AI模型</a> </p>
+  <div class="summary"> 臉書強調M2M-100模型能直接互譯100種語言，不需透過訓練資料較充裕的英文進行中介轉譯
+  </div>
+  <p class="post-at">2020-10-20 </p>
+</div>    </div>
+  <div class="span4 channel-item no-margin-left">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140577"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/img_5572.jpg?itok=s-LHTepR" width="300" height="132" alt="" title="中信銀AI聚焦3大研發領域，瞄準了6大核心AI應用，更揭露多項落地的應用案例。（攝影／李靜宜）" /></a></p>
+  <p class="category"><a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/fintech">FinTech</a> | <a href="/tags/%E4%B8%AD%E4%BF%A1%E6%95%B8%E6%93%9A%E6%9A%A8%E7%A7%91%E6%8A%80%E7%A0%94%E7%99%BC%E8%99%95">中信數據暨科技研發處</a> | <a href="/tags/%E4%B8%AD%E5%9C%8B%E4%BF%A1%E8%A8%97%E9%8A%80%E8%A1%8C">中國信託銀行</a> | <a href="/tags/%E5%85%A8%E9%80%9A%E8%B7%AF">全通路</a> | <a href="/tags/%E6%95%B8%E4%BD%8D%E9%87%91%E8%9E%8D">數位金融</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a> | <a href="/tags/%E6%96%B0%E9%87%91%E8%9E%8D">新金融</a> | <a href="/tags/%E7%8E%8B%E4%BF%8A%E6%AC%8A">王俊權</a> | <a href="/tags/%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80">金融科技</a></p>
+  <p class="title"><a href="/news/140577">中國信託銀行瞄準新金融時代3大機會，將靠AI、超級個人化以全通路迎戰純網銀</a> </p>
+  <div class="summary"> 中國信託銀行數據暨科技研發處處長王俊權，近期揭露了自家觀察到新金融發展的3大機會。一是隨著經營環境改變，中信銀要搶攻數位金融這片新藍海，以AI確保金融大數據應用落地。二是以數據掌握顧客人生不同階段需求，提供超級個人化服務。三則是以Digital First結合全通路體驗，作為與純網銀競爭關鍵。
+  </div>
+  <p class="post-at">2020-10-16 </p>
+</div>    </div>
+  <div class="span4 channel-item">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140569"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/it-just-got-smarter-hero.jpeg?itok=oyQEAoqV" width="300" height="132" alt="" /></a></p>
+  <p class="category"><a href="/tags/ai">AI</a> | <a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/ibm">IBM</a> | <a href="/tags/it">IT</a> | <a href="/tags/servicenow">ServiceNow</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a></p>
+  <p class="title"><a href="/news/140569">ServiceNow與IBM合作，利用Watson AI自動檢測並診斷IT系統問題</a> </p>
+  <div class="summary"> 結合IT管理系統和人工智慧，ServiceNow與IBM要推聯合解決方案，加速IT人員掌握並解決IT系統異常
+  </div>
+  <p class="post-at">2020-10-16 </p>
+</div>    </div>
+  <div class="span4 channel-item">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140567"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/1016-google_search_on.png?itok=61HqgCoL" width="300" height="132" alt="" /></a></p>
+  <p class="category"><a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/google">google</a> | <a href="/tags/%E6%90%9C%E5%B0%8B">搜尋</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a> | <a href="/tags/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92">機器學習</a> | <a href="/tags/%E9%9F%B3%E6%A8%82%E8%BE%A8%E8%AD%98">音樂辨識</a></p>
+  <p class="title"><a href="/news/140567">Google打造能生成歌曲指紋的ML模型，只要哼出弦律就查得到歌名</a> </p>
+  <div class="summary"> 機器學習模型將使用者哼出的旋律轉變成一連串數字，再將這串數字與Google從全球蒐集的歌曲進行比對找出相符的音樂
+  </div>
+  <p class="post-at">2020-10-16 </p>
+</div>    </div>
+  <div class="span4 channel-item no-margin-left">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140563"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/1016-google_assistant.jpg?itok=RBgDOlyT" width="300" height="132" alt="" /></a></p>
+  <p class="category"><a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/google-assistant">Google assistant</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a></p>
+  <p class="title"><a href="/news/140563">Google Assistant將登上三星Smart TV</a> </p>
+  <div class="summary"> 三星Smart TV、Fitbit手錶及聯想智慧時鐘開始支援Google Assistant
+  </div>
+  <p class="post-at">2020-10-16 </p>
+</div>    </div>
+  <div class="span4 channel-item">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140555"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/jie_tu_2020-10-15_xia_wu_6.18.08.jpg?itok=UgHudHv8" width="300" height="132" alt="" /></a></p>
+  <p class="category"><a href="/tags/ai">AI</a> | <a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/cmu">CMU</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a> | <a href="/tags/%E8%87%89%E6%9B%B8">臉書</a> | <a href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%B8">量子力學</a></p>
+  <p class="title"><a href="/news/140555">臉書和卡內基美隆大學合作，要以AI加速尋找再生能源儲存新方法</a> </p>
+  <div class="summary"> 研究人員要以人工智慧模擬量子力學，加速發現新的電催化劑，以更經濟的方式儲存再生能源
+  </div>
+  <p class="post-at">2020-10-16 </p>
+</div>    </div>
+  <div class="span4 channel-item">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140548"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/1015-image_captioning.png?itok=kAz8mj7n" width="300" height="132" alt="" title="翻攝自：https://www.youtube.com/watch?v=ubpEUksa3v0&amp;feature=emb_logo" /></a></p>
+  <p class="category"><a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/ai%E5%9C%96%E8%AA%AA">AI圖說</a> | <a href="/tags/azure%E8%AA%8D%E7%9F%A5%E6%9C%8D%E5%8B%99">Azure認知服務</a> | <a href="/tags/seeing-ai">Seeing AI</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a></p>
+  <p class="title"><a href="/news/140548">微軟今年內將讓Word、Outlook及PowerPoint具備AI圖說功能</a> </p>
+  <div class="summary"> 微軟強調新的圖說系統能夠更準確地辨識並描述圖片，而且成效優於人類，之前的圖說系統在看到一堆咖啡豆時，產生的圖說是「食物的近照」，優化後的系統現在能直接產生「一堆咖啡豆」的圖說
+  </div>
+  <p class="post-at">2020-10-15 </p>
+</div>    </div>
+  <div class="span4 channel-item no-margin-left">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140544"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/cover_54.jpg?itok=kRSZtqC6" width="300" height="132" alt="" title="近日一篇Transformer匿名論文引起ML注目，它強調只以Transformer進行大規模預訓練，其影像分類表現比卷積網路要好，而且更省運算資源。" /></a></p>
+  <p class="category"><a href="/tags/ai">AI</a> | <a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/performer">Performer</a> | <a href="/tags/transformer">Transformer</a> | <a href="/tags/%E5%8D%B7%E7%A9%8D%E7%B6%B2%E8%B7%AF">卷積網路</a> | <a href="/tags/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98">影像辨識</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a></p>
+  <p class="title"><a href="/news/140544">AI趨勢周報第146期：再見了卷積網路？一篇Transformer匿名論文引起ML社群圍觀</a> </p>
+  <div class="summary"> 卷積網路CNN一直是影像辨識的首選，但近日一篇匿名論文（An Image Is Worth 16×16 Words）引起ML社群關注，指出直接用Transformer來處理影像Patch序列，其影像分類能力遠比CNN出色，連DeepMind、Tesla AI總監和發明AlexNet的OpenAI首席科學家都表示期待。該論文正接受AI頂級盛會ICLR 2021的評審，因此無法透露作者姓名。
+
+
+ 
+
+ 
+
+ 
+ 
+
+
+  </div>
+  <p class="post-at">2020-10-15 </p>
+</div>    </div>
+  <div class="span4 channel-item">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/article/140466"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/994-feng_mian_gu_shi_-open-960x420_gong_zuo_qu_yu_1.jpg?itok=HVxa0xE9" width="300" height="132" alt="" /></a></p>
+  <p class="category"><a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/taxonomy/term/75">專題故事</a> | <a href="/taxonomy/term/81">CIO</a> | <a href="/taxonomy/term/451">Smart Business</a></p>
+  <p class="title"><a href="/article/140466">臺灣RPA應用更夯</a> </p>
+  <div class="summary"> RPA從2017年吹進臺灣，金融、高科技、傳統製造、零售流通到醫療業都紛紛出現應用需求，專責RPA人力需求逐年增加，先行企業開始深化作法，甚至舉辦內部RPA黑客松來挖掘更多RPA好點子。勤業眾信觀察，臺灣正掀起第二波RPA應用浪潮
+  </div>
+  <p class="post-at">2020-10-15 </p>
+</div>    </div>
+  <div class="span4 channel-item">
+
+      
+          <div class="item">
+  <p class="photo"> <a href="/news/140465"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/field/image/uipath.png?itok=AM1m8l9q" width="300" height="132" alt="" title="UiPath的RPA流程設計與開發介面，特色是能透過拖拉的方式與設定，來快速建立起RPA流程。（圖片來源／UiPath）" /></a></p>
+  <p class="category"><a href="/taxonomy/term/78">AI &amp; Big Data</a> | <a href="/tags/rpa">RPA</a> | <a href="/tags/uipath">UiPath</a> | <a href="/tags/%E6%96%B0%E8%81%9E">新聞</a> | <a href="/taxonomy/term/81">CIO</a> | <a href="/taxonomy/term/451">Smart Business</a></p>
+  <p class="title"><a href="/news/140465">【RPA主要廠牌：UiPath】RPA開發工具分3級，涵蓋素人開發者到專業IT都支援</a> </p>
+  <div class="summary"> 依使用者類型分三大產品授權，滑鼠拖拉就能開發RPA，要讓素人開發者也易學易上手，更在臺設立辦公室提供在地銷售服務
+  </div>
+  <p class="post-at">2020-10-15 </p>
+</div>    </div>
+
+
+    </div>
+  
+      <div class="pagination pagination-centered"><ul><li class="active first"><a href="#">1</a></li>
+<li><a title="到第 2 頁" href="/big-data?page=1">2</a></li>
+<li><a title="到第 3 頁" href="/big-data?page=2">3</a></li>
+<li><a title="到第 4 頁" href="/big-data?page=3">4</a></li>
+<li><a title="到第 5 頁" href="/big-data?page=4">5</a></li>
+<li><a title="到第 6 頁" href="/big-data?page=5">6</a></li>
+<li><a title="到第 7 頁" href="/big-data?page=6">7</a></li>
+<li><a title="到第 8 頁" href="/big-data?page=7">8</a></li>
+<li><a title="到第 9 頁" href="/big-data?page=8">9</a></li>
+<li class="pager-ellipsis disabled"><span>…</span></li>
+<li class="next last"><a title="到下一頁" href="/big-data?page=1">下一頁 ›</a></li>
+</ul></div>  
+  
+  
+  
+  
+</div>    </section>
+
+          <aside class="span3 aside-right" role="complementary">
+          <div class="region region-sidebar-second">
+    <section id="block-block-41" class="block block-block clearfix">
+
+      
+  <style>
+#block-block-41 {background-color:#f7f7f7}
+#block-block-41 .wrap {text-align: center; margin: 0 auto 14px;}
+</style>
+<div class="wrap">
+  <div class="fb-like" data-href="https://www.facebook.com/ithomeonline" data-width="300" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div> 按讚加入iThome粉絲團追蹤
+</div></section> <!-- /.block -->
+<section id="block-block-9" class="block block-block clearfix">
+
+      
+  <div class="ad-banner-text">
+  <div class="square">
+               <script src="https://itadapi.ithome.com.tw/ads/serve?type=B2&channel=ithome_index"></script>
+	</div>
+	<div class="text">
+        <script src="https://itadapi.ithome.com.tw/ads/serve?type=T1&channel=ithome_index"></script>
+	</div>
+</div>
+</section> <!-- /.block -->
+<section id="block-block-69" class="block block-block clearfix">
+
+      
+  <script language="javascript">
+pad_width=300;
+pad_height=250;
+pad_customerId="PFBC20160907001";
+pad_positionId="PFBP201609070004C";
+</script>
+<script id="pcadscript" language="javascript" src="https://kdpic.pchome.com.tw/img/js/xpcadshow.js"></script></section> <!-- /.block -->
+<section id="block-block-83" class="block block-block clearfix">
+
+      
+  <style>
+.sidebox {line-height: 1.6; width: 300px}
+.sidebox a.ir-sidebox__header {text-decoration: none;}
+.sidebox ul {margin-left: 0; padding: 10px 10px 10px 30px; margin:0}
+.sidebox ul li { 15px 0; color: #ccc; margin: 8px 0}
+.sidebox ul li span {background-color: #4badf8; color:#fff; margin-right: 10px; padding: 3px 5px}
+.ir-sidebox__header--ironman:focus, .ir-sidebox__header--ironman:hover {
+  color: #fff; 
+}   
+.ir-sidebox__header--ironman {
+    position: relative;
+    margin-top: 10px;
+    font-size: 18px;
+    padding-left: 54px;
+    color: #fff; 
+}   
+    
+.ir-sidebox__header {
+    display: block;
+    padding: 6px 6px 0px 50px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: #fac698;
+    background: -moz-linear-gradient(to left, #03546b 0%, #0594bc 60%, #3ad4ff 100%);
+    background: -webkit-linear-gradient(to left, #03546b 0%, #0594bc 60%, #3ad4ff 100%);
+    background: -webkit-gradient(linear, right top, left top, from(#03546b), color-stop(60%,#0594bc), to(#3ad4ff ));
+    background: -webkit-linear-gradient(right, #03546b 0%, #0594bc 60%, #3ad4ff 100%);
+    background: -o-linear-gradient(right, #03546b 0%, #0594bc 60%, #3ad4ff 100%);
+    background: linear-gradient(to left, #03546b 0%, #0594bc 60%, #3ad4ff 100%);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+   /* border-bottom: 3px solid #e67b22; */
+}   
+
+
+
+.ir-sidebox__header-img {
+    position: absolute;
+    left: 10px;
+    top: -15px;
+    vertical-align: middle;
+}
+ 
+</style>
+<div class="sidebox">
+    <a href="https://ithelp.ithome.com.tw/ironman?utm_source=ithome&utm_medium=article_widget&utm_campaign=ironman12&utm_content=latest_article" target="_blank" class="ir-sidebox__header ir-sidebox__header--ironman">
+        <img src="https://ithelp.ithome.com.tw/storage/image/ironman9thsidebar.png" alt="" class="ir-sidebox__header-img">第12屆iT邦幫忙鐵人賽最新文章
+    </a>
+ <div id="ithelp-ironman-widget"  data-widget-height="470" data-widget-amount="10" data-widget-width="300" style="background-color: #fff"></div>
+</div>
+<script>
+var ironmanHotArticlesAPI = '/ironmanHotArticles.json';
+var group_label = {
+"azure": "Everything on Azure",
+"ai-and-data": "AI & Data",
+ "agile": "Agile",
+ "blockchain": "Blockchain",
+ "cloud": "Cloud Native",
+ "kubernetes": "Kubernetes",
+  "web": "Modern Web",
+  "security": "Security",
+  "software-dev": "Software Development",
+  "video-tutorial": "影片教學",
+   "self": "自我挑戰"};
+
+(function($){
+   $(function(){
+
+    $.getJSON(ironmanHotArticlesAPI,function(data){
+          var listElm = "<ul>";
+          $.each(data,function(index,item){
+               listElm +=  ('<li><a href="'+item.url+'" target="_blank">'+ item.subject+'</a></li>');
+          })
+          listElm += "</ul>";
+
+          $("#ithelp-ironman-widget").append($(listElm));
+    })   
+
+   })
+
+})(jQuery)
+
+
+</script>
+</section> <!-- /.block -->
+<section id="block-views-views-seminar-block-4" class="block block-views clearfix">
+
+        <h2 class="block-title">iThome 研討會</h2>
+    
+  <div class="view view-views-seminar view-id-views_seminar view-display-id-block_4 seminar-block row-fluid view-dom-id-a168741926d33f3f1ad3f99f47243dcd">
+        
+  
+  
+      <div class="view-content">
+        <div class="channel-item">
+    <div class="panel-2col-stacked clearfix panel-display" >
+      <div class="panel-col-top panel-panel">
+      <div class="inside">  
+  <div class="views-field views-field-field-conf-date">        <div class="field-content"><div>
+  <p class="photo"> <a href="https://seminar.ithome.com.tw/live/vm2020secu/index.html?utm_source=edm&utm_medium=itweb&utm_campaign=vmware" target="_blank"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/seminar/kv-v1-v1_960420.jpg?itok=qnRCVXfa" width="300" height="132" alt="" /></a></p>
+  <p class="category"> </p>
+  <p class="title"> <a href="https://seminar.ithome.com.tw/live/vm2020secu/index.html?utm_source=edm&utm_medium=itweb&utm_campaign=vmware" target="_blank">藉由原生安全，打造前所未見的驚奇防禦力！</a> </p>
+  <div class="summary">VMware 訴求「原生安全」，帶來「內建而非外掛」、「整合而非孤立」、「變被動為主動」防禦新思維，希望協助企業建立更完整的安全防護體系。因此 將於 10/21、11/4、11/18 舉辦「藉由原生安全，打造前所未見的驚奇防禦力」網路研討會系列，帶領您一窺 VMware 原生安全解決方案的奧妙。  </div>
+  <p class="summary" align="right">日期: 10/21(三)、11/4(三)、11/18(三) </p>
+</div></div>  </div></div>
+    </div>
+  
+  <div class="center-wrapper">
+    <div class="panel-col-first panel-panel">
+      <div class="inside"></div>
+    </div>
+    <div class="panel-col-last panel-panel">
+      <div class="inside"></div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <div class="channel-item">
+    <div class="panel-2col-stacked clearfix panel-display" >
+      <div class="panel-col-top panel-panel">
+      <div class="inside">  
+  <div class="views-field views-field-field-conf-date">        <div class="field-content"><div>
+  <p class="photo"> <a href="https://event.ithome.com.tw/live/accs-forum/index.html" target="_blank"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/seminar/1113_chang_ci_.jpg?itok=Qg5JiuYD" width="300" height="132" alt="" /></a></p>
+  <p class="category"> </p>
+  <p class="title"> <a href="https://event.ithome.com.tw/live/accs-forum/index.html" target="_blank">臺灣資安國際拓銷論壇</a> </p>
+  <div class="summary">面對世界新常態，國內資安產業要如何超前部署，跨越地域限制拓銷國際？即刻報名了解  </div>
+  <p class="summary" align="right">日期: 2020/11/13 (五) | 13:40－17:00 </p>
+</div></div>  </div></div>
+    </div>
+  
+  <div class="center-wrapper">
+    <div class="panel-col-first panel-panel">
+      <div class="inside"></div>
+    </div>
+    <div class="panel-col-last panel-panel">
+      <div class="inside"></div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <div class="channel-item">
+    <div class="panel-2col-stacked clearfix panel-display" >
+      <div class="panel-col-top panel-panel">
+      <div class="inside">  
+  <div class="views-field views-field-field-conf-date">        <div class="field-content"><div>
+  <p class="photo"> <a href="https://stli.iii.org.tw/news-event.aspx?no=16&d=1052" target="_blank"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/seminar/960x420_43.jpg?itok=bCyNit7q" width="300" height="132" alt="" /></a></p>
+  <p class="category"> </p>
+  <p class="title"> <a href="https://stli.iii.org.tw/news-event.aspx?no=16&d=1052" target="_blank">通傳資料應用與法制整備研討會</a> </p>
+  <div class="summary">近年全球數位轉型浪潮愈趨炙熱，舉凡物聯網、大數據、人工智慧相繼蔚為顯學，加上 2020 年受到疫情影響、及 5G 效應的推波助瀾，使得世人對通傳資料經濟價值之重視度節節攀高。  </div>
+  <p class="summary" align="right">日期: 2020/11/10 （二）9:00~17:10 </p>
+</div></div>  </div></div>
+    </div>
+  
+  <div class="center-wrapper">
+    <div class="panel-col-first panel-panel">
+      <div class="inside"></div>
+    </div>
+    <div class="panel-col-last panel-panel">
+      <div class="inside"></div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <div class="channel-item">
+    <div class="panel-2col-stacked clearfix panel-display" >
+      <div class="panel-col-top panel-panel">
+      <div class="inside">  
+  <div class="views-field views-field-field-conf-date">        <div class="field-content"><div>
+  <p class="photo"> <a href="https://webinar.ithome.com.tw/" target="_blank"><img src="https://d3jcp1umdd59vg.cloudfront.net/sites/default/files/styles/picture_size_small/public/seminar/banner_960x420_3.jpg?itok=7-U1KdPl" width="300" height="132" alt="" /></a></p>
+  <p class="category"> </p>
+  <p class="title"> <a href="https://webinar.ithome.com.tw/" target="_blank">數位轉型攻略：後疫時代企業生存法則</a> </p>
+  <div class="summary">來勢兇猛的新冠肺炎疫情，讓企業習以為的商務差旅、實體會議戛然而止；迫不得已下，許多企業為降低營運衝擊，紛紛藉助數位科技，啟動線上會議、遠距辦公、數位行銷等新興模式，意外激發了數位轉型動能。
+英國前首相邱吉爾曾說「千萬不要浪費每一場危機」；疫情是危機，也是企業蛻變的轉機。  </div>
+  <p class="summary" align="right">日期: 11/05(四) </p>
+</div></div>  </div></div>
+    </div>
+  
+  <div class="center-wrapper">
+    <div class="panel-col-first panel-panel">
+      <div class="inside"></div>
+    </div>
+    <div class="panel-col-last panel-panel">
+      <div class="inside"></div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div class="watch-more"><a href="http://www.ithome.com.tw/seminar">看更多 iThome 近期研討會</a><i class="icon icon-angle-right"></i></div>    </div>
+  
+  
+</div></section> <!-- /.block -->
+  </div>
+      </aside>  <!-- /#sidebar-second -->
+    
+  </div>
+</div>
+
+<footer class="footer">
+      <div class="region region-footer">
+    <section id="block-block-7" class="block block-block clearfix">
+
+      
+  <div id="mkt-on-top">
+  <div class="mkt-720">  
+ <script src="https://itadapi.ithome.com.tw/ads/serve?type=B1&channel=ithome_index"></script>
+
+  </div>
+    <div class="mkt-200 inline" style="margin-left: 15px">
+  <script src="https://itadapi.ithome.com.tw/ads/serve?type=B6&channel=ithome_index"></script>
+    </div>
+</div></section> <!-- /.block -->
+<section id="block-block-2" class="block block-block clearfix">
+
+      
+  <ul class="copyright inline"><li>電週文化事業版權所有、轉載必究  | Copyright &copy; iThome</li><li><a href="/aboutus/">刊登廣告</a></li><li><a href="https://service.ithome.com.tw/">訂閱週刊</a></li><li><a href="/aboutus/">授權服務</a></li><li><a href="/aboutus/">服務信箱</a></li><li><a href="/terms">隱私權聲明與會員使用條款</a></li><li><a href="/aboutus/">關於iThome</a></li><li><a href="/rss">RSS</a></li> <li><a href="/jobs">徵才</a> </li></ul>
+<!--  2014.2.21 改版上線 --></section> <!-- /.block -->
+<section id="block-block-24" class="block block-block clearfix">
+
+      
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3355931-5', 'auto');
+  ga('send', 'pageview');
+     
+(function($){
+  $("#intelbp").click(function(){
+    ga("send", {
+                 "hitType": "event",              
+                 "eventCategory": "menulink",     
+                 "eventAction": "click",            
+                 "eventLabel": "intel商用電腦",   
+     })
+  })
+
+  $("#f5banner").click(function(){
+    ga("send", {
+                 "hitType": "event",              
+                 "eventCategory": "adlink",     
+                 "eventAction": "click",            
+                 "eventLabel": "f5_資安學院",   
+     })
+  })
+})(jQuery)
+
+</script>
+</section> <!-- /.block -->
+  </div>
+</footer>
+  </body>
+</html>
