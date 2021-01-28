@@ -1,0 +1,1870 @@
+<?xml version="1.0"  encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="zh-TW" lang="zh-TW" xmlns:hyweb="urn:gip-hyweb-com" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link type="image/ico" rel="icon" href="GIPDSD/xslGip/xslExport/1/1/images/basic/favicon.png">
+</link>
+<title>國立臺灣圖書館 ─ 活動訊息</title>
+<script type="text/javascript" src="GIPDSD/xslGip/xslExport/1/1/js/fancyBox/jquery.fancybox.js?v=2.1.5">
+</script>
+<link rel="stylesheet" type="text/css" media="screen" href="GIPDSD/xslGip/xslExport/1/1/js/fancyBox/jquery.fancybox.css?v=2.1.5">
+</link>
+<link rel="stylesheet" href="GIPDSD/xslGip/xslExport/1/1/assets/module/slick/slick.css">
+</link>
+<link rel="stylesheet" href="GIPDSD/xslGip/xslExport/1/1/assets/module/slick/slick-theme.css">
+</link>
+<link rel="stylesheet" href="GIPDSD/xslGip/xslExport/1/1/assets/module/fontello/css/fontello.css">
+</link>
+<link rel="stylesheet" href="GIPDSD/xslGip/xslExport/1/1/assets/module/fontello/css/animation.css">
+</link>
+<link rel="stylesheet" href="GIPDSD/xslGip/xslExport/1/1/css/hyui.css">
+</link>
+</head>
+<body>
+<script type="text/javascript">
+if(!document.all) {
+	Node.prototype.__defineGetter__("xml",function(){ return (new XMLSerializer).serializeToString(this);});
+	Node.prototype.__defineGetter__("text",function(){ return this.textContent; });
+}
+function blen(xs) {			//檢測中英文夾雜字串實際長度
+	var xl = xs.length;
+	for(i=0; i<xl; i++) {
+		var intcode = xs.charCodeAt(i); 
+		if(intcode > 255 || intcode < 0) xl += 1;
+	}
+	return xl;
+}
+function date(){
+	var d = new Date();
+	return [d.getFullYear(), d.getMonth() > 8 ? d.getMonth() + 1 : '0' + (d.getMonth() + 1), d.getDate() > 9 ? d.getDate() : '0' + d.getDate()].join('/');
+}
+function getDate(dt){
+	var d = dt;
+	return [d.getFullYear(), d.getMonth() > 8 ? d.getMonth() + 1 : '0' + (d.getMonth() + 1), d.getDate() > 9 ? d.getDate() : '0' + d.getDate()].join('/');
+}
+function javad7date(dt){
+	var xd7date = "";
+	if (dt != "") {
+		var xPos = (dt.indexOf("上午") != -1) ? dt.indexOf("上午") : dt.indexOf("下午");
+		dt = (xPos != -1) ? dt.substring(0,xPos-1) : dt;
+		var xYear = dt.substring(0,4)
+		var firstSlash = dt.indexOf("/");
+		var secondSlash = dt.indexOf("/", firstSlash + 1);
+		var xMonth = dt.substring(firstSlash+1,secondSlash)
+		var xDay = dt.substring(secondSlash+1,dt.length)
+		xd7date = new Date(parseInt(xYear), parseInt(xMonth)-1, parseInt(xDay));
+	}
+	return xd7date;
+}
+
+function DateAdd(ItemType, DateToWorkOn, ValueToBeAdded)
+{
+    switch (ItemType)
+    {
+        //date portion         
+        case 'd': //add days
+            DateToWorkOn.setDate(DateToWorkOn.getDate() + ValueToBeAdded)
+            break;
+        case 'm': //add months
+            DateToWorkOn.setMonth(DateToWorkOn.getMonth() + ValueToBeAdded)
+            break;
+        case 'y': //add years
+            DateToWorkOn.setYear(DateToWorkOn.getFullYear() + ValueToBeAdded)
+            break;
+        //time portion         
+        case 'h': //add days
+            DateToWorkOn.setHours(DateToWorkOn.getHours() + ValueToBeAdded)
+            break;
+        case 'n': //add minutes
+            DateToWorkOn.setMinutes(DateToWorkOn.getMinutes() + ValueToBeAdded)
+            break;
+        case 's': //add seconds
+            DateToWorkOn.setSeconds(DateToWorkOn.getSeconds() + ValueToBeAdded)
+            break;
+    }
+    return DateToWorkOn;
+}	
+</script>
+
+<!-- 直接跳主內容區 -->
+<a class="goCenter" href="#MainContent" tabindex="1">按Enter到主內容區</a>
+<section id="Header">
+  <nav class="navbar set-relative" role="navigation">
+    <div class="accesskey hidden-xs"><a href="#" tabindex="2" title="header" id="accesskeyU" accesskey="U">:::</a></div>
+    <div class="container">
+      <div class="row">
+        <!--手機收合選單-->
+        <div class="navbar-header set-relative">
+          <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#offcanvas-left">
+            <span class="sr-only">Toggle navigation</span><i class="icon-menu"></i>
+          </button>
+          <a tabindex="14" class="Logo" href="mp.asp?mp=1" title="國立臺灣圖書館">
+		    <h1>國立臺灣圖書館</h1>
+			<!--<img src="GIPDSD/xslGip/xslExport/1/1/images/basic/logo.png" alt="國立臺灣圖書館Logo" title="國立臺灣圖書館Logo" class="img-responsive">-->
+		  </a>
+          <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#offcanvas-right">
+            <span class="sr-only">Toggle navigation</span><i class="icon-down-open"></i>
+          </button> 
+        </div>
+
+        <!--其他選單 收合右側-->
+        <div class="collapse navbar-collapse set-relative" id="offcanvas-right" role="navigation">
+          <!--靠右連結-->
+          <div class="pull-sm-right pull-md-right pull-lg-right">
+            <div class="Links-Right">
+              <!--Links-->
+              <div class="Normal-Links">
+                <ul class="nav navbar-nav White">
+                  <li class="active"><a tabindex="5" href="sp.asp?xdurl=CuratorMail_RWD/CuratorMail_agree.asp&mp=1&ctNode=1798" title="民意信箱"><i class="icon-mail-alt"></i>民意信箱</a></li>
+                  <li><a tabindex="6" href="lp.asp?ctNode=1830&CtUnit=221&BaseDSD=7&mp=1" title="下載專區"><i class="icon-download"></i>下載專區</a></li>  
+                  <li><a tabindex="7" href="sitemap.asp?mp=1" title="網站導覽"><i class="icon-sitemap"></i>網站導覽</a></li>
+                  <li><a tabindex="8" href="mp.asp?mp=1" title="回首頁"><i class="icon-home"></i>回首頁</a></li>
+                </ul> 
+              </div>
+              <!--language-->
+              <div class="Language">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a tabindex="12" href="https://wwwacc.ntl.edu.tw/mp.asp?mp=3" title="日本語">日本語</a></li>
+                  <li><a tabindex="13" href="https://wwwacc.ntl.edu.tw/mp.asp?mp=2" title="ENGLISH">ENGLISH</a></li>
+                </ul> 
+              </div>
+              <!--search-->
+
+<script language="JavaScript">
+<!--
+function Checkgoogle()
+{
+	if ((document.search_google.q.value.replace(/(^\s*)|(\s*$)/g, "") == "") || (document.search_google.q.value.replace(/(^\s*)|(\s*$)/g, "") == "站內搜尋")) {
+		alert("請輸入查詢詞!");
+		document.search_google.q.focus();
+		return false;
+	}
+	document.search_google.send.disabled=true;
+	//return confirm('確定查詢嗎?');
+}
+//-->
+</script>
+              <div class="Search pull-sm-right pull-md-right pull-lg-right hidden-xs">
+                <div class="accesskey"><!--<a href="#" accesskey="S" title="站內搜尋">:::</a>--></div>
+				<form class="navbar-form" role="search" name="search_google" method="get" action="sp.asp" onSubmit="return Checkgoogle();">
+				  <input type="hidden" name="xdurl" value="MP1AP_RWD/searchList.asp">
+				  <input type="hidden" name="mp" value="1">
+                  <div class="input-group">
+					<input tabindex="15" type="text" class="form-control" accesskey="S" placeholder="站內搜尋" name="q" title="站內搜尋" onfocus="javascript: if(this.value=='站內搜尋') this.value='';" onBlur="javascript: if(this.value=='') this.value='站內搜尋';" value="站內搜尋" />
+                    <span class="input-group-btn">
+                      <button tabindex="16" type="submit" class="btn" title="搜尋" alt="搜尋" name="搜尋">
+                        <span class="icon-search-1">搜尋</span>
+                      </button>
+                    </span>
+                  </div>  
+                  <button tabindex="17" type="button" class="btn" onclick="window.open('https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=www.ntl.edu.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www','_blank')" onkeypress="window.open('https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=www.ntl.edu.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www','_blank')" title="進階搜尋">進階搜尋</button>
+                </form>
+
+<script type="text/javascript">
+	function searchHot(keywordHot) {
+		document.search_google.q.value=keywordHot;
+		document.search_google.submit();
+	}
+</script>
+				<div class="keywords">熱門：
+					<a tabindex="18" href="#" onclick="searchHot('碩博士論文');" onkeypress="searchHot('碩博士論文');">碩博士論文</a>、
+					<a tabindex="19" href="#" onclick="searchHot('徵才');" onkeypress="searchHot('徵才');">徵才</a>、
+					<a tabindex="20" href="#" onclick="searchHot('單車失竊記');" onkeypress="searchHot('單車失竊記');">單車失竊記</a>
+					<!--
+					<a href="sp.asp?xdurl=MP1AP_RWD/searchList.asp&mp=1&q=%E7%A2%A9%E5%8D%9A%E5%A3%AB%E8%AB%96%E6%96%87" title="碩博士論文">碩博士論文</a>、
+					<a href="sp.asp?xdurl=MP1AP_RWD/searchList.asp&mp=1&q=%E5%BE%B5%E6%89%8D" title="徵才">徵才</a>、
+					<a href="sp.asp?xdurl=MP1AP_RWD/searchList.asp&mp=1&q=%E5%96%AE%E8%BB%8A%E5%A4%B1%E7%AB%8A%E8%A8%98" title="單車失竊記">單車失竊記</a>
+					-->
+				</div>
+              </div>
+            </div>
+          </div>
+          <!--靠左連結-->
+          <div class="pull-sm-left pull-md-left pull-lg-left">
+            <div class="Links-Left">
+              <!--圖書館營運相關-->
+              <ul class="nav navbar-nav White">
+                <li class="active"><a tabindex="3" href="ct.asp?xItem=58536&CtNode=1711&mp=1" title="開館時間"><i class="icon-clock"></i>開館時間</a></li>  
+                <li><a tabindex="4" href="ct.asp?xItem=12776&CtNode=1710&mp=1" title="如何到圖書館"><i class="icon-cab"></i>如何到圖書館</a></li>
+              </ul> 
+              <!--字級-->
+              <div class="Word-Class hidden-xs">
+                <span>字級：</span>
+                <a tabindex="9" href="#" class="FontLarge" title="字級-大">大</a> 
+                <a tabindex="10" href="#" class="FontMidium" title="字級-中">中</a>
+                <a tabindex="11" href="#" class="FontSmall" title="字級-小">小</a>
+				<noscript>
+					您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態。
+				</noscript>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <!--主選單  收合左側-->
+        <div class="collapse navbar-collapse" id="offcanvas-left" role="navigation">
+          <div class="MainMenu">
+            <ul class="nav navbar-nav">
+
+	<li  class="dropdown">
+
+		<a data-hover="dropdown" data-toggle="dropdown" class="active dropdown-toggle" href="np.asp?ctNode=1651&mp=1" title="認識本館">認識本館<b class="caret"></b></a>
+
+		<ul class="dropdown-menu">
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1659&mp=1" title="本館介紹">本館介紹</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1660&mp=1" title="本館出版品">本館出版品</a>
+
+				</li>
+
+				<li>
+
+			<a href="sp.asp?xdurl=MP1AP_RWD/Commodity_List.asp&mp=1&ctNode=1661&CtUnit=247" title="文創品">文創品</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1663&mp=1" title="志工園地">志工園地</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/mp.asp?mp=5" target="_blank" title="臺灣學研究中心(另開新視窗)">臺灣學研究中心</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2361&mp=1" title="本土教育資源中心">本土教育資源中心</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/mp.asp?mp=4" target="_blank" title="親子資料中心(另開新視窗)">親子資料中心</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://viis.ntl.edu.tw" target="_blank" title="視障資料中心(另開新視窗)">視障資料中心</a>
+
+				</li>
+
+				<li>
+
+			<a href="http://chungshanhall.ntl.edu.tw" target="_blank" title="陽明山中山樓(另開新視窗)">陽明山中山樓</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1662&mp=1" title="臺灣圖書醫院">臺灣圖書醫院</a>
+
+				</li>
+
+		
+		</ul>
+	</li>
+
+	<li  class="dropdown">
+
+		<a data-hover="dropdown" data-toggle="dropdown" class="active dropdown-toggle" href="np.asp?ctNode=1652&mp=1" title="公布欄">公布欄<b class="caret"></b></a>
+
+		<ul class="dropdown-menu">
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1664&CtUnit=99&BaseDSD=7&mp=1" title="最新消息">最新消息</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1667&CtUnit=104&BaseDSD=7&mp=1" title="新聞稿">新聞稿</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1882&CtUnit=909&BaseDSD=7&mp=1" title="圖書捐贈">圖書捐贈</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1665&CtUnit=102&BaseDSD=7&mp=1" title="徵稿啟事">徵稿啟事</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1668&CtUnit=105&BaseDSD=7&mp=1" title="藝文資訊">藝文資訊</a>
+
+				</li>
+
+				<li>
+
+			<a href="sp.asp?xdurl=Form_RWD/epaper.asp&mp=1&ctNode=1669" title="訂閱電子報">訂閱電子報</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1666&CtUnit=103&BaseDSD=7&mp=1" title="答客問Q&A">答客問Q&A</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2169&CtUnit=932&BaseDSD=58&mp=1" title="遺失物專區">遺失物專區</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/mp.asp?mp=14" target="_blank" title="教育部閱讀推廣與館藏充實實施計畫(另開新視窗)">教育部閱讀推廣與館藏充實實施計畫</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2265&mp=1" title="臺灣閱讀公園">臺灣閱讀公園</a>
+
+				</li>
+
+		
+		</ul>
+	</li>
+
+	<li  class="dropdown">
+
+		<a data-hover="dropdown" data-toggle="dropdown" class="active dropdown-toggle" href="np.asp?ctNode=1653&mp=1" title="活動訊息">活動訊息<b class="caret"></b></a>
+
+		<ul class="dropdown-menu">
+
+
+				<li>
+
+			<a href="sp.asp?xdurl=MP1AP_RWD/month_action.asp&mp=1&ctNode=1891" title="本月活動">本月活動</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1672&CtUnit=109&BaseDSD=57&mp=1" title="展覽">展覽</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1673&CtUnit=110&BaseDSD=59&mp=1" title="講座">講座</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1674&CtUnit=482&BaseDSD=59&mp=1" title="與作家有約">與作家有約</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1676&CtUnit=114&BaseDSD=57&mp=1" title="主題書展">主題書展</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1677&CtUnit=115&BaseDSD=57&mp=1" title="影片欣賞">影片欣賞</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1678&mp=1" title="研習班">研習班</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1861&CtUnit=881&BaseDSD=57&mp=1" title="其他">其他</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2259&CtUnit=109&BaseDSD=57&mp=1" title="特展歷史資料區">特展歷史資料區</a>
+
+				</li>
+
+		
+		</ul>
+	</li>
+
+	<li  class="dropdown">
+
+		<a data-hover="dropdown" data-toggle="dropdown" class="active dropdown-toggle" href="np.asp?ctNode=1654&mp=1" title="資源探索">資源探索<b class="caret"></b></a>
+
+		<ul class="dropdown-menu">
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1685&mp=1" title="館藏資源">館藏資源</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1686&mp=1" title="數位資源">數位資源</a>
+
+				</li>
+
+		
+		</ul>
+	</li>
+
+	<li  class="dropdown">
+
+		<a data-hover="dropdown" data-toggle="dropdown" class="active dropdown-toggle" href="np.asp?ctNode=1655&mp=1" title="讀者服務">讀者服務<b class="caret"></b></a>
+
+		<ul class="dropdown-menu">
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1909&mp=1" title="館藏查詢">館藏查詢</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1738&CtUnit=126&BaseDSD=7&mp=1" title="借閱證申請">借閱證申請</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1746&CtUnit=134&BaseDSD=7&mp=1" title="自修排隊及使用須知">自修排隊及使用須知</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1739&mp=1" title="館藏借閱">館藏借閱</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1740&mp=1" title="參考諮詢">參考諮詢</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1741&mp=1" title="網路資源">網路資源</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1742&CtUnit=544&BaseDSD=7&mp=1" title="館際合作(文獻傳遞)">館際合作(文獻傳遞)</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1743&mp=1" title="檔案應用專區">檔案應用專區</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1744&CtUnit=130&BaseDSD=7&mp=1" title="圖書賠償">圖書賠償</a>
+
+				</li>
+
+				<li>
+
+			<a href="http://cis.ntl.edu.tw/F?func=file&file_name=feedback1" target="_blank" title="圖書推薦(另開新視窗)">圖書推薦</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1747&mp=1" title="無障礙服務專區">無障礙服務專區</a>
+
+				</li>
+
+		
+		</ul>
+	</li>
+
+	<li  class="dropdown">
+
+		<a data-hover="dropdown" data-toggle="dropdown" class="active dropdown-toggle" href="np.asp?ctNode=1656&mp=1" title="我想要…">我想要…<b class="caret"></b></a>
+
+		<ul class="dropdown-menu">
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1896&mp=1" title="申請展覽.攝影.公共服務等">申請展覽.攝影.公共服務等</a>
+
+				</li>
+
+				<li>
+
+			<a href="sp.asp?xdurl=Form_RWD/Form.asp&xItem=7454&ctNode=1693&mp=1" title="申請圖書館導覽">申請圖書館導覽</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1897&CtUnit=932&BaseDSD=58&mp=1" title="尋找遺失物">尋找遺失物</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1899&CtUnit=909&BaseDSD=7&mp=1" title="捐贈圖書">捐贈圖書</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://www.ntl.edu.tw/ct.asp?xItem=7930&ctNode=1783&mp=1" title="使用無線網路">使用無線網路</a>
+
+				</li>
+
+				<li>
+
+			<a href="sp.asp?xdurl=Form_RWD/epaper.asp&mp=1&ctNode=1669" title="訂閱電子報">訂閱電子報</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1902&CtUnit=922&BaseDSD=7&mp=1" title="購買影印卡">購買影印卡</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/ct.asp?xItem=8031&CtNode=1143&mp=4" title="使用哺乳室">使用哺乳室</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1696&CtUnit=635&BaseDSD=7&mp=1" title="使用輕食區">使用輕食區</a>
+
+				</li>
+
+		
+		</ul>
+	</li>
+
+	<li  class="dropdown">
+
+		<a data-hover="dropdown" data-toggle="dropdown" class="active dropdown-toggle" href="np.asp?ctNode=1657&mp=1" title="分齡分眾">分齡分眾<b class="caret"></b></a>
+
+		<ul class="dropdown-menu">
+
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/mp.asp?mp=4" target="_blank" title="親子服務(另開新視窗)">親子服務</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1697&CtUnit=249&BaseDSD=7&mp=1" title="樂齡服務">樂齡服務</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1699&CtUnit=698&BaseDSD=7&mp=1" title="青少年服務">青少年服務</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://viis.ntl.edu.tw" target="_blank" title="視障服務(另開新視窗)">視障服務</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1698&CtUnit=618&BaseDSD=7&mp=1" title="新住民服務">新住民服務</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/mp.asp?mp=5" target="_blank" title="臺灣學服務(另開新視窗)">臺灣學服務</a>
+
+				</li>
+
+		
+		</ul>
+	</li>
+
+	<li  class="dropdown">
+
+		<a data-hover="dropdown" data-toggle="dropdown" class="active dropdown-toggle" href="np.asp?ctNode=1658&mp=1" title="政府公開資訊">政府公開資訊<b class="caret"></b></a>
+
+		<ul class="dropdown-menu">
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1783&CtUnit=125&BaseDSD=7&mp=1" title="法令規章">法令規章</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1784&mp=1" title="認識本館">認識本館</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1785&CtUnit=177&BaseDSD=7&mp=1" title="服務品質計畫">服務品質計畫</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1786&mp=1" title="業務統計">業務統計</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1787&CtUnit=179&BaseDSD=7&mp=1" title="研究報告">研究報告</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1788&mp=1" title="預算、決算書及會計月報">預算、決算書及會計月報</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1789&CtUnit=181&BaseDSD=7&mp=1" title="請願及訴願">請願及訴願</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1790&CtUnit=182&BaseDSD=7&mp=1" title="書面之公共工程及採購契約">書面之公共工程及採購契約</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1791&CtUnit=269&BaseDSD=7&mp=1" title="支付或接受之補助">支付或接受之補助</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1792&mp=1" title="政策宣導相關廣告執行情形">政策宣導相關廣告執行情形</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1793&CtUnit=688&BaseDSD=7&mp=1" title="保有及管理個人資料項目">保有及管理個人資料項目</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2171&mp=1" title="因公出國">因公出國</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2172&mp=1" title="內部控制">內部控制</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2252&CtUnit=964&BaseDSD=7&mp=1" title="讀者滿意度調查報告">讀者滿意度調查報告</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2279&CtUnit=983&BaseDSD=7&mp=1" title="年度工作報告">年度工作報告</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2360&CtUnit=1044&BaseDSD=7&mp=1" title="預算對民間團體及個人補(捐)助經費">預算對民間團體及個人補(捐)助經費</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2368&CtUnit=1051&BaseDSD=7&mp=1" title="性別平等">性別平等</a>
+
+				</li>
+
+		
+		</ul>
+	</li>
+ 
+            </ul>
+          </div>              
+        </div>
+		
+		<!--search-->
+<script language="JavaScript">
+<!--
+function Checkgoogle_m()
+{
+	if ((document.search_google_m.q.value.replace(/(^\s*)|(\s*$)/g, "") == "") || (document.search_google_m.q.value.replace(/(^\s*)|(\s*$)/g, "") == "站內搜尋")) {
+		alert("請輸入查詢詞!");
+		document.search_google_m.q.focus();
+		return false;
+	}
+	document.search_google_m.send.disabled=true;
+	//return confirm('確定查詢嗎?');
+}
+//-->
+</script>
+		<div class="Phone visible-xs-block">
+			<div class="Search">
+				<form class="navbar-form" role="search" name="search_google_m" method="get" action="sp.asp" onSubmit="return Checkgoogle_m();">
+					<input type="hidden" name="xdurl" value="MP1AP_RWD/searchList.asp">
+					<input type="hidden" name="mp" value="1">
+					<div class="input-group">
+						<input type="text" class="form-control" accesskey="S" placeholder="站內搜尋" name="q" title="站內搜尋" onfocus="javascript: if(this.value=='站內搜尋') this.value='';" onBlur="javascript: if(this.value=='') this.value='站內搜尋';" value="站內搜尋" />
+						<span class="input-group-btn">
+							<button type="submit" class="btn" title="搜尋" alt="搜尋" name="搜尋">
+								<span class="icon-search-1">搜尋</span>
+							</button>
+						</span>
+					</div>  
+					<button type="button" class="btn" onclick="window.open('https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=www.ntl.edu.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www','_blank')" onkeypress="window.open('https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=www.ntl.edu.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www','_blank')" title="進階搜尋">進階搜尋</button>
+				</form>
+			</div>
+		</div>
+				
+      </div> 
+
+    </div>
+  </nav> 
+</section>
+<section id="MainContent" class="Inner">
+<div class="container">
+<div class="row">
+<article class="col-sm-12 col-md-12">
+<div class="accesskey">
+<a href="#" accesskey="C" title="中央內容區塊">:::</a>
+</div>
+<div id="breadcrumb" class="hidden-xs">
+<ol class="breadcrumb">
+<li><i class="icon-home-1"></i><a href="mp.asp?mp=1" title="首頁">首頁</a></li>
+<li class="active">活動訊息</li>
+</ol>
+</div>
+<div class="Function FunctionTop hidden-xs"><a href="javascript:history.back();" class="icon-reply-1" title="回上一頁">回上一頁</a><noscript>請利用「Backspace鍵」回上頁</noscript>
+</div>
+<div class="ContentPage NP">
+<h2 class="PageTitle">活動訊息</h2>
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="Items"><a href="sp.asp?xdurl=MP1AP_RWD/month_action.asp&mp=1&ctNode=1891" title="本月活動"><i class="icon-angle-right"></i>本月活動</a></div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="Items"><a href="lp.asp?ctNode=1672&amp;CtUnit=109&amp;BaseDSD=57&amp;mp=1" title="展覽"><i class="icon-angle-right"></i>展覽</a></div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="Items"><a href="lp.asp?ctNode=1673&amp;CtUnit=110&amp;BaseDSD=59&amp;mp=1" title="講座"><i class="icon-angle-right"></i>講座</a></div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="Items"><a href="lp.asp?ctNode=1674&amp;CtUnit=482&amp;BaseDSD=59&amp;mp=1" title="與作家有約"><i class="icon-angle-right"></i>與作家有約</a></div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="Items"><a href="lp.asp?ctNode=1676&amp;CtUnit=114&amp;BaseDSD=57&amp;mp=1" title="主題書展"><i class="icon-angle-right"></i>主題書展</a></div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="Items"><a href="lp.asp?ctNode=1677&amp;CtUnit=115&amp;BaseDSD=57&amp;mp=1" title="影片欣賞 "><i class="icon-angle-right"></i>影片欣賞 </a></div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="Items"><a href="np.asp?ctNode=1678&mp=1" title="研習班"><i class="icon-angle-right"></i>研習班</a></div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="Items"><a href="lp.asp?ctNode=1861&amp;CtUnit=881&amp;BaseDSD=57&amp;mp=1" title="其他"><i class="icon-angle-right"></i>其他</a></div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="Items"><a href="lp.asp?ctNode=2259&amp;CtUnit=109&amp;BaseDSD=57&amp;mp=1" title="特展歷史資料區"><i class="icon-angle-right"></i>特展歷史資料區</a></div>
+</div>
+</div>
+</div>
+<div class="Function FunctionBottom"><a href="javascript:history.back();" class="icon-reply-1" title="回上一頁">回上一頁</a></div>
+</article>
+</div>
+</div>
+</section>
+<script type="text/javascript">
+if(!document.all) {
+	Node.prototype.__defineGetter__("xml",function(){ return (new XMLSerializer).serializeToString(this);});
+	Node.prototype.__defineGetter__("text",function(){ return this.textContent; });
+}
+function blen(xs) {			//檢測中英文夾雜字串實際長度
+	var xl = xs.length;
+	for(i=0; i<xl; i++) {
+		var intcode = xs.charCodeAt(i); 
+		if(intcode > 255 || intcode < 0) xl += 1;
+	}
+	return xl;
+}
+function date(){
+	var d = new Date();
+	return [d.getFullYear(), d.getMonth() > 8 ? d.getMonth() + 1 : '0' + (d.getMonth() + 1), d.getDate() > 9 ? d.getDate() : '0' + d.getDate()].join('/');
+}
+function getDate(dt){
+	var d = dt;
+	return [d.getFullYear(), d.getMonth() > 8 ? d.getMonth() + 1 : '0' + (d.getMonth() + 1), d.getDate() > 9 ? d.getDate() : '0' + d.getDate()].join('/');
+}
+function javad7date(dt){
+	var xd7date = "";
+	if (dt != "") {
+		var xPos = (dt.indexOf("上午") != -1) ? dt.indexOf("上午") : dt.indexOf("下午");
+		dt = (xPos != -1) ? dt.substring(0,xPos-1) : dt;
+		var xYear = dt.substring(0,4)
+		var firstSlash = dt.indexOf("/");
+		var secondSlash = dt.indexOf("/", firstSlash + 1);
+		var xMonth = dt.substring(firstSlash+1,secondSlash)
+		var xDay = dt.substring(secondSlash+1,dt.length)
+		xd7date = new Date(parseInt(xYear), parseInt(xMonth)-1, parseInt(xDay));
+	}
+	return xd7date;
+}
+
+function DateAdd(ItemType, DateToWorkOn, ValueToBeAdded)
+{
+    switch (ItemType)
+    {
+        //date portion         
+        case 'd': //add days
+            DateToWorkOn.setDate(DateToWorkOn.getDate() + ValueToBeAdded)
+            break;
+        case 'm': //add months
+            DateToWorkOn.setMonth(DateToWorkOn.getMonth() + ValueToBeAdded)
+            break;
+        case 'y': //add years
+            DateToWorkOn.setYear(DateToWorkOn.getFullYear() + ValueToBeAdded)
+            break;
+        //time portion         
+        case 'h': //add days
+            DateToWorkOn.setHours(DateToWorkOn.getHours() + ValueToBeAdded)
+            break;
+        case 'n': //add minutes
+            DateToWorkOn.setMinutes(DateToWorkOn.getMinutes() + ValueToBeAdded)
+            break;
+        case 's': //add seconds
+            DateToWorkOn.setSeconds(DateToWorkOn.getSeconds() + ValueToBeAdded)
+            break;
+    }
+    return DateToWorkOn;
+}	
+</script>
+
+<section id="FatFooter" class="FatFooter"> 
+	<div class="container">  
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="OpenBTN-box">
+					<span>網站導覽選單</span>
+					<button type="button" id="OpenBTN" class="btn btn-brown btn-lg">展　開</button>
+				</div>
+				<div id="HideArea">
+					<div class="FieldArea">
+
+	<div class="Field">
+
+		<h3><a href="np.asp?ctNode=1651&mp=1" title="認識本館">認識本館</a></h3>
+
+		<ul>
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1659&mp=1" title="本館介紹">本館介紹</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1660&mp=1" title="本館出版品">本館出版品</a>
+
+				</li>
+
+				<li>
+
+			<a href="sp.asp?xdurl=MP1AP_RWD/Commodity_List.asp&mp=1&ctNode=1661&CtUnit=247" title="文創品">文創品</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1663&mp=1" title="志工園地">志工園地</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/mp.asp?mp=5" target="_blank" title="臺灣學研究中心(另開新視窗)">臺灣學研究中心</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2361&mp=1" title="本土教育資源中心">本土教育資源中心</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/mp.asp?mp=4" target="_blank" title="親子資料中心(另開新視窗)">親子資料中心</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://viis.ntl.edu.tw" target="_blank" title="視障資料中心(另開新視窗)">視障資料中心</a>
+
+				</li>
+
+				<li>
+
+			<a href="http://chungshanhall.ntl.edu.tw" target="_blank" title="陽明山中山樓(另開新視窗)">陽明山中山樓</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1662&mp=1" title="臺灣圖書醫院">臺灣圖書醫院</a>
+
+				</li>
+
+		
+		</ul>
+	</div>
+
+	<div class="Field">
+
+		<h3><a href="np.asp?ctNode=1652&mp=1" title="公布欄">公布欄</a></h3>
+
+		<ul>
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1664&CtUnit=99&BaseDSD=7&mp=1" title="最新消息">最新消息</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1667&CtUnit=104&BaseDSD=7&mp=1" title="新聞稿">新聞稿</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1882&CtUnit=909&BaseDSD=7&mp=1" title="圖書捐贈">圖書捐贈</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1665&CtUnit=102&BaseDSD=7&mp=1" title="徵稿啟事">徵稿啟事</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1668&CtUnit=105&BaseDSD=7&mp=1" title="藝文資訊">藝文資訊</a>
+
+				</li>
+
+				<li>
+
+			<a href="sp.asp?xdurl=Form_RWD/epaper.asp&mp=1&ctNode=1669" title="訂閱電子報">訂閱電子報</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1666&CtUnit=103&BaseDSD=7&mp=1" title="答客問Q&A">答客問Q&A</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2169&CtUnit=932&BaseDSD=58&mp=1" title="遺失物專區">遺失物專區</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/mp.asp?mp=14" target="_blank" title="教育部閱讀推廣與館藏充實實施計畫(另開新視窗)">教育部閱讀推廣與館藏充實實施計畫</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2265&mp=1" title="臺灣閱讀公園">臺灣閱讀公園</a>
+
+				</li>
+
+		
+		</ul>
+	</div>
+
+	<div class="Field">
+
+		<h3><a href="np.asp?ctNode=1653&mp=1" title="活動訊息">活動訊息</a></h3>
+
+		<ul>
+
+
+				<li>
+
+			<a href="sp.asp?xdurl=MP1AP_RWD/month_action.asp&mp=1&ctNode=1891" title="本月活動">本月活動</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1672&CtUnit=109&BaseDSD=57&mp=1" title="展覽">展覽</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1673&CtUnit=110&BaseDSD=59&mp=1" title="講座">講座</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1674&CtUnit=482&BaseDSD=59&mp=1" title="與作家有約">與作家有約</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1676&CtUnit=114&BaseDSD=57&mp=1" title="主題書展">主題書展</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1677&CtUnit=115&BaseDSD=57&mp=1" title="影片欣賞">影片欣賞</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1678&mp=1" title="研習班">研習班</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1861&CtUnit=881&BaseDSD=57&mp=1" title="其他">其他</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2259&CtUnit=109&BaseDSD=57&mp=1" title="特展歷史資料區">特展歷史資料區</a>
+
+				</li>
+
+		
+		</ul>
+	</div>
+
+	<div class="Field">
+
+		<h3><a href="np.asp?ctNode=1654&mp=1" title="資源探索">資源探索</a></h3>
+
+		<ul>
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1685&mp=1" title="館藏資源">館藏資源</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1686&mp=1" title="數位資源">數位資源</a>
+
+				</li>
+
+		
+		</ul>
+	</div>
+
+	<div class="Field">
+
+		<h3><a href="np.asp?ctNode=1655&mp=1" title="讀者服務">讀者服務</a></h3>
+
+		<ul>
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1909&mp=1" title="館藏查詢">館藏查詢</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1738&CtUnit=126&BaseDSD=7&mp=1" title="借閱證申請">借閱證申請</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1746&CtUnit=134&BaseDSD=7&mp=1" title="自修排隊及使用須知">自修排隊及使用須知</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1739&mp=1" title="館藏借閱">館藏借閱</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1740&mp=1" title="參考諮詢">參考諮詢</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1741&mp=1" title="網路資源">網路資源</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1742&CtUnit=544&BaseDSD=7&mp=1" title="館際合作(文獻傳遞)">館際合作(文獻傳遞)</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1743&mp=1" title="檔案應用專區">檔案應用專區</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1744&CtUnit=130&BaseDSD=7&mp=1" title="圖書賠償">圖書賠償</a>
+
+				</li>
+
+				<li>
+
+			<a href="http://cis.ntl.edu.tw/F?func=file&file_name=feedback1" target="_blank" title="圖書推薦(另開新視窗)">圖書推薦</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1747&mp=1" title="無障礙服務專區">無障礙服務專區</a>
+
+				</li>
+
+		
+		</ul>
+	</div>
+
+	<div class="Field">
+
+		<h3><a href="np.asp?ctNode=1656&mp=1" title="我想要…">我想要…</a></h3>
+
+		<ul>
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1896&mp=1" title="申請展覽.攝影.公共服務等">申請展覽.攝影.公共服務等</a>
+
+				</li>
+
+				<li>
+
+			<a href="sp.asp?xdurl=Form_RWD/Form.asp&xItem=7454&ctNode=1693&mp=1" title="申請圖書館導覽">申請圖書館導覽</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1897&CtUnit=932&BaseDSD=58&mp=1" title="尋找遺失物">尋找遺失物</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1899&CtUnit=909&BaseDSD=7&mp=1" title="捐贈圖書">捐贈圖書</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://www.ntl.edu.tw/ct.asp?xItem=7930&ctNode=1783&mp=1" title="使用無線網路">使用無線網路</a>
+
+				</li>
+
+				<li>
+
+			<a href="sp.asp?xdurl=Form_RWD/epaper.asp&mp=1&ctNode=1669" title="訂閱電子報">訂閱電子報</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1902&CtUnit=922&BaseDSD=7&mp=1" title="購買影印卡">購買影印卡</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/ct.asp?xItem=8031&CtNode=1143&mp=4" title="使用哺乳室">使用哺乳室</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1696&CtUnit=635&BaseDSD=7&mp=1" title="使用輕食區">使用輕食區</a>
+
+				</li>
+
+		
+		</ul>
+	</div>
+
+	<div class="Field">
+
+		<h3><a href="np.asp?ctNode=1657&mp=1" title="分齡分眾">分齡分眾</a></h3>
+
+		<ul>
+
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/mp.asp?mp=4" target="_blank" title="親子服務(另開新視窗)">親子服務</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1697&CtUnit=249&BaseDSD=7&mp=1" title="樂齡服務">樂齡服務</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1699&CtUnit=698&BaseDSD=7&mp=1" title="青少年服務">青少年服務</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://viis.ntl.edu.tw" target="_blank" title="視障服務(另開新視窗)">視障服務</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1698&CtUnit=618&BaseDSD=7&mp=1" title="新住民服務">新住民服務</a>
+
+				</li>
+
+				<li>
+
+			<a href="https://wwwacc.ntl.edu.tw/mp.asp?mp=5" target="_blank" title="臺灣學服務(另開新視窗)">臺灣學服務</a>
+
+				</li>
+
+		
+		</ul>
+	</div>
+
+	<div class="Field">
+
+		<h3><a href="np.asp?ctNode=1658&mp=1" title="政府公開資訊">政府公開資訊</a></h3>
+
+		<ul>
+
+
+				<li>
+
+			<a href="np.asp?ctNode=1783&CtUnit=125&BaseDSD=7&mp=1" title="法令規章">法令規章</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1784&mp=1" title="認識本館">認識本館</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1785&CtUnit=177&BaseDSD=7&mp=1" title="服務品質計畫">服務品質計畫</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1786&mp=1" title="業務統計">業務統計</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1787&CtUnit=179&BaseDSD=7&mp=1" title="研究報告">研究報告</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1788&mp=1" title="預算、決算書及會計月報">預算、決算書及會計月報</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1789&CtUnit=181&BaseDSD=7&mp=1" title="請願及訴願">請願及訴願</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1790&CtUnit=182&BaseDSD=7&mp=1" title="書面之公共工程及採購契約">書面之公共工程及採購契約</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1791&CtUnit=269&BaseDSD=7&mp=1" title="支付或接受之補助">支付或接受之補助</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1792&mp=1" title="政策宣導相關廣告執行情形">政策宣導相關廣告執行情形</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=1793&CtUnit=688&BaseDSD=7&mp=1" title="保有及管理個人資料項目">保有及管理個人資料項目</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2171&mp=1" title="因公出國">因公出國</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2172&mp=1" title="內部控制">內部控制</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2252&CtUnit=964&BaseDSD=7&mp=1" title="讀者滿意度調查報告">讀者滿意度調查報告</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2279&CtUnit=983&BaseDSD=7&mp=1" title="年度工作報告">年度工作報告</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2360&CtUnit=1044&BaseDSD=7&mp=1" title="預算對民間團體及個人補(捐)助經費">預算對民間團體及個人補(捐)助經費</a>
+
+				</li>
+
+				<li>
+
+			<a href="np.asp?ctNode=2368&CtUnit=1051&BaseDSD=7&mp=1" title="性別平等">性別平等</a>
+
+				</li>
+
+		
+		</ul>
+	</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+if(!document.all) {
+	Node.prototype.__defineGetter__("xml",function(){ return (new XMLSerializer).serializeToString(this);});
+	Node.prototype.__defineGetter__("text",function(){ return this.textContent; });
+}
+function blen(xs) {			//檢測中英文夾雜字串實際長度
+	var xl = xs.length;
+	for(i=0; i<xl; i++) {
+		var intcode = xs.charCodeAt(i); 
+		if(intcode > 255 || intcode < 0) xl += 1;
+	}
+	return xl;
+}
+function date(){
+	var d = new Date();
+	return [d.getFullYear(), d.getMonth() > 8 ? d.getMonth() + 1 : '0' + (d.getMonth() + 1), d.getDate() > 9 ? d.getDate() : '0' + d.getDate()].join('/');
+}
+function getDate(dt){
+	var d = dt;
+	return [d.getFullYear(), d.getMonth() > 8 ? d.getMonth() + 1 : '0' + (d.getMonth() + 1), d.getDate() > 9 ? d.getDate() : '0' + d.getDate()].join('/');
+}
+function javad7date(dt){
+	var xd7date = "";
+	if (dt != "") {
+		var xPos = (dt.indexOf("上午") != -1) ? dt.indexOf("上午") : dt.indexOf("下午");
+		dt = (xPos != -1) ? dt.substring(0,xPos-1) : dt;
+		var xYear = dt.substring(0,4)
+		var firstSlash = dt.indexOf("/");
+		var secondSlash = dt.indexOf("/", firstSlash + 1);
+		var xMonth = dt.substring(firstSlash+1,secondSlash)
+		var xDay = dt.substring(secondSlash+1,dt.length)
+		xd7date = new Date(parseInt(xYear), parseInt(xMonth)-1, parseInt(xDay));
+	}
+	return xd7date;
+}
+
+function DateAdd(ItemType, DateToWorkOn, ValueToBeAdded)
+{
+    switch (ItemType)
+    {
+        //date portion         
+        case 'd': //add days
+            DateToWorkOn.setDate(DateToWorkOn.getDate() + ValueToBeAdded)
+            break;
+        case 'm': //add months
+            DateToWorkOn.setMonth(DateToWorkOn.getMonth() + ValueToBeAdded)
+            break;
+        case 'y': //add years
+            DateToWorkOn.setYear(DateToWorkOn.getFullYear() + ValueToBeAdded)
+            break;
+        //time portion         
+        case 'h': //add days
+            DateToWorkOn.setHours(DateToWorkOn.getHours() + ValueToBeAdded)
+            break;
+        case 'n': //add minutes
+            DateToWorkOn.setMinutes(DateToWorkOn.getMinutes() + ValueToBeAdded)
+            break;
+        case 's': //add seconds
+            DateToWorkOn.setSeconds(DateToWorkOn.getSeconds() + ValueToBeAdded)
+            break;
+    }
+    return DateToWorkOn;
+}	
+</script>
+
+<section id="Footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="Footer_link">
+					<a href="lp.asp?CtNode=1868&CtUnit=232&BaseDSD=7&mp=1" title="翻譯詞彙對照表">翻譯詞彙對照表</a>
+					<a href="ct.asp?xItem=1102&ctNode=1869&mp=1" title="隱私權保護政策">隱私權保護政策</a>
+					<a href="ct.asp?xItem=1103&ctNode=1870&mp=1" title="網站安全政策">網站安全政策</a>
+					<a href="ct.asp?xItem=59993&ctNode=1783&mp=1" title="資訊安全政策">資訊安全政策</a>
+					<a href="ct.asp?xItem=14624&ctNode=1871&mp=1" title="無障礙說明">無障礙說明</a>
+					<a href="sp.asp?xdurl=CuratorMail_RWD/CuratorMail_agree.asp&mp=1&ctNode=1798" title="聯絡我們">聯絡我們</a></a>
+					<a href="ct.asp?xItem=70120&ctNode=2350&mp=1" title="政府網站資料開放宣告">政府網站資料開放宣告</a>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="Footer_info">
+					<div class="Address">館址：23574 新北市中和區中安街八十五號
+					<a href="https://maps.google.com.tw/maps?q=%E5%9C%8B%E7%AB%8B%E5%8F%B0%E7%81%A3%E5%9C%96%E6%9B%B8%E9%A4%A8&hl=zh-TW&ie=UTF8&ll=25.003367,121.512222&spn=0.008187,0.015278&cid=854761177722451895&gl=TW&t=m&z=16&iwloc=A&brcurrent=3,0x3442a9c2a0f41215:0xb2aee41d223e5dca,0,0x345d5538b0b6645f:0x5aa90dfa6620edc0&output=classic&dg=brw" class="Map_link" title="Google Map(另開新視窗)" target="_blank"><img src="GIPDSD/xslGip/xslExport/1/1/images/basic/Google-Maps-icon.png" alt="Google Map(另開新視窗)"></a>
+					　  電話：（02）2926-6888</div>
+					<div class="Address">No.85 Zhong-an St., Zhonghe District, New Taipei City 23574, Taiwan (R.O.C)<br>
+					TEL：（02）2926-6888</div>
+				</div>
+				<div class="Copyright">Copyrights reserved by National Taiwan Library, 2016<br>Microsoft Internet Explorer 9.0 Above</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="Footer_icon">
+					<a class="Accessible_icon" href="https://accessibility.ncc.gov.tw/Applications/Detail?category=20200730164441" title="無障礙網站(另開新視窗)" target="_blank"><img src="GIPDSD/xslGip/xslExport/1/1/images/basic/AA.jpg" alt="通過AA無障礙網頁檢測(另開新視窗)"></a>
+				</div>
+				<div class="Counter">瀏覽人次：<a href="sp.asp?xdurl=superxd_RWD/click.asp&mp=1" title="瀏覽人次:64788956">64788956</a></div>
+			</div>
+		</div>
+	</div>
+</section>
+<a href="javascript:;" class="scrollToTop" title="回頁首">回頁首</a>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178244542-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-178244542-1');
+</script>
+
+<script type="text/javascript">
+if(!document.all) {
+	Node.prototype.__defineGetter__("xml",function(){ return (new XMLSerializer).serializeToString(this);});
+	Node.prototype.__defineGetter__("text",function(){ return this.textContent; });
+}
+function blen(xs) {			//檢測中英文夾雜字串實際長度
+	var xl = xs.length;
+	for(i=0; i<xl; i++) {
+		var intcode = xs.charCodeAt(i); 
+		if(intcode > 255 || intcode < 0) xl += 1;
+	}
+	return xl;
+}
+function date(){
+	var d = new Date();
+	return [d.getFullYear(), d.getMonth() > 8 ? d.getMonth() + 1 : '0' + (d.getMonth() + 1), d.getDate() > 9 ? d.getDate() : '0' + d.getDate()].join('/');
+}
+function getDate(dt){
+	var d = dt;
+	return [d.getFullYear(), d.getMonth() > 8 ? d.getMonth() + 1 : '0' + (d.getMonth() + 1), d.getDate() > 9 ? d.getDate() : '0' + d.getDate()].join('/');
+}
+function javad7date(dt){
+	var xd7date = "";
+	if (dt != "") {
+		var xPos = (dt.indexOf("上午") != -1) ? dt.indexOf("上午") : dt.indexOf("下午");
+		dt = (xPos != -1) ? dt.substring(0,xPos-1) : dt;
+		var xYear = dt.substring(0,4)
+		var firstSlash = dt.indexOf("/");
+		var secondSlash = dt.indexOf("/", firstSlash + 1);
+		var xMonth = dt.substring(firstSlash+1,secondSlash)
+		var xDay = dt.substring(secondSlash+1,dt.length)
+		xd7date = new Date(parseInt(xYear), parseInt(xMonth)-1, parseInt(xDay));
+	}
+	return xd7date;
+}
+
+function DateAdd(ItemType, DateToWorkOn, ValueToBeAdded)
+{
+    switch (ItemType)
+    {
+        //date portion         
+        case 'd': //add days
+            DateToWorkOn.setDate(DateToWorkOn.getDate() + ValueToBeAdded)
+            break;
+        case 'm': //add months
+            DateToWorkOn.setMonth(DateToWorkOn.getMonth() + ValueToBeAdded)
+            break;
+        case 'y': //add years
+            DateToWorkOn.setYear(DateToWorkOn.getFullYear() + ValueToBeAdded)
+            break;
+        //time portion         
+        case 'h': //add days
+            DateToWorkOn.setHours(DateToWorkOn.getHours() + ValueToBeAdded)
+            break;
+        case 'n': //add minutes
+            DateToWorkOn.setMinutes(DateToWorkOn.getMinutes() + ValueToBeAdded)
+            break;
+        case 's': //add seconds
+            DateToWorkOn.setSeconds(DateToWorkOn.getSeconds() + ValueToBeAdded)
+            break;
+    }
+    return DateToWorkOn;
+}	
+</script>
+
+<script  src="GIPDSD/xslGip/xslExport/1/1/assets/js/jquery-1.11.2.js"></script>
+<script  src="GIPDSD/xslGip/xslExport/1/1/assets/js/jquery.easing.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="GIPDSD/xslGip/xslExport/1/1/assets/module/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+<script src="GIPDSD/xslGip/xslExport/1/1/assets/js/jquery.lazyload.min.js"></script>
+<script src="GIPDSD/xslGip/xslExport/1/1/assets/js/BS3JS.min.js"></script> 
+
+<!-- slick  -->
+<script src="GIPDSD/xslGip/xslExport/1/1/assets/module/slick/slick.js"></script>
+<!-- slick 自訂 -->
+<script src="GIPDSD/xslGip/xslExport/1/1/js/slick-addscripts.js"></script> 
+<!-- header offcanvas -->	
+<script src="GIPDSD/xslGip/xslExport/1/1/assets/js/bootstrap.offcanvas.js"></script>  
+
+<script type="text/javascript">
+  /*-----------------------------------*/
+  ///////////////置頂go to top////////////
+  /*-----------------------------------*/
+  $(window).bind('scroll', function() {
+      if ($(this).scrollTop() > 200) {
+          $('.scrollToTop').fadeIn();
+      } else {
+          $('.scrollToTop').fadeOut();
+      }
+  });
+  /*-----------------------------------*/
+  /////click event to scroll to top//////
+  /*-----------------------------------*/
+  $('.scrollToTop').click(function(e) {
+      $('html, body').animate({ scrollTop: 0 }, 400, 'easeOutExpo');
+      e.preventDefault();
+  });
+  $('.scrollToTop').keydown(function(e) {
+      $('body').find('a:first').focus();
+      e.preventDefault();
+  });
+</script>
+
+<!-- 送select選單內容至select框內 -->	
+<script type="text/javascript">
+	$(document).ready(function(e){
+		$('.search-panel .dropdown-menu').find('a').click(function(e) {
+			e.preventDefault();
+			var param = $(this).attr("href").replace("#","");
+			var concept = $(this).text();
+			$('.search-panel span#search_concept').text(concept);
+			$('.input-group #search_param').val(param);
+		});
+	});
+</script>  
+
+<!-- Open Fatfooter-->
+<script type="text/javascript">
+	$(function(){
+		$("#OpenBTN").click(function(){
+			$("#HideArea").slideToggle(600);
+		})
+	})
+</script>
+
+<!-- scrollUp-->
+<script type="text/javascript" src="GIPDSD/xslGip/xslExport/1/1/assets/js/jquery.scrollUp.js"></script> 
+<!-- scrollUp 自訂-->     
+<script type="text/javascript">
+ $(function () {
+  $.scrollUp({
+		    scrollName: 'scrollUp', // Element ID
+		    topDistance: '300', // Distance from top before showing element (px)
+		    topSpeed: 300, // Speed back to top (ms)
+		    animation: 'fade', // Fade, slide, none
+		    animationInSpeed: 200, // Animation in speed (ms)
+		    animationOutSpeed: 200, // Animation out speed (ms)
+		    scrollText: 'Scroll to top', // Text for element
+		    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+      });
+});
+</script>
+<!-- 字級 -->
+<script type="text/javascript">
+  $(function(){
+    $(".FontSmall").click(function(){
+      $(".ContentPage").css({fontSize:"90%"});
+      $("h1").css({fontSize:"30px"});
+      $("h2").css({fontSize:"26px"});
+      $("h3").css({fontSize:"20px"});
+      $("h4").css({fontSize:"16px"});
+      $("h5").css({fontSize:"11px"});
+      $("h6").css({fontSize:"11px"});
+      $(".Block0 .MainLink ul li a").css({fontSize:"1em"});
+      $("#Header .navbar #offcanvas-right ul.nav.White > li a").css({fontSize:"0.9em"});
+      return false;
+    });
+    $(".FontMidium").click(function(){
+      $(".ContentPage").css({fontSize:"100%"});
+      $("h1").css({fontSize:"32px"});
+      $("h2").css({fontSize:"1.8em"});
+      $("h3").css({fontSize:"24px"});
+      $("h4").css({fontSize:"20px"});
+      $("h5").css({fontSize:"0.813em"});
+      $("h6").css({fontSize:"0.813em"});
+      $(".Block0 .MainLink ul li a").css({fontSize:"1.2em"});
+      $("#Header .navbar #offcanvas-right ul.nav.White > li a").css({fontSize:"1em"});
+      return false;
+    });
+    $(".FontLarge").click(function(){
+      $(".ContentPage").css({fontSize:"110%"});
+      $("h1").css({fontSize:"43px"});
+      $("h2").css({fontSize:"36px"});
+      $("h3").css({fontSize:"30px"});
+      $("h4").css({fontSize:"23px"});
+      $("h5").css({fontSize:"19px"});
+      $("h6").css({fontSize:"17px"});
+      $(".Block0 .MainLink ul li a").css({fontSize:"1.4em"});
+      $("#Header .navbar #offcanvas-right ul.nav.White > li a").css({fontSize:"1.2em"});
+      return false;	
+    });
+  })
+</script>
+<!-- dropdownHover-->
+<script src="GIPDSD/xslGip/xslExport/1/1/js/bootstrap-hover-dropdown.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.js-activated').dropdownHover().dropdown();
+  });
+</script>
+<script type="text/javascript">
+  $(function(){
+    $('ul.nav').children('li.dropdown').keyup(function(){
+      $(this).children().show();
+      $(this).siblings().focus(function(){
+        $(this).hide();
+      });
+    });
+    $('ul.nav').children('li.dropdown').keyup(function(){
+      $(this).siblings().children('ul').hide();
+    });
+    $('ul.nav li.dropdown li:last>a').focusout(function(){
+      $('ul.nav li.dropdown ul').hide();
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(function () {
+    $('.FAQ dd').hide();
+    $('.FAQ dd:first-of-type').show();
+    $('.FAQ dt:first-of-type').addClass("Answerclose");
+
+    $('.FAQ dt').click(function() {
+      $('.FAQ dd').slideUp();
+      $('.FAQ dt').removeClass("Answerclose");
+
+      $(this).next().slideDown();
+      $(this).addClass("Answerclose");
+      return false;
+    });
+  });
+</script>
+
+<!--fancy box-->
+<script type="text/javascript" src="GIPDSD/xslGip/xslExport/1/1/js/fancyBox/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript">
+ $(function(){
+    // Button helper. Disable animations, hide close button, change title type and content 
+    $('.fancybox-buttons').fancybox({
+      openEffect  : 'none',
+      closeEffect : 'none',
+      prevEffect : 'none',
+      nextEffect : 'none',
+
+      closeBtn  : false,
+
+      helpers : {
+        title : { type : 'inside' },
+        buttons : {}
+      },
+
+      afterLoad : function(){
+        this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+      }
+    });
+  });
+</script>
+
+<!-- fullcalendar
+<script type="text/javascript" src="GIPDSD/xslGip/xslExport/1/1/assets/module/fullcalendar-2.3.1/lib/moment.min.js"></script>
+<script type="text/javascript" src="GIPDSD/xslGip/xslExport/1/1/assets/module/fullcalendar-2.3.1/fullcalendar.min.js"></script>
+<script>
+  $(document).ready(function() {
+    function renderCalendar() {
+      $('#calendar').fullCalendar({
+        buttonText: {
+          today: '今天',
+          month: '月',
+          week: '周',
+          day: '日',
+          prev:'上個月',
+          next:'下個月',
+        },
+        weekMode: "variable",
+        columnFormat: {
+          year: 'dddd',
+          month: 'dddd',
+          day: 'dddd M-d'
+        },
+        monthNames: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+        dayNames: ["日", "一", "二", "三", "四", "五", "六"],
+        header: {
+          left: 'title',
+          right: 'prev,next, today'
+        },          
+        defaultDate: '2017-06-20',
+    		buttonIcons: false, // show the prev/next text
+    		eventClick: function (date, allDay, jsEvent, view) {},
+    		events: function (start, end, callback) {}
+    	});
+    }
+    renderCalendar();
+  });
+</script>
+ -->
+
+<!-- 首頁頁籤 -->
+<script>
+  $(function(){
+    // 預設.options 第一個.Nico 加上.here
+    $(".tabSet .options li:first-child").addClass('here').find('.NewsList').show();
+
+    // this Nico被click時
+    $(".Nico").click(function(){
+      var ThisNico = $(".tabSet .options li");
+      // 清除所有的.here
+      // hide所有的.NewsList
+      ThisNico.removeClass('here');
+      ThisNico.find('.NewsList').hide();
+
+      // this Nico 加入.here
+      $(this).addClass('here').find('.NewsList').show();
+      // $(this).find('.NewsList').show();
+    });
+  });
+</script>
+</body>
+</html>
