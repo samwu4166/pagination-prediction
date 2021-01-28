@@ -19,14 +19,38 @@ DEFAULT_LABEL_MAP = {
     'FIRST': 'PAGE',
     'LAST': 'PAGE',
 }
+TEST_FILE_MAP = {
+    'NORMAL': 'test_data',
+    'EVENT_SOURCE': 'test_yuching',
+}
+
+'''
+Validate:
+If we just use href for training, we need to guarantee that one url is only link to one class
+'''
+
 
 class Storage(object):
 
     def __init__(self, path=DEFAULT_DATA_PATH, label_map=DEFAULT_LABEL_MAP):
         self.path = path
         self.label_map = label_map
-        print(path)
-
+        self.__test_file = None
+    
+    @property
+    def test_file(self):
+        return self.__test_file
+    
+    @test_file.setter
+    def test_file(self, value):
+        if value not in TEST_FILE_MAP:
+            print(f"{value} not in the list: {TEST_FILE_MAP.keys()}")
+            return
+        self.__test_file = value
+        
+    def get_test_file_list(self):
+        print("Test file list: ")
+        print(TEST_FILE_MAP)
     def get_Xy(self, validate=True, contain_button=True, file_type='T'):
         X, y = [], []
         for row in self.iter_records(contain_button, file_type):
@@ -78,16 +102,23 @@ class Storage(object):
                 if row['Checked'] == file_type:
                     yield row
     def iter_test_records(self):
-        info_path = os.path.join(self.path, 'test_data/test_data.csv')
+        if self.__test_file is None:
+            print("please assign test_file first")
+            return
+        info_path = os.path.join(self.path, TEST_FILE_MAP[self.__test_file]+'/test_data.csv')
         with io.open(info_path, encoding='utf8') as f:
             for row in csv.DictReader(f):
-                yield row
+                if row['Checked'] == 'T':
+                    yield row
 #         test_csv = pd.read_csv(info_path)
 #         test_csv = test_csv.fillna('N/A')
 #         for idx, row in test_csv.iterrows():
 #             yield row
     def _load_test_html(self, row):
-        data_path = os.path.join(self.path, 'test_data/html')
+        if self.__test_file is None:
+            print("please assign test_file first")
+            return
+        data_path = os.path.join(self.path, TEST_FILE_MAP[self.__test_file]+'/html')
         path = os.path.join(data_path, str(row['File Name']) + ".html")
         with io.open(path, encoding=row['Encoding']) as f:
             return f.read()
