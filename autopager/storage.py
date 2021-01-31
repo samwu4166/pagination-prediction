@@ -7,7 +7,11 @@ import parsel
 import pandas as pd
 
 from autopager.htmlutils import get_xseq_yseq
+from autopager.parserutils import (TagParser, MyHTMLParser, draw_scaled_page, position_check, compare_tag)
 
+#Define parser
+tagParser = TagParser()
+parser = MyHTMLParser()
 
 DEFAULT_DATA_PATH = os.path.join(os.path.dirname(__file__), 'data')
 # ../autopager/data
@@ -51,10 +55,14 @@ class Storage(object):
     def get_test_file_list(self):
         print("Test file list: ")
         print(TEST_FILE_MAP)
+        
     def get_Xy(self, validate=True, contain_button=True, file_type='T'):
-        X, y = [], []
+        X, y, scaled_pages = [], [], []
         for row in self.iter_records(contain_button, file_type):
             html = self._load_html(row)
+            parser._reset()
+            parser.feed(html)
+            tag_positions = parser.get_scaled_page()
             selectors = {key: row[key] for key in self.label_map.keys()}
             root = parsel.Selector(html)
             xseq, yseq = get_xseq_yseq(root, selectors, validate=validate, contain_button=contain_button)
@@ -62,7 +70,8 @@ class Storage(object):
             print(f"Finish: Get Page {row['File Name']} (Encoding: {row['Encoding']})records ... (len: {len(yseq)})")
             X.append(xseq)
             y.append(yseq)
-        return X, y
+            scaled_pages.append(tag_positions[:len(xseq)])
+        return X, y, scaled_pages
     
     def test_selector(self, target, validate=True, contain_button=True, file_type='T'):
         for row in self.iter_records(contain_button, file_type):
@@ -77,9 +86,12 @@ class Storage(object):
                 print(yseq)
         return
     def get_test_Xy(self, validate=True, contain_button=True):
-        X, y = [], []
+        X, y, scaled_pages = [], [], []
         for row in self.iter_test_records():
             html = self._load_test_html(row)
+            parser._reset()
+            parser.feed(html)
+            tag_positions = parser.get_scaled_page()
             selectors = {key: row[key] for key in self.label_map.keys()}
 #             print(selectors)
             root = parsel.Selector(html)
@@ -87,7 +99,8 @@ class Storage(object):
             yseq = [self.label_map.get(_y, _y) for _y in yseq]
             X.append(xseq)
             y.append(yseq)
-        return X, y
+            scaled_pages.append(tag_positions[:len(xseq)])
+        return X, y, scaled_pages
 
     def iter_records(self, contain_button, file_type):
 #         info_path = os.path.join(self.path, 'data_2.csv')
