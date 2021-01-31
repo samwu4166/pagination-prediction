@@ -44,8 +44,6 @@ T,42,GET,UTF-8,page,https://www.cdc.gov/,n,,,,,,1
 T,43,GET,UTF-8,page,https://www.cdc.gov/cancer/,n,,,,,,1
 T,44,GET,UTF-8,page,https://community.myfitnesspal.com/en/,n,,,,,,1
 T,45,GET,UTF-8,page,https://community.myfitnesspal.com/en/discussions,a,,.NumberedPager a:nth-child(n):nth-last-child(n+3),.NumberedPager a.Next,,,0
-T,46,GET,UTF-8,page,https://community.myfitnesspal.com/en/discussions/p5,a,.NumberedPager a.Previous,.NumberedPager a:nth-child(n+2):nth-last-child(n+3),.NumberedPager a.Next,,,0
-T,47,GET,UTF-8,page,https://community.myfitnesspal.com/en/discussions/p20,a,.NumberedPager a.Previous,.NumberedPager a:nth-child(n+2):nth-last-child(n+3),.NumberedPager a.Next,,,0
 T,48,GET,UTF-8,page,https://www.psychologytoday.com/intl,n,,,a.page-link,,,0
 T,49,GET,UTF-8,page,https://www.psychologytoday.com/intl/blog-posts?page=1,a,li:nth-child(1) a.page-link,,li:nth-child(3) a.page-link,,,0
 T,50,GET,UTF-8,page,https://www.medscape.com/,n,,,,,,1
