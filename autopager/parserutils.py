@@ -148,6 +148,10 @@ def position_check(file, parser, tagParser):
         i+=1
     return True
 
+def get_first_tag(parser, html):
+    parser._reset()
+    parser.feed(html)
+    return parser.start_tags[0][0]
 
 # In[ ]:
 
