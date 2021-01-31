@@ -54,7 +54,7 @@ T,52,GET,UTF-8,ACD,https://www.ylighting.com/,n,,,,,,1
 T,53,GET,UTF-8,ACD,https://www.1stoplighting.com,n,,,,,,1
 T,54,GET,UTF-8,ACD,https://www.dmlights.com,n,,,,,,1
 T,55,GET,UTF-8,alexa,https://bangqu.com/index.html,a,,.pagination li:not(:last-child) a,.pagination li:last-child a,,,0
-T,56,GET,UTF-8,alexa,https://bangqu.com/index.html?pagenum=4,a,.pagination li:nth-child(1) a,.pagination li:nth-child(n+2):nth-last-child(n+2) a,.pagination li:nth-last-child(1) a,,,0
+T,56,GET,UTF-8,ACD,https://www.globalpropertyguide.com/Asia,n,,,,,,
 T,57,GET,UTF-8,alexa,https://bangqu.com/index.html?pagenum=10,a,.pagination li:nth-child(1) a,.pagination li:nth-child(n+2):nth-last-child(n+2) a,.pagination li:nth-last-child(1) a,,,0
 T,58,GET,UTF-8,alexa,http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=japan&fenlei=256&rsv_pq=82d40a510002f5fa&rsv_t=eda3ZpU0d7wbxvPiI8dQjph1yppDXZspGXtmJkWlZ%2Bk9ai0t6SMniYOlr%2Bs&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=8&rsv_sug1=2&rsv_sug7=100&rsv_sug2=0&rsv_btype=i&inputT=2566&rsv_sug4=3837,a,,.page-inner a:not(.n),.page-inner a.n,,,0
 T,59,GET,UTF-8,alexa,http://www.baidu.com/,n,,,,,,1
@@ -72,7 +72,7 @@ T,70,GET,UTF-8,alexa,https://www.bing.com/search?q=python&form=QBLH&sp=-1&pq=pyt
 T,71,GET,UTF-8,alexa,https://www.bing.com/search?q=python&sp=-1&pq=pytho&sc=8-5&qs=n&sk=&cvid=9221794471FA4E1BB14CE4A657B1910C&first=21&FORM=PERE1,a,.b_pag li:first-child a,.b_pag li:nth-child(n+2):nth-last-child(n+2) a,.b_pag li:last-child a,,,0
 T,72,GET,UTF-8,alexa,https://www.nicovideo.jp/,n,,,,,,1
 T,73,GET,UTF-8,alexa,https://anime.nicovideo.jp/?ref=nicotop_theme,n,,,,,,1
-T,74,GET,UTF-8,alexa,https://dic.nicovideo.jp/b/a/%E3%81%9F%E3%81%A8%E3%81%88%E3%81%B0%E3%83%A9%E3%82%B9%E3%83%88%E3%83%80%E3%83%B3%E3%82%B8%E3%83%A7%E3%83%B3%E5%89%8D%E3%81%AE%E6%9D%91%E3%81%AE%E5%B0%91%E5%B9%B4%E3%81%8C%E5%BA%8F%E7%9B%A4%E3%81%AE%E8%A1%97%E3%81%A7%E6%9A%AE%E3%82%89%E3%81%99%E3%82%88%E3%81%86%E3%81%AA%E7%89%A9%E8%AA%9E/91-,a,.st-pg_contents a:first-child,.st-pg_contents a:not(.navi),.st-pg_contents a:last-child,,,0
+T,74,GET,UTF-8,ACD,https://activerain.com/,a,,.pagination li:nth-child(n+2):nth-last-child(n+2) a,.pagination li:nth-last-child(1) a,,,0
 T,75,GET,UTF-8,alexa,https://dic.nicovideo.jp/a/%E3%82%A4%E3%82%AB%E3%82%8C%E3%81%9F%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E3%82%92%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B%E3%81%9C%21,n,,,,,,1
 T,76,GET,UTF-8,alexa,https://dic.nicovideo.jp/b/a/%E3%81%9F%E3%81%A8%E3%81%88%E3%81%B0%E3%83%A9%E3%82%B9%E3%83%88%E3%83%80%E3%83%B3%E3%82%B8%E3%83%A7%E3%83%B3%E5%89%8D%E3%81%AE%E6%9D%91%E3%81%AE%E5%B0%91%E5%B9%B4%E3%81%8C%E5%BA%8F%E7%9B%A4%E3%81%AE%E8%A1%97%E3%81%A7%E6%9A%AE%E3%82%89%E3%81%99%E3%82%88%E3%81%86%E3%81%AA%E7%89%A9%E8%AA%9E/151-,a,.st-pg_contents a:first-child,.st-pg_contents a:not(.navi),,,,0
 T,77,GET,UTF-8,alexa,https://www.ebay.com/,n,,,,,,1
@@ -81,13 +81,13 @@ T,79,GET,UTF-8,alexa,https://kakaku.com/,n,,,,,,1
 T,80,GET,UTF-8,alexa,https://kakaku.com/kaden/,n,,,,,,1
 T,81,GET,UTF-8,alexa,https://yandex.ru/search/?lr=111618&text=python,a,,.pager__items a:not(:last-child),.pager__items a:last-child,,,0
 T,82,GET,UTF-8,alexa,https://chaturbate.com/,a,.paging a.prev,.paging a:not(.prev):not(.next),.paging a.next,,,0
-T,83,GET,UTF-8,alexa,https://chaturbate.com/?page=3,a,.paging a.prev,.paging a:not(.prev):not(.next),.paging a.next,,,0
-T,84,GET,UTF-8,alexa,https://chaturbate.com/?page=8,a,.paging a.prev,.paging a:not(.prev):not(.next),.paging a.next,,,0
+T,83,GET,UTF-8,ACD,https://www.globest.com/technology/,n,,,,,,
+T,84,GET,UTF-8,ACD,http://blog.rismedia.com/#close,a,,a.inactive,.pagination a:nth-child(5),a.lastpag,,
 T,85,GET,UTF-8,alexa,https://www.huanqiu.com/,n,,,,,,1
 T,86,GET,UTF-8,alexa,https://taiwan.huanqiu.com/,n,,,,,,1
 T,87,GET,UTF-8,alexa,https://taiwan.huanqiu.com/article/41UsqrlnP9Q,n,,,,,,1
 T,88,GET,UTF-8,alexa,https://www.naver.com/,n,,,,,,1
-T,89,GET,UTF-8,alexa,https://news.naver.com/main/list.nhn?mode=LSD&mid=sec&sid1=001,a,,.paging a:not(.next),.paging a.next,,,0
+T,89,GET,UTF-8,alexa,https://movie.naver.com/movie/running/movieclip.nhn,a,,.paging a:not(.pg_next),.paging a.pg_next,,,
 T,90,GET,UTF-8,alexa,https://news.naver.com/main/list.nhn?mode=LSD&mid=sec&sid1=001&date=20210131&page=6,a,,.paging a:not(.next),.paging a.next,,,0
 T,91,GET,UTF-8,alexa,https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0,a,,.pagination a:not(.button_next),.pagination a.button_next,,,0
 T,92,GET,UTF-8,alexa,https://www.aliexpress.com/,n,,,,,,1
