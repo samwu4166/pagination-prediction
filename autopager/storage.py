@@ -56,13 +56,13 @@ class Storage(object):
         print("Test file list: ")
         print(TEST_FILE_MAP)
         
-    def get_Xy(self, validate=True, contain_button=True, file_type='T'):
+    def get_Xy(self, validate=True, contain_button=True, file_type='T', scaled_page = 'normal'):
         X, y, scaled_pages = [], [], []
         for row in self.iter_records(contain_button, file_type):
             html = self._load_html(row)
             parser._reset()
             parser.feed(html)
-            tag_positions = parser.get_scaled_page()
+            tag_positions = parser.get_scaled_page(scaler = scaled_page)
             selectors = {key: row[key] for key in self.label_map.keys()}
             root = parsel.Selector(html)
             xseq, yseq = get_xseq_yseq(root, selectors, validate=validate, contain_button=contain_button)
@@ -85,13 +85,13 @@ class Storage(object):
                 print(xseq)
                 print(yseq)
         return
-    def get_test_Xy(self, validate=True, contain_button=True):
+    def get_test_Xy(self, validate=True, contain_button=True, scaled_page = 'normal'):
         X, y, scaled_pages = [], [], []
         for row in self.iter_test_records():
             html = self._load_test_html(row)
             parser._reset()
             parser.feed(html)
-            tag_positions = parser.get_scaled_page()
+            tag_positions = parser.get_scaled_page(scaler = scaled_page)
             selectors = {key: row[key] for key in self.label_map.keys()}
 #             print(selectors)
             root = parsel.Selector(html)

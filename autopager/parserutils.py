@@ -15,7 +15,6 @@ from sklearn import preprocessing
 
 # In[6]:
 
-
 class TagParser(HTMLParser):
     def __init__(self):
         HTMLParser.__init__(self)
@@ -64,7 +63,12 @@ class MyHTMLParser(HTMLParser):
     def get_tags(self):
         return self.start_tags, self.end_tags
     
-    def get_scaled_page(self, only_train_data = True):
+    def get_scaled_page(self, only_train_data = True, scaler = 'normal'):
+        
+        if scaler != 'normal' and scaler != 'cos':
+#             print("scaler must be normal or cos !")
+            raise ValueError("scaler must be normal or cos !")
+        
         def PageScaler(x, y):
             x = np.array(x)
             y = np.array(y)
@@ -74,9 +78,12 @@ class MyHTMLParser(HTMLParser):
 #             print(f"max_x: {max_x}")
 #             print(f"max_y: {max_y}")
 #             print(f"tran: {tranTheta}")
+            
             x_scaler = preprocessing.MinMaxScaler((0, 1))
-        #     y_scaler = preprocessing.MinMaxScaler((0, tranTheta))
-            y_scaler = preprocessing.MinMaxScaler((0, 1))
+            if scaler == 'normal':
+                y_scaler = preprocessing.MinMaxScaler((0, 1))
+            elif scaler == 'cos':
+                y_scaler = preprocessing.MinMaxScaler((0, tranTheta))
             x_scaled = x_scaler.fit_transform(x.reshape(-1, 1))
             y_scaled = y_scaler.fit_transform(y.reshape(-1, 1))
             return x_scaled, y_scaled
