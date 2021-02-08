@@ -56,13 +56,13 @@ class Storage(object):
         print("Test file list: ")
         print(TEST_FILE_MAP)
         
-    def get_Xy(self, validate=True, contain_button=True, file_type='T', scaled_page = 'normal'):
+    def get_Xy(self, validate=True, contain_button=True, contain_position=False, file_type='T', scaled_page = 'normal'):
         X, y, scaled_pages = [], [], []
+        print(f"Contain position: {contain_position}")
         for row in self.iter_records(contain_button, file_type):
             html = self._load_html(row)
             parser._reset()
             parser.feed(html)
-            tag_positions = parser.get_scaled_page(scaler = scaled_page)
             selectors = {key: row[key] for key in self.label_map.keys()}
             root = parsel.Selector(html)
             xseq, yseq = get_xseq_yseq(root, selectors, validate=validate, contain_button=contain_button)
@@ -70,7 +70,9 @@ class Storage(object):
             print(f"Finish: Get Page {row['File Name']} (Encoding: {row['Encoding']})records ... (len: {len(yseq)})")
             X.append(xseq)
             y.append(yseq)
-            scaled_pages.append(tag_positions[:len(xseq)])
+            if contain_position is True:
+                tag_positions = parser.get_scaled_page(scaler = scaled_page)
+                scaled_pages.append(tag_positions[:len(xseq)])
         return X, y, scaled_pages
     
     def test_selector(self, target, validate=True, contain_button=True, file_type='T'):
@@ -85,21 +87,22 @@ class Storage(object):
                 print(xseq)
                 print(yseq)
         return
-    def get_test_Xy(self, validate=True, contain_button=True, scaled_page = 'normal'):
+    def get_test_Xy(self, validate=True, contain_button=True, contain_position=False, scaled_page = 'normal'):
         X, y, scaled_pages = [], [], []
+        print(f"Contain position: {contain_position}")
         for row in self.iter_test_records():
             html = self._load_test_html(row)
             parser._reset()
             parser.feed(html)
-            tag_positions = parser.get_scaled_page(scaler = scaled_page)
             selectors = {key: row[key] for key in self.label_map.keys()}
-#             print(selectors)
             root = parsel.Selector(html)
             xseq, yseq = get_xseq_yseq(root, selectors, validate=validate, contain_button=contain_button)
             yseq = [self.label_map.get(_y, _y) for _y in yseq]
             X.append(xseq)
             y.append(yseq)
-            scaled_pages.append(tag_positions[:len(xseq)])
+            if contain_position is True:
+                tag_positions = parser.get_scaled_page(scaler = scaled_page)
+                scaled_pages.append(tag_positions[:len(xseq)])
         return X, y, scaled_pages
 
     def iter_records(self, contain_button, file_type):
