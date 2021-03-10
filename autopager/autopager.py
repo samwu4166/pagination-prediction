@@ -6,7 +6,7 @@ from six.moves.urllib.parse import urljoin
 import six.moves.cPickle as pickle
 
 import parsel
-from autopager.htmlutils import get_links
+from autopager.htmlutils import get_links, get_every_button_and_a
 from autopager.model import page_to_features, get_crf, AUTOPAGER_LIMITS
 from autopager.storage import Storage
 
@@ -52,7 +52,7 @@ def extract(page, direct=True, prev=True, next=True):
 
 
 class AutoPager(object):
-    DEFAULT_CRF_PATH = os.path.join(os.path.dirname(__file__), 'autopager.crf')
+    DEFAULT_CRF_PATH = os.path.join(os.path.dirname(__file__), 'models/autopager.crf')
 
     def __init__(self, path=None, crf=None):
         if crf is not None and path is not None:
@@ -69,7 +69,7 @@ class AutoPager(object):
                 crf = pickle.load(f)
         self.crf = crf
 
-    def urls(self, page, baseurl=auto, direct=True, prev=True, next=True):
+    def urls(self, page, baseurl=auto, direct=True, prev=False, next=True):
         """
         Return a list of pagination URLs extracted form the page.
         When baseurl is None relative URLs are returned; pass baseurl
@@ -86,7 +86,7 @@ class AutoPager(object):
             urls = [urljoin(baseurl, url) for url in urls]
         return urls
 
-    def select(self, page, direct=True, prev=True, next=True):
+    def select(self, page, direct=True, prev=False, next=True):
         """
         Return parsel.SelectorList with pagination <a> elements.
 
@@ -97,7 +97,7 @@ class AutoPager(object):
         links = self.extract(page, prev=prev, next=next, direct=direct)
         return parsel.SelectorList([x for y, x in links])
 
-    def extract(self, page, direct=True, prev=True, next=True):
+    def extract(self, page, direct=True, prev=False, next=True):
         """
         Return an iterator of (link_type, link) tuples with pagination links.
         link_type is one of "PAGE", "PREV" and "NEXT" constants;
@@ -107,9 +107,8 @@ class AutoPager(object):
         'next page', 'previous page' links and links to specific pages.
         By default, all link types are returned.
         """
-        sel = _any2selector(page)
-        links = get_links(sel)
-        links = links[:AUTOPAGER_LIMITS.max_links]
+        sel = parsel.Selector(page)
+        links = get_every_button_and_a(sel)
         xseq = page_to_features(links)
         yseq = self.crf.predict_single(xseq)
         for x, y in zip(links, yseq):

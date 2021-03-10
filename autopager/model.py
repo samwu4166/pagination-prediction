@@ -36,7 +36,9 @@ from autopager.htmlutils import (
 )
 from autopager.limits import Limits
 from autopager.utils import normalize, tokenize, ngrams_wb, replace_digits
-
+from autopager.parserutils import (TagParser, MyHTMLParser, draw_scaled_page, position_check, compare_tag, get_first_tag)
+parser = MyHTMLParser()
+tagParser = TagParser()
 
 AUTOPAGER_LIMITS = Limits()
 
@@ -65,23 +67,23 @@ def _as_list(generator, limit=None):
     """
     return list(generator if limit is None else islice(generator, 0, limit))
 
-
+#New version
 def link_to_features(link):
     text = normalize(get_link_text(link))
-
     href = get_link_href(link)
+    if href is None:
+        href = ""
     p = urlsplit(href)
-
-    query_parsed = parse_qsl(p.query)
+    query_parsed = parse_qsl(p.query) #parse query string from path
     query_param_names = [k.lower() for k, v in query_parsed]
     query_param_names_ngrams = _as_list(ngrams_wb(
         " ".join([normalize(name) for name in query_param_names]), 3, 5, True
     ))
-
+    parent = link.xpath('..').extract()
+    parent = get_first_tag(parser, parent[0])
     elem = get_selector_root(link)
     elem_target = _elem_attr(elem, 'target')
     elem_rel = _elem_attr(elem, 'rel')
-
     # Classes of link itself and all its children.
     # It is common to have e.g. span elements with fontawesome
     # arrow icon classes inside <a> links.
@@ -93,56 +95,105 @@ def link_to_features(link):
         'bias': 3.0,
         'isdigit': text.isdigit(),
         'isalpha': text.isalpha(),
-        'elem-target': elem_target,
-        'elem-rel': elem_rel,
+#         'elem-target': elem_target, # Not effective
+#         'elem-rel': elem_rel, # Not effective
         'num-tokens%s' % _num_tokens_feature(text): 1.0,
 
         'text': _as_list(ngrams_wb(replace_digits(text), 2, 5),
                          AUTOPAGER_LIMITS.max_text_features),
         'text-exact': replace_digits(text.strip()[:20].strip()),
+        'parent-tag': parent, #Really good at Normal, but get worse in EVENT_SOURCE
         'class': _as_list(ngrams_wb(css_classes, 4, 5),
                           AUTOPAGER_LIMITS.max_css_features),
+        'class_disabled': True if 'disabled' in css_classes else False, #Effective
         'query': query_param_names_ngrams,
-
+        'has-href': False if href is "" else True,
         'path-has-page': 'page' in p.path.lower(),
         'path-has-pageXX': re.search(r'[/-](?:p|page\w?)/?\d+', p.path.lower()) is not None,
         'path-has-number': any(part.isdigit() for part in p.path.split('/')),
 
         'href-has-year': re.search('20\d\d', href) is not None,
+#         'href-had-self-redirection': '#' in href # effect to bad performance
     }
 
-    # Unused features
-    # ===============
-    #
-    # href_ngrams = ngrams_striped(p.path + '?' + p.query, 5, 5)
-    # query_param_patterns = [
-    #     "%s=%s" % (k.lower(), number_pattern(v, ratio=0.0).strip())
-    #     for k, v in query_parsed
-    # ]
-    # path_tokens = tokenize(number_pattern(p.path.lower(), 0.1))
-    # path_ngrams = ngrams_striped(p.path, 4, 4)
-    # query_ngrams = ngrams_striped(p.query, 4, 4)
-    #
-    # path_tokens = ngrams_wb(replace_digits(p.path.lower().replace('/', ' ')), 3, 5)
-    # elem_css_class = _elem_attr(elem, 'class')
-    # elem_id = _elem_attr(elem, 'id')
-    # elem_title = _elem_attr(elem, 'title')
-    #
-    # path = path_tokens
-    # bad_href = "javascript://" in _href or p.fragment and (not p.query or p.path)
-    # title = ngrams_wb(replace_digits(normalize(elem_title)), 4, 5)
-    #
-    # 'css-class-ngrams': ngrams_striped(link_classes, 4, 5),
-    # 'css-parent-class-ngrams': ngrams_striped(parent_classes, 4, 5),
-    # 'query_param_name': query_param_names,
-    # 'query_param_pattern': query_param_patterns,
-    # 'path_tokens': path_tokens,
-    # 'text_pattern': normalize(text_pattern),
-    # 'text_ngrams': text_ngrams,
-    #
-    # 'id': ngrams_wb(elem_id, 4, 4),
-    # 'id-class-ngrams': ngrams_striped(elem_css_class + ' ' + elem_id, 5, 5),
-    # 'id': tokenize(elem_id),
+#Old version
+# def link_to_features(link):
+#     text = normalize(get_link_text(link))
+
+#     href = get_link_href(link)
+#     p = urlsplit(href)
+
+#     query_parsed = parse_qsl(p.query)
+#     query_param_names = [k.lower() for k, v in query_parsed]
+#     query_param_names_ngrams = _as_list(ngrams_wb(
+#         " ".join([normalize(name) for name in query_param_names]), 3, 5, True
+#     ))
+
+#     elem = get_selector_root(link)
+#     elem_target = _elem_attr(elem, 'target')
+#     elem_rel = _elem_attr(elem, 'rel')
+
+#     # Classes of link itself and all its children.
+#     # It is common to have e.g. span elements with fontawesome
+#     # arrow icon classes inside <a> links.
+#     self_and_children_classes = ' '.join(link.xpath(".//@class").extract())
+#     parent_classes = ' '.join(link.xpath('../@class').extract())
+#     css_classes = normalize(parent_classes + ' ' + self_and_children_classes)
+
+#     return {
+#         'bias': 3.0,
+#         'isdigit': text.isdigit(),
+#         'isalpha': text.isalpha(),
+#         'elem-target': elem_target,
+#         'elem-rel': elem_rel,
+#         'num-tokens%s' % _num_tokens_feature(text): 1.0,
+
+#         'text': _as_list(ngrams_wb(replace_digits(text), 2, 5),
+#                          AUTOPAGER_LIMITS.max_text_features),
+#         'text-exact': replace_digits(text.strip()[:20].strip()),
+#         'class': _as_list(ngrams_wb(css_classes, 4, 5),
+#                           AUTOPAGER_LIMITS.max_css_features),
+#         'query': query_param_names_ngrams,
+
+#         'path-has-page': 'page' in p.path.lower(),
+#         'path-has-pageXX': re.search(r'[/-](?:p|page\w?)/?\d+', p.path.lower()) is not None,
+#         'path-has-number': any(part.isdigit() for part in p.path.split('/')),
+
+#         'href-has-year': re.search('20\d\d', href) is not None,
+#     }
+
+#     # Unused features
+#     # ===============
+#     #
+#     # href_ngrams = ngrams_striped(p.path + '?' + p.query, 5, 5)
+#     # query_param_patterns = [
+#     #     "%s=%s" % (k.lower(), number_pattern(v, ratio=0.0).strip())
+#     #     for k, v in query_parsed
+#     # ]
+#     # path_tokens = tokenize(number_pattern(p.path.lower(), 0.1))
+#     # path_ngrams = ngrams_striped(p.path, 4, 4)
+#     # query_ngrams = ngrams_striped(p.query, 4, 4)
+#     #
+#     # path_tokens = ngrams_wb(replace_digits(p.path.lower().replace('/', ' ')), 3, 5)
+#     # elem_css_class = _elem_attr(elem, 'class')
+#     # elem_id = _elem_attr(elem, 'id')
+#     # elem_title = _elem_attr(elem, 'title')
+#     #
+#     # path = path_tokens
+#     # bad_href = "javascript://" in _href or p.fragment and (not p.query or p.path)
+#     # title = ngrams_wb(replace_digits(normalize(elem_title)), 4, 5)
+#     #
+#     # 'css-class-ngrams': ngrams_striped(link_classes, 4, 5),
+#     # 'css-parent-class-ngrams': ngrams_striped(parent_classes, 4, 5),
+#     # 'query_param_name': query_param_names,
+#     # 'query_param_pattern': query_param_patterns,
+#     # 'path_tokens': path_tokens,
+#     # 'text_pattern': normalize(text_pattern),
+#     # 'text_ngrams': text_ngrams,
+#     #
+#     # 'id': ngrams_wb(elem_id, 4, 4),
+#     # 'id-class-ngrams': ngrams_striped(elem_css_class + ' ' + elem_id, 5, 5),
+#     # 'id': tokenize(elem_id),
 
 
 def page_to_features(xseq):
