@@ -6,6 +6,14 @@ import uuid
 
 from urllib.parse import unquote
 
+import sys
+
+sys.path.insert(0, '../../..')
+
+from autopager.autopager import get_shared_autopager
+
+shared_autopager = get_shared_autopager()
+
 router = APIRouter(
 
     prefix="/autopager",
@@ -27,6 +35,7 @@ fake_items_db = {"test_url1": {"page": ["url1","url2"], "next": ["url1"]}, "test
 @router.get("/")
 
 async def read_items():
+    print("CURRENT_CRF_MODEL: ",shared_autopager.DEFAULT_CRF_PATH)
     return fake_items_db
 
 

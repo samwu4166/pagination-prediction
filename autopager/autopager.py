@@ -4,7 +4,7 @@ import os
 import six
 from six.moves.urllib.parse import urljoin
 import six.moves.cPickle as pickle
-
+import pathlib
 import parsel
 from autopager.htmlutils import get_links, get_every_button_and_a
 from autopager.model import page_to_features, get_crf, AUTOPAGER_LIMITS
@@ -52,7 +52,7 @@ def extract(page, direct=True, prev=True, next=True):
 
 
 class AutoPager(object):
-    DEFAULT_CRF_PATH = os.path.join(os.path.dirname(__file__), 'models/autopager.crf')
+    DEFAULT_CRF_PATH = os.path.join(pathlib.Path(__file__).parent.absolute(), 'models/autopager.crf')
 
     def __init__(self, path=None, crf=None):
         if crf is not None and path is not None:
