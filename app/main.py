@@ -6,7 +6,7 @@ from .routers import autopager
 app = FastAPI(
     title="Pagination Prediction",
     description="This is a RESTAPI project of pagination prediction.",
-    # dependencies=[Depends(get_query_token)],
+    dependencies=[Depends(get_token_header)],
     version="0.0.1",
 )
 origins = ["*"]

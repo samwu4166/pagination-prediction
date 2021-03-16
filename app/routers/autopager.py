@@ -48,9 +48,9 @@ async def read_item(url_id: str):
     return {"result": fake_items_db[url_id], "url_id": url_id}
 
 
-@router.post("/{url}")
-async def predict_item(url: str):
+@router.post("/{encoded_url}")
+async def predict_item(encoded_url: str):
     _uid = uuid.uuid1()
-    uncode_url = unquote(url)
-    print("Get post action: ", uncode_url)
+    uncoded_url = unquote(encoded_url)
+    print("Get post action: ", uncoded_url)
     return {"uuid": _uid, "result": {"page": ["url1","url2"], "next": ["url1"]}}
