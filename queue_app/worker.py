@@ -8,7 +8,7 @@ from datetime import datetime
 from database import (
     add_page
 )
-from publisher import publish_message
+from publisher import publish_message, publish_error
 
 sys.path.insert(0, os.path.abspath(r".."))
 from autopager.autopager import get_shared_autopager
@@ -20,8 +20,13 @@ working_queue = PikaQueue(RABBIT_HOST, RABBIT_PORT, RABBIT_ACCOUNT, RABBIT_PASSW
 def main():
     #working_queue.DeclareQueue(QUEUE_NAME)
     def callback(ch, method, properties, body):
-        print(" [x] Received %r" % body.decode())
-        page_workflow(body.decode())
+        decoded_url = body.decode()
+        print(" [x] Received %r" % decoded_url)
+        try:
+            page_workflow(decoded_url)
+        except Exception as e:
+            publish_error(decoded_url)
+            print("Error! url: ",decoded_url)
         print(" [x] Done")
         ch.basic_ack(delivery_tag=method.delivery_tag)
     def page_workflow(page_url):
