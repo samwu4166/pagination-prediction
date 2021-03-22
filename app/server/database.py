@@ -1,16 +1,16 @@
 import motor.motor_asyncio
 from bson.objectid import ObjectId
-from .settings import MONGO_USER, MONGO_PASSWORD
+from .settings import MONGO_USER, MONGO_PASSWORD, MONGO_PORT, DATABASE, COLLECTION
 
 # print(f"Loading settings, user:{MONGO_USER}, passwd:{MONGO_PASSWORD}")
 
-MONGO_DETAILS = f"mongodb://{MONGO_USER}:{MONGO_PASSWORD}@localhost:27000"
+MONGO_DETAILS = f"mongodb://{MONGO_USER}:{MONGO_PASSWORD}@localhost:{MONGO_PORT}"
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 
-database = client.pageDB
+database = client[DATABASE]
 
-page_collection = database.get_collection("predictResult")
+page_collection = database.get_collection(COLLECTION)
 
 
 # helpers

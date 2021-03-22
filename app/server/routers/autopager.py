@@ -39,7 +39,7 @@ router = APIRouter(
 
     tags=["autopager"],
 
-    # dependencies=[Depends(get_token_header)],
+    dependencies=[Depends(get_token_header)],
 
     responses={404: {"description": "Not found"}},
 
