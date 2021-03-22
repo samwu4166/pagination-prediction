@@ -9,7 +9,7 @@ from database import (
     add_page
 )
 from publisher import publish_message, publish_error
-
+import validators
 sys.path.insert(0, os.path.abspath(r".."))
 from autopager.autopager import get_shared_autopager
 from autopager.preprocessing import generate_page_component
@@ -21,9 +21,13 @@ def main():
     #working_queue.DeclareQueue(QUEUE_NAME)
     def callback(ch, method, properties, body):
         decoded_url = body.decode()
+        decoded_url = decoded_url.strip('"')
         print(" [x] Received %r" % decoded_url)
         try:
-            page_workflow(decoded_url)
+            if validators.url(decoded_url):
+                page_workflow(decoded_url)
+            else:
+                print("Not a valid url, pass task.")
         except Exception as e:
             publish_error(decoded_url)
             print("Error! url: ",decoded_url)
@@ -31,7 +35,7 @@ def main():
         ch.basic_ack(delivery_tag=method.delivery_tag)
     def page_workflow(page_url):
         _uid = ObjectId()
-        uncoded_url = page_url.strip('"')
+        uncoded_url = page_url
         # print(f"Get request: {uncoded_url}")
         autopager = get_shared_autopager()
         page_component = generate_page_component(uncoded_url)
