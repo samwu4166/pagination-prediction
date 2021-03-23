@@ -29,8 +29,9 @@ def main():
             else:
                 print("Not a valid url, pass task.")
         except Exception as e:
-            publish_error(decoded_url)
-            print("Error! url: ",decoded_url)
+            if QUEUE_NAME == EVENT_QUEUE:
+                publish_error(decoded_url)
+            print(f"Error! url: {decoded_url} ({e})")
         print(" [x] Done")
         ch.basic_ack(delivery_tag=method.delivery_tag)
     def page_workflow(page_url):
@@ -44,8 +45,13 @@ def main():
         result_component = {"tid": _uid, "url": uncoded_url, "urls": result_urls, "created_time": current_time}
         ### add result to Mongo
         new_page = add_page(result_component)
-        publish_message(new_page["tid"])
-        print("Success! result tid: ",new_page["tid"])
+        if new_page["status"] == False or new_page["tid"] == None:
+            print("Bypass this url. (Document already exist.)")
+        else:
+            if QUEUE_NAME == EVENT_QUEUE:
+                print("Publish to ExtractQueue.")
+                publish_message(new_page["tid"])
+            print("Success! result tid: ",new_page["tid"])
     working_queue.GetFromQueue(QUEUE_NAME, callback, False)
 def nothing(ch, method, properties, body):
     print(body)
