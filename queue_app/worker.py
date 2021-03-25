@@ -15,7 +15,10 @@ from autopager.autopager import get_shared_autopager
 from autopager.preprocessing import generate_page_component
 
 QUEUE_NAME = EVENT_QUEUE
-working_queue = PikaQueue(RABBIT_HOST, RABBIT_PORT, RABBIT_ACCOUNT, RABBIT_PASSWORD)
+try:
+    working_queue = PikaQueue(RABBIT_HOST, RABBIT_PORT, RABBIT_ACCOUNT, RABBIT_PASSWORD)
+except Exception as e:
+    print(f"Problem occured when connected to RabbitMQ ({e})")
 
 def main():
     #working_queue.DeclareQueue(QUEUE_NAME)
