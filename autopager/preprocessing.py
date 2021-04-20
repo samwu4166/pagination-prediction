@@ -69,6 +69,7 @@ NB_TO_PY = True
 def _get_html_from_selenium(url):
     # 然後將options加入Chrome方法裡面，至於driver請用executable_path宣告進入
     browser=webdriver.Chrome(options=chrome_options)
+    browser.set_page_load_timeout(30)
     # 在瀏覽器打上網址連入
     browser.get(url) 
     html = browser.page_source
@@ -98,7 +99,7 @@ def get_selectors_from_file(html):
     return xseq
 
 
-# In[17]:
+# In[18]:
 
 
 if __name__ == '__main__':
