@@ -35,13 +35,10 @@ def retrieve_pages():
 # Add a new page into to the database
 def add_page(page_data: dict) -> dict:
     status_data = {"status": False, "tid": None}
-    if page_collection.find({'url': page_data['url']}).count() < 1:
-        page = page_collection.insert_one(page_data)
-        new_page = page_collection.find_one({"tid": ObjectId(page_data['tid'])})
-        status_data["status"] = True
-        status_data["tid"] = str(new_page["tid"])
-    else:
-        print("Url already exists")
+    page = page_collection.insert_one(page_data)
+    new_page = page_collection.find_one({"tid": ObjectId(page_data['tid'])})
+    status_data["status"] = True
+    status_data["tid"] = str(new_page["tid"])
     return status_data
 
 
