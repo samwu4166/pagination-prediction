@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
+<head>
+<meta name="viewport" content="width=1250">
+<meta charset="UTF-8">
+<title>神魔之塔 哈啦板 - 巴哈姆特</title>
+
+<meta property="og:site_name" content="巴哈姆特電玩資訊站">
+<meta property="fb:app_id" content="668497826514848">
+<meta name="description" content="歡迎來到神魔之塔哈啦板，最新資訊及情報分享、精華好文查找、創作交流討論，盡在巴哈姆特！">
+<meta property="og:description" content="歡迎來到神魔之塔哈啦板，最新資訊及情報分享、精華好文查找、創作交流討論，盡在巴哈姆特！"/>
+<link href="https://i2.bahamut.com.tw/css/basic.css?v=1598339851" rel="stylesheet" type="text/css" />
+<link href="https://i2.bahamut.com.tw/css/search.css?v=1600912258" rel="stylesheet" type="text/css" />
+<link href="https://i2.bahamut.com.tw/css/index_top.css?v=1573528117" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teko:300,400">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://i2.bahamut.com.tw/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link rel="apple-touch-icon" href="https://i2.bahamut.com.tw/apple-touch-icon.png" />
+<script src="https://i2.bahamut.com.tw/js/sys.js?v=1602574456"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://i2.bahamut.com.tw/js/BAHA_EGG.js?v=1583139657"></script>
+<script src="https://i2.bahamut.com.tw/js/rsearch.js?v=1588644554"></script>
+<script src="https://i2.bahamut.com.tw/js/plugins/js.cookie-2.1.4.js?v=1502676176"></script>
+<script src="https://i2.bahamut.com.tw/js/plugins/dialogify.min.js?v=1591687434"></script>
+<script src="https://i2.bahamut.com.tw/js/user_login.js?v=1566194792"></script>
+<script src="https://i2.bahamut.com.tw/js/BH_topBar_noegg.js?v=1603693431" defer></script>
+<script src="https://i2.bahamut.com.tw/js/BH_mainmenu.js?v=1603348681" defer></script>
+<script src="https://i2.bahamut.com.tw/js/changeText.js?v=1581390583"></script>
+<script src="https://i2.bahamut.com.tw/js/util.js?v=1590639293"></script>
+<script src="https://i2.bahamut.com.tw/js/dfp.js?v=1598425998"></script>
+<script>
+jQuery(document).ready(function($) {
+if (typeof BH_AlkasooD === 'function') {
+BH_AlkasooD($);
+}
+});
+
+// anti adblock
+var AntiAd = AntiAd || {};
+(function(AntiAd) {
+'use strict';
+
+AntiAd.flag = false;
+AntiAd.whiteList = [];
+
+AntiAd.verifyLink = function (link) {}
+AntiAd.block = function() {}
+AntiAd.check = function(element) {}
+})(AntiAd);
+</script>
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/im_layout_lib.js?v=1586846585"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/im_top_bar.js?v=1603175569"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teko:300,400">
+<link href="https://i2.bahamut.com.tw/css/forum.css?v=1599039412" rel="stylesheet" type="text/css">
+<link href="https://i2.bahamut.com.tw/css/forum_wallpaper_C.css" rel="stylesheet" type="text/css">
+<link href="https://i2.bahamut.com.tw/css/plugins/tippy-1.4.0.css?v=1508309674" rel="stylesheet" type="text/css">
+<link href="https://i2.bahamut.com.tw/css/plugins/slick.css?v=1495087872" rel="stylesheet" type="text/css">
+<link href="https://i2.bahamut.com.tw/css/plugins/gamercard.css?v=1556273115" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/plugins/tippy-1.4.0.min.js?v=1508309663"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/plugins/slick-1.6.0.min.js?v=1495088259"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/plugins/gamercard.js?v=1598429595"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/forum_new.js?v=1591328284"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/embed_player.js?v=1532055550"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/forum_lastBoard.js?v=1525330826"></script>
+<script type="text/javascript">
+function forum_search_checkdata(){
+//精華區要另開視窗
+if( '請輸入搜尋字串...' == document.forum_search.sval.value || '' == document.forum_search.sval.value ) {
+alert('請輸入搜尋內容');
+return false;
+}
+if(7 == document.forum_search.stype.value){
+document.forum_search.target="_blank";
+}
+
+if(ga){
+ga('send', 'event', {
+eventCategory: '互動',
+eventAction: '哈啦區',
+eventLabel: '桌面搜尋',
+transport: 'beacon'
+});
+
+if (23805 == 60076) {
+ga('send', 'event', {
+eventCategory: '互動',
+eventAction: '哈啦區',
+eventLabel: '桌面搜尋-場外',
+transport: 'beacon'
+});
+}
+}
+document.forum_search.submit();
+return false;
+}
+
+function showbmset(bsn){
+//$.lightbox(bsn);
+egg.ajax({
+url: '/ajax/set_new.php',
+method: 'get',
+data: 'bsn='+bsn,
+success: function(text){
+egg.lightbox(text);
+}
+});
+}
+
+function addfavorite(bsn) {
+getCSRFToken().done(function(token) {
+jQuery.ajax({
+url: '/ajax/addfavorite.php',
+method: 'POST',
+data: { brdsn: bsn, token: token },
+}).done(function(code) {
+switch(code) {
+case 'nologin':
+Dialogify.alert("您尚未登入");
+break;
+case 'added':
+Dialogify.alert("您已訂閱過此板");
+break;
+case 'success':
+Dialogify.alert("訂閱看板完成");
+break;
+default:
+Dialogify.alert("系統維護中！");
+}
+});
+});
+}
+
+function FORUM_C_share(bsn, snA) {
+bsn = parseInt(bsn, 10);
+snA = parseInt(snA, 10);
+
+if (!bsn || !snA || !FB) {
+return;
+}
+
+FB.ui({
+method: 'share_open_graph',
+action_type: 'og.likes',
+action_properties: JSON.stringify({
+object:'http://forum.gamer.com.tw/C.php?bsn=' + bsn + '&snA=' + snA,
+})
+}, function(response){});
+}
+
+function FORUM_Co_share(bsn, sn) {
+bsn = parseInt(bsn, 10);
+sn = parseInt(sn, 10);
+
+if (!bsn || !sn || !FB) {
+return;
+}
+
+FB.ui({
+method: 'share_open_graph',
+action_type: 'og.likes',
+action_properties: JSON.stringify({
+object:'http://forum.gamer.com.tw/Co.php?bsn=' + bsn + '&sn=' + sn,
+})
+}, function(response){});
+}
+
+function doLogin(backurl){
+backurl = 'https://acg.gamer.com.tw/'+backurl;
+setCookieNew('ckFrom', backurl, 'gamer.com.tw','/');
+location.href = 'https://user.gamer.com.tw/login.php';
+}
+</script>
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.gamer.com.tw/forum/B.php?bsn=23805">
+<link rel="canonical" href="https://forum.gamer.com.tw/A.php?bsn=23805">
+<meta property="og:title" content="神魔之塔 哈啦板 - 巴哈姆特">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://forum.gamer.com.tw/A.php?bsn=23805">
+<meta property="og:image" content="https://p2.bahamut.com.tw/FORUM/welcome/23805_1_1603511022.JPG?v=1603511023">
+<meta name="thumbnail" content="https://p2.bahamut.com.tw/FORUM/welcome/23805_1_1603511022.JPG?v=1603511023">
+<script type="application/ld+json">[{"@context":"http:\/\/schema.org","@type":"WebSite","name":"\u5df4\u54c8\u59c6\u7279\u96fb\u73a9\u8cc7\u8a0a\u7ad9","url":"https:\/\/www.gamer.com.tw\/","alternateName":"\u5df4\u54c8\u59c6\u7279"},{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/forum.gamer.com.tw\/","name":"\u54c8\u5566\u5340"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/forum.gamer.com.tw\/A.php?bsn=23805","name":"\u795e\u9b54\u4e4b\u5854"}}]}]</script>
+<link href="https://i2.bahamut.com.tw/css/acg_new.css?v=1600145520" rel="stylesheet" type="text/css">
+<link href="https://i2.bahamut.com.tw/css/forum_wide.css?v=1587021050" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/home_acg.js?v=1570615419"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/votesystem.js?v=1581644001"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/forum_daren.js?v=1539676942"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/movetomobile.js?v=1563334688"></script>
+<script src="https://i2.bahamut.com.tw/js/forum_common.js?v=1589179171"></script>
+
+<script type="text/javascript">
+var shownotifications = 1;
+
+
+if( '1' != $.cookie.get('ckNOMOBILE') ){
+headertomobile(navigator.userAgent||navigator.vendor||window.opera, 'https://m.gamer.com.tw/forum/B.php?bsn=23805');
+}
+
+function chkdata_vote( frm, opnum )
+{
+if( !chkoption(frm,"checkbox","op[]",1, opnum) ){
+Dialogify.alert('您未選擇或選擇超過限制！');
+return false;
+}
+else{
+return true;
+}
+}
+
+function change_info(bsn,page) {
+$.ajax({
+url: '/ajax/change_info.php',
+method: 'POST',
+param: 'bsn='+bsn+'&p='+page,
+success: function(text) {
+$('#info_html').html(text);
+}
+});
+}
+</script>
+<!--
+<PageMap>
+<DataObject type="thread">
+<Attribute name="filename" value="A" />
+<Attribute name="bsn" value="23805" />
+</DataObject>
+</PageMap>
+-->
+
+<script>
+
+if (window.Cookies) {
+BAHAID = Cookies.get('BAHAID') || "";
+} else if (window.getCookie) {
+BAHAID = getCookie( 'BAHAID' );
+} else if (window.jQuery && jQuery.cookie) {
+BAHAID = jQuery.cookie('BAHAID') || "";
+} else {
+BAHAID = "";
+}
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-108920-1', 'auto');
+
+ga('set', {"dimension1":"23805"});
+
+if (BAHAID) {
+ga('set', 'userId', BAHAID.toLowerCase());
+}
+
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+if (window.Cookies) {
+bahalv = Cookies.get('BAHALV') || "";
+} else if (window.getCookie) {
+bahalv = getCookie( 'BAHALV' );
+} else if (window.jQuery && jQuery.cookie) {
+bahalv = jQuery.cookie('BAHALV') || "";
+} else {
+bahalv = "";
+}
+
+bahalv = (bahalv) ? bahalv : 0;
+
+var fparam = location.search;
+var bsnary = fparam.match(/\d+/g);
+var gpt_bsn = (bsnary === null) ? 0 : bsnary[0];
+
+googletag.cmd.push(function() {
+googletag.defineSlot('/1017768/B300', [[300, 250], [300, 600]], 'div-gpt-ad-1489070677458-0').addService(googletag.pubads());window.DFP.setTargeting();
+googletag.pubads().setTargeting("LV", bahalv);
+googletag.pubads().setTargeting("bsn", gpt_bsn);
+googletag.pubads().setTargeting("service","forum");
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();
+});
+</script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/ad.js?v=1602819564"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/JS/ad/insideAD.js?v=2020102618"></script>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KDKMGT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KDKMGT');</script>
+<!-- End Google Tag Manager --><div class="TOP-bh"><!--全站內頁天-->
+<div class="TOP-data" id="BH-top-data"><!--全站內頁天中間區塊-->
+<div class="TOP-my"></div>
+<div id="topBarMsg_more" style="display:none" class="TOP-msg"></div>
+<link href="https://i2.bahamut.com.tw/css/gcse.css?v=1569895465" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/jquery/jquery.cookie.js"></script>
+<script type="text/javascript" src="https://i2.bahamut.com.tw/js/forum_search.js?v=1569211917"></script>
+<!-- New Searchbox -->
+<a class="logo" href="https://www.gamer.com.tw/"><img src="https://i2.bahamut.com.tw/top_logo.svg" style="height:35px;"></a>
+<div class="header__search gcse-bar mobilehide">
+<div id="searchbox" class="top__gcse gcse-main"></div>
+<div id="old_search_searchbox" class="top__gcse gcse-main" style="display:none">
+<form class="gsc-search-box gsc-search-box-tools" id="old_search_form" method="GET" onsubmit="return forumSearch.submit();">
+<table class="gsc-search-box">
+<tr>
+<td class="gsc-input">
+<div class="gsc-input-box">
+<table class="gstl_50">
+<tr>
+<td class="gsib_a">
+<input class="gsc-input" id="old_search_input" name="sval" autocomplete="off" style="width: 100%; padding: 0px; border: none; margin: -0.0625em 0px 0px; height: 1.25em; outline: none; background: text-indent: 48px;" value="" placeholder="找標題">
+<input name="bsn" type="hidden" value="23805">
+<input name="stype" id="stype" type="hidden" value="1">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</form>
+</div>
+<div class="gcse-option">
+<button type="button" class="gcse-option-control"><span class="material-icons">&#xE313;</span></button>
+<button type="button" class="gcse-clear" style="display:none;"><span class="material-icons">&#xE5C9;</span></button>
+<div class="gcse-dropdown gcse-sort">
+<ul>
+<li><span class="gcse-sort-title">找標題</span><span>查詢標題相符的文章</span></li>
+<li><span class="gcse-sort-title">找作者</span><span>查詢作者相符的文章</span></li>
+<li><span class="gcse-sort-title">找M文</span><span>查詢被 MARK 的文章</span></li>
+<li><span class="gcse-sort-title">找全文</span><span>搜尋本板文章、作者</span></li>
+</ul>
+</div>
+<div class="gcse-dropdown gcse-suggest">
+<div class="gcse-suggest-child" id="gcse-suggest-child-recently"></div>
+<div class="gcse-suggest-child" id="gcse-suggest-child-hot"></div>
+</div>
+</div>
+</div>
+<div id="js-SearchForm" class="nav_searchform" style="display: none;">
+<span class="nav-search-close-button" tabindex="0" onclick="TopBar.hideSearchBar();">✕</span>
+<div class="nav-search-inner">
+<p class="TOP-search">
+<div class="header__search gcse-bar">
+<div id="searchbox_mobile" class="top__gcse gcse-main"></div>
+<div id="old_search_searchbox_mobile" class="top__gcse gcse-main" style="display:none">
+<form class="gsc-search-box gsc-search-box-tools" id="old_search_form_mobile" method="GET" onsubmit="return forumSearch.submit();">
+<table class="gsc-search-box">
+<tr>
+<td class="gsc-input">
+<div class="gsc-input-box">
+<table class="gstl_50" style="width: 100%">
+<tr>
+<td class="gsib_a">
+<input class="gsc-input" id="old_search_input_mobile" name="sval" autocomplete="off" style="width: 100%; padding: 0px; border: none; margin: -0.0625em 0px 0px; height: 1.25em; outline: none; background: text-indent: 48px;" value="" placeholder="找標題">
+<input name="bsn" type="hidden" value="23805">
+<input name="stype" id="stype_mobile" type="hidden" value="1">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</form>
+</div>
+<div class="gcse-option">
+<button type="button" class="gcse-option-control"><span class="material-icons">&#xE313;</span></button>
+<button type="button" class="gcse-clear" style="display:none;"><span class="material-icons">&#xE5C9;</span></button>
+<div class="gcse-dropdown gcse-sort">
+<ul>
+<li><span class="gcse-sort-title">找標題</span><span>查詢標題相符的文章</span></li>
+<li><span class="gcse-sort-title">找作者</span><span>查詢作者相符的文章</span></li>
+<li><span class="gcse-sort-title">找M文</span><span>查詢被 MARK 的文章</span></li>
+<li><span class="gcse-sort-title">找全文</span><span>搜尋本板文章、作者</span></li>
+</ul>
+</div>
+<div class="gcse-dropdown gcse-suggest">
+<div class="gcse-suggest-child" id="gcse-suggest-child-recently_mobile"></div>
+<div class="gcse-suggest-child" id="gcse-suggest-child-hot_mobile"></div>
+</div>
+</div>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var hotKeywords = ["\u5341\u842c","\u96e3\u9003\u4e00\u7761","\u8f2a\u8ff4","\u4e94\u5341","\u9f8d\u523b","\u9b54\u795e\u6230","\u4ee5\u8afe","\u96e3\u9003","\u9b54\u795e","\u62c9\u666e\u62c9\u65af","\u5929\u7167","\u78a9\u6708\u7009\u7834\u8b0e\u4e94\u5341","Eva","\u6210\u5c31","\u5408\u4f5c"];
+var useOldSearch = 0;
+(function() {
+var cx = '001994533065495648396:c3salsx3fty';
+var gcse = document.createElement('script');
+gcse.type = 'text/javascript';
+gcse.async = true;
+gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(gcse, s);
+})();
+
+jQuery(function(){
+TopBar.render();
+TopBar.getNotifyNumber();
+Forum.LastBoard.addBoard('23805', "\u795e\u9b54\u4e4b\u5854");
+});
+</script>
+<!--全站主選單-->
+<div id="BH-menu-fill">&nbsp;</div>
+<div id="BH-menu-path" class="BH-menu ">
+<script>
+jQuery(function() {
+var searchParam = false;BH_Menu_Render('FORUM_board', 1, 0, 'board_name=%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94<>board_sn=23805<>c1=18743<>snA=<>sn=<>subbsn=<>page=<>lock=<>article_title=<>bPage=<>chatboard_sn=60615', searchParam, false);
+});
+</script>
+</div>
+<!--全站主選單結束-->
+<div id="bh-banner" class="bh-banner ">
+<div id="BH-bigbanner"><script type='text/javascript'>top_abanner1000()</script>
+</div></div>
+<div id="BH-background">
+<div id="BH-wrapper" class=""><!--最外層寬1000包裝-->
+<div style="width:0;height:0;position:relative;top:0px;left:0px;z-index:100;"><div style="position:absolute; top:0px; left:730px; width:268px; border: solid 1px #000000; background: #FFFFFF; z-index:100;display:none;" class="rsearch" id="rsearch" align="left"><ol id="suggestol"></ol></div></div><!--搜尋BAR下拉結束-->
+
+<!--服務選單-->
+<div class="FM-abox1"><a href="B.php?bsn=23805"><span></span><img src="https://p2.bahamut.com.tw/FORUM/welcome/23805_1_1603511022.JPG?v=1603511023" height="300"/></a></div><!--進板圖--><div id="BH-master"><!--內容左側區塊--><ul class="FM-atag1"><!--熱門推薦開始-->
+<li><a href="#" class="FM-atag1now">熱門推薦</a></li>
+</ul>
+<div class="BH-lbox FM-abox2">
+<div class="FM-abox2A">
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=635732"><img src="https://avatar2.bahamut.com.tw/avataruserpic/j/a/jacklien/jacklien.png"></a>
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=635732" class="FM-abox2B">  【心得】「一進場就技能全跳起來」，快速測</a><p>自己想過一件事，我有新的卡剛拿到，我要快速測試一下...（<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=635732">繼續閱讀</a>）</p>
+</div>
+<div class="FM-abox2A">
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646724"><img src="https://i1.ytimg.com/vi/OLkEfAaSvus/hqdefault.jpg"></a>
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646724" class="FM-abox2B">  【心得】接下來就由我們，光暗妍希來當你的</a><p>各位安安我是鎧翔這次煉獄真的有億點點麻煩所以想配置...（<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646724">繼續閱讀</a>）</p>
+</div>
+<div class="FM-abox2A">
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646720"><img src="https://truth.bahamut.com.tw/s01/202010/86b39c7f98e36a011be65076f62fea34.JPG?w=300&h=300&fit=o"></a>
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646720" class="FM-abox2B">  【心得】吸暴隊 (希照) vs 難逃一睡</a><p>各位EVA駕駛員大家好~上次說我會再去開發新隊伍時...（<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646720">繼續閱讀</a>）</p>
+</div>
+<div class="FM-abox2A">
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646715"><img src="https://truth.bahamut.com.tw/s01/202010/f12bb8eeac06374c7aa31fceda6bc842.JPG?w=300&h=300&fit=o"></a>
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646715" class="FM-abox2B">  【心得】被瘋頭的可愛數學考倒了  梵天通</a><p>上一次的煉獄級是某個搞種族岐視的熊屁孩不過這次我才...（<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646715">繼續閱讀</a>）</p>
+</div>
+<div class="FM-abox2A">
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646729"><img src="https://i.imgur.com/1lHS0qt.jpg"></a>
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646729" class="FM-abox2B">  【情報】10/26-11/1活動整理by</a><p>每日會有新的溫馨小提醒歡迎每天回來看看此區===每...（<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646729">繼續閱讀</a>）</p>
+</div>
+<div class="FM-abox2A">
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646722"><img src="https://truth.bahamut.com.tw/s01/202010/0387733fcb88a30050f7bae5ae12f3fe.JPG?w=300&h=300&fit=o"></a>
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646722" class="FM-abox2B">  【情報】全新戰慄級 「侵蝕EVA3號機」</a><p>【珍貴的樣本】戰慄級任務『侵蝕EVA3號機』開放時...（<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646722">繼續閱讀</a>）</p>
+</div>
+<div class="FM-abox2A">
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646711"><img src="https://avatar2.bahamut.com.tw/avataruserpic/f/a/fabin1790/fabin1790.png"></a>
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646711" class="FM-abox2B">  【心得】那個小偷普奇 記得重開遊戲才看得</a><p>如題上下都有打五次會送技8卡的獎勵，都打可以拿兩張...（<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646711">繼續閱讀</a>）</p>
+</div>
+<div class="FM-abox2A">
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646757"><img src="https://i1.ytimg.com/vi/R_kT0bsMOhE/hqdefault.jpg"></a>
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646757" class="FM-abox2B">  【心得】伊聖隊不輕鬆磨過第9使徒戰慄級</a><p>大家好我是伊登難得出了一個難度明顯較低的新時代關卡...（<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646757">繼續閱讀</a>）</p>
+</div>
+<div class="FM-abox2A">
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646717"><img src="https://i1.ytimg.com/vi/mb0ZZKUKqps/hqdefault.jpg"></a>
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646717" class="FM-abox2B">  【攻略】翡翠五卡通關熾熱嗜殺</a><p>隊伍：注意事項：隊長一定要裝九封龍刻，金恩裝武裝，...（<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646717">繼續閱讀</a>）</p>
+</div>
+<div class="FM-abox2A">
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646739"><img src="https://truth.bahamut.com.tw/s01/202010/8b32d4ce7b67c265c695d2c892ef7320.JPG?w=300&h=300&fit=o"></a>
+<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646739" class="FM-abox2B FM-daco">  【攻略】珍貴的樣本【戰慄級】8個SS級參</a><p>戰慄級任務『珍貴的樣本』時間：10月26日(一)至...（<a data-gtm="熱門推薦" href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646739">繼續閱讀</a>）</p>
+</div>
+</div><!--熱門推薦結束-->
+<h4><IMG src="https://i2.bahamut.com.tw/h1_img.gif">哈啦板達人專欄</h4><!--大大名單-->
+<div class="BH-lbox FM-abox8">
+<div>
+<p class="FM-abox8A"><img class="IMG-H10" src="https://i2.bahamut.com.tw/spacer.gif"/><a href="//forum.gamer.com.tw/B.php?bsn=23805&qt=3&q=lovegiemsa">《Luke mS》</a><span><a href="//forum.gamer.com.tw/B.php?bsn=23805&qt=3&q=lovegiemsa"><i>115</i>篇專欄</a>∣<a href="javascript:void(0)" name="darenIntro" title="大家好~我是Luke RS，叫我路克也可以。我非常喜歡正妹姬氏這張卡，所以每次新關卡都會帶著正妹姬氏去闖。 偶爾會在板上發實測文。" >專欄介紹</a></span></p>
+<a href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646748">【攻略】第9使徒戰慄 珍貴的樣本 真嗣x零 SS級無腦速刷</a>
+<a href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646435">【攻略】第6使徒進攻關卡(第三階段)速刷隊伍 (10/18更新)</a>
+<a href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646162">【心得】雙附加盾的解法整理 (19.4版本)</a>
+<a href="//forum.gamer.com.tw/C.php?bsn=23805&snA=645906">【其他】EVA駕駛員昇華劍/心無效</a>
+</div>
+<div>
+<p class="FM-abox8A"><img class="IMG-H10" src="https://i2.bahamut.com.tw/spacer.gif"/><a href="//forum.gamer.com.tw/B.php?bsn=23805&qt=3&q=mylcharles">《鄰家小弟》</a><span><a href="//forum.gamer.com.tw/B.php?bsn=23805&qt=3&q=mylcharles"><i>50</i>篇專欄</a>∣<a href="javascript:void(0)" name="darenIntro" title="大家好！我是鄰家小弟查爾斯，巴哈第一位搶先推出地獄/夢魘級通關影片的玩家。從2017一直默默付出到現在，希望通過我的影片能夠幫助召喚師們輕鬆通關 :)" >專欄介紹</a></span></p>
+<a href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646739">【攻略】珍貴的樣本【戰慄級】8個SS級參考隊伍</a>
+<a href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646486">【攻略】32%-0% 粒子炮的鐳射高熱【魔神戰】4個速刷隊伍</a>
+<a href="//forum.gamer.com.tw/C.php?bsn=23805&snA=646432">【心得】黑魅之巨大質量【地獄級】6個參考隊伍</a>
+<a href="//forum.gamer.com.tw/C.php?bsn=23805&snA=645733">【心得】塵世巨蟒【戰慄級】6個參考隊伍</a>
+</div>
+
+<cite class="FM-abox8B"><button onclick="applyDaren('guest', '23805', '神魔之塔');">申請達人</button><button onclick="location.href='//forum.gamer.com.tw/B.php?bsn=23805&qt=3'">看更多</button><button onclick="location.href='//forum.gamer.com.tw/darenList.php?bsn=23805'">名單</button><!--span class="FM-abox6Bpage">1/1<a href="#"></a><a href="#"></a></span--></cite>
+</div><!--大大名單結束-->
+<h4><IMG src="https://i2.bahamut.com.tw/h1_img.gif">公佈欄</h4><!--公佈欄-->
+<div class="BH-lbox FM-abox5">
+<div class="FM-abox5B">
+
+<div align=center><a href="https://truth.bahamut.com.tw/s01/201705/996c84ce3cdbf9226ba06182959d7de8.PNG" target="_blank"><img src="https://truth.bahamut.com.tw/s01/201705/996c84ce3cdbf9226ba06182959d7de8.PNG" border="0" /></a><br></div><div align=center><font face="微軟正黑體"><font size="5"><b><font color="#000000">19.3版本 │ </font></b></font><b><font color="#003300"><font size="5">「</font></font></b></font><font face="微軟正黑體"><b><font color="#003300"><font size="5">顛覆天地．神魔交戰」</font></font></b></font></div><div align=center><font face="微軟正黑體"><b><font color="#003300"><font size="5"><br></font></font></b></font></div><div align=center><a href="https://i.imgur.com/ax3YfYr.png" target="_blank"><img src="https://i.imgur.com/ax3YfYr.png" border="0" /></a></div><div><div align=center><br></div><div align=center><b><font size="4"><font face="微軟正黑體"><font color="#ff0000">※</font> <font color="#FF0000">發文前請先看過</font><a href="https://ref.gamer.com.tw/redir.php?url=http%3A%2F%2Fforum.gamer.com.tw%2Frules.php%3Fbsn%3D23805" target="_blank"><font color="#3366FF">本板板規</font></a> <font color="#ff0000">※</font></font></font></b></div><div align=center><div><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃&nbsp;&nbsp;</font></font><font face="微軟正黑體"><font color="#000000">▃</font></font></div></div><div align=center><div align=center><font size="2"><font face="微軟正黑體"><font color="#000000"><b>【 聯絡官方 】</b></font>cs.zh@towerofsaviors.com</font></font></div></div></div>
+<table border="0" cellSpacing="0" cellPadding="0" width="100%">
+<tbody><tr>
+<td vAlign="top"><span style="color: rgb(0, 153, 153); font-size: 11px;">--</span></td>
+<td colSpan="2">&nbsp;</td>
+</tr>
+<tr>
+<td vAlign="top" align="left"><span style="color: rgb(204, 204, 204); font-size: 11px;"><a href="//wiki2.gamer.com.tw/wiki.php?n=13710%3A%E6%9D%BF%E4%B8%BB%E9%A0%88%E7%9F%A5&amp;ss=13710&amp;mpath=,7," target="_blank"><img border="0" alt="" align="middle" src="https://i2.bahamut.com.tw/fckeditor/smiley/41.gif" width="19" height="19"></a></span></td>
+<td width="1%">&nbsp;</td>
+<td width="96%" align="left"><span style="color: rgb(0, 153, 153); font-size: 11px;">端正網路風氣，從你我做起。<br>
+請尊重他人著作，如需參考或沿用，請先取得原作者同意。</span></td>
+</tr>
+</tbody></table>
+
+</div>
+</div><!--公佈欄結束-->
+</div><!--內容左側區塊結束-->
+<div id="BH-slave"><!--右側區塊-->
+<div class="BH-rbox FM-rbox14"><!-- 板主區 開始 --><div class="FM-rbox14-master">板務人員：<a href="//home.gamer.com.tw/cloudroam" target="_blank"><img class="gamercard" data-gamercard-userid="cloudroam" src="https://avatar2.bahamut.com.tw/avataruserpic/c/l/cloudroam/cloudroam_s.png"></a><a href="//home.gamer.com.tw/darknesswy" target="_blank"><img class="gamercard" data-gamercard-userid="darknesswy" src="https://avatar2.bahamut.com.tw/avataruserpic/d/a/darknesswy/darknesswy_s.png"></a><a href="//home.gamer.com.tw/abc664411" target="_blank"><img class="gamercard" data-gamercard-userid="abc664411" src="https://avatar2.bahamut.com.tw/avataruserpic/a/b/abc664411/abc664411_s.png"></a><a href="//home.gamer.com.tw/will31221" target="_blank"><img class="gamercard" data-gamercard-userid="will31221" src="https://avatar2.bahamut.com.tw/avataruserpic/w/i/will31221/will31221_s.png"></a><a href="//home.gamer.com.tw/smartkuo" target="_blank"><img class="gamercard" data-gamercard-userid="smartkuo" src="https://avatar2.bahamut.com.tw/avataruserpic/s/m/smartkuo/smartkuo_s.png"></a><a href="//home.gamer.com.tw/uj1030" target="_blank"><img class="gamercard" data-gamercard-userid="uj1030" src="https://avatar2.bahamut.com.tw/avataruserpic/u/j/uj1030/uj1030_s.png"></a></div><a name="guild_flag" href="//guild.gamer.com.tw/guild.php?sn=7090" target="_blank" ><img title="神魔之塔 精華組：史上最強精華組! !" src="https://p2.bahamut.com.tw/B/GUILD/f/0/0000007090.PNG" style="max-width:110px;max-height:50px;" /></a><p style="line-height:20px;"><a href="/G1.php?bsn=23805">6247</a> 筆精華，<a href="//forum.gamer.com.tw/logG.php?bsn=23805">10/12</a> 更新<br />一個月內新增 <a href="//forum.gamer.com.tw/logG.php?bsn=23805">2</a> 筆<br /><a href="//guild.gamer.com.tw/guild.php?sn=7090" target="_blank">歡迎加入</a>共同維護。</p>
+</div><!-- 板主區 結束 --><script>
+jQuery(function(){
+var chatMenu = jQuery('ul.BH-menuE > li > a[title="閒聊板"]');
+if (chatMenu.length == 0) {
+return;
+}
+
+var chatUrl = chatMenu.attr('href');
+jQuery('.FM-rbox14-master').parent('.BH-rbox.FM-rbox14')
+.after(`
+<div class="BH-rbox FM-rbox14 forum_chat_rbox">
+<div>
+<h3>輕鬆<b>閒聊板</b></h3>
+<p>輕鬆卡串、隨意曬卡不違規<br>不論非或歐，無壓力閒聊！<br>來這裡 ++！</p>
+<a href="${chatUrl}" class="btn btn-primary">進入閒聊板</a>
+</div>
+</div>
+`);
+});
+</script><h5>作品介紹</h5><!--作品介紹--><div class="BH-rbox FM-abox6 FM-rbox12" id="info_html"><div class="FM-abox6B"><!--左側作品資料1--><a href="//acg.gamer.com.tw/acgDetail.php?s=59910" target="_blank">神魔之塔</a><a href="//acg.gamer.com.tw/acgDetail.php?s=59910" target="_blank"><img src="https://p2.bahamut.com.tw/S/ACG/c/10/0000059910.JPG" /></a><p>　　由 Mad Head Limited 開發的《神魔之塔》，是一款集寶石消除和召喚獸收集、育成於一體的角色扮演手機遊戲。　　《神魔之塔》以古人類為了成為神而建造了能通向天界的以諾塔作主題，講述在建塔的過程中，惡魔欲利用以諾塔入侵...（<a href="//acg.gamer.com.tw/acgDetail.php?s=59910" target="_blank">繼續閱讀</a>）</p><span class="FM-abox6Bpage">1/2<a href="javascript:;" onclick="change_info('23805','2')"></a><a href="javascript:;" onclick="change_info('23805','2')"></a></span></div><!--左側作品資料結束--><div class="FM-abox6A FM-abox6A_acgbox"><p class="BH-acgbox" ><a id="w2p_59910" href="https://user.gamer.com.tw/login.php" ><span>Android</span></a><span id="w2pnum_59910">16581</span></p></div>
+<div class="FM-abox6A ACG-rbox3" id="newscore59910">
+<div class="ACG-box">
+<div class="ACG-score">9.3<span>9945人</span></div>
+<div class="ACG-data">
+<ul><li>遊戲畫面</li><li>耐玩度</li><li>操作介面</li><li>輕鬆休閒</li><li>重視思考</li></ul><ul class="ACG-persent"><li><p style="width: 23%;background-color:"></p><span>23%</span></li>
+<li><p style="width: 20%;background-color:"></p><span>20%</span></li>
+<li><p style="width: 13%;background-color:"></p><span>13%</span></li>
+<li><p style="width: 11%;background-color:"></p><span>11%</span></li>
+<li><p style="width: 11%;background-color:"></p><span>11%</span></li>
+</ul></div>
+<p class="ACG-rbox4B" style="font-size:15px;">我的評價 ►
+<a href="https://user.gamer.com.tw/login.php" ><img name="ACGStar" class="ACG-Star0" src="https://i2.bahamut.com.tw/bit.gif" onmouseover="Star_now(1,0,0,0,0);"/></a>
+<a href="https://user.gamer.com.tw/login.php" ><img name="ACGStar" class="ACG-Star0" src="https://i2.bahamut.com.tw/bit.gif" onmouseover="Star_now(1,1,0,0,0);"/></a>
+<a href="https://user.gamer.com.tw/login.php" ><img name="ACGStar" class="ACG-Star0" src="https://i2.bahamut.com.tw/bit.gif" onmouseover="Star_now(1,1,1,0,0);"/></a>
+<a href="https://user.gamer.com.tw/login.php" ><img name="ACGStar" class="ACG-Star0" src="https://i2.bahamut.com.tw/bit.gif" onmouseover="Star_now(1,1,1,1,0);"/></a>
+<a href="https://user.gamer.com.tw/login.php" ><img name="ACGStar" class="ACG-Star0" src="https://i2.bahamut.com.tw/bit.gif" onmouseover="Star_now(1,1,1,1,1);"/></a>
+</p>
+</div>
+</div>
+</div><!--作品介紹結束--><div id='flySalve' style="margin-bottom:10px;">
+
+<!-- /1017768/B300 -->
+<div id='div-gpt-ad-1489070677458-0'>
+<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1489070677458-0'); });</script>
+</div>
+</div>
+<h5>板主推薦連結</h5><!--板主推薦連結-->
+<div class="BH-rbox BH-list1 FM-rbox10">
+<ul>
+<li><a href="//ref.gamer.com.tw/redir.php?url=http%3A%2F%2Fwww.towerofsaviors.com%2F" target="_blank"> 神魔之塔官方網頁 (中文)</a></li>
+<li><a href="//ref.gamer.com.tw/redir.php?url=http%3A%2F%2Fzh.tos.wikia.com%2F" target="_blank">神魔之塔繁中維基 (中文)</a></li>
+<li><a href="//ref.gamer.com.tw/redir.php?url=http%3A%2F%2Ftosgp.weebly.com%2Findex.html" target="_blank"> 神魔之塔研究組 (中文)</a></li>
+<li><a href="//ref.gamer.com.tw/redir.php?url=http%3A%2F%2Fwww.facebook.com%2Ftos.zh" target="_blank"> 神魔之塔FB粉絲團 (中文)</a></li>
+<li><a href="//ref.gamer.com.tw/redir.php?url=http%3A%2F%2Fwww.facebook.com%2Fgroups%2Ftos.zh" target="_blank"> 神魔之塔FB交友區 (中文)</a></li>
+<li><a href="//ref.gamer.com.tw/redir.php?url=http%3A%2F%2Fwww.meetgee.com%2FTopic%2FList.aspx%3FGameID%3D2007805" target="_blank"> 神魔之塔密技QA網 (中文)</a></li>
+<li><a href="//ref.gamer.com.tw/redir.php?url=http%3A%2F%2Fdocs.google.com%2Fspreadsheet%2Flv%3Fkey%3D0AiGaabp7CkKBdHk0U2UxMG80eGYzRWRTN05FWW02a3c%26toomany%3Dtrue" target="_blank"> 神魔之塔攻略資料網 (中文)</a></li>
+<li><a href="//ref.gamer.com.tw/redir.php?url=http%3A%2F%2Fwww.gamebase.com.tw%2Fforum%2F69512%2Fportal" target="_blank">遊戲基地神魔之塔板 (中文)</a></li>
+</ul>
+</div>
+<h5 id="votearea">投票區</h5>
+<div class="BH-rbox FM-rbox3">
+<p class="FM-abmbar">
+<a href="vresult1.php?bsn=23805" target="_blank">歷史結果</a>
+</p>
+</div>
+<script>
+$('[name=darenIntro]').tooltip('', {className:'FM-ytbox'});
+buttonToMobile();
+jQuery(function() {
+if (typeof DFP != 'undefined') {
+DFP.setcookie({"dc_c1":"18743"});}
+
+Forum.Common.addDarkThemeSwitch();
+});
+</script>
+</div><!--右側/全版區塊結束-->
+<br class="clearfloat" /><!--清除浮動-->
+<div id="BH-footer"><!--最底版權宣告-->
+<p>本站所刊載之圖文內容等版權皆屬原廠商或原作者所有，非經同意請勿轉載<br>
+巴 哈 姆 特 電 玩 資 訊 站 https://www.gamer.com.tw
+</p>
+</div><!--最底版權宣告結束-->
+</div>
+<!--最外層寬1000包裝結束-->
+</div>
+<div style="position: fixed; left: 20px; right: 20px; bottom: 20px; z-index: 99;">
+<div
+style="
+position: relative;
+display: none;
+padding: 15px 30px 15px 15px;
+border: 1px solid transparent;
+border-radius: 3px;
+line-height: 1.5;
+background: #FFFFDB;
+border-color: #E1D3B8;
+max-width: 1250px;
+margin: auto;
+color: #705930;">
+<a href="javascript:;" class="alert-close oldbrowser-close"><i class="fa fa-times"></i></a>
+<p style="color: #705930;"><i class="material-icons" style="vertical-align: bottom; font-size: 22px; margin-right: 5px;">face</i>基於日前微軟官方表示 Internet Explorer 不再支援新的網路標準，可能無法使用新的應用程式來呈現網站內容，在瀏覽器支援度及網站安全性的雙重考量下，為了讓巴友們有更好的使用體驗，巴哈姆特即將於 2019年9月2日 停止支援 Internet Explorer 瀏覽器的頁面呈現和功能。<br>屆時建議您使用下述瀏覽器來瀏覽巴哈姆特：<br><a href="https://www.google.com/intl/zh-TW_ALL/chrome/" style="color: #0055aa;" target="_blank">。Google Chrome（推薦）</a><br><a href="https://www.mozilla.org/zh-TW/firefox/new/" style="color: #0055aa;" target="_blank">。Mozilla Firefox</a><br><a href="https://www.microsoft.com/zh-tw/windows/microsoft-edge" style="color: #0055aa;" target="_blank">。Microsoft Edge（Windows10以上的作業系統版本才可使用）</a></p>
+</div>
+<div
+style="
+position: relative;
+display: none;
+padding: 15px 30px 15px 15px;
+border: 1px solid transparent;
+border-radius: 3px;
+line-height: 1.5;
+background: #FFFFDB;
+border-color: #E1D3B8;
+color: #705930;">
+<a href="javascript:;" class="alert-close adb-close"><i class="fa fa-times"></i></a>
+<p style="color: #705930;"><i class="material-icons" style="vertical-align: bottom; font-size: 22px; margin-right: 5px;">face</i>我們了解您不想看到廣告的心情⋯ 若您願意支持巴哈姆特永續經營，請將 gamer.com.tw 加入廣告阻擋工具的白名單中，謝謝 !<a href="https://goo.gl/PmkwWS" style="color: #0055aa;" target="_blank;">【教學】</a></p>
+</div>
+</div>
+<script>
+
+jQuery(".a-mercy-d").click(function() {
+var url = this.href;
+var goRedirect = false;
+var openNew = (this.target) ? true : false;
+
+if (url) {
+jQuery.get("/ajax/baha_lkasoo.php", {id: jQuery(this).data('ssn')})
+.done(function() {
+goRedirect = true;
+if (!openNew) {
+document.location = url;
+}
+});
+
+setTimeout(function() {
+if (!goRedirect) {
+if (!openNew) {
+document.location = url;
+}
+}
+}, 1500);
+}
+
+if (!openNew) {
+return false;
+}
+});
+
+var mercyadblock = (function () {
+var adblock = {};
+
+adblock.show = function () {
+jQuery('.adb-close').parent().show();
+};
+
+adblock.hide = function () {
+jQuery('.adb-close').parent().hide();
+};
+
+adblock.check = function () {
+if (localStorage.getItem('admercyblocks') === null) {
+jQuery('.adb-close').parent().show();
+} else {
+var hourts = Math.floor(Date.now() / 1000)-86400;
+if (localStorage.getItem('admercyblocks') < hourts) {
+jQuery('.adb-close').parent().show();
+localStorage.removeItem('admercyblocks');
+}
+}
+};
+
+return adblock;
+} ());
+
+var mercyoldbrowser = (function () {
+var oldbrowser = {};
+
+oldbrowser.show = function () {
+jQuery('.oldbrowser-close').parent().show();
+};
+
+oldbrowser.hide = function () {
+jQuery('.oldbrowser-close').parent().hide();
+};
+
+oldbrowser.check = function () {
+if (localStorage.getItem('oldbrowsermercy') === null) {
+jQuery('.oldbrowser-close').parent().show();
+} else {
+var hourts = Math.floor(Date.now() / 1000)-86400;
+if (localStorage.getItem('oldbrowsermercy') < hourts) {
+jQuery('.oldbrowser-close').parent().show();
+localStorage.removeItem('oldbrowsermercy');
+}
+}
+};
+
+return oldbrowser;
+} ());
+
+jQuery(".oldbrowser-close").click(function () {
+mercyoldbrowser.hide();
+
+if (typeof(Storage) !== "undefined") {
+localStorage.setItem('oldbrowsermercy', Math.floor(Date.now() / 1000));
+}
+});
+
+jQuery(".adb-close").click(function() {
+mercyadblock.hide();
+
+if (typeof(Storage) !== "undefined") {
+localStorage.setItem('admercyblocks', Math.floor(Date.now() / 1000));
+}
+});
+
+if (typeof(chpagehotkey) == 'function') {
+document.onkeydown = function (evt){
+evt = window.event || evt;
+chpagehotkey(evt.keyCode);
+};
+}
+</script>
+<script>
+var isIEFlag=window.ActiveXObject || "ActiveXObject" in window;
+jQuery(function() {
+if (typeof(Storage) === "undefined") {
+/*load fail*/
+if (typeof antiadb === 'undefined') {
+mercyadblock.show();
+} else {
+/*load success but open*/
+antiadb.onDetected(function () {
+mercyadblock.show();
+});
+}
+
+if (isIEFlag) {
+mercyoldbrowser.show();
+}
+} else {
+/*load fail*/
+if (typeof antiadb === 'undefined') {
+mercyadblock.check();
+} else {
+/*load success but open*/
+antiadb.onDetected(function(){
+mercyadblock.check();
+});
+}
+
+if (isIEFlag) {
+mercyoldbrowser.check();
+}
+}
+});
+</script>
+</body>
+</html>
