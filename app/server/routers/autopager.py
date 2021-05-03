@@ -72,12 +72,33 @@ async def predict_page(page: RequestPageSchema = Body(...)):
     uncoded_url = unquote(page_item['url'])
     # print(f"Get request: {uncoded_url}")
     autopager = get_shared_autopager()
-    page_component = generate_page_component(uncoded_url)
-    result_urls = autopager.urls(page_component["html"], uncoded_url, direct=True, prev=False, next=False)
-    current_time = datetime.now()
-    result_component = {"tid": _uid, "url": uncoded_url, "urls": result_urls, "created_time": current_time}
-    ### add result to Mongo
-    new_page = await add_page_data(result_component)
+    try:
+        page_component = generate_page_component(uncoded_url)
+    except:
+        return ErrorResponseModel(
+        "An error occurred",
+        404,
+        "There was an error fetching the page.",
+    )
+    try:
+        result_urls = autopager.urls(page_component["html"], uncoded_url, direct=True, prev=False, next=False)
+    except:
+        return ErrorResponseModel(
+        "An error occurred",
+        404,
+        "There was an error predicting the page.",
+        )
+    try:
+        current_time = datetime.now()
+        result_component = {"tid": _uid, "url": uncoded_url, "urls": result_urls, "created_time": current_time}
+        ### add result to Mongo
+        new_page = await add_page_data(result_component)
+    except:
+        return ErrorResponseModel(
+        "An error occurred",
+        404,
+        "There was an error saving the record.",
+        )
     return ResponseModel(new_page, "Page predicted and saved successfully.")
 
 async def add_page_data(page: PageSchema):
