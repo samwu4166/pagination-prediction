@@ -160,6 +160,10 @@ def get_first_tag(parser, html):
     parser.feed(html)
     return parser.start_tags[0][0]
 
+def get_attribute_text(parser, html):
+    parser._reset()
+    parser.feed(html)
+
 # In[ ]:
 
 

@@ -63,9 +63,10 @@ class Storage(object):
         print("Test file list: ")
         print(TEST_FILE_MAP)
         
-    def get_Xy(self, language=None, validate=True, contain_button=True, contain_position=False, file_type='T', scaled_page = 'normal'):
+    def get_Xy(self, language=None, validate=True, contain_button=True, contain_position=False, file_type='T', scaled_page = 'normal', verbose = False):
         X, y, scaled_pages = [], [], []
-        print(f"Contain position: {contain_position}")
+        if verbose:
+            print(f"Contain position: {contain_position}")
         for row in self.iter_records(contain_button, file_type, language):
             html = self._load_html(row)
             parser._reset()
@@ -74,7 +75,8 @@ class Storage(object):
             root = parsel.Selector(html)
             xseq, yseq = get_xseq_yseq(root, selectors, validate=validate, contain_button=contain_button)
             yseq = [self.label_map.get(_y, _y) for _y in yseq]
-            print(f"Finish: Get Page {row['File Name']} (Encoding: {row['Encoding']})records ... (len: {len(yseq)})")
+            if verbose:
+                print(f"Finish: Get Page {row['File Name']} (Encoding: {row['Encoding']})records ... (len: {len(yseq)})")
             X.append(xseq)
             y.append(yseq)
             if contain_position is True:
@@ -94,9 +96,10 @@ class Storage(object):
                 print(xseq)
                 print(yseq)
         return
-    def get_test_Xy(self, validate=True, contain_button=True, contain_position=False, scaled_page = 'normal', exclude_en = None):
+    def get_test_Xy(self, validate=True, contain_button=True, contain_position=False, scaled_page = 'normal', exclude_en = None, verbose = False):
         X, y, scaled_pages = [], [], []
-        print(f"Contain position: {contain_position}")
+        if verbose:
+            print(f"Contain position: {contain_position}")
         for row in self.iter_test_records(exclude_en):
             html = self._load_test_html(row)
             parser._reset()
