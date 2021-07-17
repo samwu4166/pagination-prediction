@@ -1,0 +1,398 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/event.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<link rel="SHORTCUT ICON" href="/assets/images/NCU.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>國立中央大學 - 校園活動</title>
+<!-- InstanceEndEditable -->
+<meta name="description" content="國立中央大學校園活動首頁">
+<meta name="keywords" content="國立中央大學,中大,校園活動,社團,公告">
+<link href="/assets/event/css/main.css?v=2" rel="stylesheet" type="text/css" media="all">
+<link href="/assets/event/css/style-event.css" rel="stylesheet" type="text/css" media="all">
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="/assets/event/js/bjqs-1.3.min.js"></script>
+<script src="/assets/event/js/basic-jquery-slider.js"></script>
+<!-- calender -->
+<script src="/assets/js/jquery.datepick.js?v=1"></script> 
+<link href="/assets/css/jquery.datepick.css" rel="stylesheet" type="text/css" media="all">
+<script>
+
+    var event_month_days = [];
+    $(document).ready(function() {
+
+	var curr_date = new Date(),
+    	curr_month = curr_date.getMonth() + 1,
+    	curr_year = curr_date.getFullYear();
+	update_calendar_change_month_event(curr_year, curr_month);
+
+	$('#banner').bjqs({
+	    'animation' : 'slide',
+	    'width' : 680,
+	    'height' : 350,
+	    'centerMarkers' : false,
+	    'nextText': '<i class="icon-right"></i>',
+	    'prevText': '<i class="icon-left"></i>'
+	});
+
+	$('#calender_cal, #defaultInline').datepick({
+	    prevText: '&nbsp;',  
+	    nextText: '&nbsp;',
+	    changeMonth: false,
+	    dateFormat: 'yyyy-mm-dd',
+	    onSelect: function(dates) { 
+		var select_date = $.datepick.formatDate('yyyy/mm/dd', dates[0]);
+
+		update_calendar_event(select_date);
+	    }, 
+	    onChangeMonthYear: function(year, month) {
+
+		update_calendar_change_month_event(year, month);
+	    },
+	    onDate: eventDays,
+	}); 
+
+    	$('.datepick-cmd-today ').live('click', function() {
+
+	    $('#calender_cal').datepick('setDate', new Date());
+    	});
+    	function eventDays(date, inMonth) { 
+	    if (!inMonth){
+        	return {selectable: true};
+	    }
+	    for (i = 0; i < event_month_days.length; i++) {
+        	if (date.getDate() == event_month_days[i]){
+		    return {selectable: true};
+        	}
+	    } 
+	    return {selectable: false};
+    	};
+	//
+	
+	var todays = $.datepick.today();
+	var select_date = $.datepick.formatDate('yyyy/mm/dd', todays);
+	update_calendar_event(select_date);
+    });
+    function update_calendar_event(select_date){
+	var url = "/events/welcome/calendar/" + select_date;
+	$.get(url, function( data ) {
+	    $('#cal_selected_month').html(data.selected.month);
+	    $('#cal_selected_days').html(data.selected.days);
+	    $('#cal_selected_week').html(data.selected.week);
+	    $('#caln-list').html(data.event_list);
+	}, "json" ); 				
+    }
+
+    function update_calendar_change_month_event(year, month){
+	var url = "/events/welcome/calendar_change_month/" + year + '/' + month;
+	$.ajax({
+	    url : url,
+            data : {},
+            type : 'GET',
+            async : false,
+            error : function(xhr) {
+            },
+            success : function(data) {
+		event_month_days = $.parseJSON(data);
+	    }
+	});				
+    }
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57415188-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+  <div id="wrapper">
+     <div id="header">
+        <div class="Accesskey"><a accesskey="U" href="#top-menu" id="top-menu" title="上方導覽連結區" tabindex="1"><font color="#3f3a35">:::</font></a></div>
+        <div id="logo"><a href="/" title="國立中央大學" tabindex="2"><img src="/assets/event/images/logo.gif" alt="國立中央大學" width="320" height="95"></a></div>
+        <div id="head-right" class=" clearfix">
+           <div id="top">
+           <div id="head-lag"><a href="/en" title="國立中央大學英文版" tabindex="8">English</a></div>
+           <div id="head-nav">
+              <ul>
+                
+                <li><a href="/user/faculty_staff" title="教職員" tabindex="3">教職員</a></li>
+                <li><a href="/user/student" title="學生" tabindex="4">學生</a></li>
+                <li><a href="http://in.ncu.edu.tw/alumni/web/" target="_blank" title="校友 (將另開新視窗)" tabindex="5">校友</a></li>
+                <li><a href="/user/parents" title="家長" tabindex="6">家長</a></li>
+                <li><a href="/sitemap" title="網站導覽" tabindex="7">網站導覽</a></li>
+              </ul>
+           </div>
+           </div>
+              <div id="head-contents">
+              <div id="head-links">
+                <ul>
+                  <li><a href="http://portal.ncu.edu.tw/" target="_blank" title="中大Portal (將另開新視窗)">中大Portal</a></li>
+                  <li><a href="/events" title="校園活動">校園活動</a></li>
+                  <li><a href="http://give.ncu.edu.tw/" target="_blank" title="捐贈中大 (將另開新視窗)">捐贈中大</a></li>
+                </ul>
+              </div>
+              <div id="head-weather">
+                 <h1><a href="https://obs.pblap.tw/" target="_blank" title="中大即時氣象 (將另開新視窗)"><img src="/assets/images/weather-top.gif" width="173" height="27" alt="中大即時氣象"></a></h1>
+                <div id="head-weatherData">
+                    <div class="text01">溫度： 28.86 °C <br> 濕度： 79.21 %</div>
+                    <img src="https://www.ncu.edu.tw/assets/weather/obsImg/Snv2.jpg" width="45" height="45" alt="氣象圖">		
+                </div>
+              </div>
+           </div>
+            <div id="head-search">
+		     <form method="get" name="searchform" action="/search" onsubmit="return checksearch();">
+             <input id="q" name="q" type="text" onfocus="if (this.value=='全站搜尋') this.value='';" onblur="if (this.value=='全站搜尋') this.value='';" value="全站搜尋" autosave="search" results="10" style="width:205px" class="input01">
+             <button type="submit" onclick="submit" onkeypress="return false;"><p>&nbsp;</p></button>
+			 <input type="hidden" name="cx" value="001642321297111331018:v6v6j3pumwq">
+			 <input type="hidden" name="ie" value="UTF-8"> 
+			 </form>
+           </div>
+        </div>
+     </div>
+     <div id="event-mid" class="clearfix">
+        <span style="top:0px"><a href="/events" title="校園活動"><img src="/assets/event/images/events_Lpic01.gif" width="115" height="170" alt="校園活動"></a></span>
+        <div id="event-cont">
+           <div id="event-inner">
+              <!-- InstanceBeginEditable name="content" -->
+              <div class="Accesskey"><a accesskey="L" href="#main-menu" id="main-menu" title="主要選單區"><font color="#ede1cc">:::</font></a></div>
+			  <div id="bread" class="clearfix">
+                <ul>
+                  <li><a href="/" title="首頁">首頁</a>&gt;</li>
+                  <li><a href="/events" title="校園活動">校園活動</a></li>
+                </ul>
+              </div><!--/#bread-->
+              <div id="banner" style="height: 350px; width: 680px;"><div class="bjqs-wrapper" style="width: 680px; height: 350px; overflow: hidden; position: relative;"><ul class="bjqs" style="height: 350px; width: 4760px; left: -680px; display: block;"><li class="bjqs-slide clone" style="height: 350px; width: 680px; float: left; position: relative; display: list-item;"><a href="https://www.ncu.edu.tw/en/visitors/sights_and_scenery" target="_blank" title="校園導覽－中大十景"><img src="/assets/thumbs/events/5779e8a7e650777d8dd06a7e6e4f06e0.jpg" width="680" height="350" alt="校園導覽－中大十景"></a></li>
+				                      				   <li class="bjqs-slide" style="height: 350px; width: 680px; float: left; position: relative; display: list-item;"><a href="https://www.facebook.com/ncupress/photos/a.1300409226648845/4069566726399734/" target="_blank" title="◆新書上架◆《四方雲集:臺港中新的繪本漫畫文圖學》(主編:衣若芬)"><img src="/assets/thumbs/events/cfaecb60786d3610475a7c3128a7074e.jpg" width="680" height="350" alt="◆新書上架◆《四方雲集:臺港中新的繪本漫畫文圖學》(主編:衣若芬)"></a></li>
+                   				                     				   <li class="bjqs-slide" style="height: 350px; width: 680px; float: left; position: relative; display: list-item;"><a href="https://www.facebook.com/ncupress/photos/a.1300409226648845/3973569635999444/" target="_blank" title="◆新書上架◆《我的鑽石人生:林沖回憶錄》(策劃主編:林文淇，吳思薇、王善卿著)"><img src="/assets/thumbs/events/be059804e8d59523dbbc6db74f2cad56.jpg" width="680" height="350" alt="◆新書上架◆《我的鑽石人生:林沖回憶錄》(策劃主編:林文淇，吳思薇、王善卿著)"></a></li>
+                   				                     				   <li class="bjqs-slide" style="height: 350px; width: 680px; float: left; position: relative; display: list-item;"><a href="https://www.facebook.com/colazncu/" target="_blank" title="中央大學授權校園紀念品"><img src="/assets/thumbs/events/7ca15b6a65cb86a16633118a6a0110d8.jpg" width="680" height="350" alt="中央大學授權校園紀念品"></a></li>
+                   				                     				   <li class="bjqs-slide" style="height: 350px; width: 680px; float: left; position: relative; display: list-item;"><a href="https://www.ncu.edu.tw/events/event_list/event_catgory/6" target="_blank" title="中大徵才"><img src="/assets/thumbs/events/4d4e1c73a81a52e31748fb4ecfe9fe8a.jpg" width="680" height="350" alt="中大徵才"></a></li>
+                   				                     				   <li class="bjqs-slide" style="height: 350px; width: 680px; float: left; position: relative; display: list-item;"><a href="https://www.ncu.edu.tw/en/visitors/sights_and_scenery" target="_blank" title="校園導覽－中大十景"><img src="/assets/thumbs/events/5779e8a7e650777d8dd06a7e6e4f06e0.jpg" width="680" height="350" alt="校園導覽－中大十景"></a></li>
+                   				   
+				 <li class="bjqs-slide clone" style="height: 350px; width: 680px; float: left; position: relative; display: list-item;"><a href="https://www.facebook.com/ncupress/photos/a.1300409226648845/4069566726399734/" target="_blank" title="◆新書上架◆《四方雲集:臺港中新的繪本漫畫文圖學》(主編:衣若芬)"><img src="/assets/thumbs/events/cfaecb60786d3610475a7c3128a7074e.jpg" width="680" height="350" alt="◆新書上架◆《四方雲集:臺港中新的繪本漫畫文圖學》(主編:衣若芬)"></a></li></ul></div>
+                 
+              <ul class="bjqs-controls"><li><a href="#" class="bjqs-next" style="top: 0px;"><i class="icon-right"></i></a></li><li><a href="#" class="bjqs-prev" style="top: 0px;"><i class="icon-left"></i></a></li></ul><ol class="bjqs-markers"><li class="active-marker"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li></ol></div>
+              
+              <div id="calendar">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                   <tbody><tr>
+                     <td width="210" align="right" valign="top" style="background:url(/assets/event/images/caln-bkg.gif) top repeat-x"><table width="192" border="0" cellspacing="0" cellpadding="0">
+                       <tbody><tr>
+                         <td height="35" valign="bottom" style="background:url(/assets/event/images/caln-top.gif) top center no-repeat"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                         </table></td>
+                       </tr>
+					   
+                       <tr>
+                         <td bgcolor="#25221f"><div id="calender_cal" class="hasDatepick"><div class="datepick" style="width: 182px;"><div class="datepick-nav"><a href="javascript:void(0)" title="顯示上月" class="datepick-cmd datepick-cmd-prev ">&nbsp;</a><a href="javascript:void(0)" title="顯示本月" class="datepick-cmd datepick-cmd-today ">今天</a><a href="javascript:void(0)" title="顯示下月" class="datepick-cmd datepick-cmd-next ">&nbsp;</a></div><div class="datepick-month-row"><div class="datepick-month"><div class="datepick-month-header">六月 2021年</div><table><thead><tr><th><span class="datepick-dow-1" title="星期一">一</span></th><th><span class="datepick-dow-2" title="星期二">二</span></th><th><span class="datepick-dow-3" title="星期三">三</span></th><th><span class="datepick-dow-4" title="星期四">四</span></th><th><span class="datepick-dow-5" title="星期五">五</span></th><th><span class="datepick-dow-6" title="星期六">六</span></th><th><span class="datepick-dow-0" title="星期日">日</span></th></tr></thead><tbody><tr><td><span class="dp1622433600000  datepick-other-month">&nbsp;</span></td><td><a href="javascript:void(0)" class="dp1622520000000  " title="選擇 6月 1日, 星期二">1</a></td><td><span class="dp1622606400000 ">2</span></td><td><a href="javascript:void(0)" class="dp1622692800000  " title="選擇 6月 3日, 星期四">3</a></td><td><span class="dp1622779200000 ">4</span></td><td><a href="javascript:void(0)" class="dp1622865600000   datepick-weekend" title="選擇 6月 5日, 星期六">5</a></td><td><span class="dp1622952000000  datepick-weekend">6</span></td></tr><tr><td><span class="dp1623038400000 ">7</span></td><td><a href="javascript:void(0)" class="dp1623124800000  " title="選擇 6月 8日, 星期二">8</a></td><td><a href="javascript:void(0)" class="dp1623211200000  " title="選擇 6月 9日, 星期三">9</a></td><td><a href="javascript:void(0)" class="dp1623297600000  " title="選擇 6月 10日, 星期四">10</a></td><td><span class="dp1623384000000 ">11</span></td><td><span class="dp1623470400000  datepick-weekend">12</span></td><td><span class="dp1623556800000  datepick-weekend">13</span></td></tr><tr><td><a href="javascript:void(0)" class="dp1623643200000  " title="選擇 6月 14日, 星期一">14</a></td><td><a href="javascript:void(0)" class="dp1623729600000   datepick-today" title="選擇 6月 15日, 星期二">15</a></td><td><span class="dp1623816000000 ">16</span></td><td><span class="dp1623902400000 ">17</span></td><td><span class="dp1623988800000 ">18</span></td><td><span class="dp1624075200000  datepick-weekend">19</span></td><td><span class="dp1624161600000  datepick-weekend">20</span></td></tr><tr><td><a href="javascript:void(0)" class="dp1624248000000  " title="選擇 6月 21日, 星期一">21</a></td><td><a href="javascript:void(0)" class="dp1624334400000  " title="選擇 6月 22日, 星期二">22</a></td><td><a href="javascript:void(0)" class="dp1624420800000  " title="選擇 6月 23日, 星期三">23</a></td><td><a href="javascript:void(0)" class="dp1624507200000  " title="選擇 6月 24日, 星期四">24</a></td><td><a href="javascript:void(0)" class="dp1624593600000  " title="選擇 6月 25日, 星期五">25</a></td><td><span class="dp1624680000000  datepick-weekend">26</span></td><td><span class="dp1624766400000  datepick-weekend">27</span></td></tr><tr><td><a href="javascript:void(0)" class="dp1624852800000  " title="選擇 6月 28日, 星期一">28</a></td><td><span class="dp1624939200000 ">29</span></td><td><span class="dp1625025600000 ">30</span></td><td><span class="dp1625112000000  datepick-other-month">&nbsp;</span></td><td><span class="dp1625198400000  datepick-other-month">&nbsp;</span></td><td><span class="dp1625284800000  datepick-weekend datepick-other-month">&nbsp;</span></td><td><span class="dp1625371200000  datepick-weekend datepick-other-month">&nbsp;</span></td></tr></tbody></table></div></div><div class="datepick-clear-fix"></div></div></div></td>
+                       </tr>
+                     </tbody></table></td>
+                     <td valign="top" style="padding:30px 0px 0px 10px; background:url(/assets/event/images/caln-bkg.gif) top repeat-x"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                       <tbody><tr>
+                         <td width="180" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                           <tbody><tr>
+                             <td align="center"><img src="/assets/event/images/events_today.gif" alt="today" width="110" height="35"></td>
+                           </tr>
+                           <tr>
+                             <td align="center" class="text02" style="padding:10px 0px 15px"><font color="#cd4b61"><span id="cal_selected_month">六月</span></font></td>
+                           </tr>
+                           <tr>
+                             <td align="center" class="date-L"><span id="cal_selected_days">15</span></td>
+                           </tr>
+                           <tr>
+                             <td align="center" class="text-w01"><font color="#cd4b61"><span id="cal_selected_week">星期二</span></font></td>
+                           </tr>
+                         </tbody></table></td>
+                         <td valign="top">
+                         <div id="caln-list"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td width="40"></td><td><a href="https://www.ncu.edu.tw/events/showevent/eventid/9953" target="_blank">[線上演講] Applications of Data Analytic Modeling for Seizure Prediction</a></td><td><font class="caln-venue"></font></td></tr></tbody></table></div>
+						 </td>
+                       </tr>
+                     </tbody></table></td>
+                   </tr>
+                </tbody></table>
+              </div>
+             
+              <!--/#calendar-->
+			  <div class="Accesskey"><a accesskey="C" href="#start-content" id="start-content" title="主要內容區"><font color="#faf6f0">:::</font></a></div>
+              <div id="event-news" class="clearfix">
+                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                     <tbody><tr>
+                       <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                         <tbody><tr>
+                           <td><img src="/assets/event/images/events_news.gif" width="150" height="50" alt="最新公告"></td>
+                         </tr>
+                         <tr>
+                           <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+						                                 <tbody><tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6aa8cc;padding:0px 15px 0px 7px">行政</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6aa8cc; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9982" title="蔡文甫先生追思座談會">蔡文甫先生追思座談會</a><font class="note"> (人文研究中心 &nbsp;/&nbsp; 2021-06-15)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #9f7a5f;padding:0px 15px 0px 7px">施工</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #9f7a5f; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9981" title="【公告】110年6月17日至18日汽車停車場割草作業">【公告】110年6月17日至18日汽車停車場割草作業</a><font class="note"> (總務處事務組 &nbsp;/&nbsp; 2021-06-15)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #ce5d72;padding:0px 15px 0px 7px">藝文</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #ce5d72; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9979" title="中央大學學務處第二屆「百花川詩獎」入圍名單公告">中央大學學務處第二屆「百花川詩獎」入圍名單公告</a><font class="note"> (生活輔導組 &nbsp;/&nbsp; 2021-06-11)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #9f7a5f;padding:0px 15px 0px 7px">施工</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #9f7a5f; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9978" title="【公告】110/06/11植栽病蟲害防治">【公告】110/06/11植栽病蟲害防治</a><font class="note"> (總務處事務組 &nbsp;/&nbsp; 2021-06-10)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6bb494;padding:0px 15px 0px 7px">徵才</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6bb494; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9977" title="環境研究中心誠徵專任助理1名">環境研究中心誠徵專任助理1名</a><font class="note"> (環境研究中心 &nbsp;/&nbsp; 2021-06-10)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6bb494;padding:0px 15px 0px 7px">徵才</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6bb494; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9975" title="災害防治研究中心 誠徵專任人員(行政助理)1名">災害防治研究中心 誠徵專任人員(行政助理)1名</a><font class="note"> (災害防治研究中心 &nbsp;/&nbsp; 2021-06-10)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6bb494;padding:0px 15px 0px 7px">徵才</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6bb494; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9974" title="【研發處產學營運中心】誠徵專任人員(創新育成)1名">【研發處產學營運中心】誠徵專任人員(創新育成)1名</a><font class="note"> (研發處產學營運中心 &nbsp;/&nbsp; 2021-06-09)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6aa8cc;padding:0px 15px 0px 7px">行政</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6aa8cc; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9973" title=" 調整109下_學生宿網服務結束時間"> 調整109下_學生宿網服務結束時間</a><font class="note"> (電子計算機中心 &nbsp;/&nbsp; 2021-06-09)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6aa8cc;padding:0px 15px 0px 7px">行政</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6aa8cc; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9972" title="[試用資料庫] 新增 中國近代中文報紙全文數據庫-民國日報(1916-1947)">[試用資料庫] 新增 中國近代中文報紙全文數據庫-民國日報(1916-1947)</a><font class="note"> (圖書館 &nbsp;/&nbsp; 2021-06-09)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6aa8cc;padding:0px 15px 0px 7px">行政</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6aa8cc; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9971" title="配合全國3級警戒管制延期至6月28日，爰本校同仁自110年6月15日至110年6月28日賡續擴大彈性調整辦公時間。">配合全國3級警戒管制延期至6月28日，爰本校同仁自110年6月15日至110年6月28日賡續擴大彈性調整辦公時間。</a><font class="note"> (人事室 &nbsp;/&nbsp; 2021-06-08)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6aa8cc;padding:0px 15px 0px 7px">行政</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6aa8cc; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9969" title="暑假期間校外交通安全宣導">暑假期間校外交通安全宣導</a><font class="note"> (生活輔導組 &nbsp;/&nbsp; 2021-06-05)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6aa8cc;padding:0px 15px 0px 7px">行政</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6aa8cc; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9966" title="110學年度第1學期註冊通知">110學年度第1學期註冊通知</a><font class="note"> (教務處註冊組 &nbsp;/&nbsp; 2021-06-04)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6bb494;padding:0px 15px 0px 7px">徵才</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6bb494; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9965" title="【高能與強場物理研究中心】 誠徵噴塗工讀生一名">【高能與強場物理研究中心】 誠徵噴塗工讀生一名</a><font class="note"> (物理學系 &nbsp;/&nbsp; 2021-06-03)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #9f7a5f;padding:0px 15px 0px 7px">施工</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #9f7a5f; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9962" title="男十三舍寢室空間改善工程案  施工公告">男十三舍寢室空間改善工程案  施工公告</a><font class="note"> (總務處營繕組 &nbsp;/&nbsp; 2021-06-02)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							                             <tr>
+                               <td style="padding-bottom:2px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tbody><tr>
+                                   <td width="35" align="center" class="text-w01" style="background:url(/assets/event/images/news-Tbkg.gif) right top no-repeat #6bb494;padding:0px 15px 0px 7px">徵才</td>
+                                   <td style="background:url(/assets/event/images/news-bkg.gif) top repeat-x  #6bb494; padding:9px 10px 9px" class="text02"><a href="/events/showevent/eventid/9961" title="國立中央大學化材系誠徵計畫專任助理一名">國立中央大學化材系誠徵計畫專任助理一名</a><font class="note"> (化學工程與材料工程學系 &nbsp;/&nbsp; 2021-06-02)</font></td>
+                                 </tr>
+                               </tbody></table></td>
+                             </tr>
+							 
+
+							 
+                           </tbody></table></td>
+                         </tr>
+                         <tr>
+                           <td align="right" style="background:url(/assets/event/images/news-btm.gif) top repeat-x; padding-bottom:15px"><a href="/events/event_list/event_catgory/0"><img src="/assets/event/images/news-more.gif" width="65" height="25" alt="更多最新公告" onmouseover="src='/assets/event/images/news-more_ov.gif'" onfocus="src='/assets/event/images/news-more_ov.gif'" onmouseout="src='/assets/event/images/news-more.gif'" onblur="src='/assets/event/images/news-more.gif'"></a></td>
+                         </tr>
+                       </tbody></table></td>
+                       <td valign="bottom" style="padding-left:15px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                         <tbody><tr>
+                           <td style="padding:12px 15px 0px">&nbsp;</td>
+                         </tr>
+                         <tr>
+                           <td style="padding:12px 15px 30px"><a href="/assets/thumbs/events/國立中央大學校園活動刊登使用說明手冊.pdf" alt="國立中央大學校園活動刊登使用說明手冊" target="_blank"><img src="/assets/event/images/events_link02.gif" alt="活動列登使用說明" width="100" height="100" onmouseover="src='/assets/event/images/events_link02_ov.gif'" onmouseout="src='/assets/event/images/events_link02.gif'" onfocus="src='/assets/event/images/events_link02_ov.gif'" onblur="src='/assets/event/images/events_link02.gif'"></a></td>
+                         </tr>
+                       </tbody></table></td>
+                     </tr>
+                   </tbody></table>
+             </div><!--/#event-news-->
+		  <!-- InstanceEndEditable -->
+          </div><!--/#event-inner-->
+        </div>
+     </div>
+  
+       <div class="Accesskey"><a accesskey="B" href="#footer-license" id="footer-license" title="下方網頁資訊區"><font color="#faf6f0">:::</font></a></div>
+	   <div id="footer">
+       <copyright>國立中央大學 版權所有<br>
+         校址：(320317)桃園市中壢區中大路300號&nbsp;&nbsp;&nbsp;<br>總機電話：03-4227151&nbsp;&nbsp;傳真：03-4226062<br>
+         緊急事件聯絡電話：03-4267144、校內分機57119(駐警隊)<br>
+         <span style="padding-left:108px">03-2805666、校內分機57212(生輔組)</span><br>
+         建議瀏覽解析度1024 x 768</copyright>
+       <div id="footer-link">
+         <ul>
+           <li class="twitter"><a href="https://twitter.com/NcUofficial" target="_blank" title="Twitter (將另開新視窗)">Twitter</a></li>
+           <li class="ig"><a href="https://www.instagram.com/ncu_fansclub" target="_blank" title="Instagram (將另開新視窗)">Instagram</a></li>
+           <li class="fb"><a href="https://www.facebook.com/ncu.tw" target="_blank" title="facebook (將另開新視窗)">facebook</a></li>
+           <li class="youtube"><a href="https://www.youtube.com/channel/UC8yWU0IRBmTPO8JMe5eHdug" target="_blank" title="youtube (將另開新視窗)">youtube</a></li>
+           <li class="calendar"><a href="http://pdc.adm.ncu.edu.tw/calendar.asp?roadno=8" target="_blank" title="學校行事曆 (將另開新視窗)">學校行事曆</a></li>
+		       <li class="contact"><a href="/contact" title="聯絡我們">聯絡我們</a></li>
+		       <li class="siterules"><a href="https://www.cc.ncu.edu.tw/page/rules_ncu" target="_blank" title="網路使用規範 (將另開新視窗)">網路使用規範</a></li>
+           <li class="privacy"><a href="https://www.ncu.edu.tw/assets/thumbs/word/privacy_1050114.pdf" target="_blank" title="隱私權政策聲明 (將另開新視窗)">隱私權政策聲明</a></li>
+		 </ul>
+       </div>
+       <br>
+    </div>
+  </div>
+
+<!-- InstanceEnd --></body></html>

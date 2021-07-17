@@ -1,0 +1,1270 @@
+<html lang="zh-TW"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>
+        國立歷史博物館-當期展覽
+    </title>
+    <meta name="description" content="國立歷史博物館">
+    <meta name="keywords" content="國立歷史博物館">
+    <link rel="stylesheet" href="https://www.nmh.gov.tw/themes/55/css/owl.carousel.css">
+    <link rel="stylesheet" href="https://www.nmh.gov.tw/themes/55/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.nmh.gov.tw/themes/55/css/style.css"> 
+    <link rel="stylesheet" href="https://www.nmh.gov.tw/themes/55/js/dist/css/bootstrap-datepicker.min.css">
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://www.nmh.gov.tw/themes/55/js/jquery.min.js"></script>
+<script>
+$(function(){
+   $("#select-start-time").blur(function(){
+            checkDate($(this).val(),"#select-start-time")
+        })
+        $("#select-end-time").blur(function(){
+            checkDate($(this).val(),"#select-end-time")
+        })
+        function checkDate(strInputDate,el) {
+            console.log(strInputDate.length);
+            //定義一個月份天數的常量數組
+            var DA = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            //統一日期格式
+            var strDate = strInputDate.replace(/-/g, "/");
+            if(!strDate.length)return
+           
+            //判斷日期是否是預期格式
+            if (strDate.indexOf("/") == -1&&strInputDate.length) {
+                alert("請輸入yyyy-MM-dd格式!");
+                $(el).val("")
+                $(el).focus();
+                return false;
+            }
+            //分解出年月日
+            var arrD = strDate.split("/");
+            if (arrD.length != 3&&strInputDate.length) {
+                alert("日期格式有誤!");
+                $(el).val("")
+                $(el).focus();
+                return false;
+            }
+            // y = parseInt(arrD[0]);
+            // m = parseInt(arrD[1]);
+            // d = parseInt(arrD[2]);
+            y = arrD[0]
+            m = arrD[1]
+            d = arrD[2]
+            
+            //判斷年月日是否是數字
+            if (isNaN(y) || isNaN(m) || isNaN(d)) {
+                alert("年月日請輸入數字");
+                $(el).val("")
+                $(el).focus();
+                return false;
+            }
+            //判斷月是否在1-12之間
+            if (m > 12 || m < 1&&strInputDate.length) {
+                alert("月份有誤");
+                $(el).val("")
+                $(el).focus();
+                return false;
+            }
+            //判斷是否是閏年
+            if (isLoopYear(y))
+                DA[2] = 29;
+            //判斷輸入的日期是否超過了當月月份的總天數
+            if (d > DA[m]&&strInputDate.length) {
+                alert("日期天數有誤");
+                $(el).val("")
+                $(el).focus();
+                return false;
+            }
+            //各種條件都驗證了,則應該是一個合法的日期了
+            //格式化日期yyyy-MM-dd
+            var str = y + "-" + (m < 10 ? "0" : "") + m + "-" + (d < 10 ? "0" : "") + d;
+            // alert(str);
+            return true;
+        }
+        //檢測是否為閏年
+        function isLoopYear(theYear) {
+            return (new Date(theYear, 1, 29).getDate == 29)
+        }
+  })
+       
+        </script>
+<link href="https://www.nmh.gov.tw/themes/55/js/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css"></head>
+<body>
+    <div class="container-full">
+        <div class="web-bg-img" style="background-image: url(https://www.nmh.gov.tw/themes/55/images/conbanner/exhibition.jpg?v=1);"></div>
+        <div class="wrap">
+            <div class="header">
+        <a href="#C" class="sr-only sr-only-focusable" tabindex="1" title="跳到主要內容區塊">跳到主要內容區塊</a>
+        <noscript>
+            <div style="color: #000;text-align: center;line-height:40px;">『您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態』</div>
+        </noscript>
+        <div class="box header-logo cl">
+            <h1>
+                <a href="/">
+                    <img src="https://www.nmh.gov.tw/themes/55/images/logo1.png" alt="台灣歷史博物館-logo">
+                </a>
+            </h1>
+            <a href="/">
+                <img src="https://www.nmh.gov.tw/themes/55/images/logo2.png" alt="台灣歷史博物館-english-logo">
+            </a>
+        </div>
+        <div class="header-lang box">
+            <a href="/en/">
+                EN
+            </a>
+            ｜
+            <a href="/jp/">
+                日本語
+            </a>
+    
+  </div>
+        <div class="box header-middle cl">
+            <ul class="header-mid-nav cl">
+                <li>
+                    <a accesskey="U" href="#U" name="U" title="上方功能區塊">:::</a>
+                    <a href="sitemap.html">
+                        網站導覽
+                    </a>
+                </li>
+                <li>
+                    <a href="qa_146_3275_1.html" tilte="閉館整建Q&amp;A">
+                        閉館整建Q&amp;A
+                    </a>
+                </li>
+                <li>
+                    <a href="onlineobject_143_219.html" tilte="聯絡我們">
+                        聯絡我們
+                    </a>
+                </li>
+                <li>
+                    <a href="links_169.html" tilte="相關連結">
+                        相關連結
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://accessibility.moc.gov.tw/NMH/" tilte="無障礙專區「另開新視窗」">
+                        無障礙專區
+                    </a>
+                </li>
+            </ul>
+            <div class="search-wrapper">
+                <form action="SearchAction" method="post">
+                    <input name="__RequestVerificationToken" type="hidden" value="qJkshXsX1F94WSHH1Tc_ALMM5YHRunRWPEzd3Xd-C-0K8JWTOMvVk2FE07ydLm2x5u-oV_RVU_QBDUOfwbq39g1Ibx1zdlXep0iWKYfeUms1">
+                    <input type="hidden" name="h" value="1">
+                    <div class="search-put">
+                        <input type="text" placeholder="請輸入關鍵字" name="q" title="請輸入關鍵字">
+                        <button style="text-indent: -9999px;" title="搜尋"> 搜尋</button>
+                    </div>
+                    <div class="search-key">
+                        關鍵字:
+                        <span>
+                            <a href="searchall.html?q=史博">
+                                史博
+                            </a>
+                            、
+                            <a href="searchall.html?q=歷史">
+                                歷史
+                            </a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+<div class="header-bottom">
+            <ul class="header-bottom-nav cl">
+<li>
+                    <a href="activitysoonlist_66.html" title="展覽" class="has-menu">展覽</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="activitysoonlist_66.html" title="當期展覽">當期展覽</a>
+                        </li>
+<li>
+                            <a class="t" href="activitysoonlist_67.html?isexp=2" title="展覽預告">展覽預告</a>
+                        </li>
+<li>
+                            <a class="t" href="activitysoonlist_68.html?isexp=1" title="展覽回顧">展覽回顧</a>
+                        </li>
+<li>
+                            <a class="t" href="informationimgs_69.html" title="線上展覽">線上展覽</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_204.html" title="展覽報導">展覽報導</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="activitysoonlist1_71.html?isexp=3" title="活動" class="has-menu">活動</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="activitysoonlist1_71.html?isexp=3" title="當期活動">當期活動</a>
+                        </li>
+<li>
+                            <a class="t" href="activitysoonlist1_72.html?isexp=1" title="活動成果">活動成果</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="informationlists_74.html" title="訊息" class="has-menu">訊息</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="informationlists_74.html" title="訊息公告">訊息公告</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_75.html?isdate=1" title="媒體報導">媒體報導</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_207.html" title="影音報導">影音報導</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_188.html" title="史博電子報">史博電子報</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="nmhcollectionlist_77.html" title="典藏" class="has-menu">典藏</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="nmhcollectionlist_77.html" title="國寶與重要古物">國寶與重要古物</a>
+                        </li>
+<li>
+                            <a class="t" href="http://collections.culture.tw/nmh_collectionsweb/" title="典藏查詢系統「另開新視窗」" target="_blank">典藏查詢系統</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_197.html" title="典藏制度與要點">典藏制度與要點</a>
+                        </li>
+<li>
+                            <a class="t" href="movielist_80.html" title="典藏維護與活化">典藏維護與活化</a>
+                        </li>
+<li>
+                            <a class="t" href="https://artistsday.nmh.gov.tw/index.html" title="史博藝術家日「另開新視窗」" target="_blank">史博藝術家日</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_203.html" title="典藏報導">典藏報導</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="content_195.html" title="教育" class="has-menu">教育</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="content_195.html" title="行動博物館">行動博物館</a>
+                        </li>
+<li>
+                            <a class="t" href="studylist_88.html" title="學習資源">學習資源</a>
+                        </li>
+<li>
+                            <a class="t" href="content_89.html" title="暑期實習">暑期實習</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_206.html" title="教育報導">教育報導</a>
+                        </li>
+<li>
+                            <a class="t" href="informationimgs_218.html" title="史博賀新春">史博賀新春</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="reportlist_159.html" title="研究" class="has-menu">研究</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="reportlist_159.html" title="史博年報">史博年報</a>
+                        </li>
+<li>
+                            <a class="t" href="informationimgs_219.html" title="口述歷史">口述歷史</a>
+                        </li>
+<li>
+                            <a class="t" href="nmhpublishlist_93.html" title="出版品">出版品</a>
+                        </li>
+<li>
+                            <a class="t" href="content_106.html" title="獎助學金">獎助學金</a>
+                        </li>
+<li>
+                            <a class="t" href="content_91.html" title="重建臺灣藝術史">重建臺灣藝術史</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_209.html" title="研究成果專輯">研究成果專輯</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_205.html" title="研究報導">研究報導</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="shopping_109.html" title="文創" class="has-menu">文創</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="shopping_109.html" title="商店據點">商店據點</a>
+                        </li>
+<li>
+                            <a class="t" href="content_111.html" title="史博文創">史博文創</a>
+                        </li>
+<li>
+                            <a class="t" href="informationimgs_116.html" title="文創精選與推薦">文創精選與推薦</a>
+                        </li>
+<li>
+                            <a class="t" href="goods_119.html" title="授權商品">授權商品</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_122.html?isdate=1" title="活動參與">活動參與</a>
+                        </li>
+<li>
+                            <a class="t" href="https://www.nmhshop.com.tw/?utm_source=nmh.com&amp;utm_medium=banner" title="史博館精選商城「另開新視窗」" target="_blank">史博館精選商城</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_108.html" title="文創報導">文創報導</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="informationlists_128.html" title="服務" class="has-menu">服務</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="informationlists_128.html" title="服務導引">服務導引</a>
+                        </li>
+<li>
+                            <a class="t" href="content_130.html" title="志工服務">志工服務</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_134.html" title="政府資訊公開">政府資訊公開</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_212.html" title="性別平等專區">性別平等專區</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_220.html" title="身分揭露專區">身分揭露專區</a>
+                        </li>
+<li>
+                            <a class="t" href="onlineobject_143_219.html" title="服務信箱">服務信箱</a>
+                        </li>
+<li>
+                            <a class="t" href="qa_146_3275_1.html" title="常見問題">常見問題</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="content_149.html" title="關於" class="has-menu">關於</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="content_149.html" title="服務團隊">服務團隊</a>
+                        </li>
+<li>
+                            <a class="t" href="content_153.html" title="本館沿革">本館沿革</a>
+                        </li>
+<li>
+                            <a class="t" href="content_155.html" title="姊妹館">姊妹館</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+            <div class="content">
+                <div class="position box">
+
+<ul class="breadcrumb">
+        <li><a href="/">首頁</a></li>
+<li><a href="activitysoonlist_66.html">展覽</a></li>
+<li><a href="activitysoonlist_66.html">當期展覽</a></li>
+
+      </ul>
+                </div>
+                <div class="detail box row">
+
+     <div class="left-menu col-xs-12">
+      <a accesskey="L" href="#L" name="L" id="AL" title="左方功能區塊" style="float: left;">:::</a>
+      <p class="mobile-left">展覽</p>
+
+<ul>
+<li>
+
+
+<a href="activitysoonlist_66.html" class="active" title="當期展覽"> 當期展覽</a>
+
+        </li>
+<li>
+
+
+<a href="activitysoonlist_67.html?isexp=2" title="展覽預告"> 展覽預告</a>
+
+        </li>
+<li>
+
+
+<a href="activitysoonlist_68.html?isexp=1" title="展覽回顧"> 展覽回顧</a>
+
+        </li>
+<li>
+
+
+<a href="informationimgs_69.html" title="線上展覽"> 線上展覽</a>
+
+        </li>
+<li>
+
+
+<a href="informationlist_204.html" title="展覽報導"> 展覽報導</a>
+
+        </li>
+
+      </ul>
+    </div>
+                    <div class="col-xs-12 right-content">
+                    <a accesskey="C" href="#C" name="C" id="AC" title="中央內容區塊" style="float:left;">:::</a>
+                        <div class="right-tit">
+                            <i class="border-line"></i>
+                            <h2>當期展覽</h2>
+                        </div>
+
+                        <div class="right-lists">
+
+
+<div>
+                                <ul class="lists row">
+<li class="item col-xs-4">
+                                        <a href="https://event.culture.tw/NMH/portal/Registration/C0103MAction?actId=11067" title="人間池塘—張大千、文人與荷花藝術大展「另開新視窗」" target="_blank">
+                                            <div class="img-wrapper">
+
+<img alt="" src="https://mocfile.moc.gov.tw/activitySones/userFiles/NMH/JpgFile/01/11067/11067.jpg">
+
+                                            </div>
+                                            <div class="info">
+                                                <p class="tit">人間池塘—張大千、文人與荷花藝術大展</p>
+                                                <p class="time"><span>2021.05.05</span>  <span>-2021.08.15</span></p>
+<p class="address">地點：佛光山佛陀紀念館第一展覽廳</p>
+                                            </div>
+                                        </a>
+                                    </li>
+<li class="item col-xs-4">
+                                        <a href="https://event.culture.tw/NMH/portal/Registration/C0103MAction?actId=11068" title="微光燦爛于昕蕎個人畫展、黃麟鳴雕刻創作展在立法院「另開新視窗」" target="_blank">
+                                            <div class="img-wrapper">
+
+<img alt="" src="https://mocfile.moc.gov.tw/activitySones/userFiles/NMH/JpgFile/01/11068/11068.jpg">
+
+                                            </div>
+                                            <div class="info">
+                                                <p class="tit">微光燦爛于昕蕎個人畫展、黃麟鳴雕刻創作展在立法院</p>
+                                                <p class="time"><span>2021.05.03</span>  <span>-2021.06.30</span></p>
+<p class="address">地點：立法院文化走廊、國會藝廊（本展覽位於立法院辦公區不對外開放）</p>
+                                            </div>
+                                        </a>
+                                    </li>
+<li class="item col-xs-4">
+                                        <a href="https://event.culture.tw/NMH/portal/Registration/C0103MAction?actId=11066" title="「祛病鎮煞」─史博館在機場文化櫥窗展出抗疫主題!!「另開新視窗」" target="_blank">
+                                            <div class="img-wrapper">
+
+<img alt="" src="https://mocfile.moc.gov.tw/activitySones/userFiles/NMH/JpgFile/01/11066/11066.jpg">
+
+                                            </div>
+                                            <div class="info">
+                                                <p class="tit">「祛病鎮煞」─史博館在機場文化櫥窗展出抗疫主題!!</p>
+                                                <p class="time"><span>2021.05.01</span>  <span>-2021.08.31</span></p>
+<p class="address">地點：桃園國際機場二航廈入境疫檢區、驗照區文化部文化櫥窗</p>
+                                            </div>
+                                        </a>
+                                    </li>
+<li class="item col-xs-4">
+                                        <a href="https://event.culture.tw/NMH/portal/Registration/C0103MAction?actId=11054" title="「經緯之間 織織不倦－烏來泰雅織女與織物的對話」特展「另開新視窗」" target="_blank">
+                                            <div class="img-wrapper">
+
+<img alt="" src="https://mocfile.moc.gov.tw/activitySones/userFiles/NMH/JpgFile/01/11054/11054.jpg">
+
+                                            </div>
+                                            <div class="info">
+                                                <p class="tit">「經緯之間 織織不倦－烏來泰雅織女與織物的對話」特展</p>
+                                                <p class="time"><span>2021.02.08</span>  <span>-2021.08.22</span></p>
+<p class="address">地點：新北市烏來泰雅民族博物館</p>
+                                            </div>
+                                        </a>
+                                    </li>
+<li class="item col-xs-4">
+                                        <a href="https://event.culture.tw/NMH/portal/Registration/C0103MAction?actId=11052" title="「海之美—海洋文化與臺灣風貌」特展「另開新視窗」" target="_blank">
+                                            <div class="img-wrapper">
+
+<img alt="" src="https://mocfile.moc.gov.tw/activitySones/userFiles/NMH/JpgFile/01/11052/11052.jpg">
+
+                                            </div>
+                                            <div class="info">
+                                                <p class="tit">「海之美—海洋文化與臺灣風貌」特展</p>
+                                                <p class="time"><span>2021.01.27</span>  <span>-2021.06.20</span></p>
+<p class="address">地點：新北市立十三行博物館</p>
+                                            </div>
+                                        </a>
+                                    </li>
+<li class="item col-xs-4">
+                                        <a href="https://event.culture.tw/NMH/portal/Registration/C0103MAction?actId=00951" title="館藏借展：「佛陀形影—院藏亞洲佛教藝術之美」「另開新視窗」" target="_blank">
+                                            <div class="img-wrapper">
+
+<img alt="" src="https://mocfile.moc.gov.tw/activitySones/userFiles/NMH/JpgFile/01/00951/00951.jpg">
+
+                                            </div>
+                                            <div class="info">
+                                                <p class="tit">館藏借展：「佛陀形影—院藏亞洲佛教藝術之美」</p>
+                                                <p class="time"><span>2020.12.30</span>  <span>-2022.12.31</span></p>
+<p class="address">地點：國立故宮博物院南部院區S303展廳</p>
+                                            </div>
+                                        </a>
+                                    </li>
+<li class="item col-xs-4">
+                                        <a href="https://event.culture.tw/NMH/portal/Registration/C0103MAction?actId=00949" title="館藏借展：「樹：從信仰到抒情」「另開新視窗」" target="_blank">
+                                            <div class="img-wrapper">
+
+<img alt="" src="https://mocfile.moc.gov.tw/activitySones/userFiles/NMH/JpgFile/01/00949/00949.jpg">
+
+                                            </div>
+                                            <div class="info">
+                                                <p class="tit">館藏借展：「樹：從信仰到抒情」</p>
+                                                <p class="time"><span>2020.12.25</span>  <span>-2021.06.20</span></p>
+<p class="address">地點：國立故宮博物院南部院區3F S304展廳</p>
+                                            </div>
+                                        </a>
+                                    </li>
+<li class="item col-xs-4">
+                                        <a href="https://event.culture.tw/NMH/portal/Registration/C0103MAction?actId=90011" title="東周實相──河南出土東周文物展「另開新視窗」" target="_blank">
+                                            <div class="img-wrapper">
+
+<img alt="" src="https://mocfile.moc.gov.tw/activitySones/userFiles/NMH/JpgFile/01/90011/90011.jpg">
+
+                                            </div>
+                                            <div class="info">
+                                                <p class="tit">東周實相──河南出土東周文物展</p>
+                                                <p class="time"><span>2019.05.15</span>  <span>-2022.12.31</span></p>
+<p class="address">地點：中央研究院歷史語言研究所</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <div id="page">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+        <div class="box">
+
+<div class="footer-top">
+            <a accesskey="Z" href="#Z" name="Z" id="AZ" title="下方功能區塊" style="float:left;">:::</a>
+                <ul class="footer-nav row">
+<li class="col-xs-1">
+                        <a href="activitysoonlist_66.html" title="展覽">
+                            展覽
+                        </a>
+<ul class="sub-menu">
+<li>
+                                <a class="t" href="activitysoonlist_66.html" title="當期展覽">
+                                    當期展覽
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="activitysoonlist_67.html?isexp=2" title="展覽預告">
+                                    展覽預告
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="activitysoonlist_68.html?isexp=1" title="展覽回顧">
+                                    展覽回顧
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationimgs_69.html" title="線上展覽">
+                                    線上展覽
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_204.html" title="展覽報導">
+                                    展覽報導
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+<li class="col-xs-1">
+                        <a href="activitysoonlist1_71.html?isexp=3" title="活動">
+                            活動
+                        </a>
+<ul class="sub-menu">
+<li>
+                                <a class="t" href="activitysoonlist1_71.html?isexp=3" title="當期活動">
+                                    當期活動
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="activitysoonlist1_72.html?isexp=1" title="活動成果">
+                                    活動成果
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+<li class="col-xs-1">
+                        <a href="informationlists_74.html" title="訊息">
+                            訊息
+                        </a>
+<ul class="sub-menu">
+<li>
+                                <a class="t" href="informationlists_74.html" title="訊息公告">
+                                    訊息公告
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_75.html?isdate=1" title="媒體報導">
+                                    媒體報導
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_207.html" title="影音報導">
+                                    影音報導
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_188.html" title="史博電子報">
+                                    史博電子報
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+<li class="col-xs-1">
+                        <a href="nmhcollectionlist_77.html" title="典藏">
+                            典藏
+                        </a>
+<ul class="sub-menu">
+<li>
+                                <a class="t" href="nmhcollectionlist_77.html" title="國寶與重要古物">
+                                    國寶與重要古物
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="http://collections.culture.tw/nmh_collectionsweb/" title="典藏查詢系統「另開新視窗」" target="_blank">
+                                    典藏查詢系統
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_197.html" title="典藏制度與要點">
+                                    典藏制度與要點
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="movielist_80.html" title="典藏維護與活化">
+                                    典藏維護與活化
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="https://artistsday.nmh.gov.tw/index.html" title="史博藝術家日「另開新視窗」" target="_blank">
+                                    史博藝術家日
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_203.html" title="典藏報導">
+                                    典藏報導
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+<li class="col-xs-1">
+                        <a href="content_195.html" title="教育">
+                            教育
+                        </a>
+<ul class="sub-menu">
+<li>
+                                <a class="t" href="content_195.html" title="行動博物館">
+                                    行動博物館
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="studylist_88.html" title="學習資源">
+                                    學習資源
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="content_89.html" title="暑期實習">
+                                    暑期實習
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_206.html" title="教育報導">
+                                    教育報導
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationimgs_218.html" title="史博賀新春">
+                                    史博賀新春
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+<li class="col-xs-1">
+                        <a href="reportlist_159.html" title="研究">
+                            研究
+                        </a>
+<ul class="sub-menu">
+<li>
+                                <a class="t" href="reportlist_159.html" title="史博年報">
+                                    史博年報
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationimgs_219.html" title="口述歷史">
+                                    口述歷史
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="nmhpublishlist_93.html" title="出版品">
+                                    出版品
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="content_106.html" title="獎助學金">
+                                    獎助學金
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="content_91.html" title="重建臺灣藝術史">
+                                    重建臺灣藝術史
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_209.html" title="研究成果專輯">
+                                    研究成果專輯
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_205.html" title="研究報導">
+                                    研究報導
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+<li class="col-xs-1">
+                        <a href="shopping_109.html" title="文創">
+                            文創
+                        </a>
+<ul class="sub-menu">
+<li>
+                                <a class="t" href="shopping_109.html" title="商店據點">
+                                    商店據點
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="content_111.html" title="史博文創">
+                                    史博文創
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationimgs_116.html" title="文創精選與推薦">
+                                    文創精選與推薦
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="goods_119.html" title="授權商品">
+                                    授權商品
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_122.html?isdate=1" title="活動參與">
+                                    活動參與
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="https://www.nmhshop.com.tw/?utm_source=nmh.com&amp;utm_medium=banner" title="史博館精選商城「另開新視窗」" target="_blank">
+                                    史博館精選商城
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_108.html" title="文創報導">
+                                    文創報導
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+<li class="col-xs-1">
+                        <a href="informationlists_128.html" title="服務">
+                            服務
+                        </a>
+<ul class="sub-menu">
+<li>
+                                <a class="t" href="informationlists_128.html" title="服務導引">
+                                    服務導引
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="content_130.html" title="志工服務">
+                                    志工服務
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_134.html" title="政府資訊公開">
+                                    政府資訊公開
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_212.html" title="性別平等專區">
+                                    性別平等專區
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="informationlist_220.html" title="身分揭露專區">
+                                    身分揭露專區
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="onlineobject_143_219.html" title="服務信箱">
+                                    服務信箱
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="qa_146_3275_1.html" title="常見問題">
+                                    常見問題
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+<li class="col-xs-1">
+                        <a href="content_149.html" title="關於">
+                            關於
+                        </a>
+<ul class="sub-menu">
+<li>
+                                <a class="t" href="content_149.html" title="服務團隊">
+                                    服務團隊
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="content_153.html" title="本館沿革">
+                                    本館沿革
+                                </a>
+                            </li>
+<li>
+                                <a class="t" href="content_155.html" title="姊妹館">
+                                    姊妹館
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="footer-bottom cl">
+                <div class="footer-bottom-left">
+                    <p class="contact-info">
+                        國立歷史博物館徐州路臨時辦公室
+                    </p>
+                    <p class="contact-info">
+                        地址:100025臺北市中正區徐州路21號
+                    </p>
+                    <p class="contact-info">
+                        TEL: 02-2361-0270 / FAX: 02-2393-1771
+                    </p>
+                    <p>
+                        <a href="bilingual_161_3284.html" title="雙語詞彙">
+                            雙語詞彙 ｜
+                        </a>
+                        <a href="informationlist_212.html" title="性別平等">
+                            性別平等 ｜
+                        </a>
+                        <a href="https://www.moc.gov.tw/submenu_300.html" target="_blank" title="文化部重大政策「另開新視窗」">
+                            文化部重大政策 ｜
+                        </a>
+                        <a href="content_164.html" title="政府網站資料開放宣告">
+                            政府網站資料開放宣告 ｜
+                        </a>
+                        <a href="content_163.html" title="隱私權保護政策">
+                            隱私權保護政策 ｜
+                        </a>
+                        <a href="content_162.html" title="資訊安全政策">
+                            資訊安全政策 ｜
+                        </a>
+                    </p>
+                    <p>
+                        建議使用IE或Chrome 1280 x 720 解析度瀏覽本網站 / 總瀏覽人次:965,732人 /
+                        更新日期：2021/06/15
+                    </p>
+                    <p>
+                        ©2019 Copyright National Museum of History All rights reserved.
+                    </p>
+                </div>
+                <div class="footer-bottom-right">
+                    <ul class="friend-link cl">
+                        <li>
+                            <a target="_blank" href="https://event.culture.tw/NMH/portal/Epaper/Q0102MAction.action" title="訂閱/取消電子報「另開新視窗">
+                                <img src="https://www.nmh.gov.tw/themes/55/images/link1.png" alt="訂閱/取消電子報">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/TaipeiNMH" title="官方臉書「另開新視窗">
+                                <img src="https://www.nmh.gov.tw/themes/55/images/link2.png" alt="官方臉書">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.youtube.com/channel/UCM5ktwR17336rFxx0q1M7QA" title="影音專區「另開新視窗">
+                                <img src="https://www.nmh.gov.tw/themes/55/images/link3.png" alt="影音專區">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="rss.html" title="rss訂閱「另開新視窗">
+                                <img src="https://www.nmh.gov.tw/themes/55/images/link4.png" alt="rss訂閱">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.moc.gov.tw/" title="文化部「另開新視窗">
+                                <img src="https://www.nmh.gov.tw/themes/55/images/link5.png" alt="文化部">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://accessibility.ncc.gov.tw/Applications/DetectLog/111903" title="無障礙網站[另開新視窗]">
+                                <img src="https://www.nmh.gov.tw/themes/55/images/link6.png" alt="通過AA+無障礙網頁檢測">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.gov.tw/" title="我的E政府「另開新視窗">
+                                <img src="https://www.nmh.gov.tw/themes/55/images/link7.png" alt="我的E政府">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="go-top" href="javascript:void(0);" title="回頂部" style="text-indent: -9999px;">回頂部</a>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-30325843-44"></script>
+<script>  
+    $(document).on("keydown", function (e) {
+        if (e.altKey && e.keyCode == 83) {
+            $(".search-put").find('input[type="text"]').focus();
+        }
+    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());  
+    gtag('config', 'UA-30325843-44'); 
+</script>
+        </div>
+    </div>
+    
+    <script src="https://www.nmh.gov.tw/themes/55/js/public.js"></script>
+    <script src="https://www.nmh.gov.tw/themes/55/js/owl.carousel.min.js"></script>
+    <script src="https://www.nmh.gov.tw/themes/55/js/My97DatePicker/WdatePicker.js"></script>
+    <script src="https://www.nmh.gov.tw/themes/55/js/sorkefront.js"></script>
+    
+    <script src="https://www.nmh.gov.tw/themes/55/js/owl.carousel.min.js"></script>
+    <script src="https://www.nmh.gov.tw/themes/55/js/dist/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://www.nmh.gov.tw/themes/55/js/dist/locales/bootstrap-datepicker.zh-TW.min.js"></script>
+        
+    <script>
+       $(function () {
+            $("#btnsub").click(function () {
+                var starttime = $("#select-start-time").val();
+                var endtime = $("#select-end-time").val();
+                if (starttime == "" && endtime != "") {
+                    alert("請選擇展覽開始日期!");
+                    return false;
+                    $("#select-start-time").focus();
+                }
+                if (starttime != "" && endtime != "") {
+                    var start = new Date(starttime);
+                    var end = new Date(endtime);
+                    if (end < start) {
+                        alert("展覽結束日期不能小於開始日期!");
+                        return false;
+                        $("#select-end-time").focus();
+                    }
+                }
+            });
+           var category="";
+            if(category!="")
+            {
+              $("#category").attr("placeholder",$(".sel").text())
+            }
+           // $("#typeId").val($(".sel").attr("data-id"));
+           // $(document).on("click", ".select-box li", function () {
+            //    var url = location.href;
+               // if (url.indexOf("?typeId=") > -1) {
+             //       url = url.replace(/\?typeId=([^&]*)/g, '');
+             //   }
+             //   if ($(this).text()) {
+              //      location.href = url + "?typeId=" + $(".sel").text() + "&isexp=66";
+             //   }
+              //  else {
+             //       location.href = url;
+              //  }
+           // });
+        });
+    </script>
+
+<a id="mobile-toggle">行動版選單開關<hr></a><div id="mobile"><div class="mobile-nav">
+            <ul class="header-bottom-nav cl">
+<li>
+                    <a href="javascript:;" title="展覽" class="has-menu">展覽</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="activitysoonlist_66.html" title="當期展覽">當期展覽</a>
+                        </li>
+<li>
+                            <a class="t" href="activitysoonlist_67.html?isexp=2" title="展覽預告">展覽預告</a>
+                        </li>
+<li>
+                            <a class="t" href="activitysoonlist_68.html?isexp=1" title="展覽回顧">展覽回顧</a>
+                        </li>
+<li>
+                            <a class="t" href="informationimgs_69.html" title="線上展覽">線上展覽</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_204.html" title="展覽報導">展覽報導</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="javascript:;" title="活動" class="has-menu">活動</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="activitysoonlist1_71.html?isexp=3" title="當期活動">當期活動</a>
+                        </li>
+<li>
+                            <a class="t" href="activitysoonlist1_72.html?isexp=1" title="活動成果">活動成果</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="javascript:;" title="訊息" class="has-menu">訊息</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="informationlists_74.html" title="訊息公告">訊息公告</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_75.html?isdate=1" title="媒體報導">媒體報導</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_207.html" title="影音報導">影音報導</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_188.html" title="史博電子報">史博電子報</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="javascript:;" title="典藏" class="has-menu">典藏</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="nmhcollectionlist_77.html" title="國寶與重要古物">國寶與重要古物</a>
+                        </li>
+<li>
+                            <a class="t" href="http://collections.culture.tw/nmh_collectionsweb/" title="典藏查詢系統「另開新視窗」" target="_blank">典藏查詢系統</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_197.html" title="典藏制度與要點">典藏制度與要點</a>
+                        </li>
+<li>
+                            <a class="t" href="movielist_80.html" title="典藏維護與活化">典藏維護與活化</a>
+                        </li>
+<li>
+                            <a class="t" href="https://artistsday.nmh.gov.tw/index.html" title="史博藝術家日「另開新視窗」" target="_blank">史博藝術家日</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_203.html" title="典藏報導">典藏報導</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="javascript:;" title="教育" class="has-menu">教育</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="content_195.html" title="行動博物館">行動博物館</a>
+                        </li>
+<li>
+                            <a class="t" href="studylist_88.html" title="學習資源">學習資源</a>
+                        </li>
+<li>
+                            <a class="t" href="content_89.html" title="暑期實習">暑期實習</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_206.html" title="教育報導">教育報導</a>
+                        </li>
+<li>
+                            <a class="t" href="informationimgs_218.html" title="史博賀新春">史博賀新春</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="javascript:;" title="研究" class="has-menu">研究</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="reportlist_159.html" title="史博年報">史博年報</a>
+                        </li>
+<li>
+                            <a class="t" href="informationimgs_219.html" title="口述歷史">口述歷史</a>
+                        </li>
+<li>
+                            <a class="t" href="nmhpublishlist_93.html" title="出版品">出版品</a>
+                        </li>
+<li>
+                            <a class="t" href="content_106.html" title="獎助學金">獎助學金</a>
+                        </li>
+<li>
+                            <a class="t" href="content_91.html" title="重建臺灣藝術史">重建臺灣藝術史</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_209.html" title="研究成果專輯">研究成果專輯</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_205.html" title="研究報導">研究報導</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="javascript:;" title="文創" class="has-menu">文創</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="shopping_109.html" title="商店據點">商店據點</a>
+                        </li>
+<li>
+                            <a class="t" href="content_111.html" title="史博文創">史博文創</a>
+                        </li>
+<li>
+                            <a class="t" href="informationimgs_116.html" title="文創精選與推薦">文創精選與推薦</a>
+                        </li>
+<li>
+                            <a class="t" href="goods_119.html" title="授權商品">授權商品</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_122.html?isdate=1" title="活動參與">活動參與</a>
+                        </li>
+<li>
+                            <a class="t" href="https://www.nmhshop.com.tw/?utm_source=nmh.com&amp;utm_medium=banner" title="史博館精選商城「另開新視窗」" target="_blank">史博館精選商城</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_108.html" title="文創報導">文創報導</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="javascript:;" title="服務" class="has-menu">服務</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="informationlists_128.html" title="服務導引">服務導引</a>
+                        </li>
+<li>
+                            <a class="t" href="content_130.html" title="志工服務">志工服務</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_134.html" title="政府資訊公開">政府資訊公開</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_212.html" title="性別平等專區">性別平等專區</a>
+                        </li>
+<li>
+                            <a class="t" href="informationlist_220.html" title="身分揭露專區">身分揭露專區</a>
+                        </li>
+<li>
+                            <a class="t" href="onlineobject_143_219.html" title="服務信箱">服務信箱</a>
+                        </li>
+<li>
+                            <a class="t" href="qa_146_3275_1.html" title="常見問題">常見問題</a>
+                        </li>
+
+                    </ul>
+                </li>
+<li>
+                    <a href="javascript:;" title="關於" class="has-menu">關於</a>
+<ul class="sub-menu">
+<li>
+                            <a class="t" href="content_149.html" title="服務團隊">服務團隊</a>
+                        </li>
+<li>
+                            <a class="t" href="content_153.html" title="本館沿革">本館沿革</a>
+                        </li>
+<li>
+                            <a class="t" href="content_155.html" title="姊妹館">姊妹館</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        
+            <ul class="header-mid-nav cl">
+                <li>
+                    <a accesskey="U" href="#U" name="U" title="上方功能區塊">:::</a>
+                    <a href="sitemap.html">
+                        網站導覽
+                    </a>
+                </li>
+                <li>
+                    <a href="qa_146_3275_1.html" tilte="閉館整建Q&amp;A">
+                        閉館整建Q&amp;A
+                    </a>
+                </li>
+                <li>
+                    <a href="onlineobject_143_219.html" tilte="聯絡我們">
+                        聯絡我們
+                    </a>
+                </li>
+                <li>
+                    <a href="links_169.html" tilte="相關連結">
+                        相關連結
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://accessibility.moc.gov.tw/NMH/" tilte="無障礙專區「另開新視窗」">
+                        無障礙專區
+                    </a>
+                </li>
+            </ul>
+            <div class="search-wrapper">
+                <form action="SearchAction" method="post">
+                    <input name="__RequestVerificationToken" type="hidden" value="qJkshXsX1F94WSHH1Tc_ALMM5YHRunRWPEzd3Xd-C-0K8JWTOMvVk2FE07ydLm2x5u-oV_RVU_QBDUOfwbq39g1Ibx1zdlXep0iWKYfeUms1">
+                    <input type="hidden" name="h" value="1">
+                    <div class="search-put">
+                        <input type="text" placeholder="請輸入關鍵字" name="q" title="請輸入關鍵字">
+                        <button style="text-indent: -9999px;" title="搜尋"> 搜尋</button>
+                    </div>
+                    <div class="search-key">
+                        關鍵字:
+                        <span>
+                            <a href="searchall.html?q=史博">
+                                史博
+                            </a>
+                            、
+                            <a href="searchall.html?q=歷史">
+                                歷史
+                            </a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        <div class="mobile-lang">
+            <a href="/en/">
+                EN
+            </a>
+            ｜
+            <a href="/jp/">
+                日本語
+            </a>
+    
+  </div></div></div></body></html>
