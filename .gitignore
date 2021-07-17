@@ -17,3 +17,6 @@ autopager/models
 notebooks/embedding
 .env
 cc.en.300.*
+queue_app/download
+tests/test_file
+
