@@ -14,6 +14,18 @@ class RequestPageSchema(BaseModel):
             }
         }
 
+class RequestPageFileSchema(BaseModel):
+    url: str = Field(...)
+    html: str = Field(...)
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "url": "https://test_url.com",
+                "html": "<html> ... </html",
+            }
+        }
+
 
 class PageSchema(BaseModel):
     tid: str = Field(...)

@@ -44,6 +44,7 @@ def main():
         autopager = get_shared_autopager()
         page_component = generate_page_component(uncoded_url)
         result_urls = autopager.urls(page_component["html"], uncoded_url, direct=True, prev=False, next=False)
+        result_urls = list(set(result_urls))
         current_time = datetime.now()
         result_component = {"tid": _uid, "url": uncoded_url, "urls": result_urls, "created_time": current_time}
         ### add result to Mongo

@@ -21,6 +21,7 @@ from ..models.page import (
     ResponseModel,
     PageSchema,
     RequestPageSchema,
+    RequestPageFileSchema,
     UpdatePageModel,
 )
 
@@ -82,6 +83,7 @@ async def predict_page(page: RequestPageSchema = Body(...)):
     )
     try:
         result_urls = autopager.urls(page_component["html"], uncoded_url, direct=True, prev=False, next=False)
+        result_urls = list(set(result_urls))
     except:
         return ErrorResponseModel(
         "An error occurred",
@@ -104,6 +106,36 @@ async def predict_page(page: RequestPageSchema = Body(...)):
 async def add_page_data(page: PageSchema):
     new_page = await add_page(page)
     return new_page
+
+@router.post("/file")
+async def post_page_file(page: RequestPageFileSchema = Body(...)):
+    print("CURRENT_CRF_MODEL: ",shared_autopager.DEFAULT_CRF_PATH)
+    _uid = ObjectId()
+    page_item = jsonable_encoder(page)
+    uncoded_url = unquote(page_item['url'])
+    uncoded_html = unquote(page_item['html'])
+    # print(f"Get request: {uncoded_url}")
+    autopager = get_shared_autopager()
+    try:
+        result_urls = autopager.urls(uncoded_html, uncoded_url, direct=True, prev=False, next=False)
+    except:
+        return ErrorResponseModel(
+        "An error occurred",
+        404,
+        "There was an error predicting the page.",
+        )
+    try:
+        current_time = datetime.now()
+        result_component = {"tid": _uid, "url": uncoded_url, "urls": result_urls, "created_time": current_time}
+        ### add result to Mongo
+        new_page = await add_page_data(result_component)
+    except:
+        return ErrorResponseModel(
+        "An error occurred",
+        404,
+        "There was an error saving the record.",
+        )
+    return ResponseModel(new_page, "Page predicted and saved successfully.")
 
 @router.put("/{tid}")
 async def update_page_data(tid: str, req: UpdatePageModel = Body(...)):
