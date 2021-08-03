@@ -60,8 +60,18 @@ Code are located under 'queue_app/worker.py', after execute by:
 python worker.py
 ```
 
-Program will open connection to RabbitMQ(setting can be customized with **dotenv** package) to receive task from task source queue. 
+Program will open connection to RabbitMQ(setting can be customized with **dotenv** package) to receive task from task source queue. (.env details can be accessed in my google shared folder)
 
-Task message is required to have URL format.
+### Notice
+1. Task message is required to have URL format.
+2. Pagination prediction's results will be stored in container 'pageDB_v'.
+```shell=
+CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                                                                                                         NAMES
+b86ae6e60415        mongo                   "docker-entrypoint.s…"   4 months ago        Up 44 hours         0.0.0.0:27000->27017/tcp                                                                                      pageDB_v
+```
+3. After pagination recognition, result task ID will be passed into data etl work queue then finish subsequent process automatically.
 
-After pagination recognition, result task ID will be passed into data etl work queue then finish subsequent process automatically.
+
+## Evaluate Event Extraction
+
+In folder queue_app, you can use 'Event_manual_throw.ipynb' to throw url to event's queue directly, and 'AEStatistic.ipynb' is used to calculate the # of Single/Multi page result and # of legal extractors.
