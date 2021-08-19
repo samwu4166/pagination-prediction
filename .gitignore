@@ -13,7 +13,6 @@ htmlcov
 docs/_build
 .~*
 *.crf
-autopager/models
 notebooks/embedding
 .env
 cc.en.300.*
