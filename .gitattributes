@@ -1,1 +1,3 @@
 *.html linguist-detectable=false
+autopager/data/* linguist-detectable=false
+autopager/data/* linguist-generated
